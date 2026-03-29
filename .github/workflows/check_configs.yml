@@ -62,16 +62,23 @@ jobs:
           # are not directly reachable so we rely on GeoIP for verification.
           # Set to 0 on a self-hosted runner in Europe/Armenia for live testing.
           SKIP_V2RAY_TEST: "1"
+          # Job fails if fewer than this many configs pass — catches source outages.
+          # Lower if you expect temporarily fewer sources; raise for stricter health checks.
+          MIN_PASSING_CONFIGS: "200"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: intranet-configs-${{ github.run_id }}
+          # Date-stamped name for easier identification vs run-ID-only names
+          name: intranet-configs-${{ github.run_id }}-${{ github.run_attempt }}
           if-no-files-found: ignore
           path: |
             outputs/passing_intranet_configs.txt
+            outputs/passing_intranet_configs_annotated.txt
             outputs/passing_intranet_configs.json
             outputs/passing_intranet_configs_base64.txt
+            outputs/ir_exit_configs.txt
+            outputs/armenian_bridge_configs.txt
             outputs/hiddify_intranet.json
             outputs/by_protocol/
 
@@ -80,7 +87,6 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Commit the outputs directory
           git add outputs/ || true
 
           git diff --cached --quiet || \
