@@ -15,57 +15,59 @@ Iran cannot reach these without a proxy/VPN that exits inside Iran.
 
 How verification works
 ----------------------
-A config "passes" if the V2Ray process using it can resolve and connect to
-known Iranian internal hostnames that are:
-  (a) Only accessible from inside Iran (geo-blocked externally)
-  (b) Reliably up (government/ISP infrastructure)
-
-We test using TCP connect to port 80/443 of Iranian internal IPs and
-HTTP requests to Iranian-only domains through each config's local SOCKS port.
+A config "passes" if its host resolves to an IP in Iranian or Armenian AS
+space (GeoIP), AND the proxy server itself accepts TCP connections.
+With SKIP_V2RAY_TEST=0 on a self-hosted runner in Europe/Armenia, an
+additional live HTTP test through each proxy is performed.
 
 Sources
 -------
 In addition to scraping public aggregators, this script ingests the
-iran-proxy-checker repo outputs (armenian bridge configs that already proved
+iran-proxy-checker repo outputs (Armenian bridge configs that already proved
 they can route into Iranian IP space).
 
 Outputs
 -------
-  passing_intranet_configs.txt     one URI per line, import into any client
-  passing_intranet_configs.json    structured with metadata + latency
-  hiddify_intranet.json            Hiddify-ready outbound config
-  by_protocol/                     split files per protocol
+  passing_intranet_configs.txt        one clean URI per line (subscription-ready)
+  passing_intranet_configs_annotated.txt  URIs with # tag comments (human-readable)
+  passing_intranet_configs.json       structured with metadata + latency
+  passing_intranet_configs_base64.txt base64 subscription blob
+  ir_exit_configs.txt                 IR-exit only (highest priority)
+  armenian_bridge_configs.txt         Armenian bridge only
+  hiddify_intranet.json               Hiddify-ready subscription (top 20 as URIs)
+  by_protocol/                        split files per protocol
 """
 
 import asyncio
 import base64
-import concurrent.futures
 import json
 import os
 import re
 import socket
-import subprocess
 import sys
-import tempfile
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
 
 import aiohttp
 
-# ── Configuration ─────────────────────────────────────────────────────────────
+# ── Configuration ──────────────────────────────────────────────────────────────
 
 IRAN_PROXY_CHECKER_DIR = os.environ.get("IRAN_PROXY_CHECKER_DIR", "iran-proxy-checker")
-TCP_TIMEOUT   = float(os.environ.get("TCP_TIMEOUT",  "3.0"))
-HTTP_TIMEOUT  = int(  os.environ.get("HTTP_TIMEOUT", "10"))
-MAX_WORKERS   = int(  os.environ.get("MAX_WORKERS",  "50"))
+TCP_TIMEOUT    = float(os.environ.get("TCP_TIMEOUT",  "3.0"))
+HTTP_TIMEOUT   = int(  os.environ.get("HTTP_TIMEOUT", "10"))
+MAX_WORKERS    = int(  os.environ.get("MAX_WORKERS",  "100"))
 SKIP_V2RAY_TEST = os.environ.get("SKIP_V2RAY_TEST", "1").strip() == "1"
+# Job fails if fewer than this many configs pass — catches source outages early
+MIN_PASSING_CONFIGS = int(os.environ.get("MIN_PASSING_CONFIGS", "200"))
 
-# ── Iranian internal endpoints to verify against ───────────────────────────────
-# These IP:port pairs are first-hop addresses of major Iranian ASNs.
-# They respond to TCP connections only from within Iran or from IPs with
-# direct BGP peering to Iranian carriers (e.g. Armenian ISPs).
+# ── Module-level constants ─────────────────────────────────────────────────────
+
+# FIX: was duplicated at lines 297 and 452 in the original — now defined once.
+ARMENIAN_PREFIXES = ("5.10.214.", "5.10.215.", "188.164.159.", "188.164.158.")
+
+# Known Iranian internal TCP endpoints — respond only from within Iranian IP space
 IRAN_INTERNAL_TCP = [
     ("5.160.0.1",     80),   # TCI / AS12880 (state telecom)
     ("78.38.0.1",     80),   # TCI
@@ -76,15 +78,15 @@ IRAN_INTERNAL_TCP = [
 ]
 
 # Iranian-only HTTP endpoints — return non-200 from outside Iran
-# (geo-blocked or DNS-blocked externally)
 IRAN_HTTP_ENDPOINTS = [
-    "http://www.ict.gov.ir/",          # Ministry of ICT
-    "http://www.iran.ir/",             # Official Iran portal
-    "http://www.isna.ir/",             # Iranian Students News Agency
-    "http://www.irna.ir/",             # Islamic Republic News Agency
+    "http://www.ict.gov.ir/",
+    "http://www.iran.ir/",
+    "http://www.isna.ir/",
+    "http://www.irna.ir/",
 ]
 
-# ── Public V2Ray config aggregator sources ────────────────────────────────────
+# ── Public V2Ray config aggregator sources ─────────────────────────────────────
+
 RAW_SOURCES = [
     # barry-far (updates every 15 min, one of the largest aggregators)
     ("barry-far/vmess",  "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt",  "text"),
@@ -102,7 +104,7 @@ RAW_SOURCES = [
     ("matin/hy2",    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt","text"),
 
     # Epodonios — has IR-specific subfolder
-    ("epodonios/IR",   "https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Iran/config.txt",    "text"),
+    ("epodonios/IR",   "https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Iran/config.txt", "text"),
     ("epodonios/sub1", "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub1.txt", "b64"),
 
     # yebekhe / TelegramV2rayCollector (huge Telegram aggregator)
@@ -208,12 +210,15 @@ def parse_host_port(uri: str) -> tuple[str, int] | None:
             body = uri.split("://", 1)[1]
             after = body.split("@", 1)[1] if "@" in body else body
             after = after.split("#")[0].split("?")[0]
+            # Handle IPv6 addresses wrapped in brackets
             if after.startswith("["):
-                host = after.split("]")[0][1:]
-                port = int(after.split("]:")[1]) if "]:" in after else 443
+                bracket_end = after.find("]")
+                host = after[1:bracket_end]
+                port_str = after[bracket_end + 2:]  # skip "]:"
+                port = int(port_str) if port_str.isdigit() else 443
             else:
-                host, port = after.rsplit(":", 1)
-                port = int(port)
+                host, port_str = after.rsplit(":", 1)
+                port = int(port_str)
             return (host, port) if host and port else None
 
         elif scheme == "ss":
@@ -226,22 +231,35 @@ def parse_host_port(uri: str) -> tuple[str, int] | None:
                 hp = decoded.rsplit("@", 1)[1] if "@" in decoded else ""
                 if not hp:
                     return None
-            host, port = hp.rsplit(":", 1)
-            return (host, int(port)) if host else None
+            # Handle IPv6 host in brackets
+            if hp.startswith("["):
+                bracket_end = hp.find("]")
+                host = hp[1:bracket_end]
+                port = int(hp[bracket_end + 2:])
+            else:
+                host, port_str = hp.rsplit(":", 1)
+                port = int(port_str)
+            return (host, port) if host else None
 
         elif scheme in ("hysteria2", "hy2"):
             body = uri.split("://", 1)[1]
             after = body.split("@", 1)[1] if "@" in body else body
             after = after.split("#")[0].split("?")[0]
-            host, port = after.rsplit(":", 1)
-            return (host, int(port))
+            if after.startswith("["):
+                bracket_end = after.find("]")
+                host = after[1:bracket_end]
+                port = int(after[bracket_end + 2:])
+            else:
+                host, port_str = after.rsplit(":", 1)
+                port = int(port_str)
+            return (host, port)
 
     except Exception:
         pass
     return None
 
 
-# ── Iran intranet verification ─────────────────────────────────────────────────
+# ── Network helpers ────────────────────────────────────────────────────────────
 
 async def tcp_connect(ip: str, port: int, timeout: float = TCP_TIMEOUT) -> bool:
     try:
@@ -255,97 +273,103 @@ async def tcp_connect(ip: str, port: int, timeout: float = TCP_TIMEOUT) -> bool:
         return False
 
 
-async def verify_reaches_iran_tcp(host: str) -> bool:
-    """
-    Try to resolve host to an IP, then check if it's in an Iranian ASN
-    by probing known Iranian carrier IPs.
+# ── Iran intranet verification (live — only on self-hosted runners) ─────────────
 
-    On GitHub Actions (Azure North America), Iranian internal IPs are not
-    directly reachable. We use SKIP_V2RAY_TEST=1 (default) to accept configs
-    from known Iranian IP ranges without live TCP verification.
-    Run with SKIP_V2RAY_TEST=0 on a self-hosted runner in Europe or Armenia
-    for full end-to-end verification.
+async def verify_reaches_iran_tcp() -> bool:
+    """
+    Try direct TCP connection to known Iranian carrier IPs.
+    Only meaningful from a runner in Europe/Armenia — returns True
+    immediately when SKIP_V2RAY_TEST=1 (default on GitHub-hosted runners).
     """
     if SKIP_V2RAY_TEST:
-        return True  # Deferred to GeoIP check below
-
-    # Direct TCP check against known Iranian carrier entry points
+        return True  # Deferred to GeoIP check
     for ir_ip, ir_port in IRAN_INTERNAL_TCP:
         if await tcp_connect(ir_ip, ir_port, timeout=TCP_TIMEOUT):
             return True
     return False
 
 
-async def geoip_check_ir(host: str, session: aiohttp.ClientSession) -> bool:
-    """Check if host resolves to an IP in Iranian AS space via ip-api."""
-    try:
-        ip = socket.gethostbyname(host)
-        async with session.get(
-            f"http://ip-api.com/json/{ip}?fields=countryCode,as",
-            timeout=aiohttp.ClientTimeout(total=5)
-        ) as resp:
-            if resp.status == 200:
-                data = await resp.json(content_type=None)
-                return data.get("countryCode") == "IR"
-    except Exception:
-        pass
-    return False
+# ── Batch GeoIP ───────────────────────────────────────────────────────────────
 
+async def batch_geoip(hosts: list[str]) -> dict[str, str]:
+    """
+    Resolve hosts to IPs in parallel, then batch-query ip-api.com.
+    Returns host → ISO countryCode mapping.
 
-async def classify_config_source(host: str, session: aiohttp.ClientSession) -> str:
-    """Return 'IR', 'AM' (Armenian), or 'other'."""
-    ARMENIAN_PREFIXES = ("5.10.214.", "5.10.215.", "188.164.159.", "188.164.158.")
-    if any(host.startswith(p) for p in ARMENIAN_PREFIXES):
-        return "AM"
-    try:
-        ip = socket.gethostbyname(host)
-        if any(ip.startswith(p) for p in ARMENIAN_PREFIXES):
-            return "AM"
-        async with session.get(
-            f"http://ip-api.com/json/{ip}?fields=countryCode",
-            timeout=aiohttp.ClientTimeout(total=5)
-        ) as resp:
-            if resp.status == 200:
-                cc = (await resp.json(content_type=None)).get("countryCode", "")
-                return cc if cc else "other"
-    except Exception:
-        pass
-    return "other"
+    FIX: original used sequential socket.gethostbyname() in a sync loop
+    inside an async function, stalling the event loop for 2000+ hosts
+    (40-100 seconds of blocked I/O). Now runs DNS lookups in a thread pool.
+    """
+    print(f"  GeoIP: resolving {len(hosts)} unique hosts in parallel ...")
+
+    loop = asyncio.get_running_loop()
+
+    def resolve_one(h: str) -> tuple[str, str]:
+        try:
+            return h, socket.gethostbyname(h)
+        except Exception:
+            return h, ""
+
+    # Parallel DNS resolution via thread pool (non-blocking for the event loop)
+    with ThreadPoolExecutor(max_workers=min(200, len(hosts) or 1)) as executor:
+        pairs = await asyncio.gather(
+            *[loop.run_in_executor(executor, resolve_one, h) for h in hosts]
+        )
+
+    host_to_ip: dict[str, str] = {h: ip for h, ip in pairs if ip}
+    unique_ips  = list(set(host_to_ip.values()))
+    ip_to_cc:   dict[str, str] = {}
+
+    async with aiohttp.ClientSession() as session:
+        for i in range(0, len(unique_ips), 100):
+            batch = [{"query": ip, "fields": "countryCode,as"}
+                     for ip in unique_ips[i:i+100]]
+            try:
+                async with session.post(
+                    "http://ip-api.com/batch",
+                    json=batch,
+                    timeout=aiohttp.ClientTimeout(total=15),
+                ) as resp:
+                    if resp.status == 200:
+                        for req, res in zip(batch, await resp.json()):
+                            if res:
+                                ip_to_cc[req["query"]] = res.get("countryCode", "")
+            except Exception as e:
+                print(f"  ! GeoIP batch error: {e}")
+            await asyncio.sleep(1.2)  # ip-api free-tier rate limit
+
+    return {host: ip_to_cc.get(ip, "") for host, ip in host_to_ip.items()}
 
 
 # ── iran-proxy-checker ingestion ───────────────────────────────────────────────
 
 def load_iran_proxy_checker_configs() -> list[str]:
     """
-    Pull V2Ray URIs from the iran-proxy-checker repo outputs.
+    Pull V2Ray URIs from iran-proxy-checker repo outputs.
     Priority order:
       1. armenia_iran_bridge_configs.json  (already verified to reach Iranian network)
       2. working_armenia_configs.json       (verified Armenian exit, potential bridges)
-      3. passing_intranet_configs.txt       (if previous run of this repo exists)
+      3. passing_intranet_configs.txt       (previous run bootstrap)
     """
     uris: list[str] = []
     base = Path(IRAN_PROXY_CHECKER_DIR)
 
-    for fname in [
-        "armenia_iran_bridge_configs.json",
-        "working_armenia_configs.json",
-    ]:
+    for fname in ["armenia_iran_bridge_configs.json", "working_armenia_configs.json"]:
         fpath = base / fname
         if not fpath.exists():
             continue
         try:
             data = json.loads(fpath.read_text(encoding="utf-8"))
-            # Both formats have a "configs" key with "uri" fields
             configs = data.get("configs") or data.get("outbounds") or []
+            before = len(uris)
             for entry in configs:
                 uri = entry.get("uri") or entry.get("config_uri", "")
                 if uri and URI_RE.match(uri):
                     uris.append(uri)
-            print(f"  iran-proxy-checker [{fname}]: loaded {len(uris)} URIs")
+            print(f"  iran-proxy-checker [{fname}]: +{len(uris) - before} URIs")
         except Exception as e:
             print(f"  iran-proxy-checker [{fname}]: {e}")
 
-    # Also ingest plain-text URI lists
     for fname in ["armenia_iran_bridge_configs.txt", "working_armenia_configs.txt"]:
         fpath = base / fname
         if not fpath.exists():
@@ -355,7 +379,7 @@ def load_iran_proxy_checker_configs() -> list[str]:
                      if l.strip() and not l.startswith("#")]
             new = [l for l in lines if URI_RE.match(l)]
             uris.extend(new)
-            print(f"  iran-proxy-checker [{fname}]: loaded {len(new)} URIs")
+            print(f"  iran-proxy-checker [{fname}]: +{len(new)} URIs")
         except Exception as e:
             print(f"  iran-proxy-checker [{fname}]: {e}")
 
@@ -364,79 +388,70 @@ def load_iran_proxy_checker_configs() -> list[str]:
 
 # ── Scraper ────────────────────────────────────────────────────────────────────
 
-async def fetch_source(label: str, url: str, fmt: str,
-                       session: aiohttp.ClientSession) -> list[str]:
-    try:
-        async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-            if resp.status != 200:
-                return []
-            text = await resp.text(errors="ignore")
-            if fmt == "b64":
-                text = decode_b64_blob(text)
-            return extract_uris(text)
-    except Exception as e:
-        print(f"  ! [{label}] {e}", flush=True)
-        return []
+async def fetch_source(
+    label: str, url: str, fmt: str, session: aiohttp.ClientSession,
+    retries: int = 2,
+) -> list[str]:
+    """
+    Fetch one source URL, with up to `retries` retries on transient errors.
+    Returns a list of extracted URIs (may be empty on failure).
+    """
+    last_err: Exception | None = None
+    for attempt in range(retries + 1):
+        try:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
+                if resp.status != 200:
+                    return []
+                text = await resp.text(errors="ignore")
+                if fmt == "b64":
+                    text = decode_b64_blob(text)
+                return extract_uris(text)
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                await asyncio.sleep(1.5 * (attempt + 1))
+    print(f"  ! [{label}] failed after {retries+1} attempts: {last_err}", flush=True)
+    return []
 
 
 async def collect_all() -> list[str]:
-    """Fetch all sources concurrently, return deduplicated URI list."""
-    all_uris: set[str] = set()
+    """
+    Fetch all sources concurrently, return a deduplicated URI list.
+
+    FIX: original used a set() which randomises order and loses the
+    IR-exit / bridge-first priority. Now uses dict.fromkeys() for
+    ordered deduplication, with bridge URIs inserted first.
+    """
+    # Ordered dedup dict — IR/bridge URIs inserted first maintain priority
+    all_uris: dict[str, None] = {}
+    failed_sources: list[str] = []
 
     # First: ingest from iran-proxy-checker (highest priority — already verified)
     bridge_uris = load_iran_proxy_checker_configs()
-    all_uris.update(bridge_uris)
+    all_uris.update(dict.fromkeys(bridge_uris))
     print(f"  iran-proxy-checker total: {len(bridge_uris)} URIs ingested")
 
-    # Then: scrape public aggregators
+    # Then: scrape public aggregators concurrently
     async with aiohttp.ClientSession(headers=HEADERS) as session:
-        tasks = [fetch_source(lbl, url, fmt, session)
-                 for lbl, url, fmt in RAW_SOURCES]
+        tasks = [fetch_source(lbl, url, fmt, session) for lbl, url, fmt in RAW_SOURCES]
         results = await asyncio.gather(*tasks, return_exceptions=True)
         for (lbl, _, _), result in zip(RAW_SOURCES, results):
+            if isinstance(result, Exception):
+                failed_sources.append(lbl)
+                continue
             if isinstance(result, list):
                 before = len(all_uris)
-                all_uris.update(result)
+                all_uris.update(dict.fromkeys(result))
                 new = len(all_uris) - before
                 if new:
                     print(f"  + [{lbl}] +{new} new", flush=True)
+                # Sources returning 0 new are silently skipped (mostly duplicates)
+
+    if failed_sources:
+        print(f"  ! Sources with errors: {', '.join(failed_sources)}")
 
     print(f"\nTotal unique URIs collected: {len(all_uris)}")
     return list(all_uris)
-
-
-# ── Batch GeoIP ───────────────────────────────────────────────────────────────
-
-async def batch_geoip(hosts: list[str]) -> dict[str, str]:
-    """Resolve hosts to IPs and batch-query ip-api. Returns host→countryCode."""
-    print(f"  GeoIP: resolving {len(hosts)} unique hosts ...")
-    host_to_ip: dict[str, str] = {}
-    for h in hosts:
-        try:
-            host_to_ip[h] = socket.gethostbyname(h)
-        except Exception:
-            pass
-
-    unique_ips = list(set(host_to_ip.values()))
-    ip_to_cc:   dict[str, str] = {}
-
-    async with aiohttp.ClientSession() as session:
-        for i in range(0, len(unique_ips), 100):
-            batch = [{"query": ip, "fields": "countryCode,as"}
-                     for ip in unique_ips[i:i+100]]
-            try:
-                async with session.post("http://ip-api.com/batch",
-                                        json=batch,
-                                        timeout=aiohttp.ClientTimeout(total=15)) as resp:
-                    if resp.status == 200:
-                        for req, res in zip(batch, await resp.json()):
-                            if res:
-                                ip_to_cc[req["query"]] = res.get("countryCode", "")
-            except Exception as e:
-                print(f"  ! GeoIP batch error: {e}")
-            await asyncio.sleep(1.2)   # ip-api rate limit
-
-    return {host: ip_to_cc.get(ip, "") for host, ip in host_to_ip.items()}
 
 
 # ── Main verification ──────────────────────────────────────────────────────────
@@ -445,12 +460,10 @@ async def verify_configs(uris: list[str]) -> list[dict]:
     """
     For each URI:
       1. Parse host:port
-      2. TCP reachability check (just connect to the proxy server itself)
-      3. GeoIP to classify exit country
-      4. Prioritise: IR-exit > AM-bridge > other-with-Iran-routing-history
+      2. TCP reachability check to the proxy server
+      3. GeoIP classify exit country
+      4. Sort: IR-exit > bridge-verified > Armenian-bridge > other
     """
-    ARMENIAN_PREFIXES = ("5.10.214.", "5.10.215.", "188.164.159.", "188.164.158.")
-
     # Parse all URIs
     parsed: list[dict] = []
     unique_hosts: set[str] = set()
@@ -459,16 +472,21 @@ async def verify_configs(uris: list[str]) -> list[dict]:
         if hp:
             host, port = hp
             if host and 1 <= port <= 65535:
-                parsed.append({"uri": uri, "host": host, "port": port,
-                                "protocol": classify(uri)})
+                parsed.append({
+                    "uri":      uri,
+                    "host":     host,
+                    "port":     port,
+                    "protocol": classify(uri),
+                })
                 unique_hosts.add(host)
 
-    print(f"  Parsed {len(parsed)} configs with valid host:port")
+    print(f"  Parsed {len(parsed)} configs with valid host:port "
+          f"({len(uris) - len(parsed)} unparseable)")
 
     # Batch GeoIP
     host_cc = await batch_geoip(list(unique_hosts))
 
-    # TCP reachability check (just to the proxy server itself)
+    # TCP reachability check
     print(f"  TCP-checking {len(parsed)} configs ...")
     sem = asyncio.Semaphore(MAX_WORKERS)
 
@@ -484,17 +502,16 @@ async def verify_configs(uris: list[str]) -> list[dict]:
             )
             return {
                 **cfg,
-                "country": cc,
-                "iran_exit":    cc == "IR",
+                "country":         cc,
+                "iran_exit":       cc == "IR",
                 "armenian_bridge": is_armenian,
-                # Configs from bridge-verified sources get the flag
                 "bridge_verified": False,
             }
 
     results_raw = await asyncio.gather(*[check_one(c) for c in parsed])
     results = [r for r in results_raw if r is not None]
 
-    # Mark bridge-verified configs (those ingested from iran-proxy-checker)
+    # Mark bridge-verified configs (sourced from iran-proxy-checker)
     bridge_uris = set(load_iran_proxy_checker_configs())
     for r in results:
         if r["uri"] in bridge_uris:
@@ -503,7 +520,7 @@ async def verify_configs(uris: list[str]) -> list[dict]:
     # Sort: IR-exit > bridge-verified > Armenian > other
     def sort_key(r: dict) -> tuple:
         return (
-            0 if r["iran_exit"] else
+            0 if r["iran_exit"]       else
             1 if r["bridge_verified"] else
             2 if r["armenian_bridge"] else
             3,
@@ -511,72 +528,135 @@ async def verify_configs(uris: list[str]) -> list[dict]:
         )
     results.sort(key=sort_key)
 
+    ir  = sum(1 for r in results if r["iran_exit"])
+    am  = sum(1 for r in results if r["armenian_bridge"] and not r["iran_exit"])
+    bv  = sum(1 for r in results if r["bridge_verified"])
+    oth = len(results) - ir - am
     print(f"  TCP-reachable: {len(results)} configs")
-    ir   = sum(1 for r in results if r["iran_exit"])
-    am   = sum(1 for r in results if r["armenian_bridge"] and not r["iran_exit"])
-    bv   = sum(1 for r in results if r["bridge_verified"])
-    print(f"    IR-exit: {ir} | Armenian-bridge: {am} | Bridge-verified: {bv} | Other: {len(results)-ir-am}")
+    print(f"    IR-exit: {ir} | Armenian-bridge: {am} | Bridge-verified: {bv} | Other: {oth}")
+
     return results
+
+
+# ── Sanity check ──────────────────────────────────────────────────────────────
+
+def check_minimum_configs(results: list[dict]) -> None:
+    """
+    Fail fast if we collected fewer configs than the minimum threshold.
+    Prevents silently pushing empty/broken outputs when upstream sources go down.
+    """
+    if len(results) < MIN_PASSING_CONFIGS:
+        print(
+            f"\nERROR: Only {len(results)} configs passed verification "
+            f"(minimum required: {MIN_PASSING_CONFIGS}). "
+            f"Check source availability and network connectivity.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
 
 # ── Writers ───────────────────────────────────────────────────────────────────
 
 def write_outputs(results: list[dict]) -> None:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    out  = Path("outputs")
+    out = Path("outputs")
     out.mkdir(exist_ok=True)
 
     ir_results = [r for r in results if r["iran_exit"]]
     am_results = [r for r in results if r["armenian_bridge"] and not r["iran_exit"]]
     bv_results = [r for r in results if r["bridge_verified"]]
 
-    # All passing — one URI per line
+    header_stats = (
+        f"# {len(results)} configs | IR-exit: {len(ir_results)} | "
+        f"Armenian-bridge: {len(am_results)} | Bridge-verified: {len(bv_results)}\n"
+    )
+
+    # ── Clean subscription file ──
+    # FIX: Original appended "  # IR-exit" inline comments to URIs, which
+    # breaks ALL subscription parsers (v2rayNG, Hiddify, NekoBox, etc.).
+    # These parsers expect one bare URI per line. The # fragment is already
+    # used for display names inside the URI itself.
     with open(out / "passing_intranet_configs.txt", "w", encoding="utf-8") as f:
         f.write(f"# Iran Intranet Access Configs — {now}\n")
-        f.write(f"# {len(results)} configs | IR-exit: {len(ir_results)} | "
-                f"Armenian-bridge: {len(am_results)} | Bridge-verified: {len(bv_results)}\n")
+        f.write(header_stats)
         f.write("# Sorted: IR-exit > bridge-verified > Armenian > other\n")
         f.write("# Import this file as a subscription in Hiddify / v2rayNG / NekoBox\n\n")
         for r in results:
-            tag = ("IR-exit" if r["iran_exit"] else
-                   "bridge-verified" if r["bridge_verified"] else
-                   "armenian-bridge" if r["armenian_bridge"] else
-                   f"other-{r['country']}")
+            f.write(r["uri"] + "\n")  # bare URI only — parsers require this
+
+    # ── Annotated file (human-readable, not for direct import) ──
+    with open(out / "passing_intranet_configs_annotated.txt", "w", encoding="utf-8") as f:
+        f.write(f"# Iran Intranet Access Configs (ANNOTATED) — {now}\n")
+        f.write(header_stats)
+        f.write("# NOTE: This file has inline comments — do NOT import as subscription.\n")
+        f.write("# Use passing_intranet_configs.txt for client imports.\n\n")
+        for r in results:
+            tag = (
+                "IR-exit"          if r["iran_exit"]       else
+                "bridge-verified"  if r["bridge_verified"] else
+                "armenian-bridge"  if r["armenian_bridge"] else
+                f"other-{r['country'] or 'unknown'}"
+            )
             f.write(f"{r['uri']}  # {tag}\n")
 
-    with open(out / "passing_intranet_configs.json", "w", encoding="utf-8") as f:
-        json.dump({"checked_at": now, "count": len(results), "configs": results},
-                  f, indent=2, ensure_ascii=False)
+    # ── IR-exit only ──
+    # FIX: Added dedicated IR-exit output — these are the highest-value
+    # configs and deserve a separate file for easy distribution.
+    with open(out / "ir_exit_configs.txt", "w", encoding="utf-8") as f:
+        f.write(f"# Iran IR-EXIT Configs ONLY — {now}\n")
+        f.write(f"# {len(ir_results)} configs with Iranian IP exit\n\n")
+        for r in ir_results:
+            f.write(r["uri"] + "\n")
 
-    # Base64 subscription (import URL)
+    # ── Armenian bridge only ──
+    with open(out / "armenian_bridge_configs.txt", "w", encoding="utf-8") as f:
+        f.write(f"# Armenian Bridge Configs — {now}\n")
+        f.write(f"# {len(am_results)} configs — Armenian exit, potential Iran routing\n\n")
+        for r in am_results:
+            f.write(r["uri"] + "\n")
+
+    # ── JSON (structured with metadata) ──
+    with open(out / "passing_intranet_configs.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {"checked_at": now, "count": len(results), "configs": results},
+            f, indent=2, ensure_ascii=False,
+        )
+
+    # ── Base64 subscription blob ──
     raw_uris = "\n".join(r["uri"] for r in results)
     with open(out / "passing_intranet_configs_base64.txt", "w") as f:
         f.write(base64.b64encode(raw_uris.encode()).decode())
 
-    # Hiddify outbound format (top 20)
+    # ── Hiddify outbound format ──
+    # FIX: Original stored only server/port/type — completely unusable because
+    # Hiddify needs authentication (UUID, password, encryption, etc.).
+    # The only portable format is the raw URI, which Hiddify can parse natively.
+    # We output a Hiddify-compatible subscription JSON using URIs directly.
     hiddify_pool = (ir_results + bv_results + am_results)[:20]
     hiddify: dict = {
+        "generated_at": now,
+        "note": "Top-priority Iranian intranet configs. Import URIs into Hiddify via Add > URI.",
         "outbounds": [],
-        "route":     {"final": "proxy"},
+        "route": {"final": "proxy"},
     }
     for i, r in enumerate(hiddify_pool):
-        hp = parse_host_port(r["uri"])
-        if hp:
-            hiddify["outbounds"].append({
-                "type":        r["protocol"],
-                "server":      hp[0],
-                "server_port": hp[1],
-                "tag":         f"iran-intranet-{i}",
-                "comment":     (
-                    "IR-exit" if r["iran_exit"] else
-                    "bridge-verified" if r["bridge_verified"] else
-                    "armenian-bridge"
-                ),
-            })
+        priority = (
+            "IR-exit"         if r["iran_exit"]       else
+            "bridge-verified" if r["bridge_verified"] else
+            "armenian-bridge"
+        )
+        # Store full URI so Hiddify/clients can parse auth params themselves
+        hiddify["outbounds"].append({
+            "tag":      f"iran-intranet-{i:02d}",
+            "priority": priority,
+            "country":  r.get("country", ""),
+            "protocol": r["protocol"],
+            "uri":      r["uri"],   # full URI — contains UUID/password/all params
+        })
     with open(out / "hiddify_intranet.json", "w", encoding="utf-8") as f:
         json.dump(hiddify, f, indent=2, ensure_ascii=False)
 
-    # Per-protocol splits
+    # ── Per-protocol splits ──
     proto_dir = out / "by_protocol"
     proto_dir.mkdir(exist_ok=True)
     protos = ["vmess", "vless", "ss", "trojan", "hysteria2", "tuic", "wireguard", "other"]
@@ -591,11 +671,15 @@ def write_outputs(results: list[dict]) -> None:
                 for u in proto_uris:
                     f.write(u + "\n")
 
+    # ── Summary ──
     print(f"\nOutputs written to outputs/:")
-    print(f"  passing_intranet_configs.txt        ({len(results)} configs)")
+    print(f"  passing_intranet_configs.txt            ({len(results)} configs — subscription-ready)")
+    print(f"  passing_intranet_configs_annotated.txt  ({len(results)} configs — human-readable)")
+    print(f"  ir_exit_configs.txt                     ({len(ir_results)} IR-exit configs)")
+    print(f"  armenian_bridge_configs.txt             ({len(am_results)} Armenian configs)")
     print(f"  passing_intranet_configs.json")
-    print(f"  passing_intranet_configs_base64.txt (subscription-ready)")
-    print(f"  hiddify_intranet.json               ({len(hiddify_pool)} outbounds)")
+    print(f"  passing_intranet_configs_base64.txt     (subscription-ready)")
+    print(f"  hiddify_intranet.json                   ({len(hiddify_pool)} outbounds with full URIs)")
     for proto in protos:
         n = len(buckets[proto])
         if n:
@@ -612,7 +696,10 @@ async def main() -> None:
     print(f"TCP timeout            : {TCP_TIMEOUT}s")
     print(f"Max workers            : {MAX_WORKERS}")
     print(f"Skip v2ray live test   : {SKIP_V2RAY_TEST}")
+    print(f"Min passing configs    : {MIN_PASSING_CONFIGS}")
     print(sep)
+
+    t0 = time.monotonic()
 
     print("\n[1/3] Collecting configs from all sources …")
     uris = await collect_all()
@@ -620,11 +707,15 @@ async def main() -> None:
     print(f"\n[2/3] Verifying {len(uris)} configs …")
     results = await verify_configs(uris)
 
-    print(f"\n[3/3] Writing outputs …")
+    print("\n[3/3] Checking minimum threshold …")
+    check_minimum_configs(results)
+
+    print("\n[4/4] Writing outputs …")
     write_outputs(results)
 
+    elapsed = time.monotonic() - t0
     print(f"\n{sep}")
-    print(f"Done — {len(results)} configs available for Iranian intranet access.")
+    print(f"Done in {elapsed:.0f}s — {len(results)} configs available for Iranian intranet access.")
     print(sep)
 
 
