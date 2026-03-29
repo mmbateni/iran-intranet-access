@@ -1,0 +1,147 @@
+{
+  "outbounds": [
+    {
+      "type": "trojan",
+      "server": "185.143.235.5",
+      "server_port": 443,
+      "tag": "iran-intranet-0",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "trojan",
+      "server": "185.143.235.5",
+      "server_port": 443,
+      "tag": "iran-intranet-1",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "trojan",
+      "server": "185.143.235.5",
+      "server_port": 443,
+      "tag": "iran-intranet-2",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.232.200",
+      "server_port": 443,
+      "tag": "iran-intranet-3",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "anten.ir",
+      "server_port": 443,
+      "tag": "iran-intranet-4",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "85.133.249.43",
+      "server_port": 58387,
+      "tag": "iran-intranet-5",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.233.5",
+      "server_port": 443,
+      "tag": "iran-intranet-6",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.233.235",
+      "server_port": 443,
+      "tag": "iran-intranet-7",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.234.5",
+      "server_port": 443,
+      "tag": "iran-intranet-8",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "arvancloud.ir",
+      "server_port": 80,
+      "tag": "iran-intranet-9",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "snapp.ir",
+      "server_port": 80,
+      "tag": "iran-intranet-10",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "my.protag.ir",
+      "server_port": 80,
+      "tag": "iran-intranet-11",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "im2.newdesigne.ir",
+      "server_port": 80,
+      "tag": "iran-intranet-12",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "snapp.ir",
+      "server_port": 443,
+      "tag": "iran-intranet-13",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.233.120",
+      "server_port": 443,
+      "tag": "iran-intranet-14",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.233.200",
+      "server_port": 80,
+      "tag": "iran-intranet-15",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "185.143.234.122",
+      "server_port": 80,
+      "tag": "iran-intranet-16",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "45.131.4.192",
+      "server_port": 80,
+      "tag": "iran-intranet-17",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "79.175.136.84",
+      "server_port": 47266,
+      "tag": "iran-intranet-18",
+      "comment": "IR-exit"
+    },
+    {
+      "type": "vless",
+      "server": "anten.ir",
+      "server_port": 443,
+      "tag": "iran-intranet-19",
+      "comment": "IR-exit"
+    }
+  ],
+  "route": {
+    "final": "proxy"
+  }
+}
