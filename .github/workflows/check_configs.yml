@@ -1,11 +1,20 @@
 name: Iran Intranet Config Collector
 
-# Runs daily to refresh the config list.
+# Runs twice daily to refresh the config list.
 # Also pulls the latest verified outputs from iran-proxy-checker (Armenian bridge
 # configs that are already proven to route into Iranian IP space).
+#
+# Schedule (both times in UTC):
+#   03:30 UTC  — overnight refresh (30 min after iran-proxy-checker finishes)
+#   05:40 UTC  — 10:10 AM Tehran (IRDT, UTC+4:30, active ~Mar–Sep)
+#                Note: shifts to 06:40 UTC in winter (IRST, UTC+3:30, Oct–Mar)
+#                Adjust the second cron to "40 6 * * *" in winter if exact
+#                Tehran time matters; otherwise 05:40 UTC is a good year-round
+#                approximation that stays within ±30 min of 10:10 AM Tehran.
 on:
   schedule:
-    - cron: "30 3 * * *"   # 03:30 UTC daily — 30 min after iran-proxy-checker finishes
+    - cron: "30 3 * * *"   # 03:30 UTC — overnight refresh
+    - cron: "40 5 * * *"   # 05:40 UTC — ≈10:10 AM Tehran (IRDT/summer)
   workflow_dispatch:
 
 env:
