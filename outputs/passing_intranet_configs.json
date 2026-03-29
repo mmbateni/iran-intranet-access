@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-03-29 23:41 UTC",
-  "count": 4386,
+  "checked_at": "2026-03-29 23:55 UTC",
+  "count": 4387,
   "configs": [
     {
       "uri": "trojan://biS(YrwB,3L$@185.143.235.5:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=mydigipay.com#برای",
@@ -1043,16 +1043,6 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ@n8mrcg0060183sf.cybervena.com:50099#%3E%3E%40v2nodes%3A%3ATW",
-      "host": "n8mrcg0060183sf.cybervena.com",
-      "port": 50099,
-      "protocol": "ss",
-      "country": "TW",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ@n8mrcg006021kdp.cybervena.com:50099#%3E%3E%40oneclickvpnkeys%3A%3ATW",
       "host": "n8mrcg006021kdp.cybervena.com",
       "port": 50099,
@@ -1075,16 +1065,6 @@
     {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ@r3mrcg001166nc2.cybervena.com:50099#%3E%3E%40v2nodes%3A%3ATW",
       "host": "r3mrcg001166nc2.cybervena.com",
-      "port": 50099,
-      "protocol": "ss",
-      "country": "TW",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ@r3mrcg00121233v.cybervena.com:50099#%3E%3E%40oneclickvpnkeys%3A%3ATW",
-      "host": "r3mrcg00121233v.cybervena.com",
       "port": 50099,
       "protocol": "ss",
       "country": "TW",
@@ -2663,16 +2643,6 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@r3mrcg001188p8v.cybervena.com:50099#%F0%9F%87%B9%F0%9F%87%BCTW-36.227.194.34-0276",
-      "host": "r3mrcg001188p8v.cybervena.com",
-      "port": 50099,
-      "protocol": "ss",
-      "country": "TW",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@r3mrcg007116sfa.cybervena.com:50099#%F0%9F%87%B9%F0%9F%87%BCTW-36.224.140.237-0285",
       "host": "r3mrcg007116sfa.cybervena.com",
       "port": 50099,
@@ -2815,16 +2785,6 @@
     {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@114.35.191.123:50099#%F0%9F%87%B9%F0%9F%87%BCTW-114.35.191.123-0265",
       "host": "114.35.191.123",
-      "port": 50099,
-      "protocol": "ss",
-      "country": "TW",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@r3mrcg00121233v.cybervena.com:50099#%F0%9F%87%B9%F0%9F%87%BCTW-111.248.110.25-0262",
-      "host": "r3mrcg00121233v.cybervena.com",
       "port": 50099,
       "protocol": "ss",
       "country": "TW",
@@ -3008,16 +2968,6 @@
       "port": 990,
       "protocol": "ss",
       "country": "BO",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@n8mrcg005938lsz.cybervena.com:50099#%F0%9F%87%B9%F0%9F%87%BCTW-111.250.225.82-0252",
-      "host": "n8mrcg005938lsz.cybervena.com",
-      "port": 50099,
-      "protocol": "ss",
-      "country": "TW",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -3343,11 +3293,11 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoYkdycGZ2TnJKc1VtS21QYlIzaVky@tinkered-pennies-puppies.freesocks.work:443#%F0%9F%87%BA%F0%9F%87%B8%20USA%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85",
-      "host": "tinkered-pennies-puppies.freesocks.work",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphZHVCOUhHeFFIakEyU0JNUmprSFg2@102.37.156.224:443#Telegram%3A%20%20%40Zero_Tunnel",
+      "host": "102.37.156.224",
       "port": 443,
       "protocol": "ss",
-      "country": "US",
+      "country": "ZA",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -4397,7 +4347,7 @@
       "host": "cn-2.tonworldnews.com",
       "port": 8083,
       "protocol": "ss",
-      "country": "PL",
+      "country": "FI",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -5023,16 +4973,6 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoeWVSc2xXaHlCYW5SRFc2UHlUaVND@212.192.14.73:65330#RU%F0%9F%87%B7%F0%9F%87%BA+%7C+212.192.14.73-65330+%7C+139.35ms",
-      "host": "212.192.14.73",
-      "port": 65330,
-      "protocol": "ss",
-      "country": "RU",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoYzhMTUpldzNGbDlNYmNGQ29GZ1Qw@46.246.96.30:31561#SE%F0%9F%87%B8%F0%9F%87%AA+%7C+46.246.96.30-31561+%7C+122.06ms",
       "host": "46.246.96.30",
       "port": 31561,
@@ -5563,16 +5503,6 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPcXQ5a2d5TUdCaU9BSlBHNHVaWGx2@31.210.50.196:12422#TR%F0%9F%87%B9%F0%9F%87%B7+%7C+31.210.50.196-12422+%7C+142.55ms",
-      "host": "31.210.50.196",
-      "port": 12422,
-      "protocol": "ss",
-      "country": "TR",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPTUg5N0k3bVJOQmNVdWdLczJhOE9n@134.17.17.36:26349#BY%F0%9F%87%A7%F0%9F%87%BE+%7C+134.17.17.36-26349+%7C+124.06ms",
       "host": "134.17.17.36",
       "port": 26349,
@@ -5963,6 +5893,16 @@
       "bridge_verified": false
     },
     {
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxWFNIRmpYTUxEZWR0TUxKTEdESWU4@46.246.97.195:23931#SE%F0%9F%87%B8%F0%9F%87%AA+%7C+46.246.97.195-23931+%7C+124.79ms",
+      "host": "46.246.97.195",
+      "port": 23931,
+      "protocol": "ss",
+      "country": "SE",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxU2xJakRLcElscHpaUGdUMzN4NkVi@45.15.162.92:64351#CY%F0%9F%87%A8%F0%9F%87%BE+%7C+45.15.162.92-64351+%7C+111.27ms",
       "host": "45.15.162.92",
       "port": 64351,
@@ -6105,6 +6045,16 @@
     {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@r3mrcg001121x36.cybervena.com:50099#TW%F0%9F%87%B9%F0%9F%87%BC+%7C+r3mrcg001121x36.cybervena.com-50099+%7C+228.54ms",
       "host": "r3mrcg001121x36.cybervena.com",
+      "port": 50099,
+      "protocol": "ss",
+      "country": "TW",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@ncmrcg0001797nk.cybervena.com:50099#TW%F0%9F%87%B9%F0%9F%87%BC+%7C+ncmrcg0001797nk.cybervena.com-50099+%7C+250.36ms",
+      "host": "ncmrcg0001797nk.cybervena.com",
       "port": 50099,
       "protocol": "ss",
       "country": "TW",
@@ -8323,16 +8273,6 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@111.248.110.25:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20167957",
-      "host": "111.248.110.25",
-      "port": 50099,
-      "protocol": "ss",
-      "country": "TW",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@36.224.128.159:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20773444",
       "host": "36.224.128.159",
       "port": 50099,
@@ -8345,6 +8285,16 @@
     {
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@1.161.246.129:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20264352",
       "host": "1.161.246.129",
+      "port": 50099,
+      "protocol": "ss",
+      "country": "TW",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@36.230.6.242:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20720208",
+      "host": "36.230.6.242",
       "port": 50099,
       "protocol": "ss",
       "country": "TW",
@@ -8723,8 +8673,8 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@111.248.110.25:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20832926",
-      "host": "111.248.110.25",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@111.241.84.132:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20446003",
+      "host": "111.241.84.132",
       "port": 50099,
       "protocol": "ss",
       "country": "TW",
@@ -9053,8 +9003,8 @@
       "bridge_verified": false
     },
     {
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@111.248.110.25:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20882613",
-      "host": "111.248.110.25",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ=@36.230.6.242:50099#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20318225",
+      "host": "36.230.6.242",
       "port": 50099,
       "protocol": "ss",
       "country": "TW",
@@ -9818,6 +9768,16 @@
       "port": 443,
       "protocol": "trojan",
       "country": "LT",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "trojan://telegram-id-privatevpns@51.44.121.226:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#(S103)🇨🇵t.me/PrivateVPNs",
+      "host": "51.44.121.226",
+      "port": 22222,
+      "protocol": "trojan",
+      "country": "FR",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -11913,6 +11873,16 @@
       "bridge_verified": false
     },
     {
+      "uri": "trojan://mj5JfghL49jcoBbx4E1GsjQ7YFtC9pYG@141.227.139.214:443?fp=chrome&pbk=tBkerXY35gLcPCRzvthi0OGQD4eGXEg0G7ojdqZmwBc&security=reality&serviceName=github.com&sid=3ef8cdbc7b7c4c5f&sni=github.com&type=grpc#REALITY|US🇺🇸",
+      "host": "141.227.139.214",
+      "port": 443,
+      "protocol": "trojan",
+      "country": "CH",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
       "uri": "trojan://humanity@www.multiplydose.com:443?path=%2Fassignment&security=tls&insecure=0&type=ws&allowInsecure=0#RELAY🚩",
       "host": "www.multiplydose.com",
       "port": 443,
@@ -13843,16 +13813,6 @@
       "bridge_verified": false
     },
     {
-      "uri": "vless://d4e52293-4a82-404c-ac29-93afc006dcbb@bitbolajepe.vip:443?path=%2FTelegram%40V2ray_Alpha%3Dcitlali.shorekeeper.ir&security=tls&alpn=http%2F1.1&encryption=none&host=crolindd.dearcarlotta.cloudns.org&fp=random&type=ws&sni=crolindd.dearcarlotta.cloudns.org#@meli_proxyy",
-      "host": "bitbolajepe.vip",
-      "port": 443,
-      "protocol": "vless",
-      "country": "",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
       "uri": "vless://d4e52293-4a82-404c-ac29-93afc006dcbb@45.194.53.52:443?path=%2FTelegram%40V2ray_Alpha%3Fed%3D512&security=tls&alpn=http%2F1.1&encryption=none&host=crolindd.dearcarlotta.cloudns.org&fp=chrome&type=ws&sni=crolindd.dearcarlotta.cloudns.org#@meli_proxyy",
       "host": "45.194.53.52",
       "port": 443,
@@ -15463,6 +15423,16 @@
       "bridge_verified": false
     },
     {
+      "uri": "vless://21915536-afb5-4a0c-b047-fcf549d3a173@185.125.103.147:443?security=reality&amp%3Bencryption=none&amp%3Bpbk=1HeKf_8KDjfzXfUi9P7WBaGStMvr96TKdUbofpkwBzQ&amp%3BheaderType=none&amp%3Bfp=chrome&amp%3Btype=tcp&amp%3Bsni=wikihow.com&amp%3Bsid=8bd29483ded126b4#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20VLESS%20%7C%20%40prrofile_purple%20%231",
+      "host": "185.125.103.147",
+      "port": 443,
+      "protocol": "vless",
+      "country": "RU",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
       "uri": "vless://203b0744-f943-4bba-a8d2-cab635467c46@45.136.126.16:443?security=reality&amp%3Bencryption=none&amp%3Bpbk=_L_eqCCzVbP0fzWTA_AqtmlyZVscCzrJ5b2nXFnq3U0&amp%3BheaderType=none&amp%3Bfp=chrome&amp%3Btype=tcp&amp%3Bsni=google.com&amp%3Bsid=d020b2#%F0%9F%87%B3%F0%9F%87%B1%20NL%20%7C%20VLESS%20%7C%20%40prrofile_purple%20%231",
       "host": "45.136.126.16",
       "port": 443,
@@ -16647,7 +16617,7 @@
       "host": "brenna.ns.cloudflare.com",
       "port": 443,
       "protocol": "vless",
-      "country": "CA",
+      "country": "US",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -23317,7 +23287,7 @@
       "host": "brenna.ns.cloudflare.com",
       "port": 443,
       "protocol": "vless",
-      "country": "CA",
+      "country": "US",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -25297,7 +25267,7 @@
       "host": "ss.mrrnasr.ir",
       "port": 443,
       "protocol": "vless",
-      "country": "DK",
+      "country": "CA",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -25448,16 +25418,6 @@
       "port": 443,
       "protocol": "vless",
       "country": "PL",
-      "iran_exit": false,
-      "armenian_bridge": false,
-      "bridge_verified": false
-    },
-    {
-      "uri": "vless://f85e436354ba409d9cce61a0d2185c0f@62.133.63.154:8443?encryption=none&type=xhttp&path=%2Fx&security=reality&sni=ya.ru&pbk=BY4c_1BeR31g3UxzO8GCtvi2yKLatiUII7VjuzXMGC8&sid=aabbccdd&fp=random#REALITY|TR🇹🇷",
-      "host": "62.133.63.154",
-      "port": 8443,
-      "protocol": "vless",
-      "country": "TR",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -26027,7 +25987,7 @@
       "host": "germ-bridge.sbrf-cdn342.ru",
       "port": 443,
       "protocol": "vless",
-      "country": "DE",
+      "country": "SE",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -26518,6 +26478,16 @@
       "port": 443,
       "protocol": "vless",
       "country": "RU",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "vless://d2de6d6d-4735-4fe3-b4b6-00a81ced69f5@nl2.srv.happvpn.com:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=cdnjs.com&fp=chrome&security=reality&pbk=MNTWCLyV7EquFn-J0a6KRlQZ0dt6QY5mmu7Dq8uDkxw&sid=4c02bbbfa833b3b6#REALITY|NL🇳🇱",
+      "host": "nl2.srv.happvpn.com",
+      "port": 443,
+      "protocol": "vless",
+      "country": "NL",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -30617,7 +30587,7 @@
       "host": "brenna.ns.cloudflare.com",
       "port": 2096,
       "protocol": "vless",
-      "country": "CA",
+      "country": "US",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -31998,6 +31968,16 @@
       "port": 443,
       "protocol": "vless",
       "country": "US",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "vless://1034a55b-ea7e-4a96-a7fa-d7cae5ab5523@95.163.152.83:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=ExkbbVbDnjp9RRcjSVbUzrkKnq78gL5KPOIJFAwXdXY&security=reality&sid=977198bfb51105&sni=autotuojat.fi&type=tcp#REALITY|FR🇫🇷",
+      "host": "95.163.152.83",
+      "port": 443,
+      "protocol": "vless",
+      "country": "FR",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -35408,6 +35388,26 @@
       "port": 443,
       "protocol": "vless",
       "country": "NL",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "vless://1034a55b-ea7e-4a96-a7fa-d7cae5ab5523@95.163.152.83:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=autotuojat.fi&pbk=ExkbbVbDnjp9RRcjSVbUzrkKnq78gL5KPOIJFAwXdXY&sid=977198bfb51105#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20368119",
+      "host": "95.163.152.83",
+      "port": 443,
+      "protocol": "vless",
+      "country": "FR",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "vless://1034a55b-ea7e-4a96-a7fa-d7cae5ab5523@95.163.152.83:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=random&sni=autotuojat.fi&pbk=ExkbbVbDnjp9RRcjSVbUzrkKnq78gL5KPOIJFAwXdXY&sid=977198bfb51105&spx=/#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20875047",
+      "host": "95.163.152.83",
+      "port": 443,
+      "protocol": "vless",
+      "country": "FR",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
@@ -39028,6 +39028,16 @@
       "port": 28190,
       "protocol": "vless",
       "country": "US",
+      "iran_exit": false,
+      "armenian_bridge": false,
+      "bridge_verified": false
+    },
+    {
+      "uri": "vless://1486220d-9247-4346-b23e-6e26e870d2a7@178.250.246.103:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&sni=max.ru:443&pbk=D5ttWzeUeEo0oKchjhHGY7Z8jFrAB-BOz6kdQpCrZg0#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20583682",
+      "host": "178.250.246.103",
+      "port": 443,
+      "protocol": "vless",
+      "country": "RU",
       "iran_exit": false,
       "armenian_bridge": false,
       "bridge_verified": false
