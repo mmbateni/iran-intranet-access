@@ -102,3 +102,8 @@ iran-proxy-checker Armenian bridge configs  ←── already verified to reach 
 4. Enable Actions → the workflow runs automatically every day
 
 No secrets are required if both repos are public.
+
+## In Outputs
+
+ir_exit_configs.txt — IR-exit configs are the most valuable and most requested subset; they now get their own file.
+armenian_bridge_configs.txt — Same rationale for the second-priority tier.
