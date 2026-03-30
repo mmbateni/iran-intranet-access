@@ -1,47 +1,41 @@
 name: Iran Intranet Config Collector
 
-# ── Direction ─────────────────────────────────────────────────────────────────
 # Direction A — Diaspora / researchers OUTSIDE Iran → SHOMA
 #
-# Collects and verifies proxy configs that EXIT inside Iranian IP space,
-# enabling access to the National Information Network (SHOMA) from abroad.
+# GitHub Free Tier budget:
+#   2 runs/day × ~15 min = ~900 min/month  (limit: 2,000 min/month)
 #
-# Direction B (Iran → Global Internet) is a separate project.
-# See: https://github.com/Iman/javidnet
-#
-# ── GitHub Free Tier Budget ───────────────────────────────────────────────────
-# Free tier: 2,000 minutes/month
-# This workflow: 2 runs/day × ~15 min = ~900 min/month  ✓ (1,100 min headroom)
-#
-# ── Schedule ──────────────────────────────────────────────────────────────────
-# Two runs per day, timed to Tehran business hours:
-#
-# UTC        IRDT (summer, UTC+4:30)   Purpose
-# ─────────  ───────────────────────   ────────────────────────────
-# 03:30      08:00                     Morning — overnight aggregators updated
-# 13:30      18:00                     Evening — peak Iranian usage window
-#
-# Winter (IRST = UTC+3:30, Oct–Mar): same UTC times, Tehran +1h shift.
+# Schedule — Tehran business hours:
+# UTC        IRDT (summer UTC+4:30)
+# 03:30      08:00  morning
+# 13:30      18:00  evening
 
 on:
   schedule:
-    - cron: "30  3 * * *"    # 08:00 IRDT morning
-    - cron: "30 13 * * *"    # 18:00 IRDT evening
-  workflow_dispatch:         # allow manual runs
+    - cron: "30  3 * * *"
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+    inputs:
+      probe_enabled:
+        description: "Enable HTTP-level liveness probing (slower but more accurate)"
+        required: false
+        default: "false"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  TCP_TIMEOUT:            "3"
-  HTTP_TIMEOUT:           "10"
-  MAX_WORKERS:            "80"
-  SKIP_V2RAY_TEST:        "1"
-  MIN_PASSING_CONFIGS:    "100"
+  TCP_TIMEOUT:          "4"
+  MAX_WORKERS:          "60"
+  SKIP_V2RAY_TEST:      "1"
+  MIN_PASSING_CONFIGS:  "30"   # lowered — HTTP probe eliminates more dead configs
+  # HTTP probe: set to "1" for manual runs when you want accurate results.
+  # Disabled by default on scheduled runs to keep runtime under 30 min.
+  PROBE_ENABLED:        "0"
 
 jobs:
   collect:
     name: Collect & Verify Intranet Configs
     runs-on: ubuntu-latest
-    timeout-minutes: 30      # hard ceiling; normal run finishes in ~12-15 min
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -50,9 +44,6 @@ jobs:
         with:
           ref: main
 
-      # ── Pull bootstrap configs from iran-proxy-checker ──────────────────────
-      # These already passed the Armenian-bridge test in a previous run.
-      # Non-fatal if the repo is private or not yet set up.
       - name: Checkout iran-proxy-checker outputs
         uses: actions/checkout@v4
         with:
@@ -61,8 +52,6 @@ jobs:
           sparse-checkout: |
             armenia_iran_bridge_configs.txt
             armenia_iran_bridge_configs.json
-            working_armenia_configs.txt
-            working_armenia_configs.json
             passing_intranet_configs.txt
             passing_intranet_configs.json
             ir_exit_configs.txt
@@ -85,22 +74,24 @@ jobs:
         env:
           IRAN_PROXY_CHECKER_DIR: iran-proxy-checker
           TCP_TIMEOUT:            ${{ env.TCP_TIMEOUT }}
-          HTTP_TIMEOUT:           ${{ env.HTTP_TIMEOUT }}
           MAX_WORKERS:            ${{ env.MAX_WORKERS }}
           SKIP_V2RAY_TEST:        ${{ env.SKIP_V2RAY_TEST }}
           MIN_PASSING_CONFIGS:    ${{ env.MIN_PASSING_CONFIGS }}
+          # Use workflow_dispatch input if provided, else env default
+          PROBE_ENABLED: ${{ github.event.inputs.probe_enabled || env.PROBE_ENABLED }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: intranet-configs-${{ github.run_id }}
           if-no-files-found: ignore
-          retention-days: 7          # keep small; free tier has 500 MB storage
+          retention-days: 7
           path: |
             outputs/passing_intranet_configs.txt
             outputs/passing_intranet_configs.json
             outputs/passing_intranet_configs_base64.txt
             outputs/ir_exit_configs.txt
+            outputs/ir_reality_configs.txt
             outputs/ir_mobile_exit_configs.txt
             outputs/armenian_bridge_configs.txt
             outputs/by_protocol/
@@ -111,9 +102,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add outputs/ || true
           git diff --cached --quiet || \
-            git commit -m "chore: update intranet configs $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git commit -m "chore: update configs $(date -u +'%Y-%m-%d %H:%M') UTC"
           git stash --include-untracked || true
           git pull --rebase origin main
           git stash pop || true
           git push
-
