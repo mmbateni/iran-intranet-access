@@ -1,5 +1,5 @@
-# TROJAN — Iran Intranet — 2026-03-30 00:32 UTC
-# 403 configs
+# TROJAN — Iran Intranet — 2026-03-30 01:55 UTC
+# 402 configs
 
 trojan://biS(YrwB,3L$@185.143.235.5:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=mydigipay.com#برای
 trojan://biS%28YrwB,3L$@185.143.235.5:443?security=tls&sni=mydigipay.com&type=#IR🇮🇷
@@ -205,7 +205,6 @@ trojan://6d29eb2f74293cb01a19b32cf08ad2e9@160.16.70.180:3700?security=tls&sni=ww
 trojan://WF42809561@touching-pigeon.rooster465.autos:443?security=tls&sni=touching-pigeon.rooster465.autos#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%B3%F0%9F%87%B1-Amsterdam-1076ms-G-Core%20Labs%20S.A.
 trojan://trojan@152.53.200.98:8444?allowInsecure=0&sni=jflsjlaf.pages.dev&ws=1&wspath=%2F#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%92%F0%9F%87%92-Unknown-1096ms-Unknown
 trojan://6d29eb2f74293cb01a19b32cf08ad2e9@153.121.38.213:4937?allowInsecure=0&sni=www.nintendogames.net#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%92%F0%9F%87%92-Unknown-1407ms-Unknown
-trojan://trojan@59.20.121.139:29999?allowInsecure=0&sni=jflsjlaf.pages.dev&ws=1&wspath=%2F#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%92%F0%9F%87%92-Unknown-1470ms-Unknown
 trojan://humanity@v1.dabache.top:443?security=tls&sni=www.multiplydose.com&fp=chrome&insecure=1&allowInsecure=1&type=ws&path=%2Fassignment#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%B3%F0%9F%87%B1-Haarlem-1542ms-Online%20S.A.S.
 trojan://WF42809561@touching-pigeon.rooster465.autos:443?allowInsecure=1#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%92%F0%9F%87%92-Unknown-1702ms-Unknown
 trojan://trojan@152.53.200.167:8444?allowInsecure=0&sni=jflsjlaf.pages.dev&ws=1&wspath=%2F#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%92%F0%9F%87%92-Unknown-1892ms-Unknown
