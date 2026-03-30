@@ -1,15 +1,13 @@
-# Iran IR-EXIT Configs ONLY — 2026-03-30 05:38 UTC
-# 57 configs with Iranian IP exit
+# Iran IR-EXIT Configs ONLY — 2026-03-30 07:10 UTC
+# 56 configs with Iranian IP exit
 
 trojan://biS(YrwB,3L$@185.143.235.5:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=mydigipay.com#برای
 trojan://biS%28YrwB,3L$@185.143.235.5:443?security=tls&sni=mydigipay.com&type=#IR🇮🇷
 trojan://biS%28YrwB%2C3L%24@185.143.235.5:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=mydigipay.com#IR🇮🇷
-vless://02a7f642-d83c-4694-823f-b43fec7df6ea@po.tehranionliine.ir:8880?path=/&security=none&encryption=none&type=ws#[🇮🇷]t.me/ConfigsHub
 vless://08238f73-88ae-49e0-81ad-aa0cf0e901d9@185.143.234.235:443?security=tls&allowInsecure=0&encryption=none&type=ws&host=api.parhamm2.ir&path=/&sni=api.parhamm2.ir&fp=chrome#@nftvici
 vless://19666df6-009d-4426-8f05-7e19b7dc9da9@snapp.ir:443?path=/&security=tls&encryption=none&insecure=0&host=my.simin123.shop&fp=chrome&type=ws&allowInsecure=0&sni=my.simin123.shop#@SPARTAN_YT
 vless://42b8b0f3-cac0-49c4-8b84-4f0efbf902f7@185.143.233.232:443?encryption=none&security=tls&sni=pishparda.ir&fp=chrome&allowInsecure=1&type=ws=-@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann&host=pishparda.ir&path=/voip#مخصوص
 vless://4c003bc1-6e72-40d4-8b9b-0e814e315336@snapp.doctor:80?path=/&security=none&encryption=none&host=shop2.plusself.ir&type=ws#⚡Telegram
-vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?&security=false&fp=chrome&type=ws&headerType=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=/#@v2rayconfigamir
 vless://6a5b2aac-9ed0-4442-9e31-936807e483b7@snapp.ir:80?path=/&security=none&encryption=none&host=ar.liarashop.ir&type=ws#Telegram:
 vless://7b85b51d-4b64-4931-854c-5130389297ab@snapp.ir:80?path=/&security=none&encryption=none&host=dl2.avenflow.ir&type=ws#⚡Telegram
 vless://7f651de1-8396-4b98-aa75-f818bc68c793@im2.newdesigne.ir:80?path=/&security=none&encryption=none&type=ws#@SPARTAN_YT🇺🇸
@@ -39,6 +37,7 @@ vless://af33a49d-e9ff-486b-ba6c-5ee9e8ded6f5@185.143.233.5:80?security=none&allo
 vless://a010db41-c32b-4eff-a75d-0f7cbd2c9ffc@185.143.233.234:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=s1.pishparda.ir&sni=s1.pishparda.ir&fp=chrome&allowInsecure=1#IR🇮🇷
 vless://a010db41-c32b-4eff-a75d-0f7cbd2c9ffc@185.143.233.232:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=pishparda.ir&sni=pishparda.ir&fp=chrome&allowInsecure=1#IR🇮🇷
 vless://9d7c1761-90de-48d1-8eda-31410ac8e848@dl.io-laptop.ir:8443?security=tls&allowInsecure=0&encryption=none&type=xhttp&path=%3Fed%3D2048&sni=dl.io-laptop.ir&fp=chrome&mode=auto&alpn=h2%2Chttp%2F1.1#IR🇮🇷
+vless://870f0165-8308-4e53-b81f-8b54eaf03bd2@62.60.212.199:443?security=reality&encryption=none&pbk=KT7T2Ny_fZP-oU18D5agZeUfe70tc6TIZ2IrlerKeTA&headerType=none&fp=random&spx=%2F&type=tcp&sni=www.figma.com&sid=8784#REALITY|IR🇮🇷
 vless://8585380d-1d74-4b09-a955-5dbf862d13df@185.143.234.5:443?path=%2F%3Fed%3D443&security=tls&encryption=none&insecure=0&host=alef.ir.oadeflantrogm.airasiadl.com&fp=randomized&type=ws&allowInsecure=0&sni=alef.ir.oadeflantrogm.airasiadl.com#IR🇮🇷
 vless://7b85b51d-4b64-4931-854c-5130389297ab@snapp.ir:80?path=%2F&security=none&encryption=none&host=dl2.avenflow.ir&type=ws#IR🇮🇷
 vless://5c57e733-06fb-4ac5-d672-b6823f782577@79.175.136.84:47266?security=none&encryption=none&headerType=none&type=tcp#IR🇮🇷
@@ -54,7 +53,7 @@ vless://3075155b-439e-4f60-9041-e92ff75136fc@my.protag.ir:80?path=%2F&security=n
 vless://13050079-6b9e-4c4e-a3b7-eedc945003ea@185.143.233.200:443?path=%2F%3Fed%3D443&security=tls&encryption=none&insecure=0&host=alef.ir.oadeflantrogm.abrirmahan.com&fp=randomized&type=ws&allowInsecure=0&sni=alef.ir.oadeflantrogm.abrirmahan.com#IR🇮🇷
 vless://13050079-6b9e-4c4e-a3b7-eedc945003ea@185.143.233.200:443?path=%2F%3Fed%3D443&security=tls&encryption=none&host=alef.ir.oadeflantrogm.abrirmahan.com&fp=randomized&type=ws&sni=alef.ir.oadeflantrogm.abrirmahan.com#IR🇮🇷
 vless://1011e6d2-009a-48e6-af63-83796521a0e2@arvancloud.ir:80?path=%2F&security=none&encryption=none&host=test.zahedimobile.ir&type=ws#IR🇮🇷
-vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?encryption=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=%2F&security=none&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20754608
-vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?encryption=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=/&security=none&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20374602
-vless://c060fdda-385d-aea1-3982-5a6c92876481@85.133.249.43:58387?encryption=none&headerType=http&host=arvancloud.ir&security=none&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20585514
+vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?encryption=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=%2F&security=none&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20789848
+vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?encryption=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=/&security=none&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20169946
+vless://c060fdda-385d-aea1-3982-5a6c92876481@85.133.249.43:58387?encryption=none&headerType=http&host=arvancloud.ir&security=none&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20568633
 vmess://eyJhZGQiOiJpLWxvdmUtaXJhbi5hbWxha2F5dW5pLmlyIiwiYWlkIjoiMCIsImFscG4iOiJoMixodHRwLzEuMSIsImZwIjoicmFuZG9taXplZCIsImhvc3QiOiJpLWxvdmUtaXJhbi5hbWxha2F5dW5pLmlyIiwiaWQiOiJmMmZlMGQ3MC0xY2IxLWFlODQtNDU4NS1lYzk2ZDQ1MGRhODAiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiI/ZWQ9MjA1MyIsInBvcnQiOiIyMDUzIiwicHMiOiLwn4eu8J+HtyBJUiB8IFZNRVNTIHwgQGNvbmZpZ19wcm94eSAjMSIsInNjeSI6ImF1dG8iLCJzbmkiOiJpLWxvdmUtaXJhbi5hbWxha2F5dW5pLmlyIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0=
