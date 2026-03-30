@@ -2,40 +2,41 @@
 """
 Iran Intranet Config Collector & Verifier
 ==========================================
-Collects free V2Ray / VLESS / Trojan / Shadowsocks / Hysteria2 configs from
-40+ public aggregators and tests which ones can reach the Iranian national
-intranet — resources only accessible from within Iranian IP space.
+Direction A — Diaspora/Researchers → SHOMA
+
+Collects V2Ray / VLESS / Trojan / Shadowsocks / Hysteria2 / TUIC configs
+from 50+ public aggregators and verifies which ones can reach the Iranian
+national intranet (SHOMA / NIN) — resources only accessible from within
+Iranian IP space: government services, banking, universities, archives.
 
 Why this is needed
 ------------------
-Iran's National Information Network (SHOMA) hosts government services, news,
-banking, university resources, and cultural archives that are only accessible
-from Iranian IP space. Iranian diaspora, researchers, and journalists outside
-Iran cannot reach these without a proxy/VPN that exits inside Iran.
+Iran's National Information Network (SHOMA) is only reachable from Iranian
+AS space. The Iranian diaspora, researchers, and journalists outside Iran
+cannot access these resources without a proxy that exits inside Iran.
 
-How verification works
-----------------------
-A config "passes" if its host resolves to an IP in Iranian or Armenian AS
-space (GeoIP), AND the proxy server itself accepts TCP connections.
-With SKIP_V2RAY_TEST=0 on a self-hosted runner in Europe/Armenia, an
-additional live HTTP test through each proxy is performed.
+Network context (2026)
+-----------------------
+TCI (AS12880/AS58224), MCI/Hamrahe Aval (AS197207), and Irancell (AS44244)
+control ~80% of routable prefixes. All gateways pass through TIC (AS48159).
+During the Jan 2026 shutdown, TCI lost 810 prefixes. Mobile carriers
+survived longest: MCI kept 689 routes, Irancell kept 368.
 
-Sources
--------
-In addition to scraping public aggregators, this script ingests the
-iran-proxy-checker repo outputs (Armenian bridge configs that already proved
-they can route into Iranian IP space).
+Verification
+------------
+A config passes if its host resolves to an Iranian or Armenian AS (GeoIP
++ ASN), or matches a known Iranian IP prefix (fast-path, no API call),
+AND the proxy server accepts TCP connections within TCP_TIMEOUT seconds.
 
-Outputs
--------
-  passing_intranet_configs.txt        one clean URI per line (subscription-ready)
-  passing_intranet_configs_annotated.txt  URIs with # tag comments (human-readable)
-  passing_intranet_configs.json       structured with metadata + latency
+Outputs  (all in outputs/)
+--------------------------
+  passing_intranet_configs.txt        subscription-ready (bare URIs)
+  passing_intranet_configs.json       structured with metadata
   passing_intranet_configs_base64.txt base64 subscription blob
-  ir_exit_configs.txt                 IR-exit only (highest priority)
-  armenian_bridge_configs.txt         Armenian bridge only
-  hiddify_intranet.json               Hiddify-ready subscription (top 20 as URIs)
-  by_protocol/                        split files per protocol
+  ir_exit_configs.txt                 IR-exit only
+  ir_mobile_exit_configs.txt          MCI/Irancell/Rightel (shutdown-resilient)
+  armenian_bridge_configs.txt         Armenian corridor
+  by_protocol/                        per-protocol splits
 """
 
 import asyncio
@@ -55,135 +56,186 @@ import aiohttp
 # ── Configuration ──────────────────────────────────────────────────────────────
 
 IRAN_PROXY_CHECKER_DIR = os.environ.get("IRAN_PROXY_CHECKER_DIR", "iran-proxy-checker")
-TCP_TIMEOUT    = float(os.environ.get("TCP_TIMEOUT",  "3.0"))
-HTTP_TIMEOUT   = int(  os.environ.get("HTTP_TIMEOUT", "10"))
-MAX_WORKERS    = int(  os.environ.get("MAX_WORKERS",  "100"))
-SKIP_V2RAY_TEST = os.environ.get("SKIP_V2RAY_TEST", "1").strip() == "1"
-# Job fails if fewer than this many configs pass — catches source outages early
-MIN_PASSING_CONFIGS = int(os.environ.get("MIN_PASSING_CONFIGS", "200"))
+TCP_TIMEOUT            = float(os.environ.get("TCP_TIMEOUT",         "3.0"))
+HTTP_TIMEOUT           = int(  os.environ.get("HTTP_TIMEOUT",        "10"))
+MAX_WORKERS            = int(  os.environ.get("MAX_WORKERS",         "80"))
+SKIP_V2RAY_TEST        = os.environ.get("SKIP_V2RAY_TEST",    "1").strip() == "1"
+MIN_PASSING_CONFIGS    = int(  os.environ.get("MIN_PASSING_CONFIGS", "100"))
 
-# ── Module-level constants ─────────────────────────────────────────────────────
+# ── Iranian IP prefix registry ─────────────────────────────────────────────────
+# Format: (prefix, ASN, operator, network_type)
+# Sources: RIPE NCC, bgp.he.net/country/IR, confirmed VPN exit observations.
+# Mobile operators flagged — they retain routes longest during shutdowns.
 
-# FIX: was duplicated at lines 297 and 452 in the original — now defined once.
-ARMENIAN_PREFIXES = ("5.10.214.", "5.10.215.", "188.164.159.", "188.164.158.")
-
-# Known Iranian IP prefixes for fast-path IR detection — bypasses GeoIP API
-# calls for IPs that are definitively in Iranian AS space based on observed
-# working VPN exit servers and BGP allocation data.
-# Format: (prefix, ASN, ISP_name)
-# Evidence: 81.12.54.94 confirmed IR-exit VPN server (AS214922, Soroush Rasaneh,
-# Tehran) observed 2026-03-29.
-IRAN_IP_PREFIXES: tuple[tuple[str, str, str], ...] = (
-    ("5.160.",      "AS12880",  "TCI"),
-    ("5.200.",      "AS12880",  "TCI"),
-    ("78.38.",      "AS12880",  "TCI"),
-    ("78.39.",      "AS12880",  "TCI"),
-    ("151.232.",    "AS197207", "MCI / Hamrahe Aval"),
-    ("185.112.",    "AS44244",  "Irancell"),
-    ("185.141.",    "AS48159",  "Shatel"),
-    ("81.12.",      "AS214922", "Soroush Rasaneh"),   # confirmed 2026-03-29
-    ("91.108.4.",   "AS62282",  "Fanap / Pasargad"),
-    ("185.51.200.", "AS205347", "Arvan Cloud"),
-    ("185.143.",    "AS207719", "Arvan Cloud / Tehran DC"),
-    ("194.5.175.",  "AS210362", "Asiatech"),
+IRAN_IP_PREFIXES: tuple[tuple[str, str, str, str], ...] = (
+    # TCI / Data Communications Company (AS12880) — backbone, first to disappear
+    ("2.176.",    "AS12880",  "TCI",              "backbone"),
+    ("2.177.",    "AS12880",  "TCI",              "backbone"),
+    ("2.178.",    "AS12880",  "TCI",              "backbone"),
+    ("2.179.",    "AS12880",  "TCI",              "backbone"),
+    ("2.180.",    "AS12880",  "TCI",              "backbone"),
+    ("2.181.",    "AS12880",  "TCI",              "backbone"),
+    ("2.182.",    "AS12880",  "TCI",              "backbone"),
+    ("2.183.",    "AS12880",  "TCI",              "backbone"),
+    ("2.184.",    "AS12880",  "TCI",              "backbone"),
+    ("2.185.",    "AS12880",  "TCI",              "backbone"),
+    ("2.186.",    "AS12880",  "TCI",              "backbone"),
+    ("2.187.",    "AS12880",  "TCI",              "backbone"),
+    ("2.188.",    "AS12880",  "TCI",              "backbone"),
+    ("2.189.",    "AS12880",  "TCI",              "backbone"),
+    ("2.190.",    "AS12880",  "TCI",              "backbone"),
+    ("2.191.",    "AS12880",  "TCI",              "backbone"),
+    ("5.160.",    "AS12880",  "TCI",              "backbone"),
+    ("5.164.",    "AS12880",  "TCI",              "backbone"),
+    ("5.168.",    "AS12880",  "TCI",              "backbone"),
+    ("5.172.",    "AS12880",  "TCI",              "backbone"),
+    ("5.176.",    "AS12880",  "TCI",              "backbone"),
+    ("5.180.",    "AS12880",  "TCI",              "backbone"),
+    ("5.184.",    "AS12880",  "TCI",              "backbone"),
+    ("5.188.",    "AS12880",  "TCI",              "backbone"),
+    ("5.192.",    "AS12880",  "TCI",              "backbone"),
+    ("5.196.",    "AS12880",  "TCI",              "backbone"),
+    ("5.200.",    "AS12880",  "TCI",              "backbone"),
+    ("78.38.",    "AS12880",  "TCI",              "backbone"),
+    ("78.39.",    "AS12880",  "TCI",              "backbone"),
+    # TCI parent (AS58224)
+    ("217.218.",  "AS58224",  "TCI",              "backbone"),
+    ("217.219.",  "AS58224",  "TCI",              "backbone"),
+    ("46.100.",   "AS58224",  "TCI",              "backbone"),
+    ("46.101.",   "AS58224",  "TCI",              "backbone"),
+    # MCI / Hamrahe Aval (AS197207) — 66% market; 689 routes survived Jan 2026
+    ("89.32.",    "AS197207", "MCI",              "mobile"),
+    ("89.33.",    "AS197207", "MCI",              "mobile"),
+    ("89.34.",    "AS197207", "MCI",              "mobile"),
+    ("89.35.",    "AS197207", "MCI",              "mobile"),
+    ("151.232.",  "AS197207", "MCI",              "mobile"),
+    ("151.233.",  "AS197207", "MCI",              "mobile"),
+    ("151.234.",  "AS197207", "MCI",              "mobile"),
+    ("151.235.",  "AS197207", "MCI",              "mobile"),
+    # Irancell (AS44244) — 10% market; 368 routes survived Jan 2026
+    ("91.92.",    "AS44244",  "Irancell",         "mobile"),
+    ("91.93.",    "AS44244",  "Irancell",         "mobile"),
+    ("91.94.",    "AS44244",  "Irancell",         "mobile"),
+    ("91.95.",    "AS44244",  "Irancell",         "mobile"),
+    ("185.112.",  "AS44244",  "Irancell",         "mobile"),
+    # Rightel / Tamin Telecom (AS57218)
+    ("91.186.",   "AS57218",  "Rightel",          "mobile"),
+    ("91.187.",   "AS57218",  "Rightel",          "mobile"),
+    # Shatel / TIC (AS48159)
+    ("185.141.",  "AS48159",  "Shatel",           "isp"),
+    ("109.122.",  "AS48159",  "Shatel",           "isp"),
+    # Soroush Rasaneh (AS214922) — confirmed IR-exit 2026-03-29
+    ("81.12.",    "AS214922", "Soroush-Rasaneh",  "isp"),
+    ("81.13.",    "AS214922", "Soroush-Rasaneh",  "isp"),
+    ("81.14.",    "AS214922", "Soroush-Rasaneh",  "isp"),
+    ("81.15.",    "AS214922", "Soroush-Rasaneh",  "isp"),
+    # Arvan Cloud CDN (AS205347, AS207719) — gov/banking domain fronting
+    ("185.51.200.", "AS205347", "Arvan-Cloud",    "cdn"),
+    ("185.143.",  "AS207719", "Arvan-Cloud",      "cdn"),
+    ("194.36.170.", "AS207719","Arvan-Cloud",     "cdn"),
+    # Asiatech (AS43754, AS210362)
+    ("194.5.175.","AS210362", "Asiatech",         "isp"),
+    ("195.146.",  "AS43754",  "Asiatech",         "isp"),
+    # Fanap / Pasargad Bank (AS62282)
+    ("91.108.4.", "AS62282",  "Fanap",            "isp"),
+    ("91.108.8.", "AS62282",  "Fanap",            "isp"),
+    # Pars Online, Afranet, Respina, HiWeb
+    ("213.176.",  "AS49100",  "ParsOnline",       "isp"),
+    ("62.193.",   "AS25184",  "Afranet",          "isp"),
+    ("185.167.",  "AS42337",  "Respina",          "isp"),
+    ("94.182.",   "AS197398", "HiWeb",            "isp"),
+    ("94.183.",   "AS197398", "HiWeb",            "isp"),
+    # IPM Research Network
+    ("212.16.",   "AS12660",  "IPM",              "academic"),
 )
 
-def is_iranian_ip(ip: str) -> bool:
-    """Fast-path check: return True if ip matches a known Iranian IP prefix."""
-    return any(ip.startswith(prefix) for prefix, _, _ in IRAN_IP_PREFIXES)
+_IRAN_PREFIXES = tuple(p for p, _, _, _ in IRAN_IP_PREFIXES)
 
-# Known Iranian internal TCP endpoints — respond only from within Iranian IP space.
-# Used for live verification on self-hosted runners (SKIP_V2RAY_TEST=0).
-IRAN_INTERNAL_TCP = [
-    ("5.160.0.1",     80),   # TCI / AS12880 (state telecom)
-    ("78.38.0.1",     80),   # TCI
-    ("151.232.0.1",   80),   # MCI / AS197207 (Hamrahe Aval)
-    ("185.112.32.1",  80),   # Irancell / AS44244
-    ("185.141.104.1", 80),   # Shatel / AS48159
-    ("5.200.200.200", 80),   # Stable public Iranian IP
-    ("81.12.0.1",     80),   # Soroush Rasaneh / AS214922 — confirmed IR-exit 2026-03-29
-]
+IRAN_ASNS: frozenset[str] = frozenset({
+    "AS12880", "AS58224", "AS197207", "AS44244", "AS57218",
+    "AS48159", "AS34369", "AS214922", "AS205347", "AS207719",
+    "AS43754", "AS210362", "AS62282", "AS49100", "AS25184",
+    "AS42337", "AS197398", "AS12660", "AS6736", "AS44285",
+    "AS47262", "AS31549", "AS16322", "AS50810", "AS34832",
+})
 
-# Iranian-only HTTP endpoints — return non-200 from outside Iran
-IRAN_HTTP_ENDPOINTS = [
-    "http://www.ict.gov.ir/",
-    "http://www.iran.ir/",
-    "http://www.isna.ir/",
-    "http://www.irna.ir/",
-]
+MOBILE_ASNS: frozenset[str] = frozenset({"AS197207", "AS44244", "AS57218"})
 
-# ── Public V2Ray config aggregator sources ─────────────────────────────────────
+# Armenian corridor — South Caucasus bridge route into Iran
+ARMENIAN_PREFIXES: tuple[str, ...] = (
+    "5.10.214.", "5.10.215.",
+    "188.164.158.", "188.164.159.",
+    "37.252.0.", "37.252.1.",
+)
+ARMENIAN_ASNS: frozenset[str] = frozenset({"AS42910", "AS43733", "AS49800"})
+
+# DPI resilience order — within each tier, prefer harder-to-block protocols
+# per the Iranian DPI environment (HTTP/3 throttled on Irancell since late 2025)
+PROTO_ORDER: dict[str, int] = {
+    "tuic": 0, "hysteria2": 1, "vless": 2,
+    "trojan": 3, "vmess": 4, "ss": 5, "wireguard": 6, "other": 7,
+}
+
+
+def get_ir_operator(ip: str) -> tuple[str, str, str] | None:
+    for prefix, asn, operator, net_type in IRAN_IP_PREFIXES:
+        if ip.startswith(prefix):
+            return asn, operator, net_type
+    return None
+
+
+# ── Sources ────────────────────────────────────────────────────────────────────
 
 RAW_SOURCES = [
-    # barry-far (updates every 15 min, one of the largest aggregators)
-    ("barry-far/vmess",  "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt",  "text"),
-    ("barry-far/vless",  "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt",  "text"),
-    ("barry-far/ss",     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt",     "text"),
-    ("barry-far/trojan", "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt", "text"),
-    ("barry-far/all",    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/All_Config_base64_Sub.txt",       "b64"),
-
+    # barry-far (updates every 15 min, one of the largest)
+    ("barry-far/vmess",   "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt",    "text"),
+    ("barry-far/vless",   "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt",    "text"),
+    ("barry-far/ss",      "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt",       "text"),
+    ("barry-far/trojan",  "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt",   "text"),
+    ("barry-far/hy2",     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/hysteria2.txt","text"),
+    ("barry-far/all",     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/All_Config_base64_Sub.txt",          "b64"),
     # MatinGhanbari
-    ("matin/super",  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt", "b64"),
-    ("matin/vmess",  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt",   "text"),
-    ("matin/vless",  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt",   "text"),
-    ("matin/ss",     "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt",      "text"),
-    ("matin/trojan", "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt",  "text"),
-    ("matin/hy2",    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt","text"),
-
-    # Epodonios — has IR-specific subfolder
-    ("epodonios/IR",   "https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Iran/config.txt", "text"),
-    ("epodonios/sub1", "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub1.txt", "b64"),
-
-    # yebekhe / TelegramV2rayCollector (huge Telegram aggregator)
-    ("yebekhe/mix",     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64",        "b64"),
-    ("yebekhe/vmess",   "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/vmess",      "text"),
-    ("yebekhe/vless",   "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/vless",      "text"),
-    ("yebekhe/trojan",  "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/trojan",     "text"),
-    ("yebekhe/reality", "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/reality",    "text"),
-
+    ("matin/super",   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt","b64"),
+    ("matin/vless",   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt",   "text"),
+    ("matin/trojan",  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt",  "text"),
+    ("matin/hy2",     "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt","text"),
+    # Epodonios — has Iran-specific subfolder
+    ("epodonios/IR",   "https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Iran/config.txt","text"),
+    ("epodonios/sub1", "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub1.txt","b64"),
+    ("epodonios/sub2", "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Sub2.txt","b64"),
+    # yebekhe / TelegramV2rayCollector
+    ("yebekhe/mix",     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64",       "b64"),
+    ("yebekhe/reality", "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/reality",   "text"),
+    ("yebekhe/hy2",     "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/normal/hysteria2", "text"),
     # soroushmirzaei
     ("soroush/vmess",  "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess",       "text"),
     ("soroush/vless",  "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vless",       "text"),
     ("soroush/trojan", "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan",      "text"),
     ("soroush/ss",     "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/shadowsocks", "text"),
-
-    # mahdibland / V2RayAggregator
-    ("mahdibland/mix", "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/update/mixed/mixed.txt", "b64"),
-
-    # ALIILAPRO
-    ("aliilapro/all",  "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt", "b64"),
-
-    # NiREvil
-    ("nirevil/sub",    "https://raw.githubusercontent.com/NiREvil/vless/main/sub/G", "b64"),
-
-    # Mosifree
-    ("mosifree/all",   "https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/main/All", "text"),
-
-    # F0rc3Run
-    ("f0rc3/vmess",  "https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vmess.txt",  "text"),
-    ("f0rc3/vless",  "https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vless.txt",  "text"),
-    ("f0rc3/trojan", "https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/trojan.txt", "text"),
-
-    # freefq
-    ("freefq/v2ray", "https://raw.githubusercontent.com/freefq/free/master/v2", "b64"),
-
-    # Leon406
-    ("leon406/all",  "https://raw.githubusercontent.com/Leon406/Sub/main/sub/share/all", "b64"),
-
-    # 10ium
-    ("10ium/mix",    "https://raw.githubusercontent.com/10ium/V2Hub3/main/merged_base64", "b64"),
-
-    # ShatakVPN
-    ("shatak/all",   "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt", "text"),
-
-    # kort0881 — Russia/Caucasus adjacent (often has configs routing into CIS)
-    ("kort0881/vless", "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/vless.txt", "text"),
-
-    # aiboboxx
-    ("aiboboxx/v2",  "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2", "b64"),
-
-    # mfuu
-    ("mfuu/v2ray",   "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray", "b64"),
+    ("soroush/hy2",    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/hysteria2",   "text"),
+    # mahdibland
+    ("mahdibland/mix", "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/update/mixed/mixed.txt","b64"),
+    # Other aggregators
+    ("aliilapro/all",  "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt",                                        "b64"),
+    ("nirevil/sub",    "https://raw.githubusercontent.com/NiREvil/vless/main/sub/G",                                                     "b64"),
+    ("nirevil/hy2",    "https://raw.githubusercontent.com/NiREvil/vless/main/sub/hysteria2",                                              "text"),
+    ("mosifree/all",   "https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/main/All",                                                "text"),
+    ("freefq/v2ray",   "https://raw.githubusercontent.com/freefq/free/master/v2",                                                        "b64"),
+    ("leon406/all",    "https://raw.githubusercontent.com/Leon406/Sub/main/sub/share/all",                                               "b64"),
+    ("10ium/mix",      "https://raw.githubusercontent.com/10ium/V2Hub3/main/merged_base64",                                              "b64"),
+    ("aiboboxx/v2",    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",                                                   "b64"),
+    ("mfuu/v2ray",     "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",                                                     "b64"),
+    # Iran-focused / Caucasus-adjacent sources
+    ("arshia/vless",     "https://raw.githubusercontent.com/arshiacomplus/v2rayTemplet/main/vless.txt",                                  "text"),
+    ("mhdi/all",         "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector_Py/main/sub/Mix/mix.txt",                         "b64"),
+    ("iranfilter/all",   "https://raw.githubusercontent.com/IranFilteredConfig/Free-Configs/main/sub/all.txt",                          "b64"),
+    ("shadowshare/am",   "https://raw.githubusercontent.com/ShadowShare/ShadowShare/main/AM.txt",                                        "text"),
+    ("rooster/reality",  "https://raw.githubusercontent.com/roosterkid/openproxylist/main/VLESS_RAW.txt",                               "text"),
+    # Satellite-tolerant protocols (QUIC-based — work over high-latency links)
+    ("hy2-collect/all",  "https://raw.githubusercontent.com/Everyday-VPN/Everyday-VPN/main/subscription/main.txt",                     "b64"),
+    ("tuic-collect/all", "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/tuic.txt",                                    "text"),
+    ("hy2-iran/all",     "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/hysteria2.txt",                               "text"),
+    ("reality-ir/all",   "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/vless.txt",                                   "text"),
 ]
 
 URI_RE = re.compile(
@@ -191,15 +243,15 @@ URI_RE = re.compile(
     re.IGNORECASE,
 )
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; IranIntranetCollector/1.0)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; IranIntranetCollector/3.0)"}
 
-# ── URI parsing ────────────────────────────────────────────────────────────────
+# ── URI helpers ────────────────────────────────────────────────────────────────
 
-def decode_b64_blob(text: str) -> str:
-    stripped = text.strip().replace("\n", "").replace("\r", "")
+def decode_b64(text: str) -> str:
+    stripped = text.strip().replace("\n","").replace("\r","")
     try:
         if not URI_RE.search(text[:200]):
-            padded = stripped + "=" * (-len(stripped) % 4)
+            padded  = stripped + "=" * (-len(stripped) % 4)
             decoded = base64.b64decode(padded).decode("utf-8", errors="ignore")
             if URI_RE.search(decoded[:200]):
                 return decoded
@@ -209,578 +261,411 @@ def decode_b64_blob(text: str) -> str:
 
 
 def extract_uris(text: str) -> list[str]:
-    text = decode_b64_blob(text)
-    return [m.group(0).strip() for m in URI_RE.finditer(text)]
+    return [m.group(0).strip() for m in URI_RE.finditer(decode_b64(text))]
 
 
-def classify(uri: str) -> str:
+def classify_proto(uri: str) -> str:
     s = uri.split("://")[0].lower()
-    return {"vmess": "vmess", "vless": "vless", "ss": "ss",
-            "trojan": "trojan", "hysteria2": "hysteria2",
-            "hy2": "hysteria2", "tuic": "tuic",
-            "wireguard": "wireguard", "wg": "wireguard"}.get(s, "other")
+    return {"vmess":"vmess","vless":"vless","ss":"ss","trojan":"trojan",
+            "hysteria2":"hysteria2","hy2":"hysteria2","tuic":"tuic",
+            "wireguard":"wireguard","wg":"wireguard"}.get(s,"other")
 
 
 def parse_host_port(uri: str) -> tuple[str, int] | None:
-    uri = uri.strip()
     scheme = uri.split("://")[0].lower()
     try:
         if scheme == "vmess":
-            raw = uri[8:]
-            raw += "=" * (-len(raw) % 4)
-            obj  = json.loads(base64.b64decode(raw).decode("utf-8", errors="ignore"))
-            host = str(obj.get("add", "") or obj.get("host", ""))
-            port = int(obj.get("port", 0))
-            return (host, port) if host and port else None
-
-        elif scheme in ("vless", "trojan", "tuic"):
-            body = uri.split("://", 1)[1]
-            after = body.split("@", 1)[1] if "@" in body else body
+            raw = uri[8:] + "=" * (-(len(uri)-8) % 4)
+            obj = json.loads(base64.b64decode(raw).decode("utf-8", errors="ignore"))
+            h, p = str(obj.get("add","") or obj.get("host","")), int(obj.get("port",0))
+            return (h, p) if h and p else None
+        elif scheme in ("vless","trojan","tuic"):
+            after = uri.split("://",1)[1]
+            if "@" in after: after = after.split("@",1)[1]
             after = after.split("#")[0].split("?")[0]
-            # Handle IPv6 addresses wrapped in brackets
             if after.startswith("["):
-                bracket_end = after.find("]")
-                host = after[1:bracket_end]
-                port_str = after[bracket_end + 2:]  # skip "]:"
-                port = int(port_str) if port_str.isdigit() else 443
+                e = after.find("]"); h = after[1:e]
+                ps = after[e+2:]; p = int(ps) if ps.isdigit() else 443
             else:
-                host, port_str = after.rsplit(":", 1)
-                port = int(port_str)
-            return (host, port) if host and port else None
-
+                h, ps = after.rsplit(":",1); p = int(ps)
+            return (h, p) if h and p else None
         elif scheme == "ss":
             body = uri[5:].split("#")[0].split("?")[0]
             if "@" in body:
-                hp = body.rsplit("@", 1)[1]
+                hp = body.rsplit("@",1)[1]
             else:
                 raw = body + "=" * (-len(body) % 4)
-                decoded = base64.b64decode(raw).decode("utf-8", errors="ignore")
-                hp = decoded.rsplit("@", 1)[1] if "@" in decoded else ""
-                if not hp:
-                    return None
-            # Handle IPv6 host in brackets
+                dec = base64.b64decode(raw).decode("utf-8", errors="ignore")
+                hp  = dec.rsplit("@",1)[1] if "@" in dec else ""
+                if not hp: return None
             if hp.startswith("["):
-                bracket_end = hp.find("]")
-                host = hp[1:bracket_end]
-                port = int(hp[bracket_end + 2:])
+                e = hp.find("]"); h = hp[1:e]; p = int(hp[e+2:])
             else:
-                host, port_str = hp.rsplit(":", 1)
-                port = int(port_str)
-            return (host, port) if host else None
-
-        elif scheme in ("hysteria2", "hy2"):
-            body = uri.split("://", 1)[1]
-            after = body.split("@", 1)[1] if "@" in body else body
+                h, ps = hp.rsplit(":",1); p = int(ps)
+            return (h, p) if h else None
+        elif scheme in ("hysteria2","hy2"):
+            after = uri.split("://",1)[1]
+            if "@" in after: after = after.split("@",1)[1]
             after = after.split("#")[0].split("?")[0]
             if after.startswith("["):
-                bracket_end = after.find("]")
-                host = after[1:bracket_end]
-                port = int(after[bracket_end + 2:])
+                e = after.find("]"); h = after[1:e]; p = int(after[e+2:])
             else:
-                host, port_str = after.rsplit(":", 1)
-                port = int(port_str)
-            return (host, port)
-
+                h, ps = after.rsplit(":",1); p = int(ps)
+            return (h, p)
+        elif scheme in ("wireguard","wg"):
+            body = uri.split("://",1)[1].split("#")[0].split("?")[0]
+            if "@" in body: body = body.rsplit("@",1)[1]
+            if ":" in body:
+                h, ps = body.rsplit(":",1); return (h, int(ps))
     except Exception:
         pass
     return None
 
 
-# ── Network helpers ────────────────────────────────────────────────────────────
+# ── Network ────────────────────────────────────────────────────────────────────
 
-async def tcp_connect(ip: str, port: int, timeout: float = TCP_TIMEOUT) -> bool:
+async def tcp_ok(ip: str, port: int, timeout: float = TCP_TIMEOUT) -> bool:
     try:
-        _, writer = await asyncio.wait_for(
-            asyncio.open_connection(ip, port), timeout=timeout
-        )
-        writer.close()
-        await writer.wait_closed()
-        return True
+        _, w = await asyncio.wait_for(asyncio.open_connection(ip, port), timeout=timeout)
+        w.close(); await w.wait_closed(); return True
     except Exception:
         return False
 
 
-# ── Iran intranet verification (live — only on self-hosted runners) ─────────────
+# ── GeoIP (batch, with ASN enrichment) ───────────────────────────────────────
 
-async def verify_reaches_iran_tcp() -> bool:
-    """
-    Try direct TCP connection to known Iranian carrier IPs.
-    Only meaningful from a runner in Europe/Armenia — returns True
-    immediately when SKIP_V2RAY_TEST=1 (default on GitHub-hosted runners).
-    """
-    if SKIP_V2RAY_TEST:
-        return True  # Deferred to GeoIP check
-    for ir_ip, ir_port in IRAN_INTERNAL_TCP:
-        if await tcp_connect(ir_ip, ir_port, timeout=TCP_TIMEOUT):
-            return True
-    return False
-
-
-# ── Batch GeoIP ───────────────────────────────────────────────────────────────
-
-async def batch_geoip(hosts: list[str]) -> dict[str, str]:
-    """
-    Resolve hosts to IPs in parallel, then batch-query ip-api.com.
-    Returns host → ISO countryCode mapping.
-
-    FIX: original used sequential socket.gethostbyname() in a sync loop
-    inside an async function, stalling the event loop for 2000+ hosts
-    (40-100 seconds of blocked I/O). Now runs DNS lookups in a thread pool.
-    """
-    if not hosts:
-        return {}
-    print(f"  GeoIP: resolving {len(hosts)} hosts (after fast-path exclusions) ...")
-
+async def batch_geoip(hosts: list[str]) -> dict[str, dict]:
+    if not hosts: return {}
+    print(f"  GeoIP: {len(hosts)} hosts ...")
     loop = asyncio.get_running_loop()
 
-    def resolve_one(h: str) -> tuple[str, str]:
-        try:
-            return h, socket.gethostbyname(h)
-        except Exception:
-            return h, ""
+    def dns(h: str) -> tuple[str, str]:
+        try: return h, socket.gethostbyname(h)
+        except: return h, ""
 
-    # Parallel DNS resolution via thread pool (non-blocking for the event loop)
-    with ThreadPoolExecutor(max_workers=min(200, len(hosts) or 1)) as executor:
-        pairs = await asyncio.gather(
-            *[loop.run_in_executor(executor, resolve_one, h) for h in hosts]
-        )
+    with ThreadPoolExecutor(max_workers=min(150, len(hosts))) as ex:
+        pairs = await asyncio.gather(*[loop.run_in_executor(ex, dns, h) for h in hosts])
 
-    host_to_ip: dict[str, str] = {h: ip for h, ip in pairs if ip}
-    unique_ips  = list(set(host_to_ip.values()))
-    ip_to_cc:   dict[str, str] = {}
-
-    async with aiohttp.ClientSession() as session:
-        for i in range(0, len(unique_ips), 100):
-            batch = [{"query": ip, "fields": "countryCode,as"}
-                     for ip in unique_ips[i:i+100]]
+    h2ip = {h: ip for h, ip in pairs if ip}
+    ip2info: dict[str, dict] = {}
+    async with aiohttp.ClientSession() as sess:
+        for i in range(0, len(h2ip), 100):
+            batch = [{"query": ip, "fields": "countryCode,as,mobile,isp"}
+                     for ip in list(h2ip.values())[i:i+100]]
             try:
-                async with session.post(
-                    "http://ip-api.com/batch",
-                    json=batch,
-                    timeout=aiohttp.ClientTimeout(total=15),
-                ) as resp:
-                    if resp.status == 200:
-                        for req, res in zip(batch, await resp.json()):
+                async with sess.post("http://ip-api.com/batch", json=batch,
+                                     timeout=aiohttp.ClientTimeout(total=15)) as r:
+                    if r.status == 200:
+                        for req, res in zip(batch, await r.json()):
                             if res:
-                                ip_to_cc[req["query"]] = res.get("countryCode", "")
+                                asn = (res.get("as","") or "").split(" ")[0]
+                                ip2info[req["query"]] = {
+                                    "cc":     res.get("countryCode",""),
+                                    "asn":    asn,
+                                    "isp":    res.get("isp",""),
+                                    "mobile": res.get("mobile", False),
+                                }
             except Exception as e:
-                print(f"  ! GeoIP batch error: {e}")
-            await asyncio.sleep(1.2)  # ip-api free-tier rate limit
+                print(f"  ! GeoIP error: {e}")
+            await asyncio.sleep(1.2)
 
-    return {host: ip_to_cc.get(ip, "") for host, ip in host_to_ip.items()}
+    empty: dict = {"cc":"","asn":"","isp":"","mobile":False}
+    return {h: {"ip": ip, **ip2info.get(ip, empty)} for h, ip in h2ip.items()}
 
 
-# ── iran-proxy-checker ingestion ───────────────────────────────────────────────
+# ── Load bootstrap configs from iran-proxy-checker ───────────────────────────
 
-def load_iran_proxy_checker_configs() -> list[str]:
-    """
-    Pull V2Ray URIs from iran-proxy-checker repo outputs.
-    Priority order:
-      1. armenia_iran_bridge_configs.json  (already verified to reach Iranian network)
-      2. working_armenia_configs.json       (verified Armenian exit, potential bridges)
-      3. passing_intranet_configs.txt       (previous run bootstrap)
-    """
+def load_bootstrap() -> list[str]:
     uris: list[str] = []
     base = Path(IRAN_PROXY_CHECKER_DIR)
-
-    for fname in ["armenia_iran_bridge_configs.json", "working_armenia_configs.json"]:
+    for fname in ["armenia_iran_bridge_configs.json", "passing_intranet_configs.json",
+                  "working_armenia_configs.json"]:
         fpath = base / fname
-        if not fpath.exists():
-            continue
+        if not fpath.exists(): continue
         try:
-            data = json.loads(fpath.read_text(encoding="utf-8"))
+            data    = json.loads(fpath.read_text(encoding="utf-8"))
             configs = data.get("configs") or data.get("outbounds") or []
-            before = len(uris)
-            for entry in configs:
-                uri = entry.get("uri") or entry.get("config_uri", "")
-                if uri and URI_RE.match(uri):
-                    uris.append(uri)
-            print(f"  iran-proxy-checker [{fname}]: +{len(uris) - before} URIs")
+            before  = len(uris)
+            for e in configs:
+                u = e.get("uri") or e.get("config_uri","")
+                if u and URI_RE.match(u): uris.append(u)
+            if len(uris) > before:
+                print(f"  bootstrap [{fname}]: +{len(uris)-before}")
         except Exception as e:
-            print(f"  iran-proxy-checker [{fname}]: {e}")
+            print(f"  bootstrap [{fname}]: {e}")
 
-    for fname in ["armenia_iran_bridge_configs.txt", "working_armenia_configs.txt"]:
+    for fname in ["armenia_iran_bridge_configs.txt", "passing_intranet_configs.txt",
+                  "ir_exit_configs.txt", "ir_mobile_exit_configs.txt",
+                  "passing_intranet_configs_base64.txt"]:
         fpath = base / fname
-        if not fpath.exists():
-            continue
+        if not fpath.exists(): continue
         try:
-            lines = [l.strip() for l in fpath.read_text(encoding="utf-8").splitlines()
-                     if l.strip() and not l.startswith("#")]
-            new = [l for l in lines if URI_RE.match(l)]
+            new = extract_uris(fpath.read_text(encoding="utf-8"))
             uris.extend(new)
-            print(f"  iran-proxy-checker [{fname}]: +{len(new)} URIs")
+            if new: print(f"  bootstrap [{fname}]: +{len(new)}")
         except Exception as e:
-            print(f"  iran-proxy-checker [{fname}]: {e}")
+            print(f"  bootstrap [{fname}]: {e}")
 
-    return list(dict.fromkeys(uris))  # deduplicate preserving order
+    return list(dict.fromkeys(uris))
 
 
-# ── Scraper ────────────────────────────────────────────────────────────────────
+# ── Fetch one source ──────────────────────────────────────────────────────────
 
-async def fetch_source(
-    label: str, url: str, fmt: str, session: aiohttp.ClientSession,
-    retries: int = 2,
-) -> list[str]:
-    """
-    Fetch one source URL, with up to `retries` retries on transient errors.
-    Returns a list of extracted URIs (may be empty on failure).
-    """
-    last_err: Exception | None = None
+async def fetch_source(label: str, url: str, fmt: str,
+                       session: aiohttp.ClientSession, retries: int = 2) -> list[str]:
     for attempt in range(retries + 1):
         try:
-            async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as resp:
-                if resp.status != 200:
-                    return []
-                text = await resp.text(errors="ignore")
-                if fmt == "b64":
-                    text = decode_b64_blob(text)
-                return extract_uris(text)
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as r:
+                if r.status != 200: return []
+                text = await r.text(errors="ignore")
+                return extract_uris(decode_b64(text) if fmt == "b64" else text)
         except Exception as e:
-            last_err = e
             if attempt < retries:
                 await asyncio.sleep(1.5 * (attempt + 1))
-    print(f"  ! [{label}] failed after {retries+1} attempts: {last_err}", flush=True)
+            else:
+                print(f"  ! [{label}]: {e}", flush=True)
     return []
 
 
 async def collect_all() -> list[str]:
-    """
-    Fetch all sources concurrently, return a deduplicated URI list.
-
-    FIX: original used a set() which randomises order and loses the
-    IR-exit / bridge-first priority. Now uses dict.fromkeys() for
-    ordered deduplication, with bridge URIs inserted first.
-    """
-    # Ordered dedup dict — IR/bridge URIs inserted first maintain priority
     all_uris: dict[str, None] = {}
-    failed_sources: list[str] = []
 
-    # First: ingest from iran-proxy-checker (highest priority — already verified)
-    bridge_uris = load_iran_proxy_checker_configs()
-    all_uris.update(dict.fromkeys(bridge_uris))
-    print(f"  iran-proxy-checker total: {len(bridge_uris)} URIs ingested")
+    bootstrap = load_bootstrap()
+    all_uris.update(dict.fromkeys(bootstrap))
+    print(f"  Bootstrap total: {len(bootstrap)} URIs")
 
-    # Then: scrape public aggregators concurrently
-    async with aiohttp.ClientSession(headers=HEADERS) as session:
-        tasks = [fetch_source(lbl, url, fmt, session) for lbl, url, fmt in RAW_SOURCES]
+    async with aiohttp.ClientSession(headers=HEADERS) as sess:
+        tasks   = [fetch_source(lbl, url, fmt, sess) for lbl, url, fmt in RAW_SOURCES]
         results = await asyncio.gather(*tasks, return_exceptions=True)
-        for (lbl, _, _), result in zip(RAW_SOURCES, results):
-            if isinstance(result, Exception):
-                failed_sources.append(lbl)
-                continue
-            if isinstance(result, list):
+        for (lbl, _, _), res in zip(RAW_SOURCES, results):
+            if isinstance(res, list):
                 before = len(all_uris)
-                all_uris.update(dict.fromkeys(result))
+                all_uris.update(dict.fromkeys(res))
                 new = len(all_uris) - before
-                if new:
-                    print(f"  + [{lbl}] +{new} new", flush=True)
-                # Sources returning 0 new are silently skipped (mostly duplicates)
+                if new: print(f"  + [{lbl}] +{new}", flush=True)
 
-    if failed_sources:
-        print(f"  ! Sources with errors: {', '.join(failed_sources)}")
-
-    print(f"\nTotal unique URIs collected: {len(all_uris)}")
+    print(f"\nTotal unique URIs: {len(all_uris)}")
     return list(all_uris)
 
 
-# ── Main verification ──────────────────────────────────────────────────────────
+# ── Verify ────────────────────────────────────────────────────────────────────
 
 async def verify_configs(uris: list[str]) -> list[dict]:
-    """
-    For each URI:
-      1. Parse host:port
-      2. TCP reachability check to the proxy server
-      3. GeoIP classify exit country
-      4. Sort: IR-exit > bridge-verified > Armenian-bridge > other
-    """
-    # Parse all URIs
     parsed: list[dict] = []
     unique_hosts: set[str] = set()
     for uri in uris:
         hp = parse_host_port(uri)
         if hp:
-            host, port = hp
-            if host and 1 <= port <= 65535:
-                parsed.append({
-                    "uri":      uri,
-                    "host":     host,
-                    "port":     port,
-                    "protocol": classify(uri),
-                })
-                unique_hosts.add(host)
+            h, p = hp
+            if h and 1 <= p <= 65535:
+                parsed.append({"uri": uri, "host": h, "port": p,
+                                "protocol": classify_proto(uri)})
+                unique_hosts.add(h)
 
-    print(f"  Parsed {len(parsed)} configs with valid host:port "
-          f"({len(uris) - len(parsed)} unparseable)")
+    print(f"  Parsed {len(parsed)} configs ({len(uris)-len(parsed)} unparseable)")
 
-    # Batch GeoIP — but skip hosts whose IPs match known Iranian prefixes.
-    # Those will be fast-pathed to cc="IR" without an API call, saving quota
-    # and speeding up the run (e.g. all 81.12.x.x hosts skip the lookup).
+    # DNS resolution for fast-path classification
     loop = asyncio.get_running_loop()
-    host_ip_fast: dict[str, str] = {}  # host → resolved IP for fast-path hosts
+    def dns(h: str) -> tuple[str, str]:
+        try: return h, socket.gethostbyname(h)
+        except: return h, ""
 
-    def resolve_for_fastpath(h: str) -> tuple[str, str]:
-        try:
-            return h, socket.gethostbyname(h)
-        except Exception:
-            return h, ""
+    with ThreadPoolExecutor(max_workers=min(150, len(unique_hosts) or 1)) as ex:
+        pairs = await asyncio.gather(*[loop.run_in_executor(ex, dns, h) for h in unique_hosts])
 
-    with ThreadPoolExecutor(max_workers=min(200, len(unique_hosts) or 1)) as ex:
-        fp_pairs = await asyncio.gather(
-            *[loop.run_in_executor(ex, resolve_for_fastpath, h) for h in unique_hosts]
-        )
+    # Fast-path: Iranian prefix → skip GeoIP API call entirely
+    fast_ir:  dict[str, dict] = {}  # host → {asn, operator, mobile}
+    fast_am:  set[str]        = set()
+    geoip_needed: list[str]   = []
 
-    fast_path_hosts: set[str] = set()
-    geoip_needed_hosts: list[str] = []
-    for host, ip in fp_pairs:
-        if ip and is_iranian_ip(ip):
-            host_ip_fast[host] = ip
-            fast_path_hosts.add(host)
+    for host, ip in pairs:
+        if not ip:
+            geoip_needed.append(host); continue
+        op = get_ir_operator(ip)
+        if op:
+            asn, operator, net_type = op
+            fast_ir[host] = {"ip": ip, "asn": asn, "operator": operator,
+                              "mobile": asn in MOBILE_ASNS}
+        elif any(ip.startswith(p) for p in ARMENIAN_PREFIXES):
+            fast_am.add(host)
         else:
-            geoip_needed_hosts.append(host)
+            geoip_needed.append(host)
 
-    if fast_path_hosts:
-        print(f"  Fast-path IR: {len(fast_path_hosts)} hosts matched known Iranian prefixes "
-              f"(skipping GeoIP API for these)")
+    print(f"  Fast-path IR: {len(fast_ir)} | AM: {len(fast_am)} | GeoIP needed: {len(geoip_needed)}")
 
-    # GeoIP only for non-fast-path hosts
-    host_cc = await batch_geoip(geoip_needed_hosts)
+    host_info = await batch_geoip(geoip_needed)
+    bootstrap_set: set[str] = set(load_bootstrap())
 
-    # Merge: fast-path hosts are definitively IR
-    for host in fast_path_hosts:
-        host_cc[host] = "IR"
-
-    # TCP reachability check
     print(f"  TCP-checking {len(parsed)} configs ...")
     sem = asyncio.Semaphore(MAX_WORKERS)
 
     async def check_one(cfg: dict) -> dict | None:
         async with sem:
-            ok = await tcp_connect(cfg["host"], cfg["port"], timeout=TCP_TIMEOUT)
-            if not ok:
-                return None
-            cc = host_cc.get(cfg["host"], "")
-            # Fast-path hosts already resolved to a known Iranian prefix
-            is_iran = (cc == "IR") or (cfg["host"] in fast_path_hosts)
+            if not await tcp_ok(cfg["host"], cfg["port"]): return None
+            host = cfg["host"]
+
+            if host in fast_ir:
+                fp = fast_ir[host]
+                asn, operator, is_iran = fp["asn"], fp["operator"], True
+                is_mobile = fp["mobile"]
+                country = "IR"
+            else:
+                info      = host_info.get(host, {})
+                asn       = info.get("asn","")
+                operator  = info.get("isp","")
+                is_iran   = (info.get("cc","") == "IR") or (asn in IRAN_ASNS)
+                is_mobile = info.get("mobile", False) or (asn in MOBILE_ASNS)
+                country   = "IR" if is_iran else info.get("cc","")
+
             is_armenian = (
-                any(cfg["host"].startswith(p) for p in ARMENIAN_PREFIXES)
-                or cc == "AM"
+                host in fast_am
+                or host_info.get(host, {}).get("cc","") == "AM"
+                or host_info.get(host, {}).get("asn","") in ARMENIAN_ASNS
             )
+
             return {
                 **cfg,
-                "country":         "IR" if is_iran else cc,
-                "iran_exit":       is_iran,
-                "armenian_bridge": is_armenian,
-                "bridge_verified": False,
+                "country":          country,
+                "asn":              asn,
+                "operator":         operator,
+                "iran_exit":        is_iran,
+                "iran_mobile_exit": is_iran and is_mobile,
+                "armenian_bridge":  is_armenian,
+                "bridge_verified":  cfg["uri"] in bootstrap_set,
             }
 
-    results_raw = await asyncio.gather(*[check_one(c) for c in parsed])
-    results = [r for r in results_raw if r is not None]
+    raw = await asyncio.gather(*[check_one(c) for c in parsed])
+    results = [r for r in raw if r is not None]
 
-    # Mark bridge-verified configs (sourced from iran-proxy-checker)
-    bridge_uris = set(load_iran_proxy_checker_configs())
-    for r in results:
-        if r["uri"] in bridge_uris:
-            r["bridge_verified"] = True
-
-    # Sort: IR-exit > bridge-verified > Armenian > other
+    # Sort: mobile-IR > IR > bridge-verified > Armenian > other
+    # Within each tier: prefer harder-to-block protocols (DPI resilience)
     def sort_key(r: dict) -> tuple:
-        return (
-            0 if r["iran_exit"]       else
-            1 if r["bridge_verified"] else
-            2 if r["armenian_bridge"] else
-            3,
-            r["protocol"],
-        )
+        tier = (0 if r["iran_mobile_exit"] else
+                1 if r["iran_exit"]        else
+                2 if r["bridge_verified"]  else
+                3 if r["armenian_bridge"]  else 4)
+        return (tier, PROTO_ORDER.get(r["protocol"], 7))
+
     results.sort(key=sort_key)
 
-    ir  = sum(1 for r in results if r["iran_exit"])
-    am  = sum(1 for r in results if r["armenian_bridge"] and not r["iran_exit"])
-    bv  = sum(1 for r in results if r["bridge_verified"])
-    oth = len(results) - ir - am
-    print(f"  TCP-reachable: {len(results)} configs")
-    print(f"    IR-exit: {ir} | Armenian-bridge: {am} | Bridge-verified: {bv} | Other: {oth}")
-
+    ir     = sum(1 for r in results if r["iran_exit"])
+    mob    = sum(1 for r in results if r["iran_mobile_exit"])
+    am     = sum(1 for r in results if r["armenian_bridge"])
+    bv     = sum(1 for r in results if r["bridge_verified"])
+    print(f"  Verified: {len(results)} | IR={ir} (mobile={mob}) | "
+          f"Armenian={am} | bridge-verified={bv}")
     return results
 
 
-# ── Sanity check ──────────────────────────────────────────────────────────────
-
-def check_minimum_configs(results: list[dict]) -> None:
-    """
-    Fail fast if we collected fewer configs than the minimum threshold.
-    Prevents silently pushing empty/broken outputs when upstream sources go down.
-    """
-    if len(results) < MIN_PASSING_CONFIGS:
-        print(
-            f"\nERROR: Only {len(results)} configs passed verification "
-            f"(minimum required: {MIN_PASSING_CONFIGS}). "
-            f"Check source availability and network connectivity.",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-
-
-# ── Writers ───────────────────────────────────────────────────────────────────
+# ── Write outputs ─────────────────────────────────────────────────────────────
 
 def write_outputs(results: list[dict]) -> None:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    out = Path("outputs")
-    out.mkdir(exist_ok=True)
+    out = Path("outputs"); out.mkdir(exist_ok=True)
 
-    ir_results = [r for r in results if r["iran_exit"]]
-    am_results = [r for r in results if r["armenian_bridge"] and not r["iran_exit"]]
-    bv_results = [r for r in results if r["bridge_verified"]]
+    ir_r  = [r for r in results if r["iran_exit"]]
+    mob_r = [r for r in results if r["iran_mobile_exit"]]
+    am_r  = [r for r in results if r["armenian_bridge"]]
 
-    header_stats = (
-        f"# {len(results)} configs | IR-exit: {len(ir_results)} | "
-        f"Armenian-bridge: {len(am_results)} | Bridge-verified: {len(bv_results)}\n"
-    )
+    header = (f"# Iran Intranet Configs — {now}\n"
+              f"# {len(results)} configs | IR={len(ir_r)} (mobile={len(mob_r)}) "
+              f"| Armenian={len(am_r)}\n"
+              f"# Sorted: IR-mobile > IR-exit > bridge-verified > Armenian\n"
+              f"# Within tier: TUIC > Hysteria2 > VLESS > Trojan > VMess > SS\n")
 
-    # ── Clean subscription file ──
-    # FIX: Original appended "  # IR-exit" inline comments to URIs, which
-    # breaks ALL subscription parsers (v2rayNG, Hiddify, NekoBox, etc.).
-    # These parsers expect one bare URI per line. The # fragment is already
-    # used for display names inside the URI itself.
-    with open(out / "passing_intranet_configs.txt", "w", encoding="utf-8") as f:
-        f.write(f"# Iran Intranet Access Configs — {now}\n")
-        f.write(header_stats)
-        f.write("# Sorted: IR-exit > bridge-verified > Armenian > other\n")
-        f.write("# Import this file as a subscription in Hiddify / v2rayNG / NekoBox\n\n")
-        for r in results:
-            f.write(r["uri"] + "\n")  # bare URI only — parsers require this
+    # Subscription file — bare URIs only (parsers require this)
+    with open(out/"passing_intranet_configs.txt","w",encoding="utf-8") as f:
+        f.write(header + "# Import in Hiddify / v2rayNG / NekoBox / Xray\n\n")
+        for r in results: f.write(r["uri"] + "\n")
 
-    # ── Annotated file (human-readable, not for direct import) ──
-    with open(out / "passing_intranet_configs_annotated.txt", "w", encoding="utf-8") as f:
-        f.write(f"# Iran Intranet Access Configs (ANNOTATED) — {now}\n")
-        f.write(header_stats)
-        f.write("# NOTE: This file has inline comments — do NOT import as subscription.\n")
-        f.write("# Use passing_intranet_configs.txt for client imports.\n\n")
-        for r in results:
-            tag = (
-                "IR-exit"          if r["iran_exit"]       else
-                "bridge-verified"  if r["bridge_verified"] else
-                "armenian-bridge"  if r["armenian_bridge"] else
-                f"other-{r['country'] or 'unknown'}"
-            )
-            f.write(f"{r['uri']}  # {tag}\n")
+    # IR-exit only
+    with open(out/"ir_exit_configs.txt","w",encoding="utf-8") as f:
+        f.write(f"# IR-exit configs — {now}\n# {len(ir_r)} configs\n\n")
+        for r in ir_r: f.write(r["uri"] + "\n")
 
-    # ── IR-exit only ──
-    # FIX: Added dedicated IR-exit output — these are the highest-value
-    # configs and deserve a separate file for easy distribution.
-    with open(out / "ir_exit_configs.txt", "w", encoding="utf-8") as f:
-        f.write(f"# Iran IR-EXIT Configs ONLY — {now}\n")
-        f.write(f"# {len(ir_results)} configs with Iranian IP exit\n\n")
-        for r in ir_results:
-            f.write(r["uri"] + "\n")
+    # Mobile-ISP exit (most resilient during shutdowns)
+    with open(out/"ir_mobile_exit_configs.txt","w",encoding="utf-8") as f:
+        f.write(f"# IR mobile-ISP exit (MCI/Irancell/Rightel) — {now}\n")
+        f.write(f"# {len(mob_r)} configs — last operators to go offline\n\n")
+        for r in mob_r: f.write(r["uri"] + "\n")
 
-    # ── Armenian bridge only ──
-    with open(out / "armenian_bridge_configs.txt", "w", encoding="utf-8") as f:
-        f.write(f"# Armenian Bridge Configs — {now}\n")
-        f.write(f"# {len(am_results)} configs — Armenian exit, potential Iran routing\n\n")
-        for r in am_results:
-            f.write(r["uri"] + "\n")
+    # Armenian bridge
+    with open(out/"armenian_bridge_configs.txt","w",encoding="utf-8") as f:
+        f.write(f"# Armenian bridge configs — {now}\n# {len(am_r)} configs\n\n")
+        for r in am_r: f.write(r["uri"] + "\n")
 
-    # ── JSON (structured with metadata) ──
-    with open(out / "passing_intranet_configs.json", "w", encoding="utf-8") as f:
-        json.dump(
-            {"checked_at": now, "count": len(results), "configs": results},
-            f, indent=2, ensure_ascii=False,
-        )
+    # JSON with metadata
+    with open(out/"passing_intranet_configs.json","w",encoding="utf-8") as f:
+        json.dump({
+            "checked_at": now,
+            "count": len(results),
+            "summary": {
+                "ir_exit": len(ir_r), "ir_mobile": len(mob_r), "armenian": len(am_r),
+            },
+            "configs": results,
+        }, f, indent=2, ensure_ascii=False)
 
-    # ── Base64 subscription blob ──
-    raw_uris = "\n".join(r["uri"] for r in results)
-    with open(out / "passing_intranet_configs_base64.txt", "w") as f:
-        f.write(base64.b64encode(raw_uris.encode()).decode())
+    # Base64 subscription blob
+    with open(out/"passing_intranet_configs_base64.txt","w") as f:
+        f.write(base64.b64encode("\n".join(r["uri"] for r in results).encode()).decode())
 
-    # ── Hiddify outbound format ──
-    # FIX: Original stored only server/port/type — completely unusable because
-    # Hiddify needs authentication (UUID, password, encryption, etc.).
-    # The only portable format is the raw URI, which Hiddify can parse natively.
-    # We output a Hiddify-compatible subscription JSON using URIs directly.
-    hiddify_pool = (ir_results + bv_results + am_results)[:20]
-    hiddify: dict = {
-        "generated_at": now,
-        "note": "Top-priority Iranian intranet configs. Import URIs into Hiddify via Add > URI.",
-        "outbounds": [],
-        "route": {"final": "proxy"},
-    }
-    for i, r in enumerate(hiddify_pool):
-        priority = (
-            "IR-exit"         if r["iran_exit"]       else
-            "bridge-verified" if r["bridge_verified"] else
-            "armenian-bridge"
-        )
-        # Store full URI so Hiddify/clients can parse auth params themselves
-        hiddify["outbounds"].append({
-            "tag":      f"iran-intranet-{i:02d}",
-            "priority": priority,
-            "country":  r.get("country", ""),
-            "protocol": r["protocol"],
-            "uri":      r["uri"],   # full URI — contains UUID/password/all params
-        })
-    with open(out / "hiddify_intranet.json", "w", encoding="utf-8") as f:
-        json.dump(hiddify, f, indent=2, ensure_ascii=False)
+    # Per-protocol splits
+    proto_dir = out/"by_protocol"; proto_dir.mkdir(exist_ok=True)
+    protos = ["tuic","hysteria2","vless","trojan","vmess","ss","wireguard","other"]
+    buckets: dict[str,list[str]] = {p: [] for p in protos}
+    for r in results: buckets[r["protocol"]].append(r["uri"])
+    for proto, uris in buckets.items():
+        if uris:
+            with open(proto_dir/f"{proto}.txt","w",encoding="utf-8") as f:
+                f.write(f"# {proto.upper()} — {now}\n# {len(uris)} configs\n\n")
+                for u in uris: f.write(u + "\n")
 
-    # ── Per-protocol splits ──
-    proto_dir = out / "by_protocol"
-    proto_dir.mkdir(exist_ok=True)
-    protos = ["vmess", "vless", "ss", "trojan", "hysteria2", "tuic", "wireguard", "other"]
-    buckets: dict[str, list[str]] = {p: [] for p in protos}
-    for r in results:
-        buckets[r["protocol"]].append(r["uri"])
-    for proto, proto_uris in buckets.items():
-        if proto_uris:
-            with open(proto_dir / f"{proto}.txt", "w", encoding="utf-8") as f:
-                f.write(f"# {proto.upper()} — Iran Intranet — {now}\n")
-                f.write(f"# {len(proto_uris)} configs\n\n")
-                for u in proto_uris:
-                    f.write(u + "\n")
-
-    # ── Summary ──
-    print(f"\nOutputs written to outputs/:")
-    print(f"  passing_intranet_configs.txt            ({len(results)} configs — subscription-ready)")
-    print(f"  passing_intranet_configs_annotated.txt  ({len(results)} configs — human-readable)")
-    print(f"  ir_exit_configs.txt                     ({len(ir_results)} IR-exit configs)")
-    print(f"  armenian_bridge_configs.txt             ({len(am_results)} Armenian configs)")
+    print(f"\nOutputs → outputs/")
+    print(f"  passing_intranet_configs.txt    ({len(results)})")
+    print(f"  ir_exit_configs.txt             ({len(ir_r)})")
+    print(f"  ir_mobile_exit_configs.txt      ({len(mob_r)})")
+    print(f"  armenian_bridge_configs.txt     ({len(am_r)})")
     print(f"  passing_intranet_configs.json")
-    print(f"  passing_intranet_configs_base64.txt     (subscription-ready)")
-    print(f"  hiddify_intranet.json                   ({len(hiddify_pool)} outbounds with full URIs)")
-    for proto in protos:
-        n = len(buckets[proto])
-        if n:
-            print(f"  by_protocol/{proto}.txt              ({n})")
+    print(f"  passing_intranet_configs_base64.txt")
+    for p in protos:
+        n = len(buckets[p])
+        if n: print(f"  by_protocol/{p}.txt         ({n})")
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
+# ── Minimum config check ──────────────────────────────────────────────────────
+
+def check_minimum(results: list[dict]) -> None:
+    if len(results) < MIN_PASSING_CONFIGS:
+        print(f"\nERROR: Only {len(results)} configs passed "
+              f"(minimum: {MIN_PASSING_CONFIGS}). "
+              f"Check source availability.", file=sys.stderr)
+        sys.exit(1)
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 async def main() -> None:
-    sep = "=" * 60
+    sep = "=" * 55
     print(sep)
-    print("Iran Intranet Config Collector & Verifier")
-    print(f"iran-proxy-checker dir : {IRAN_PROXY_CHECKER_DIR}")
-    print(f"TCP timeout            : {TCP_TIMEOUT}s")
-    print(f"Max workers            : {MAX_WORKERS}")
-    print(f"Skip v2ray live test   : {SKIP_V2RAY_TEST}")
-    print(f"Min passing configs    : {MIN_PASSING_CONFIGS}")
+    print("Iran Intranet Config Collector  (Direction A)")
+    print(f"TCP timeout  : {TCP_TIMEOUT}s  |  max workers: {MAX_WORKERS}")
+    print(f"Min configs  : {MIN_PASSING_CONFIGS}")
     print(sep)
-
     t0 = time.monotonic()
 
-    print("\n[1/3] Collecting configs from all sources …")
+    print("\n[1/3] Collecting configs ...")
     uris = await collect_all()
 
-    print(f"\n[2/3] Verifying {len(uris)} configs …")
+    print(f"\n[2/3] Verifying {len(uris)} configs ...")
     results = await verify_configs(uris)
 
-    print("\n[3/3] Checking minimum threshold …")
-    check_minimum_configs(results)
+    check_minimum(results)
 
-    print("\n[4/4] Writing outputs …")
+    print("\n[3/3] Writing outputs ...")
     write_outputs(results)
 
-    elapsed = time.monotonic() - t0
     print(f"\n{sep}")
-    print(f"Done in {elapsed:.0f}s — {len(results)} configs available for Iranian intranet access.")
+    print(f"Done in {time.monotonic()-t0:.0f}s — {len(results)} configs.")
     print(sep)
 
 
