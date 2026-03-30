@@ -67,7 +67,33 @@ MIN_PASSING_CONFIGS = int(os.environ.get("MIN_PASSING_CONFIGS", "200"))
 # FIX: was duplicated at lines 297 and 452 in the original — now defined once.
 ARMENIAN_PREFIXES = ("5.10.214.", "5.10.215.", "188.164.159.", "188.164.158.")
 
-# Known Iranian internal TCP endpoints — respond only from within Iranian IP space
+# Known Iranian IP prefixes for fast-path IR detection — bypasses GeoIP API
+# calls for IPs that are definitively in Iranian AS space based on observed
+# working VPN exit servers and BGP allocation data.
+# Format: (prefix, ASN, ISP_name)
+# Evidence: 81.12.54.94 confirmed IR-exit VPN server (AS214922, Soroush Rasaneh,
+# Tehran) observed 2026-03-29.
+IRAN_IP_PREFIXES: tuple[tuple[str, str, str], ...] = (
+    ("5.160.",      "AS12880",  "TCI"),
+    ("5.200.",      "AS12880",  "TCI"),
+    ("78.38.",      "AS12880",  "TCI"),
+    ("78.39.",      "AS12880",  "TCI"),
+    ("151.232.",    "AS197207", "MCI / Hamrahe Aval"),
+    ("185.112.",    "AS44244",  "Irancell"),
+    ("185.141.",    "AS48159",  "Shatel"),
+    ("81.12.",      "AS214922", "Soroush Rasaneh"),   # confirmed 2026-03-29
+    ("91.108.4.",   "AS62282",  "Fanap / Pasargad"),
+    ("185.51.200.", "AS205347", "Arvan Cloud"),
+    ("185.143.",    "AS207719", "Arvan Cloud / Tehran DC"),
+    ("194.5.175.",  "AS210362", "Asiatech"),
+)
+
+def is_iranian_ip(ip: str) -> bool:
+    """Fast-path check: return True if ip matches a known Iranian IP prefix."""
+    return any(ip.startswith(prefix) for prefix, _, _ in IRAN_IP_PREFIXES)
+
+# Known Iranian internal TCP endpoints — respond only from within Iranian IP space.
+# Used for live verification on self-hosted runners (SKIP_V2RAY_TEST=0).
 IRAN_INTERNAL_TCP = [
     ("5.160.0.1",     80),   # TCI / AS12880 (state telecom)
     ("78.38.0.1",     80),   # TCI
@@ -75,6 +101,7 @@ IRAN_INTERNAL_TCP = [
     ("185.112.32.1",  80),   # Irancell / AS44244
     ("185.141.104.1", 80),   # Shatel / AS48159
     ("5.200.200.200", 80),   # Stable public Iranian IP
+    ("81.12.0.1",     80),   # Soroush Rasaneh / AS214922 — confirmed IR-exit 2026-03-29
 ]
 
 # Iranian-only HTTP endpoints — return non-200 from outside Iran
@@ -300,7 +327,9 @@ async def batch_geoip(hosts: list[str]) -> dict[str, str]:
     inside an async function, stalling the event loop for 2000+ hosts
     (40-100 seconds of blocked I/O). Now runs DNS lookups in a thread pool.
     """
-    print(f"  GeoIP: resolving {len(hosts)} unique hosts in parallel ...")
+    if not hosts:
+        return {}
+    print(f"  GeoIP: resolving {len(hosts)} hosts (after fast-path exclusions) ...")
 
     loop = asyncio.get_running_loop()
 
@@ -483,8 +512,42 @@ async def verify_configs(uris: list[str]) -> list[dict]:
     print(f"  Parsed {len(parsed)} configs with valid host:port "
           f"({len(uris) - len(parsed)} unparseable)")
 
-    # Batch GeoIP
-    host_cc = await batch_geoip(list(unique_hosts))
+    # Batch GeoIP — but skip hosts whose IPs match known Iranian prefixes.
+    # Those will be fast-pathed to cc="IR" without an API call, saving quota
+    # and speeding up the run (e.g. all 81.12.x.x hosts skip the lookup).
+    loop = asyncio.get_running_loop()
+    host_ip_fast: dict[str, str] = {}  # host → resolved IP for fast-path hosts
+
+    def resolve_for_fastpath(h: str) -> tuple[str, str]:
+        try:
+            return h, socket.gethostbyname(h)
+        except Exception:
+            return h, ""
+
+    with ThreadPoolExecutor(max_workers=min(200, len(unique_hosts) or 1)) as ex:
+        fp_pairs = await asyncio.gather(
+            *[loop.run_in_executor(ex, resolve_for_fastpath, h) for h in unique_hosts]
+        )
+
+    fast_path_hosts: set[str] = set()
+    geoip_needed_hosts: list[str] = []
+    for host, ip in fp_pairs:
+        if ip and is_iranian_ip(ip):
+            host_ip_fast[host] = ip
+            fast_path_hosts.add(host)
+        else:
+            geoip_needed_hosts.append(host)
+
+    if fast_path_hosts:
+        print(f"  Fast-path IR: {len(fast_path_hosts)} hosts matched known Iranian prefixes "
+              f"(skipping GeoIP API for these)")
+
+    # GeoIP only for non-fast-path hosts
+    host_cc = await batch_geoip(geoip_needed_hosts)
+
+    # Merge: fast-path hosts are definitively IR
+    for host in fast_path_hosts:
+        host_cc[host] = "IR"
 
     # TCP reachability check
     print(f"  TCP-checking {len(parsed)} configs ...")
@@ -496,14 +559,16 @@ async def verify_configs(uris: list[str]) -> list[dict]:
             if not ok:
                 return None
             cc = host_cc.get(cfg["host"], "")
+            # Fast-path hosts already resolved to a known Iranian prefix
+            is_iran = (cc == "IR") or (cfg["host"] in fast_path_hosts)
             is_armenian = (
                 any(cfg["host"].startswith(p) for p in ARMENIAN_PREFIXES)
                 or cc == "AM"
             )
             return {
                 **cfg,
-                "country":         cc,
-                "iran_exit":       cc == "IR",
+                "country":         "IR" if is_iran else cc,
+                "iran_exit":       is_iran,
                 "armenian_bridge": is_armenian,
                 "bridge_verified": False,
             }
