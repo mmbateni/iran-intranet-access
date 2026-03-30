@@ -1,30 +1,47 @@
 name: Iran Intranet Config Collector
 
-# Runs twice daily to refresh the config list.
-# Also pulls the latest verified outputs from iran-proxy-checker (Armenian bridge
-# configs that are already proven to route into Iranian IP space).
+# ── Direction ─────────────────────────────────────────────────────────────────
+# Direction A — Diaspora / researchers OUTSIDE Iran → SHOMA
 #
-# Schedule (both times in UTC):
-#   03:30 UTC  — overnight refresh (30 min after iran-proxy-checker finishes)
-#   05:40 UTC  — 10:10 AM Tehran (IRDT, UTC+4:30, active ~Mar–Sep)
-#                Note: shifts to 06:40 UTC in winter (IRST, UTC+3:30, Oct–Mar)
-#                Adjust the second cron to "40 6 * * *" in winter if exact
-#                Tehran time matters; otherwise 05:40 UTC is a good year-round
-#                approximation that stays within ±30 min of 10:10 AM Tehran.
+# Collects and verifies proxy configs that EXIT inside Iranian IP space,
+# enabling access to the National Information Network (SHOMA) from abroad.
+#
+# Direction B (Iran → Global Internet) is a separate project.
+# See: https://github.com/Iman/javidnet
+#
+# ── GitHub Free Tier Budget ───────────────────────────────────────────────────
+# Free tier: 2,000 minutes/month
+# This workflow: 2 runs/day × ~15 min = ~900 min/month  ✓ (1,100 min headroom)
+#
+# ── Schedule ──────────────────────────────────────────────────────────────────
+# Two runs per day, timed to Tehran business hours:
+#
+# UTC        IRDT (summer, UTC+4:30)   Purpose
+# ─────────  ───────────────────────   ────────────────────────────
+# 03:30      08:00                     Morning — overnight aggregators updated
+# 13:30      18:00                     Evening — peak Iranian usage window
+#
+# Winter (IRST = UTC+3:30, Oct–Mar): same UTC times, Tehran +1h shift.
+
 on:
   schedule:
-    - cron: "30 3 * * *"   # 03:30 UTC — overnight refresh
-    - cron: "40 5 * * *"   # 05:40 UTC — ≈10:10 AM Tehran (IRDT/summer)
-  workflow_dispatch:
+    - cron: "30  3 * * *"    # 08:00 IRDT morning
+    - cron: "30 13 * * *"    # 18:00 IRDT evening
+  workflow_dispatch:         # allow manual runs
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  TCP_TIMEOUT:            "3"
+  HTTP_TIMEOUT:           "10"
+  MAX_WORKERS:            "80"
+  SKIP_V2RAY_TEST:        "1"
+  MIN_PASSING_CONFIGS:    "100"
 
 jobs:
   collect:
     name: Collect & Verify Intranet Configs
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 30      # hard ceiling; normal run finishes in ~12-15 min
     permissions:
       contents: write
 
@@ -33,9 +50,9 @@ jobs:
         with:
           ref: main
 
-      # ── Pull verified bridge configs from iran-proxy-checker ─────────────────
-      # These configs already passed the Armenian bridge test — they are the
-      # highest-priority candidates for Iranian intranet access.
+      # ── Pull bootstrap configs from iran-proxy-checker ──────────────────────
+      # These already passed the Armenian-bridge test in a previous run.
+      # Non-fatal if the repo is private or not yet set up.
       - name: Checkout iran-proxy-checker outputs
         uses: actions/checkout@v4
         with:
@@ -47,61 +64,56 @@ jobs:
             working_armenia_configs.txt
             working_armenia_configs.json
             passing_intranet_configs.txt
-            passing_all_ranked.json
+            passing_intranet_configs.json
+            ir_exit_configs.txt
+            ir_mobile_exit_configs.txt
+            passing_intranet_configs_base64.txt
           sparse-checkout-cone-mode: false
           token: ${{ secrets.IRAN_PROXY_TOKEN || github.token }}
-        continue-on-error: true   # non-fatal if repo is private or not yet set up
+        continue-on-error: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
-        run: pip install aiohttp aiohttp-socks
+      - name: Install dependencies
+        run: pip install aiohttp
 
-      - name: Collect and verify intranet configs
+      - name: Collect and verify configs
         run: python collect_configs.py
         env:
           IRAN_PROXY_CHECKER_DIR: iran-proxy-checker
-          TCP_TIMEOUT:    "3"
-          HTTP_TIMEOUT:   "10"
-          MAX_WORKERS:    "100"
-          # On GitHub-hosted runners (Azure North America), Iranian internal IPs
-          # are not directly reachable so we rely on GeoIP for verification.
-          # Set to 0 on a self-hosted runner in Europe/Armenia for live testing.
-          SKIP_V2RAY_TEST: "1"
-          # Job fails if fewer than this many configs pass — catches source outages.
-          # Lower if you expect temporarily fewer sources; raise for stricter health checks.
-          MIN_PASSING_CONFIGS: "200"
+          TCP_TIMEOUT:            ${{ env.TCP_TIMEOUT }}
+          HTTP_TIMEOUT:           ${{ env.HTTP_TIMEOUT }}
+          MAX_WORKERS:            ${{ env.MAX_WORKERS }}
+          SKIP_V2RAY_TEST:        ${{ env.SKIP_V2RAY_TEST }}
+          MIN_PASSING_CONFIGS:    ${{ env.MIN_PASSING_CONFIGS }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          # Date-stamped name for easier identification vs run-ID-only names
-          name: intranet-configs-${{ github.run_id }}-${{ github.run_attempt }}
+          name: intranet-configs-${{ github.run_id }}
           if-no-files-found: ignore
+          retention-days: 7          # keep small; free tier has 500 MB storage
           path: |
             outputs/passing_intranet_configs.txt
-            outputs/passing_intranet_configs_annotated.txt
             outputs/passing_intranet_configs.json
             outputs/passing_intranet_configs_base64.txt
             outputs/ir_exit_configs.txt
+            outputs/ir_mobile_exit_configs.txt
             outputs/armenian_bridge_configs.txt
-            outputs/hiddify_intranet.json
             outputs/by_protocol/
 
       - name: Commit results
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
           git add outputs/ || true
-
           git diff --cached --quiet || \
             git commit -m "chore: update intranet configs $(date -u +'%Y-%m-%d %H:%M') UTC"
-
           git stash --include-untracked || true
           git pull --rebase origin main
           git stash pop || true
           git push
+
