@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30 00:03 UTC",
+  "generated_at": "2026-03-30 00:32 UTC",
   "note": "Top-priority Iranian intranet configs. Import URIs into Hiddify via Add > URI.",
   "outbounds": [
     {
@@ -35,112 +35,112 @@
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://08238f73-88ae-49e0-81ad-aa0cf0e901d9@185.143.234.235:443?security=tls&allowInsecure=0&encryption=none&type=ws&host=api.parhamm2.ir&path=/&sni=api.parhamm2.ir&fp=chrome#@nftvici"
+      "uri": "vless://08238f73-88ae-49e0-81ad-aa0cf0e901d9@185.143.233.235:443?security=tls&allowInsecure=0&encryption=none&type=ws&host=endpoint.parhamm2.ir&path=/&sni=endpoint.parhamm2.ir&fp=chrome#@nftvici"
     },
     {
       "tag": "iran-intranet-05",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://19666df6-009d-4426-8f05-7e19b7dc9da9@snapp.ir:443?path=/&security=tls&encryption=none&host=my.simin123.shop&fp=chrome&type=ws&sni=my.simin123.shop#[🇮🇷]t.me/ConfigsHub"
+      "uri": "vless://4c003bc1-6e72-40d4-8b9b-0e814e315336@snapp.doctor:80?path=/&security=none&encryption=none&host=shop2.plusself.ir&type=ws#⚡Telegram"
     },
     {
       "tag": "iran-intranet-06",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://19666df6-009d-4426-8f05-7e19b7dc9da9@snapp.ir:443?path=/&security=tls&encryption=none&insecure=0&host=my.simin123.shop&fp=chrome&type=ws&allowInsecure=0&sni=my.simin123.shop#@SPARTAN_YT"
+      "uri": "vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?&security=false&fp=chrome&type=ws&headerType=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=/#@v2rayconfigamir"
     },
     {
       "tag": "iran-intranet-07",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://42b8b0f3-cac0-49c4-8b84-4f0efbf902f7@185.143.233.232:443?encryption=none&security=tls&sni=pishparda.ir&fp=chrome&allowInsecure=1&type=ws=-@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann&host=pishparda.ir&path=/voip#مخصوص"
+      "uri": "vless://7f651de1-8396-4b98-aa75-f818bc68c793@im2.newdesigne.ir:80?path=/&security=none&encryption=none&type=ws#@SPARTAN_YT🇺🇸"
     },
     {
       "tag": "iran-intranet-08",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?&security=false&fp=chrome&type=ws&headerType=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=/#@v2rayconfigamir"
+      "uri": "vless://7f651de1-8396-4b98-aa75-f818bc68c793@im2.newdesigne.ir:80?path=/&security=none&encryption=none&type=ws#@TeleProxyTele🇺🇸"
     },
     {
       "tag": "iran-intranet-09",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://6a5b2aac-9ed0-4442-9e31-936807e483b7@snapp.ir:80?path=/&security=none&encryption=none&host=ar.liarashop.ir&type=ws#Telegram:"
+      "uri": "vless://8a3629bc-e593-470d-a27f-4f78b9987c5a@store.avenprime.ir:80?type=ws&encryption=none&path=/?ed=2048&host=&security=none#[🇮🇷]t.me/ConfigsHub"
     },
     {
       "tag": "iran-intranet-10",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://6a5b2aac-9ed0-4442-9e31-936807e483b7@snapp.ir:80?path=/&security=none&encryption=none&host=ar.liarashop.ir&type=ws#[🇮🇷]t.me/ConfigsHub"
+      "uri": "vless://9da0953c-9ae1-44d9-8482-68d4dac8e6d9@185.143.234.120:443?encryption=none&security=tls&sni=alef.ir.oadeflantrogm.mahanmapcdn.com&fp=chrome&type=ws&host=alef.ir.oadeflantrogm.mahanmapcdn.com&path=/#🇮🇷"
     },
     {
       "tag": "iran-intranet-11",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://7b85b51d-4b64-4931-854c-5130389297ab@snapp.ir:80?path=/&security=none&encryption=none&host=dl2.avenflow.ir&type=ws#⚡Telegram"
+      "uri": "vless://a1d9eaf5-9e03-4c67-af0b-e238b865b373@185.143.234.122:80?encryption=none&security=none&type=ws=-@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann&host=amm4.avenflow.ir&path=/#مخصوص"
     },
     {
       "tag": "iran-intranet-12",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://9da0953c-9ae1-44d9-8482-68d4dac8e6d9@185.143.234.120:443?encryption=none&security=tls&sni=alef.ir.oadeflantrogm.mahanmapcdn.com&fp=chrome&type=ws&host=alef.ir.oadeflantrogm.mahanmapcdn.com&path=/#🇮🇷"
+      "uri": "vless://a1d9eaf5-9e03-4c67-af0b-e238b865b373@185.143.234.122:80?path=/&security=none&encryption=none&host=amm4.avenflow.ir&type=ws#Telegram:"
     },
     {
       "tag": "iran-intranet-13",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://a1d9eaf5-9e03-4c67-af0b-e238b865b373@185.143.234.122:80?encryption=none&security=none&type=ws=-@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann&host=amm4.avenflow.ir&path=/#مخصوص"
+      "uri": "vless://db3cf6e8-515a-47e0-8572-eb47bb611fb2@185.143.233.120:443?encryption=none&security=tls=-@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann---@ghalagyann&sni=alef.ir.oadeflantrogm.realirshop.com&fp=chrome&type=ws&host=alef.ir.oadeflantrogm.realirshop.com&path=/?ed=443#مخصوص"
     },
     {
       "tag": "iran-intranet-14",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://a1d9eaf5-9e03-4c67-af0b-e238b865b373@185.143.234.122:80?path=/&security=none&encryption=none&host=amm4.avenflow.ir&type=ws#Telegram:"
+      "uri": "vless://a1d9eaf5-9e03-4c67-af0b-e238b865b373@185.143.234.122:80?encryption=none&amp%3Bsecurity=none&amp%3Btype=ws%3D-%40ghalagyann---%40ghalagyann---%40ghalagyann---%40ghalagyann---%40ghalagyann---%40ghalagyann&amp%3Bhost=amm4.avenflow.ir&amp%3Bpath=/#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40v2ray_free_conf%20%231"
     },
     {
       "tag": "iran-intranet-15",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://c20fa220-f6fe-46df-84a8-55d8c2ae8146@snapp.ir:80?path=/&security=none&encryption=none&host=dl.avenflow.ir&type=ws#⚡Telegram"
+      "uri": "vless://db3cf6e8-515a-47e0-8572-eb47bb611fb2@185.143.233.120:443?path=/%3Fed%3D443&amp%3Bsecurity=tls&amp%3Bencryption=none&amp%3Bhost=alef.ir.oadeflantrogm.realirshop.com&amp%3Bfp=randomized&amp%3Btype=ws&amp%3Bsni=alef.ir.oadeflantrogm.realirshop.com#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40v2ray_free_conf%20%232"
     },
     {
       "tag": "iran-intranet-16",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://d8680ca0-b97c-40cf-9726-16c362eadf88@snapp.ir:80?path=/?ed=2048&security=none&encryption=none&host=alfred-af5ad8949d-alfred13.apps.ir-central1.arvancaas.ir&type=ws#⚡Telegram"
+      "uri": "vless://e9e437c2-1ee5-4f0d-ae09-4bfafc835e47@185.143.233.120:2086?path=/wp-admin%3Fed%3D2048&amp%3Bsecurity=none&amp%3Bencryption=none&amp%3Bhost=getasa.ir&amp%3Btype=ws#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40v2ray_iran88%20%231"
     },
     {
       "tag": "iran-intranet-17",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://f2169fd1-8862-4cfb-b2bd-d87bdd42c37d@185.143.233.200:80?path=/&security=none&encryption=none&host=asd.arnewluncher.ir&type=ws#⚡Telegram"
+      "uri": "vless://a46fd309-e506-4207-9148-22c162b10a71@185.143.233.5:80?encryption=none&amp%3Bsecurity=none&amp%3Btype=ws&amp%3Bhost=outnika.snappfoodi.ir&amp%3Bpath=/api/v2#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40v2ray_youtube%20%231"
     },
     {
       "tag": "iran-intranet-18",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://97dce074-7db1-4d59-99ca-0ef8311e2425@s19.speedyconnect.pro:443?path=/downloader/10005%3Fed%3D2048&amp%3Bsecurity=tls&amp%3Bencryption=none&amp%3Bhost=s19.speedyconnect.pro&amp%3Btype=ws&amp%3Bsni=s19.speedyconnect.pro#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40lax_vpn%20%231"
+      "uri": "vless://a46fd309-e506-4207-9148-22c162b10a71@185.143.233.5:443?encryption=no%E2%80%A6%3C/div%3E#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40v2ray_youtube%20%232"
     },
     {
       "tag": "iran-intranet-19",
       "priority": "IR-exit",
       "country": "IR",
       "protocol": "vless",
-      "uri": "vless://a1d9eaf5-9e03-4c67-af0b-e238b865b373@185.143.234.122:80?encryption=none&amp%3Bsecurity=none&amp%3Btype=ws%3D-%40ghalagyann---%40ghalagyann---%40ghalagyann---%40ghalagyann---%40ghalagyann---%40ghalagyann&amp%3Bhost=amm4.avenflow.ir&amp%3Bpath=/#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20VLESS%20%7C%20%40v2ray_free_conf%20%231"
+      "uri": "vless://5f4845b4-11dc-41d6-9508-4ff6a02e36c1@45.131.4.192:80?encryption=none&host=silent-paper-fa57.fipiyag989.workers.dev&path=%2F&security=none&type=ws#%3E%3E%40oneclickvpnkeys%3A%3AUS"
     }
   ],
   "route": {
