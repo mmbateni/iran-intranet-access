@@ -1,4 +1,4 @@
-# Armenian corridor bridge (all) — 2026-03-31 00:06 UTC
+# Armenia→Iran bridge-verified — 2026-03-31 00:06 UTC
 # 34 configs
 
 vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?encryption=none&security=reality&sni=🔒
