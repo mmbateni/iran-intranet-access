@@ -1,4 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-04-07 15:03 UTC
+# IR mobile (MCI/Irancell/Rightel) — 2026-04-08 05:35 UTC
 # 1 configs
 
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGdGMxN1ZIOVpYUU9ONXZzbEpDWW12@91.186.217.246:31764
