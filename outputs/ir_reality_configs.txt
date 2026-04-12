@@ -1,4 +1,5 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-04-12 05:45 UTC
-# 1 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-04-12 14:19 UTC
+# 2 configs
 
 vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?security=reality&sni=apple.com&alpn=h2&fp=chrome&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd&type=tcp&flow=xtls-rprx-vision&encryption=none#REALITY|NL🇳🇱
+vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=apple.com&fp=chrome&security=reality&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd#REALITY|NL🇳🇱
