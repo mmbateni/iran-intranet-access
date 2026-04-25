@@ -1,8 +1,8 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-04-25 05:36 UTC
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-04-25 14:34 UTC
 # 5 configs
 
 vless://2c564cf2-2291-4c8a-ad02-d8db601c41f9@5.180.47.159:8443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=Bg1P8Pv18fdeezfJWpqfUScMYHUUInCgdXsXEWBNBFo&security=reality&sid=9edc548e1e284d84&sni=google.com&type=tcp#%F0%9F%95%B3%EF%B8%8F19@oneclickvpnkeys
 vless://a384c715-aeb5-45e8-859b-f687ca6c083f@5.180.97.139:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ&sid=9f35da6c9412b832&type=tcp&headerType=none
+vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=apple.com&fp=chrome&security=reality&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd#REALITY|NL🇳🇱
 vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?security=reality&sni=apple.com&alpn=h2&fp=chrome&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd&type=tcp&flow=xtls-rprx-vision&encryption=none#REALITY|NL🇳🇱
-vless://d608e843-a06d-4613-b73a-ee7bfc6cfa22@213.176.67.170:2083?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=id.vk.com&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#@v2rayconfigamir
-vless://870f0165-8308-4e53-b81f-8b54eaf03bd2@62.60.212.199:443?security=reality&encryption=none&pbk=KT7T2Ny_fZP-oU18D5agZeUfe70tc6TIZ2IrlerKeTA&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=random&spx=%2F&type=tcp&sni=www.figma.com&sid=8784#REALITY|IR🇮🇷
+vless://870f0165-8308-4e53-b81f-8b54eaf03bd2@62.60.212.199:443?security=reality&encryption=none&pbk=KT7T2Ny_fZP-oU18D5agZeUfe70tc6TIZ2IrlerKeTA&headerType=none&fp=random&spx=%2F&type=tcp&sni=www.figma.com&sid=8784#REALITY|IR🇮🇷
