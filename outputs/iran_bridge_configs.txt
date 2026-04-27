@@ -1,39 +1,40 @@
-# Armenia→Iran bridge-verified — 2026-04-26 14:33 UTC
-# 36 configs
+# Armenia→Iran bridge-verified — 2026-04-27 06:23 UTC
+# 37 configs
 
 vless://aea17401-0505-4cac-b330-d7fcecfa63b7@46.226.162.144:443?mode=gun&security=reality&encryption=none&pbk=yCVJx0wmxNCquTou_VefSTUXBJ1gMBJyOcNViF1BVXw&fp=chrome&spx=/&type=grpc&serviceName=Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs&sni=🔒
 vless://363fc7cb-211e-4ee5-86dc-32cebcd729a2@46.226.162.144:443?mode=gun&security=reality&encryption=none&pbk=yCVJx0wmxNCquTou_VefSTUXBJ1gMBJyOcNViF1BVXw&fp=chrome&spx=/&type=grpc&serviceName=Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs&sni=🔒
-trojan://Aimer@188.164.159.171:443?type=ws&sni=🔒
-trojan://Aimer@188.164.159.91:2083?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.91:2083?security=tls&sni=🔒
+vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&fp=chrome&spx=/@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-?ed=2560&type=tcp&sni=yahoo.com&sid=0e#@v2rayconfigamir
+trojan://Aimer@188.164.159.98:2083?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.138:2083?security=tls&sni=🔒
+trojan://Aimer@188.164.159.171:443?security=tls&sni=🔒
 trojan://Aimer@188.164.159.98:2083?security=tls&sni=🔒
+trojan://Aimer@188.164.159.55:2096?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.18:443?security=tls&sni=🔒
+trojan://Aimer@188.164.159.241:2096?allowInsecure=1&sni=🔒
 trojan://Aimer@188.164.159.175:8443?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.175:8443?security=tls&sni=🔒
+trojan://Aimer@188.164.159.18:443?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.91:2083?security=tls&sni=🔒
+trojan://Aimer@188.164.159.171:443?type=ws&sni=🔒
+trojan://Aimer@188.164.159.175:8443?type=ws&sni=🔒
+trojan://ttfang@5.10.215.216:2096?security=tls&sni=🔒
+trojan://Aimer@188.164.159.107:2096?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.171:443?allowInsecure=1&sni=🔒
 trojan://Aimer@188.164.159.241:2096?security=tls&sni=🔒
+trojan://Aimer@188.164.159.45:8443?security=tls&sni=🔒
+trojan://Aimer@188.164.159.74:8443?security=tls&sni=🔒
+trojan://Aimer@188.164.159.91:2083?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.107:2096?security=tls&sni=🔒
+trojan://ttfang@5.10.214.216:2096?security=tls&sni=🔒
+trojan://Aimer@188.164.159.43:2083?allowInsecure=1&sni=🔒
+trojan://Aimer@188.164.159.55:2096?security=tls&sni=🔒
+trojan://Aimer@188.164.159.138:2083?allowInsecure=1&sni=🔒
 trojan://Aimer@188.164.159.241:2096?type=ws&sni=🔒
 trojan://Aimer@188.164.159.43:2083?path=🔒
-trojan://ttfang@5.10.214.216:2096?security=tls&sni=🔒
-trojan://ttfang@5.10.215.216:2096?security=tls&sni=🔒
-trojan://Aimer@188.164.159.138:2083?security=tls&sni=🔒
-trojan://Aimer@188.164.159.171:443?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.45:8443?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.107:2096?security=tls&sni=🔒
-trojan://Aimer@188.164.159.138:2083?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.220:2083?security=tls&sni=🔒
-trojan://Aimer@188.164.159.241:2096?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.55:2096?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.98:2083?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.107:2096?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.43:2083?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.74:8443?security=tls&sni=🔒
-trojan://Aimer@188.164.159.171:443?security=tls&sni=🔒
-trojan://Aimer@188.164.159.18:443?allowInsecure=1&sni=🔒
-trojan://Aimer@188.164.159.18:443?security=tls&sni=🔒
-trojan://Aimer@188.164.159.175:8443?type=ws&sni=🔒
 trojan://Aimer@188.164.159.22:2096?path=🔒
+trojan://Aimer@188.164.159.45:8443?allowInsecure=1&sni=🔒
 trojan://Aimer@188.164.159.43:2083?security=tls&sni=🔒
-trojan://Aimer@188.164.159.55:2096?security=tls&sni=🔒
-trojan://Aimer@188.164.159.175:8443?security=tls&sni=🔒
 trojan://Aimer@188.164.159.45:8443?type=ws&sni=🔒
-trojan://Aimer@188.164.159.45:8443?security=tls&sni=🔒
+trojan://Aimer@188.164.159.220:2083?security=tls&sni=🔒
 trojan://1234567890@92.246.137.150:443?security=tls&sni=kfm-bn0.pages.dev&type=ws&host=kfm-bn0.pages.dev&path=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3#RELAY🚩
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpVS0s1WFV2aklsT2tlVGJCQTBuZllo@2.56.207.150:8443
