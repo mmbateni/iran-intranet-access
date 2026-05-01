@@ -1,5 +1,6 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-01 06:36 UTC
-# 2 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-01 14:48 UTC
+# 3 configs
 
-vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=apple.com&fp=chrome&security=reality&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd#REALITY|NL🇳🇱
+vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?security=reality&sni=apple.com&alpn=h2&fp=chrome&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd&type=tcp&flow=xtls-rprx-vision&encryption=none#REALITY|NL🇳🇱
 vless://a384c715-aeb5-45e8-859b-f687ca6c083f@5.180.97.139:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ&sid=9f35da6c9412b832&type=tcp&headerType=none
+vless://52a4263d-2ad0-452d-a669-c2d2776f4c34@5.188.224.73:2083?encryption=none&type=tcp&security=reality&sni=ir.ozone.ru&pbk=J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ&sid=6da16b1335651b38#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20114897
