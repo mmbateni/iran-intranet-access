@@ -1,5 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-04-30 15:38 UTC
-# 2 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-05-01 06:36 UTC
+# 1 configs
 
-vless://c7f067ad-044c-407e-b1d2-711902903ac0@nider-t.sbrf-cdn342.ru:443?security=reality&encryption=none&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=max.ru&sid=111111#REALITY|NL🇳🇱
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGdGMxN1ZIOVpYUU9ONXZzbEpDWW12@91.186.217.246:31764
