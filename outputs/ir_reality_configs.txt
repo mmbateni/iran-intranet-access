@@ -1,4 +1,5 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-02 06:05 UTC
-# 1 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-02 14:41 UTC
+# 2 configs
 
-vless://a384c715-aeb5-45e8-859b-f687ca6c083f@5.180.97.139:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ&sid=9f35da6c9412b832&type=tcp&headerType=none
+vless://5a3e676b-7c23-4093-868d-eb00be89eb62@5.188.115.43:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=api-maps.yandex.ru&pbk=oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk&sid=a9c4f17e3b62d8#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20115458
+vless://a384c715-aeb5-45e8-859b-f687ca6c083f@5.180.97.139:443?security=reality&encryption=none&pbk=wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=google.com&sid=9f35da6c9412b832#v2ray_dalghak
