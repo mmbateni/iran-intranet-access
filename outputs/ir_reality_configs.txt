@@ -1,4 +1,4 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-03 06:25 UTC
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-03 14:40 UTC
 # 1 configs
 
 vless://a384c715-aeb5-45e8-859b-f687ca6c083f@5.180.97.139:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ&sid=9f35da6c9412b832&type=tcp&headerType=none
