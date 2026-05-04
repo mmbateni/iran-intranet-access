@@ -1,5 +1,7 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-04 06:36 UTC
-# 2 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-04 15:42 UTC
+# 4 configs
 
+vless://2c20cd0b-16a9-4dc4-9a13-16f47822c9b0@185.141.216.88:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=mn02.hirbilon.net&pbk=3LyOfYxF1pSJQDM1rhIm6xbiSC897TzOWw79vXpUPGI&sid=05f6a5418c2a6865#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20942907
 vless://d608e843-a06d-4613-b73a-ee7bfc6cfa22@213.176.67.246:2083?security=reality&sni=id.vk.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&type=tcp&flow=xtls-rprx-vision&packetEncoding=xudp&encryption=none#@v2rayconfigamir
+vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=apple.com&fp=chrome&security=reality&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd#REALITY|NL🇳🇱
 vless://a384c715-aeb5-45e8-859b-f687ca6c083f@5.180.97.139:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=wBrGfTI9PaFf966aN6KaCY0cL6QRLlop4nzNa6bJsiQ&sid=9f35da6c9412b832&type=tcp&headerType=none
