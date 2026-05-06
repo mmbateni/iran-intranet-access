@@ -1,4 +1,4 @@
-# HYSTERIA2 — 2026-05-06 06:28 UTC
+# HYSTERIA2 — 2026-05-06 15:52 UTC
 # 1
 
-hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20828312
+hysteria2://dongtaiwang.com@163.172.113.118:40022?insecure=1&sni=www.microsoft.com#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20367834
