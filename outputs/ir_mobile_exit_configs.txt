@@ -1,7 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-05-15 06:58 UTC
-# 4 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-05-15 15:49 UTC
+# 1 configs
 
-trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?sni=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?security=tls&sni=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?allowInsecure=1&sni=Koma-YT.PAGeS.Dev&ws=1&wspath=%252FtrTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2520%2540WangCai2
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGdGMxN1ZIOVpYUU9ONXZzbEpDWW12@91.186.217.246:31764
