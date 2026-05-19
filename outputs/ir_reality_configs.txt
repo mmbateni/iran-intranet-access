@@ -1,5 +1,8 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-19 07:16 UTC
-# 2 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-05-19 16:53 UTC
+# 5 configs
 
+vless://c7f067ad-044c-407e-b1d2-711902903ac0@nider-t.sbrf-cdn342.ru:443?security=reality&encryption=none&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=max.ru&sid=111111
+vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?security=reality&sni=apple.com&alpn=h2&fp=chrome&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd&type=tcp&flow=xtls-rprx-vision&encryption=none#REALITY|NL🇳🇱
+vless://d7fbe279896e40118c23d15fe537dddd@213.176.16.74:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=apple.com&fp=chrome&security=reality&pbk=XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc&sid=aabbccdd#REALITY|NL🇳🇱
 vless://40d7798a-6c76-4298-a9d4-9e6181cd2dd7@94.183.228.63:443?security=reality&encryption=none&pbk=BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=www.cybo.com
 vless://0c6f4763-bba8-4612-baf7-a90c09b53b93@5.188.115.98:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=yandex.ru&pbk=P5KfTl_fQ0lZutcRdLhEzhwWhPNJtrVYf2reWB5LgD8
