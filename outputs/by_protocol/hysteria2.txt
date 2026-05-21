@@ -1,4 +1,4 @@
-# HYSTERIA2 — 2026-05-21 07:23 UTC
+# HYSTERIA2 — 2026-05-21 16:45 UTC
 # 1
 
 hysteria2://10550754-cf62-3d3b-ba6a-50be27a275d7@195.133.53.33:443?sni=s516.okgfw.top
