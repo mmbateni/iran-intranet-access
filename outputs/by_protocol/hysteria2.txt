@@ -1,5 +1,5 @@
-# HYSTERIA2 — 2026-05-22 16:21 UTC
+# HYSTERIA2 — 2026-05-23 06:42 UTC
 # 2
 
 hysteria2://10550754-cf62-3d3b-ba6a-50be27a275d7@195.133.53.33:443?sni=s516.okgfw.top
-hysteria2://4ZsHI2OW3j@45.91.81.231:443?alpn=h3&sni=45.91.81.231
+hysteria2://channel:HYyx9NmF3xpDbdyVP5hd@fi2.alexanderoff.ru:443?sni=fi2.alexanderoff.ru&insecure=0
