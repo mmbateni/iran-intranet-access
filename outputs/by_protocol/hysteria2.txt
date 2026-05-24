@@ -1,5 +1,7 @@
-# HYSTERIA2 — 2026-05-24 07:09 UTC
-# 2
+# HYSTERIA2 — 2026-05-24 15:09 UTC
+# 4
 
+hysteria2://new:5U2kfHM5JHqqJE5j3cKA@fi2.alexanderoff.ru:443?sni=fi2.alexanderoff.ru&insecure=0
 hysteria2://10550754-cf62-3d3b-ba6a-50be27a275d7@195.133.53.33:443?sni=s516.okgfw.top
 hysteria2://channel:HYyx9NmF3xpDbdyVP5hd@fi2.alexanderoff.ru:443?sni=fi2.alexanderoff.ru&insecure=0
+hysteria2://channel:Bu3eNYc5efAmgnWkbG9w@fiv4.alexanderoff.ru:443?sni=fiv4.alexanderoff.ru&insecure=0
