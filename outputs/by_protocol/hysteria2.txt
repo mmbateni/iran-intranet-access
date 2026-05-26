@@ -1,4 +1,4 @@
-# HYSTERIA2 — 2026-05-26 07:20 UTC
+# HYSTERIA2 — 2026-05-26 17:18 UTC
 # 3
 
 hysteria2://10550754-cf62-3d3b-ba6a-50be27a275d7@193.53.126.108:443?insecure=0&sni=s463.okgfwbackxyz.xyz
