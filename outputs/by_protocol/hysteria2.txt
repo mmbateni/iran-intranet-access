@@ -1,4 +1,4 @@
-# HYSTERIA2 — 2026-05-27 08:07 UTC
+# HYSTERIA2 — 2026-05-27 17:10 UTC
 # 4
 
 hysteria2://fe9b17e8-41e1-4d1b-b588-93a23665724f@84.200.33.151:2056?sni=nlb1.mangshe.xyz&insecure=0
