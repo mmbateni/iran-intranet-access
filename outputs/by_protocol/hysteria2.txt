@@ -1,11 +1,12 @@
-# HYSTERIA2 — 2026-05-29 17:20 UTC
-# 8
+# HYSTERIA2 — 2026-05-30 06:56 UTC
+# 9
 
+hysteria2://fe9b17e8-41e1-4d1b-b588-93a23665724f@84.200.33.151:2056?sni=nlb1.mangshe.xyz&insecure=0
 hysteria2://0wg3zH68LL6S91ueKHvZFxWM@hy2.lingshichat.top:443?sni=hy2.lingshichat.top&insecure=0
 hysteria2://0wg3zH68LL6S91ueKHvZFxWM@hy2.lingshichat.top:443?sni=hy2.lingshichat.top
-hysteria2://fe9b17e8-41e1-4d1b-b588-93a23665724f@84.200.33.151:2056?sni=nlb1.mangshe.xyz&insecure=0
 hysteria2://channel:Bu3eNYc5efAmgnWkbG9w@fiv4.alexanderoff.ru:443?sni=fiv4.alexanderoff.ru&insecure=0
-hysteria2://f076b291-b745-4ede-8227-cdf9dde7c744@sg2.yuntong.click:443?insecure=0&sni=sg2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
-hysteria2://9b016db2-a63d-43ab-99d8-e424022a752f@sg2.yuntong.click:443?sni=sg2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
-hysteria2://73e2715b-9f07-41ae-a134-8d5ef82cd01d@sg2.yuntong.click:443?insecure=0&sni=sg2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 hysteria2://5bd0aef8-00b2-42c2-b3af-15fe0a07e6ed@vn2.yuntong.click:443?insecure=0&sni=vn2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
+hysteria2://25cccf16-5693-4c6e-9bb9-0e38da7d4475@kh2.yuntong.click:443?insecure=0&sni=kh2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
+hysteria2://73e2715b-9f07-41ae-a134-8d5ef82cd01d@sg2.yuntong.click:443?insecure=0&sni=sg2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
+hysteria2://9b016db2-a63d-43ab-99d8-e424022a752f@sg2.yuntong.click:443?sni=sg2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
+hysteria2://f076b291-b745-4ede-8227-cdf9dde7c744@sg2.yuntong.click:443?insecure=0&sni=sg2.yuntong.click&obfs=salamander&obfs-password=eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
