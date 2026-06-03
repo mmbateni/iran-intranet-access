@@ -1,13 +1,11 @@
-# HYSTERIA2 — 2026-06-02 18:14 UTC
-# 10
+# HYSTERIA2 — 2026-06-03 08:55 UTC
+# 8
 
-hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20135557
-hysteria2://Masir_Sefid@18.153.46.206:443?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop
-hysteria2://Masir_Sefid@18.153.46.206:443?insecure=0&sni=qus.masir-sefid.shop&obfs=salamander&obfs-password=Masir_Sefid
-hysteria2://Masir_Sefid@18.196.180.90:443?insecure=0&sni=qus.masir-sefid.shop&obfs=salamander&obfs-password=Masir_Sefid
-hysteria2://Masir_Sefid@18.198.106.153:443?insecure=0&sni=qus.masir-sefid.shop&obfs=salamander&obfs-password=Masir_Sefid
 hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com
+hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20520288
+hysteria2://7ce9a8d0-2cb2-4b8d-8de9-262c1d6597ac@178.105.41.158:443?sni=gy.gotogle.com
+hysteria2://Masir_Sefid@18.153.46.206:443?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop
+hysteria2://Masir_Sefid@18.196.180.90:443?insecure=0&sni=qus.masir-sefid.shop&obfs=salamander&obfs-password=Masir_Sefid
 hysteria2://Masir_Sefid@18.198.106.153:443?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop
-hysteria2://Masir_Sefid@18.196.180.90:443?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop
-hysteria2://68cf2e7761c240d9ba4c31f99ab37a9f@157.22.241.242:443?insecure=0&sni=157.22.241.242
-hysteria2://68cf2e7761c240d9ba4c31f99ab37a9f@157.22.241.242:443?security=tls&insecure=0&sni=157.22.241.242
+hysteria2://Masir_Sefid@18.198.106.153:443?insecure=0&sni=qus.masir-sefid.shop&obfs=salamander&obfs-password=Masir_Sefid
+hysteria2://Masir_Sefid@18.153.46.206:443?insecure=0&sni=qus.masir-sefid.shop&obfs=salamander&obfs-password=Masir_Sefid
