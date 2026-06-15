@@ -1,23 +1,33 @@
 #!/usr/bin/env python3
 """
-Iran Intranet Config Collector & Verifier  v5 + multi-API GeoIP patch
-=====================================================================
+Iran Intranet Config Collector & Verifier  v5.1 + multi-API GeoIP patch
+========================================================================
 Direction A — Diaspora / researchers OUTSIDE Iran → SHOMA
-Enhancements over v4 (merged from collect_armenia_configs.py + check_proxies.py):
-• 20+ new sources including Armenia-specific country splits and HTML scrapers
-• Armenia CIDR fast-path — no ip-api call needed for Armenian hosts
-(loads live CIDR blocks from ipdeny/ipverse/herrbischoff with hardcoded fallback)
-• Iran-bridge test — each Armenian config is probed to see if it can reach
-known Iranian internal IPs via BGP-peered Armenian ISP links
-• Latency measurement added to TCP check
-• HTML source scraping (v2nodes.com/country/am/, openproxylist.com/v2ray/…)
-• PROBE_ENABLED now defaults to "1" — HTTP probe was the primary reason
-configs appeared to pass (TCP to CDN edge succeeds even on dead backends)
-• MIN_PASSING_CONFIGS failure is now a warning, not a hard exit
-• MIN_QUALITY_SCORE lowered to 0 — quality pre-filter was silently dropping
-valid Armenian configs that use non-standard ports without TLS URI params
-• MULTI-API GEOIP PATCH: Cross-validates Iranian exits via ipapi.co & ipinfo.io
-to ensure websites actually see the user as being inside Iran.
+
+Changes in v5.1 (source overhaul):
+• REMOVED ebrasha/all (all_extracted_configs.txt, ~196k entries) — that single
+  file caused the GitHub Actions job to be cancelled after 30+ minutes because
+  196k configs × (TCP_TIMEOUT + HTTP probe) / 60 workers = many hours to verify.
+  Investigation confirmed the collection script is CLOSED-SOURCE (1-commit repo,
+  no public GitHub Actions, driven by a private Telegram bot — AbdalV2rayBot).
+  There is no public source list to replicate directly.
+• REPLACED ebrasha/all with ebrasha’s own per-protocol split files (each capped
+  independently by MAX_URIS_PER_SOURCE so no single file can blow up the run):
+    ebrasha/curated  → V2Ray-Config-By-EbraSha.txt  (hand-tested, intentionally small)
+    ebrasha/vmess    → vmess_configs.txt
+    ebrasha/vless    → vless_configs.txt
+    ebrasha/trojan   → trojan_configs.txt
+    ebrasha/ss       → ss_configs.txt
+• ADDED new Iran-exit sources not previously in the list:
+    Surfboardv2ray/TGParse          — Telegram parser, per-protocol Iran splits
+    HosseinKoofi/GO_V2rayCollector  — Go collector, mixed/vless/ss Iran splits
+    youfoundamin/V2rayCollector     — vless_iran + ss_iran
+    Stinsonysm/GO_V2rayCollector    — trojan_iran
+    4n0nymou3/multi-proxy-config-fetcher — broad multi-protocol aggregator
+• MAX_URIS_PER_SOURCE default lowered: 30 000 → 4 000
+• MAX_TOTAL_URIS global ceiling added (default 25 000) — hard cap before verification
+• Original v5 features retained: Armenia CIDR fast-path, Iran-bridge test,
+  multi-API GeoIP cross-check, security scoring, per-protocol outputs.
 """
 import asyncio
 import base64
@@ -637,7 +647,36 @@ RAW_SOURCES = [
     ("barry-far/trojan",  "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt",   "text"),
     ("barry-far/hy2",     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/hysteria2.txt","text"),
     ("barry-far/all",     "https://raw.githubusercontent.com/barry-far/V2ray-config/main/All_Config_base64_Sub.txt",          "b64"),
-    ("ebrasha/all",       "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/all_extracted_configs.txt",  "text"),
+    # ── ebrasha: replaced "ebrasha/all" (all_extracted_configs.txt, ~196k entries) ─
+    # The all_extracted_configs.txt is a private closed-source Telegram-bot aggregate;
+    # its collection script is not public (only 1 commit, no Actions visible).
+    # We use the per-protocol split files instead — same content but each capped
+    # independently by MAX_URIS_PER_SOURCE, so no single file can blow up the run.
+    # The curated file (V2Ray-Config-By-EbraSha.txt) contains ebrasha's own/hand-
+    # tested servers and is intentionally small — always include it uncapped.
+    ("ebrasha/curated",  "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/V2Ray-Config-By-EbraSha.txt",     "text"),
+    ("ebrasha/vmess",    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/vmess_configs.txt",               "text"),
+    ("ebrasha/vless",    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/vless_configs.txt",               "text"),
+    ("ebrasha/trojan",   "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/trojan_configs.txt",              "text"),
+    ("ebrasha/ss",       "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/ss_configs.txt",                  "text"),
+    # ── Iran-exit focused sources (new — not previously in list) ─────────────────
+    # Surfboardv2ray/TGParse: Telegram-channel parser, per-protocol splits,
+    # actively maintained with Iranian exit focus.
+    ("tgparse/vless",    "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/vless",   "text"),
+    ("tgparse/trojan",   "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/trojan",  "text"),
+    ("tgparse/ss",       "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/ss",      "text"),
+    # HosseinKoofi/GO_V2rayCollector: Go-based collector with dedicated Iran-exit
+    # splits (mixed_iran, vless_iran, ss_iran).
+    ("hkofi/mixed-ir",   "https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran.txt",  "text"),
+    ("hkofi/vless-ir",   "https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vless_iran.txt",  "text"),
+    ("hkofi/ss-ir",      "https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/ss_iran.txt",     "text"),
+    # youfoundamin/V2rayCollector: another Iran-exit collector.
+    ("amin/vless-ir",    "https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vless_iran.txt",     "text"),
+    ("amin/ss-ir",       "https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/ss_iran.txt",        "text"),
+    # Stinsonysm/GO_V2rayCollector: Iran-exit Trojan configs from Telegram.
+    ("stinson/trojan-ir","https://raw.githubusercontent.com/Stinsonysm/GO_V2rayCollector/main/trojan_iran.txt",   "text"),
+    # 4n0nymou3/multi-proxy-config-fetcher: broad multi-protocol aggregator.
+    ("4n0n/proxy",       "https://github.com/4n0nymou3/multi-proxy-config-fetcher/raw/refs/heads/main/configs/proxy_configs.txt","text"),
     ("matin/super",       "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt","b64"),
     ("matin/vmess",       "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt",    "text"),
     ("matin/vless",       "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt",    "text"),
@@ -724,8 +763,12 @@ def load_bootstrap() -> list[str]:
 
 # ── Scraper ───────────────────────────────────────────────────────────────────
 async def fetch_source(label: str, url: str, fmt: str, session: aiohttp.ClientSession, retries: int = 2) -> list[str]:
-    # Read the limit from the YAML env (defaults to 30000 if not set)
-    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "30000"))
+    # Per-source cap: prevents any single file from overwhelming the pipeline.
+    # With TCP_TIMEOUT=4s + HTTP probe=5s, verifying N configs takes roughly
+    # N * (4+5) / MAX_WORKERS seconds worst-case (all-fail path).
+    # At 4000/source with 60 workers that's 600s ≈ 10 min worst-case per source.
+    # Tune via the YAML env var MAX_URIS_PER_SOURCE.
+    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "4000"))
     
     for attempt in range(retries + 1):
         try:
@@ -766,8 +809,19 @@ async def collect_all() -> list[str]:
     deduped   = deduplicate_by_uuid(list(all_uris))
     filtered = [u for u in deduped if _quality_score(u) >= MIN_QUALITY_SCORE]
     dropped  = len(deduped) - len(filtered)
+
+    # Global ceiling: caps total URIs sent to the verification stage regardless
+    # of how many sources contribute.  Verification is the slow step
+    # (TCP + HTTP probe per config), so this is the primary wall-clock guard.
+    # Order is preserved — quality_score sort already put best candidates first
+    # because deduplicate_by_uuid keeps Reality > TLS > shortest.
+    MAX_TOTAL = int(os.environ.get("MAX_TOTAL_URIS", "25000"))
+    if len(filtered) > MAX_TOTAL:
+        print(f"  Global cap: {len(filtered)} → {MAX_TOTAL} (MAX_TOTAL_URIS={MAX_TOTAL})")
+        filtered = filtered[:MAX_TOTAL]
+
     print(f"\nCollected {raw_count} URIs → {len(deduped)} after UUID dedup "
-          f"→ {len(filtered)} after quality filter "
+          f"→ {len(filtered)} after quality filter + cap "
           f"(MIN_QUALITY_SCORE={MIN_QUALITY_SCORE}, dropped {dropped})")
     return filtered
 
@@ -1019,7 +1073,7 @@ async def main():
     global _SHARED_SESSION
     sep = "="*57
     print(sep)
-    print("Iran Intranet Config Collector  v5 + multi-API GeoIP patch")
+    print("Iran Intranet Config Collector  v5.1 + multi-API GeoIP patch")
     print(f"TCP={TCP_TIMEOUT}s  workers={MAX_WORKERS}  probe={PROBE_ENABLED}  "
           f"bridge={not SKIP_IRAN_BRIDGE}")
     print(sep)
