@@ -724,8 +724,8 @@ def load_bootstrap() -> list[str]:
 
 # ── Scraper ───────────────────────────────────────────────────────────────────
 async def fetch_source(label: str, url: str, fmt: str, session: aiohttp.ClientSession, retries: int = 2) -> list[str]:
-    # Read the limit from the YAML env (defaults to 3000 if not set)
-    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "3000"))
+    # Read the limit from the YAML env (defaults to 30000 if not set)
+    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "30000"))
     
     for attempt in range(retries + 1):
         try:
