@@ -826,8 +826,8 @@ def load_bootstrap() -> list[str]:
 
 # ── Scraper ───────────────────────────────────────────────────────────────────
 async def fetch_source(label: str, url: str, fmt: str, session: aiohttp.ClientSession, retries: int = 2) -> list[str]:
-    # No per-source cap — collect everything from every source.
-    # The global MAX_TOTAL_URIS ceiling in collect_all() is the budget guard,
+    # Read the limit from the YAML env (defaults to 9000 if not set)
+    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "9000"))
     # and the three dedup passes (URI / UUID / server) cut the list
     # dramatically before it ever reaches the TCP+probe stage.
     for attempt in range(retries + 1):
