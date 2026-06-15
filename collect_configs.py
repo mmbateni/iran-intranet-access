@@ -36,7 +36,7 @@ import aiohttp
 # ── Configuration ──────────────────────────────────────────────────────────────
 IRAN_PROXY_CHECKER_DIR = os.environ.get("IRAN_PROXY_CHECKER_DIR", "iran-proxy-checker")
 TCP_TIMEOUT            = float(os.environ.get("TCP_TIMEOUT",          "4.0"))
-HTTP_TIMEOUT           = int(  os.environ.get("HTTP_TIMEOUT",         "10"))
+HTTP_TIMEOUT           = int(  os.environ.get("HTTP_TIMEOUT",         "5"))
 MAX_WORKERS            = int(  os.environ.get("MAX_WORKERS",           "60"))
 SKIP_V2RAY_TEST        = os.environ.get("SKIP_V2RAY_TEST",    "1").strip() == "1"
 MIN_PASSING_CONFIGS    = int(  os.environ.get("MIN_PASSING_CONFIGS",   "10"))
