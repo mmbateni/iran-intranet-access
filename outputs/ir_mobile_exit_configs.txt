@@ -1,22 +1,2 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-06-13 15:47 UTC
-# 19 configs
-
-vless://8619e4c1-0984-4dce-83e3-419e2d7f5079@185.112.59.159:443?encryption=none&flow=xtls-rprx-vision&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&security=reality&sid=111111&sni=max.ru&type=tcp
-vless://83b3bb17-bc07-453f-9f10-4264ae839314@89.34.230.234:443?security=tls&encryption=none&insecure=1&host=namasha.com&headerType=http&fp=chrome&type=tcp&allowInsecure=1&sni=namasha.com
-vless://eae7e64e-0dfe-4694-8a1d-f8f656f3e2f1@91.186.216.62:443?type=ws&headerType=none&security=tls&encryption=none&sni=polsha.ajajajajqj2qedvekq.online&fp=chrome&alpn=http%2F1.1&path=%2F&host=polsha.ajajajajqj2qedvekq.online&insecure=1
-vless://5add5b1e-e628-46df-b8b5-98990dbaf7a9@fl.gamelistak.com:443?alpn=h2,http/1.1&fp=chrome&security=tls
-vless://5ad38a6c-588b-4b16-8f4e-f217811deda6@fl.gamelistak.com:443?mode=auto&path=/@MrNexTV2RAY&security=tls&alpn=h2,http/1.1&encryption=none&insecure=1&host=fl.gamelistak.com&fp=chrome&type=xhttp&allowInsecure=1
-trojan://8r%3C%5B9%27l6hAO%238ZQi@185.112.83.62:8443?ed=2560&eh=Sec-WebSocket-Protocol&host=Koma-YT.PAGeS.Dev&path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&sni=Koma-YT.PAGeS.Dev&type=ws
-trojan://8r%3C%5B9%27l6hAO%238ZQi@185.112.83.62:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?allowInsecure=0&sni=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
-trojan://8r%3C%5B9%27l6hAO%238ZQi@185.112.83.62:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram+@WangCai2&Host=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?allowInsecure=0&sni=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev&insecure=0&allowInsecure=0&type=ws&host=Koma-YT.PAGeS.Dev&path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram+@WangCai2&Host=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&insecure=0&allowInsecure=0&type=ws&host=Koma-YT.PAGeS.Dev&path=%2FtrTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?allowInsecure=0&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram+@WangCai2
+# IR mobile (MCI/Irancell/Rightel) — 2026-06-15 19:29 UTC
+# 0 configs

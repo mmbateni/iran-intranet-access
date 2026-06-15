@@ -1,5 +1,9 @@
-# IR-exit (confirmed Iranian IP) — 2026-06-15 19:29 UTC
-# 127 configs
+# Iranian-exit (ip-api.com confirmed) — same as ir_exit_configs.txt
+# Kept for backward compatibility. Equivalent to ir_exit_configs.txt.
+# Generated: 2026-06-15 19:29 UTC | 127 configs
+#
+# NOT included: armenian_bridge configs — those show Armenian IPs to sites.
+
 vless://18afb896-6e4b-403b-b804-714b09b517e5@109.122.198.76:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=tMEkGmuOsuS_cgZYpj2UYBKnni559FZd-poGnH82ck8&security=reality&sid=bfb7cb31&sni=www.icloud.com&type=tcp#https:%2F%2Ft.me%2FForceRunVPN-%F0%9F%87%A9%F0%9F%87%AA-FrankfurtamMain-898ms-WAIcore%20Ltd
 vless://a1c30f35-e254-409c-89be-7754fed29ab0@87.107.193.3:8443?mode=gun&security=reality&encryption=none&pbk=XG7zu6GMH-maiYcacOIcbiDB9WwwNZLUmOkOp7nmcmw&fp=chrome&spx=%2F&type=grpc&serviceName=client&sni=www.sanjesh.org&sid=0f#REALITY|IR🇮🇷
 vless://6bc76573-d28e-4905-a984-76d241d59f68@188.121.123.42:1020?mode=gun&security=reality&encryption=none&pbk=V6QF29hv2QAmFdeLa6VpI7x4DAHEXerD6HDqalpq6TU&fp=chrome&spx=/S7pQ5Od09wdubDS&type=grpc&sni=yahoo.com&sid=4005c9611a#@bored_vpn
