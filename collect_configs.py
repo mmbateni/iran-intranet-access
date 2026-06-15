@@ -213,6 +213,181 @@ def _quality_score(uri: str) -> int:
 
 MIN_QUALITY_SCORE = int(os.environ.get("MIN_QUALITY_SCORE", "0"))
 
+# ── Security Checks ────────────────────────────────────────────────────────────
+# Minimum security score to include a config in any output (0–10, default 3).
+# Set to 0 to disable security filtering entirely.
+MIN_SECURITY_SCORE = int(os.environ.get("MIN_SECURITY_SCORE", "3"))
+
+# Shadowsocks cipher classification
+_SS_WEAK_CIPHERS: frozenset[str] = frozenset({
+    # Unauthenticated / no AEAD → vulnerable to active tampering
+    "none", "table",
+    "rc4", "rc4-md5",
+    "aes-128-cfb", "aes-192-cfb", "aes-256-cfb",
+    "aes-128-ctr", "aes-192-ctr", "aes-256-ctr",
+    "bf-cfb",
+    "camellia-128-cfb", "camellia-192-cfb", "camellia-256-cfb",
+    "salsa20", "chacha20", "chacha20-ietf",   # non-IETF / no-MAC variants
+})
+_SS_AEAD_CIPHERS: frozenset[str] = frozenset({
+    # Authenticated encryption — safe against active probing & replay
+    "aes-128-gcm", "aes-256-gcm",
+    "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305",
+    "2022-blake3-aes-128-gcm", "2022-blake3-aes-256-gcm",
+    "2022-blake3-chacha20-poly1305",
+})
+
+# Ports that naturally carry HTTPS/QUIC — less likely to be blocked or flagged
+_SECURE_PORTS: frozenset[int] = frozenset({443, 8443, 2053, 2083, 2087, 2096})
+
+
+def _get_ss_cipher(uri: str) -> str:
+    """Extract the Shadowsocks cipher method from a ss:// URI. Returns '' on failure."""
+    try:
+        body = uri[5:].split("#")[0].split("?")[0]
+        if "@" in body:
+            # SIP002 format: ss://userinfo@host:port
+            # userinfo may be base64(method:password) or plain method:password
+            userinfo = body.rsplit("@", 1)[0]
+            try:
+                decoded = base64.b64decode(
+                    userinfo + "=" * (-len(userinfo) % 4)
+                ).decode("utf-8", errors="ignore")
+                if ":" in decoded:
+                    return decoded.split(":")[0].lower()
+            except Exception:
+                pass
+            if ":" in userinfo:
+                return userinfo.split(":")[0].lower()
+        else:
+            # Legacy format: ss://base64(method:password@host:port)
+            raw = body + "=" * (-len(body) % 4)
+            dec = base64.b64decode(raw).decode("utf-8", errors="ignore")
+            if ":" in dec:
+                return dec.split(":")[0].lower()
+    except Exception:
+        pass
+    return ""
+
+
+def _get_vmess_alterid(uri: str) -> int:
+    """
+    Return VMess alterId (aid field).
+      0   → AEAD mode (secure, recommended)
+      >0  → legacy UUID-based encryption (weaker, replay-vulnerable)
+      -1  → parse error
+    """
+    try:
+        raw = uri[8:] + "=" * (-(len(uri) - 8) % 4)
+        obj = json.loads(base64.b64decode(raw).decode("utf-8", errors="ignore"))
+        return int(obj.get("aid", 0))
+    except Exception:
+        return -1
+
+
+def _score_config_security(uri: str, port: int, latency_ms: float) -> tuple[int, list[str]]:
+    """
+    Compute (security_score, security_flags) for a verified config URI.
+
+    Score tiers (0–10)
+    ──────────────────
+    7–10  Reality       — mimics real TLS 1.3; gold standard for DPI resistance
+    5–6   QUIC-based    — TUIC / Hysteria2; built-in AEAD, no extra TLS needed
+    4–6   TLS-wrapped   — VLESS/Trojan/VMess with TLS and good settings
+    2–3   TLS with       caveats (no SNI, legacy VMess alterId, unrecognized SS cipher)
+    0–1   No encryption  or known-weak cipher → filtered out at MIN_SECURITY_SCORE
+
+    Controlled by env var MIN_SECURITY_SCORE (default 3).
+    """
+    score: int = 0
+    flags: list[str] = []
+    proto = classify_proto(uri)
+    uri_l = uri.lower()
+
+    # Detect explicit TLS (covers VLESS ?security=tls, Trojan, VMess JSON "tls")
+    has_tls = (
+        "security=tls" in uri_l
+        or ("tls" in uri_l and "notls" not in uri_l and "no-tls" not in uri_l)
+    )
+
+    # ── Per-protocol base score ────────────────────────────────────────────────
+    if _is_reality(uri):
+        # VLESS + XTLS-Reality: impersonates a real TLS 1.3 website fingerprint
+        score = 7
+
+    elif proto in ("hysteria2", "tuic"):
+        # QUIC-based protocols with mandatory AEAD; TLS-equivalent by design
+        score = 5
+
+    elif proto == "wireguard":
+        # ChaCha20-Poly1305 encryption; BUT distinctive fixed-size handshake
+        score = 4
+        flags.append("wireguard_dpi_detectable")
+
+    elif proto in ("vless", "trojan"):
+        if has_tls:
+            score = 4
+        else:
+            score = 1
+            flags.append("no_tls")
+
+    elif proto == "vmess":
+        aid = _get_vmess_alterid(uri)
+        if has_tls:
+            score = 3
+            if aid == 0:
+                score += 1          # AEAD mode — authenticated encryption
+            else:
+                flags.append("vmess_legacy_aid")   # alterId>0: older, weaker UUID mode
+        else:
+            score = 1
+            flags.append("no_tls")
+            if aid > 0:
+                flags.append("vmess_legacy_aid")
+
+    elif proto == "ss":
+        cipher = _get_ss_cipher(uri)
+        if cipher in _SS_AEAD_CIPHERS:
+            score = 4
+        elif cipher in _SS_WEAK_CIPHERS:
+            # Non-authenticated: vulnerable to active probing and replay
+            score = 0
+            flags.append(f"weak_ss_cipher:{cipher}")
+        elif cipher == "":
+            score = 2
+            flags.append("ss_cipher_undetectable")
+        else:
+            score = 2
+            flags.append(f"ss_unrecognized_cipher:{cipher}")
+
+    else:
+        score = 1
+
+    # ── Port bonus / penalty ───────────────────────────────────────────────────
+    if port in _SECURE_PORTS:
+        score += 1                  # standard HTTPS/QUIC port — blends in
+    elif port == 80:
+        flags.append("plaintext_port_80")
+        score = max(0, score - 1)  # plain HTTP port — easily inspected
+
+    # ── SNI presence check for TLS configs ────────────────────────────────────
+    if has_tls and proto not in ("hysteria2", "tuic", "wireguard"):
+        has_sni = "sni=" in uri_l or "servername=" in uri_l
+        if has_sni:
+            score += 1              # SNI set: TLS handshake can mimic a legit site
+        else:
+            flags.append("no_sni")
+
+    # ── Latency quality signal ─────────────────────────────────────────────────
+    if latency_ms > 5000:
+        flags.append("very_high_latency")
+        score = max(0, score - 1)  # extremely slow — likely unreliable in practice
+    elif latency_ms > 3000:
+        flags.append("high_latency")
+
+    return min(10, score), flags
+
+
 def deduplicate_by_uuid(uris: list[str]) -> list[str]:
     best: dict[str, str] = {}
     no_uuid: list[str] = []
