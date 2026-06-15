@@ -415,6 +415,69 @@ def deduplicate_by_uuid(uris: list[str]) -> list[str]:
             elif len(uri) < len(prev) and not _is_reality(prev): best[uid] = uri
     return list(best.values()) + no_uuid
 
+# ── Additional deduplication passes ───────────────────────────────────────────
+_FRAG_RE = re.compile(r"#.*$")
+
+def deduplicate_by_normalized_uri(uris: list[str]) -> list[str]:
+    """
+    Pass 1 — strip the #fragment (channel name / label) and compare the bare URI.
+
+    Aggregators append their Telegram channel name as a comment, so the same
+    config appears dozens of times across sources:
+        vless://uuid@server:443?...#Channel_A
+        vless://uuid@server:443?...#FreeVPN_Bot
+        vless://uuid@server:443?...#مجانی
+
+    All three are byte-for-byte identical after the '#'.  dict.fromkeys in
+    collect_all() already removed exact duplicates, but these survive because
+    the fragments differ.  This pass collapses them to one.
+
+    The first occurrence wins (sources are already ordered best-first because
+    high-quality repos like barry-far appear before bulk dumps).
+    """
+    seen: dict[str, str] = {}   # normalised_uri → first_original_uri
+    for uri in uris:
+        norm = _FRAG_RE.sub("", uri).rstrip()
+        if norm not in seen:
+            seen[norm] = uri
+    return list(seen.values())
+
+
+def deduplicate_by_server(uris: list[str]) -> list[str]:
+    """
+    Pass 2 — one config per (host, port) endpoint.
+
+    This is the primary logic behind NekoBox's 'Remove Duplicates'.  If ten
+    configs all point to the same host:port they will ALL connect to the same
+    physical server, making nine of them useless.  We keep the one with the
+    highest protocol quality (Reality > TLS+443 > TLS > plain).
+
+    parse_host_port() is called here at runtime so forward-reference is fine.
+    """
+    best: dict[tuple[str, int], str] = {}   # (host, port) → best URI
+    unparseable: list[str] = []
+
+    for uri in uris:
+        hp = parse_host_port(uri)
+        if hp is None:
+            unparseable.append(uri)
+            continue
+        key = (hp[0].lower(), hp[1])
+        if key not in best:
+            best[key] = uri
+        else:
+            prev = best[key]
+            qs_new  = _quality_score(uri)
+            qs_prev = _quality_score(prev)
+            if _is_reality(uri) and not _is_reality(prev):
+                best[key] = uri
+            elif not _is_reality(prev) and qs_new > qs_prev:
+                best[key] = uri
+            elif qs_new == qs_prev and len(uri) < len(prev):
+                best[key] = uri
+
+    return list(best.values()) + unparseable
+
 # ── URI parsing ────────────────────────────────────────────────────────────────
 def decode_b64(text: str) -> str:
     s = text.strip().replace("\n", "").replace("\r", "")
@@ -763,29 +826,23 @@ def load_bootstrap() -> list[str]:
 
 # ── Scraper ───────────────────────────────────────────────────────────────────
 async def fetch_source(label: str, url: str, fmt: str, session: aiohttp.ClientSession, retries: int = 2) -> list[str]:
-    # Per-source cap: prevents any single file from overwhelming the pipeline.
-    # With TCP_TIMEOUT=4s + HTTP probe=5s, verifying N configs takes roughly
-    # N * (4+5) / MAX_WORKERS seconds worst-case (all-fail path).
-    # At 4000/source with 60 workers that's 600s ≈ 10 min worst-case per source.
-    # Tune via the YAML env var MAX_URIS_PER_SOURCE.
-    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "4000"))
-    
+    # No per-source cap — collect everything from every source.
+    # The global MAX_TOTAL_URIS ceiling in collect_all() is the budget guard,
+    # and the three dedup passes (URI / UUID / server) cut the list
+    # dramatically before it ever reaches the TCP+probe stage.
     for attempt in range(retries + 1):
         try:
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as r:
                 if r.status != 200: return []
                 text = await r.text(errors="ignore")
-                
-                # Apply the limit by slicing the list before returning
-                if fmt == "b64": 
-                    return extract_uris(decode_b64(text))[:MAX_PER_SOURCE]
-                else: 
-                    return extract_uris(text)[:MAX_PER_SOURCE]
-                    
+                if fmt == "b64":
+                    return extract_uris(decode_b64(text))
+                else:
+                    return extract_uris(text)
         except Exception as e:
-            if attempt < retries: 
+            if attempt < retries:
                 await asyncio.sleep(1.5 * (attempt + 1))
-            else: 
+            else:
                 print(f"  ! [{label}]: {e}", flush=True)
     return []
 
@@ -806,23 +863,31 @@ async def collect_all() -> list[str]:
             new = len(all_uris) - before
             if new: print(f"  + [{lbl}] +{new}", flush=True)
     raw_count = len(all_uris)
-    deduped   = deduplicate_by_uuid(list(all_uris))
-    filtered = [u for u in deduped if _quality_score(u) >= MIN_QUALITY_SCORE]
-    dropped  = len(deduped) - len(filtered)
 
-    # Global ceiling: caps total URIs sent to the verification stage regardless
-    # of how many sources contribute.  Verification is the slow step
-    # (TCP + HTTP probe per config), so this is the primary wall-clock guard.
-    # Order is preserved — quality_score sort already put best candidates first
-    # because deduplicate_by_uuid keeps Reality > TLS > shortest.
+    # ── Three dedup passes (mirrors NekoBox "Remove Duplicates") ─────────────
+    # Pass 0 — exact URI match (already done by dict.fromkeys above)
+    # Pass 1 — strip #fragment, compare bare URI (same config, different label)
+    after_uri  = deduplicate_by_normalized_uri(list(all_uris))
+    # Pass 2 — same UUID → keep best security (Reality > TLS > plain)
+    after_uuid = deduplicate_by_uuid(after_uri)
+    # Pass 3 — same host:port → keep best (one config per physical server)
+    after_srv  = deduplicate_by_server(after_uuid)
+
+    filtered = [u for u in after_srv if _quality_score(u) >= MIN_QUALITY_SCORE]
+    dropped  = len(after_srv) - len(filtered)
+
+    print(f"\nCollected {raw_count} raw URIs")
+    print(f"  → {len(after_uri)}  after fragment-strip dedup  (−{raw_count - len(after_uri)}  label variants)")
+    print(f"  → {len(after_uuid)} after UUID dedup             (−{len(after_uri) - len(after_uuid)} same-UUID dupes)")
+    print(f"  → {len(after_srv)}  after server dedup           (−{len(after_uuid) - len(after_srv)} same-server dupes)")
+    print(f"  → {len(filtered)}   after quality filter          (−{dropped} quality<{MIN_QUALITY_SCORE})")
+
+    # Global ceiling: final safety net so verification time stays predictable.
     MAX_TOTAL = int(os.environ.get("MAX_TOTAL_URIS", "25000"))
     if len(filtered) > MAX_TOTAL:
-        print(f"  Global cap: {len(filtered)} → {MAX_TOTAL} (MAX_TOTAL_URIS={MAX_TOTAL})")
+        print(f"  → {MAX_TOTAL}   after global cap              (−{len(filtered) - MAX_TOTAL} truncated, MAX_TOTAL_URIS={MAX_TOTAL})")
         filtered = filtered[:MAX_TOTAL]
 
-    print(f"\nCollected {raw_count} URIs → {len(deduped)} after UUID dedup "
-          f"→ {len(filtered)} after quality filter + cap "
-          f"(MIN_QUALITY_SCORE={MIN_QUALITY_SCORE}, dropped {dropped})")
     return filtered
 
 # ── Verify ────────────────────────────────────────────────────────────────────
