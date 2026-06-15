@@ -1,5 +1,33 @@
-# Armenian corridor bridge (all) — 2026-06-15 19:49 UTC
-# 3 configs
-vless://f76412c3-abdf-4318-baf8-4a1bfa438968@213.108.20.152:443?encryption=none&flow=xtls-rprx-vision&security=tls&sni=node-de-frankfurt.neverlock.uk&type=tcp#@Vip_Security
-vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?type=tcp&encryption=none&flow=&sni=yahoo.com&security=reality&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&sid=0e#REALITY|AM🇦🇲
-vless://56e5a83e-14f7-4c24-92ee-e47c509d57f8@5.10.215.172:80?encryption=none&host=v2configlab.v2configlab16.workers.dev&path=%2F&security=none&type=ws#RELAY🚩
+# Armenian corridor bridge (all) — 2026-06-15 20:16 UTC
+# 31 configs
+vless://f76412c3-abdf-4318-baf8-4a1bfa438968@213.108.20.152:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=node-de-frankfurt.neverlock.uk
+vless://363fc7cb-211e-4ee5-86dc-32cebcd729a2@46.226.162.144:443?mode=gun&security=reality&encryption=none&pbk=yCVJx0wmxNCquTou_VefSTUXBJ1gMBJyOcNViF1BVXw&fp=chrome&spx=/&type=grpc&serviceName=Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs&sni=tgju.org&sid=b6b65b76b5969271
+vless://8e79bde5-4df6-482a-bdc0-fb688c45e5d9@46.226.166.59:443?security=reality&sni=web.max.ru&fp=chrome&pbk=NgEiD_D62tGsAi3uX_NBLKwNIv0x1bbxK88dBtYtTDw&sid=29b6dab465bf9c24&type=tcp&flow=xtls-rprx-vision&encryption=none
+vless://5ef40d0b-3406-4409-9cdd-10a6372e50b5@5.10.214.53:80?path=/V2RayyNGvpn&security=none&encryption=none&host=MeTa.GaMEreDzOnE.tOP&type=httpupgrade
+vless://c3422602-44e0-4b53-9f23-1beb3985741e@5.10.214.53:2053?path=/&security=tls&encryption=none&host=dashboard.ir-sub.ir&fp=chrome&type=ws&sni=dashboard.ir-sub.ir
+vless://936435ff-5220-4a12-8e8e-ea4f414fc057@5.10.215.229:2083?path=%2F&security=tls&type=ws&sni=floral-waterfall-59a7.whoisbobby1.workers.dev
+trojan://Mitivpn@5.10.214.251:443?type=ws&host=cdn.hitgram.ir&path=%2F%3Fed%3D2048&security=tls&alpn=http%2F1.1&sni=cdn.hitgram.ir
+trojan://humanity@5.10.214.56:443?sni=www.calmloud.com&peer=www.calmloud.com&security=tls
+trojan://Aimer@188.164.159.171:443?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw
+trojan://Mitivpn@5.10.214.53:443?sni=dash.hitgram.ir&peer=dash.hitgram.ir&security=tls
+trojan://Aimer@188.164.159.138:2083?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.175:8443?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw
+trojan://Aimer@188.164.159.107:2096?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.18:443?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.220:2083?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw
+trojan://Aimer@188.164.159.98:2083?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.74:8443?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw
+trojan://Aimer@188.164.159.91:2083?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.45:8443?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw
+trojan://Aimer@188.164.159.55:2096?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.241:2096?security=tls&sni=epgc.aimercc.dpdns.org&alpn=h3&fp=randomized&allowInsecure=1&type=ws&host=epgc.aimercc.dpdns.org&path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw
+trojan://Aimer@188.164.159.22:2096?path=/?ed=2560&proxyip=ts.hpc.tw&security=tls&host=epgb.aimercc.dpdns.org&type=ws&sni=epgb.aimercc.dpdns.org
+trojan://Aimer@188.164.159.43:2083?security=tls&sni=epgb.aimercc.dpdns.org&type=ws&path=/?ed=2560&Host=epgb.aimercc.dpdns.org
+trojan://8r%3C%5B9%27l6hAO%238ZQi@92.246.139.226:443?security=tls&sni=Koma-YT.PAGeS.Dev
+trojan://8r%3C%5B9%27l6hAO%238ZQi@93.185.156.107:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2
+trojan://8r%3C%5B9%27l6hAO%238ZQi@92.42.102.47:8443?fp=chrome&host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
+trojan://8r%3C%5B9%27l6hAO%238ZQi@46.226.167.115:2053?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram+@WangCai2&Host=Koma-YT.PAGeS.Dev
+trojan://8r%3C%5B9%27l6hAO%238ZQi@46.226.161.12:2053?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
+trojan://8r%3C%5B9%27l6hAO%238ZQi@46.226.162.201:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
+trojan://8r%3C%5B9%27l6hAO%238ZQi@46.226.167.115:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
+trojan://rYuChHcwQZskq9E0zdoR@2.56.204.246:443?security=tls&sni=vpn5.rnmcnm.com&type=ws&host=vpn5.rnmcnm.com&path=%2Fws-79dffb8106db
