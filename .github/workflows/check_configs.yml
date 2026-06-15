@@ -23,8 +23,8 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  TCP_TIMEOUT:          "4"
-  MAX_WORKERS:          "60"
+  TCP_TIMEOUT:          "2"
+  MAX_WORKERS:          "200"
   SKIP_V2RAY_TEST:      "1"
   MIN_PASSING_CONFIGS:  "30"   # lowered — HTTP probe eliminates more dead configs
   # HTTP probe: set to "1" for manual runs when you want accurate results.
