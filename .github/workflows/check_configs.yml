@@ -30,7 +30,7 @@ env:
   # HTTP probe: set to "1" for manual runs when you want accurate results.
   # Disabled by default on scheduled runs to keep runtime under 30 min.
   PROBE_ENABLED:        "0"
-  MAX_URIS_PER_SOURCE: "4000" 
+  MAX_URIS_PER_SOURCE: "50000" 
 
 jobs:
   collect:
