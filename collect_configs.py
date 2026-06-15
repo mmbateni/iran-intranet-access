@@ -724,16 +724,26 @@ def load_bootstrap() -> list[str]:
 
 # ── Scraper ───────────────────────────────────────────────────────────────────
 async def fetch_source(label: str, url: str, fmt: str, session: aiohttp.ClientSession, retries: int = 2) -> list[str]:
+    # Read the limit from the YAML env (defaults to 3000 if not set)
+    MAX_PER_SOURCE = int(os.environ.get("MAX_URIS_PER_SOURCE", "3000"))
+    
     for attempt in range(retries + 1):
         try:
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=20)) as r:
                 if r.status != 200: return []
                 text = await r.text(errors="ignore")
-                if fmt == "b64": return extract_uris(decode_b64(text))
-                else: return extract_uris(text)
+                
+                # Apply the limit by slicing the list before returning
+                if fmt == "b64": 
+                    return extract_uris(decode_b64(text))[:MAX_PER_SOURCE]
+                else: 
+                    return extract_uris(text)[:MAX_PER_SOURCE]
+                    
         except Exception as e:
-            if attempt < retries: await asyncio.sleep(1.5 * (attempt + 1))
-            else: print(f"  ! [{label}]: {e}", flush=True)
+            if attempt < retries: 
+                await asyncio.sleep(1.5 * (attempt + 1))
+            else: 
+                print(f"  ! [{label}]: {e}", flush=True)
     return []
 
 async def collect_all() -> list[str]:
