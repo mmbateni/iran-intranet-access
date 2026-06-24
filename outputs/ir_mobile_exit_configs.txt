@@ -1,9 +1,7 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-06-24 07:08 UTC
-# 8 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-06-24 15:51 UTC
+# 6 configs
 vless://8619e4c1-0984-4dce-83e3-419e2d7f5079@185.112.59.159:443?type=tcp&security=reality&sni=max.ru&flow=xtls-rprx-vision&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&sid=111111
 vless://0c29e923-168d-46f2-baab-eaad11c15f69@89.35.119.194:443?sni=node.food38.ru&flow=xtls-rprx-vision-udp443&fp=chrome&security=tls
-vless://eae7e64e-0dfe-4694-8a1d-f8f656f3e2f1@91.186.216.62:443?type=ws&headerType=none&security=tls&encryption=none&sni=polsha.ajajajajqj2qedvekq.online&fp=chrome&alpn=http%2F1.1&path=%2F&host=polsha.ajajajajqj2qedvekq.online&insecure=1
-vless://dead894d-fd85-5f27-a24c-9b5c3a856d04@195.8.102.132:443?pcs=fc0c5a6d1f82a4a1d2b01ff17aa0574a8a016cacce4b8d82a422765f0048a146&path=/l/w/3f0c614bd1c4690e/OJuuzCkIhWNQ/nAV&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=vod.ufduiudud.site&fp=chrome&type=ws&allowInsecure=0&sni=asset.aparat.com
 trojan://8r%3C%5B9%27l6hAO%238ZQi@185.112.83.62:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
 trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?security=tls
 trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram
