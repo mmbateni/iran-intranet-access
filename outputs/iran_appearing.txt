@@ -1,57 +1,42 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-02 15:50 UTC | 50 configs
+# Generated: 2026-07-03 06:55 UTC | 35 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://f5c81fd0-11b1-4e2f-b405-d72b398328d9@185.206.95.140:9093?encryption=none&security=reality&type=xhttp&headerType=none&path=/&mode=auto&sni=play.google.com&fp=chrome&pbk=9bIcn1vtdMc_5lBKecLkId3wGuyWxAG_Y8Klj6CszRs&sid=b9a137cbdb693413&pqv=HAw6gNpjfWaxOHbVbhYYYQSY3lymQk5kEb_bHZSPP8AGvYPOd4PlmoW85KVcM--O1ITw5SXacgHzRQDmzkAP2pXG5ebzaCRH0q6Xh9azfZEVgDILMxU3Dm_HxKSwX4At2reqaQG2DDnu_OHiZt5SPjslb7-NUOIciRYCsGuDiwxe5jli4STJmFchDdGNvHCVFKSeMG9IU_2dJSGYKbI_Mri4Q7RXPHwtVmHzqiwKdiIY7Xay-ohTAdiByc0D67h15Y7NyEInyes_3BqtBkWH7c7v161Z_1U1r9t_TeJrMv9h0aYqxqny1E8RL6ui_HjrawD40drhMceFpc0hTKFbDcjgbQsgv3_kQV3PsTGpvBO7rsB_8MvSuHI-F2JhH9uC-chiB68mRmZ5Wy2xFNuYuMri2WSwjAy0fy92QRN2jAt1V-80sfMHV_cKtZIwTHRdrCEO7qISLDmNvmX9IOv7ozrZMbJOMeeqNslpcutAxNZGzVo8pS8iU0yo43ubAtmJ_k2NZ4Ry2gU9uYiE8GFcbgAzUSjGuDL_Vhlar6uzCPczNNdKujjfufv7eOPNV9MR57sTPwygemLk3wohXjdd7ZKRHpmuu1hKIBfC0ENgeYjaz-kakkDHqtB3cmOwqznoaGURtUMHVsf4P9VbqcLhZgrsfwlYHGF3wyd_KEqQFORNJk-yjk0U2NRQYpKxUUD3Y5snYUljZsvkcvsdx8-Q36PwgOZR0bB7M1dbuMiMM_8E-HOxrlcA6S8XY7Zh2400RRwp65kh5e9KZocAQjTcWYXjV-eWLeHEMH6D_BUnpRwkKs3LH9qyMy4mJQkUWKJktmTGVNd0FjO3mh4pfV_ZzncpYdl2xFVEVAoaJg8HsXYfh4ib29kpjexTzRtcsz4MFoGuoRrgXHx_0agil4BVf-HgXyUBXx77_FCmXfoHQmU4M7Y-5IYev05oX-zx8znzbLhnrEyuNYOdh1ISc47KVzK8Ec_kLfyEDt7OMaAyHl5KlzkorhfAYAu6Ms_lGIJZ1X8D3_1WXGvUZje85aiwlhZutJ-thx9s_besdYSl7nTq2diRySjtcdhdx8LQYGRXp8WjG9y2GUftFQr70DF-Hwv8z6BVQMCaFU_IbtZ-CD16cM3IWsd3dHSFUYqoXdD0AohGMonD_rY6nGegxDznuxOUdDEV8Q1J-ybwnhRxmRkRBFFws9jzZZTpXxX1TDubHq3-OaSW0V0HfrdzVXS6ZXkB_TpT-yI9mZy_HTHuvYut8zElR1djj5fc958gHzPyQBacc_37q9Bzkxx72cezMiEEh3LstTwNi7CQnpm1hC0cBbIDhcp32768LCkv5L_xa3FXN9e24V2urk46Ojj_aRAs59ChEBZbAsdstguq5CShS_kR-ufDKUPNxr7MBNt0HsQy74KQtZXaw9tm_Hfy5z5pAyteN8eqOtVx_T5cwlhXKgdZzEqgOM7pbOqmeWKGHmNLBM78zGc9GACJp0dlVp9am1YLYsDsnbzVx2KldPtbzCaI5rV1G6ltIGsFBaRPz0zP_RmY8_hEWGH1LWO23EcNC5uPCtXZL6zV1-UfVCCGaEG9wWMgmPxfrDfIpGWKTHT9kNDebO7ONDukI5ZySrYIDdqbMwNAXju1tA3-oigWxbUEAZ1OdOu32JJrVb0lsnwaC9Wiy3udr1VY8I8msPvKAQXbdFhMRMjrEEWEpZPK_fajcuh2R2ncZ7jQYUqDLJ-162m0ss6d11U-_2XImKxs3aR2Zn-RWK4Dg5vQGgbarX6j91g1LX80Ry1v7jHwtZ7TqoNU5qwtsVZHeqfm9exTy-EtzLoIslZxVs0HdIjYz0n3onZokIqLX_oaJsi1ntDXEIhtCiLvxpK7hnl8igkf8X6DvuN9vqWLyxcpWuai_6B4YW39GRPXol1_i3N4N7FVw2M-xMm8yi6_Ly7E3iqipBoCd2eRIw0yRqxj38UsKmWH3B3hPHbV-51aYjwQvpoOw1UpCHzqBU7xzVRMvkCCWJmnk5k0UtNnQO4ElKJHh8QhCRYnCvXJByL0VAKDtyoiRCHRlkpzDxNMzjK5bzZDmHPC_lG3etcGu-nonoy68yMvrAs6QCq7htWa90Ym7BY0wUY_tJPWFW-oLJml32jNxed6YPJdVJY2avLP2yUum8wts6QrkIy5uIXWtQ8eGT_t-dQbgvVzkEAJkKDnc2585mH3fTB3dySsFjYNfIUaV5p4gQcQ0zmTAk0CeZy6cs9y16Su9tUVwu_cSE0U8RTlhk20AbBS8C5vWaV06Dr-yx72xDsCMEqGV83fqw3nL6C5-R08VhNjiv8jVFh0YgscZI1aNZFteZMhHiLS9Rz94fKOCDwZvsYnlwNb8GsHDt9wPhzz6VTpVCMa5eXLQoD0IGSxca9isAXsxVg8lLk4SlWplobcNm7Es3jIL--b4IoPWo_Ca_N_RcuYzjqD-ZjXz8oSJNc8I2_GYl3dSroELqjqrFjKbRpeW7lmu98JMp67UcTSFhWqwlsmsDdurvLjSQMoLHIECaXZerAjFAOBegqxUVELADnQ2S56MCDKhcCCD3TNEClX38FKcHcd_z3X_iE9E3ZesYAdMJ8sDHs#🇮🇷IR-🚀@VPNine1
+vless://1b969107-0c23-4735-bab0-b66d29dcdd92@2.144.23.70:443?security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir#@vmess_ir
 vless://a74a5829-5494-4280-bc9a-0497f73c46e9@94.184.6.186:22093?encryption=none&security=reality&sni=biosmod.vendors.nvidia.com&fp=chrome&pbk=Lyh2tcZNX_SobDdomsrV-xTR9vFtIenihQmUYTBRZhg&sid=a728&spx=/cxEnXNWRK2h1e8h&type=tcp&headerType=none#@meliproxyy
 vless://37449985-a4a7-4c16-ae6c-464e46b4939e@khoroos4.helsinki2upload.shop:443?security=reality&encryption=none&pbk=H31-ZOmrmgdlPwXBr7K-NuEW5Ro3qAnXwS-W0gxsjxQ&headerType=none&fp=chrome&spx=/WmAS2BcSqmCQEO5&type=tcp&sni=www.aparat.com&sid=cc441e7e540f#🌐Tel:
 vless://7edd55a9-3075-4994-b8ce-e4b9866f6dc8@simorgh.sorvexa.ir:48134?mode=auto&path=/xhttp&security=reality&encryption=none&extra={
-vless://207f2c8a-d594-4915-acaf-a4398c3c130e@free1.sorvexa.ir:48134?mode=auto&path=/xhttp&security=reality&encryption=none&pbk=cIuXOLK-MNLQQVnt2WINCNIObRC9sOVb3vIiAHN0eg8&host=free.sorvexa.ir&fp=chrome&spx=/&type=xhttp&sni=cafebazaar.ir&sid=9095a4#🇮🇷IR-🚀@VPNine1
-vless://23d6295f-0337-438f-be52-388bbe321ae4@a.samrayan.ir:443?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=a.samrayan.ir#✨
+vless://b8065f37-7a9c-4041-96f7-5ed3147d45ae@185.143.233.5:2053?encryption=none&type=ws&security=tls&path=/&host=cd2.sesrsa.com&sni=cd2.sesrsa.com&fp=chrome&allowInsecure=1
 vless://354238f9-2c6a-4e09-876f-b2c78ce539c7@185.143.233.5:2096?flow=&fp=chrome&host=p1.sesrsa.com&path=/&security=tls&sni=sub.sesrsa.com&type=ws
-vless://068a1ddd-e892-438d-b2ef-881e6abe9eea@185.143.235.201:443?path=/BalePing&security=tls&encryption=none&insecure=1&host=sr2.baleping.ir&type=ws&allowInsecure=1&sni=sr2.baleping.ir
-vless://030dd1d7-9815-4851-b671-d3d2cbd52e30@185.143.233.122:443?path=/av&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=hvds2.piba82.ir
-vless://086b5064-b6bb-4aaa-bfba-a89ba6661bd6@185.143.234.113:443?encryption=none&security=tls&type=ws&headerType=none&path=/&host=fiarsh.parhamm2.ir&sni=fiarsh.parhamm2.ir&fp=chrome
-vless://119d02db-6226-452d-ae29-6c26a3f83a27@185.143.234.200:2096?path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=lol6.artarona.ir&type=ws&allowInsecure=1&sni=lol6.artarona.ir
-vless://bb1ab0a5-fd5a-4151-9d48-05727cef74d2@185.143.233.5:443?mode=auto&path=/login&security=tls&alpn=h2,http/1.1&encryption=none&extra={
-vless://1a23ef21-3f21-409c-bcb4-0964ba48f2fb@185.143.233.5:8443?path=/&security=tls&encryption=none&host=p1.sesrsa.com&fp=chrome&type=ws&sni=sub.sesrsa.co
 vless://ae95d992-66c7-4ef1-bd21-f1c5eacad85c@185.143.233.5:2083?encryption=none&type=ws&path=/&security=tls&fp=chrome&sni=sub.sesrsa.com
-vless://58a28a02-5081-4720-9ffa-bfad73202337@185.143.233.5:2087?security=tls&sni=p1.sesrsa.com&type=ws&host=p1.sesrsa.com&path=/&fp=chrome
+vless://119d02db-6226-452d-ae29-6c26a3f83a27@185.143.234.200:2096?path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=lol6.artarona.ir&type=ws&allowInsecure=1&sni=lol6.artarona.ir
+vless://1a23ef21-3f21-409c-bcb4-0964ba48f2fb@185.143.233.5:8443?path=/&security=tls&encryption=none&host=p1.sesrsa.com&fp=chrome&type=ws&sni=sub.sesrsa.co
+vless://bb1ab0a5-fd5a-4151-9d48-05727cef74d2@185.143.233.5:443?mode=auto&path=/login&security=tls&alpn=h2,http/1.1&encryption=none&extra={
 vless://3e40c799-dc8f-4155-a1bc-6a515f7cd0c2@185.143.233.68:443?flow=&fp=chrome&host=backend.parhamm2.ir&path=/&security=tls&sni=backend.parhamm2.ir&type=
-vless://d635b95e-ca6d-46ce-9465-9922642c74a8@188.213.198.238:7080?encryption=none&type=tcp&headerType=none
+vless://030dd1d7-9815-4851-b671-d3d2cbd52e30@185.143.233.122:443?path=/av&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=hvds2.piba82.ir
+vless://58a28a02-5081-4720-9ffa-bfad73202337@185.143.233.5:2087?security=tls&sni=p1.sesrsa.com&type=ws&host=p1.sesrsa.com&path=/&fp=chrome
+vless://e0128250-db1b-47cf-5107-4bd6a5249fb1@87.107.194.226:2087?mode=auto&path=/BetForward&security=tls&alpn=h3,h2,http/1.1&encryption=none&insecure=1&host=sub.zynavo.ir&fp=chrome&type=xhttp&allowInsecure=1&sni=sub.zynavo.ir
 vless://3eb2f8f2-b9e7-44e9-b90b-26b78fd38657@185.143.232.201:443?path=/voip&security=tls&encryption=none&host=pishparda.ir&fp=chrome&type=ws&sni=r1-vod.varzesh3.com
-vless://d20cdbc3-668c-49ef-bc55-57e30cb6ff0e@217.144.107.202:28831?encryption=none&type=tcp&headerType=none#@meliproxyy
+vless://a1e0867e-7790-4f07-9765-c8d7a6423245@5.160.131.68:80?path=/profile&security=&encryption=none&host=fonts.spsps.ir&type=ws
 vless://48449360-4abd-43b2-9d56-e22af072437a@snapp.ir:2087?mode=auto&path=/&security=tls&alpn=h3,h2&encryption=none&extra={
+vless://1e74bb74-590e-4d9f-9a63-7e1504b4eb6b@87.107.82.8:48771?encryption=none&security=none&type=tcp#🇮🇷IR-🚀@VPNine1
+vless://0b2c18f0-3739-2479-013e-1637cb9f9f4a@5.160.58.129:50019?path=/true&security=tls&alpn=h2,http/1.1&encryption=none&host=alabama-tigr.info&fp=chrome&type=ws&sni=alabama-tigr.info
 vless://dcb2544a-b257-4267-9200-4b522f0001e6@snapp.ir:80?path=/&type=grpc&serviceName=@V2RAYNGRAISI,@V2RAYNGRAISI,@V2RAYNGRAISI,@V2RAYNGRAISI,@V2RAYNGRAISI,@V2RAYNGRAISI,&mode=multi&security=tls
 vless://0fca7e9d-5409-4642-a3f5-87d034f50aa7@Snapp.ir:2082?path=/&security=none&encryption=none&host=Q.poiuyt.ir&type=ws
 vless://989718c0-1a92-49c9-ae8e-fd91f94e045e@snappfood.ir:443?encryption=none&security=tls&sni=dashboard.nullbyte.ir&host=dashboard.nullbyte.ir&type=ws&path=/
-vless://dc163737-386e-452e-8803-6fab8acb8a33@bmi.ir:80?security=none&allowInsecure=0&encryption=none&type=httpupgrade
+vless://18df7d31-8748-47a0-9a27-ac4f33760f44@s1.zynavo.ir:2087?security=tls&mode=auto&extra={
 vless://386d73f5-a3e8-4660-8359-3e1e30a50dec@anten.ir:8880?type=ws&security=none&path=/voip&host=i.viproomiran.club
+vless://dc163737-386e-452e-8803-6fab8acb8a33@bmi.ir:80?security=none&allowInsecure=0&encryption=none&type=httpupgrade
 vless://07bc1198-a639-45c9-a6d7-e895631ee7e2@varzesh3.com:80?encryption=none&type=ws&path=/&host=api.sobhan.cam
 vless://53478ba3-11be-4846-a3f2-59cf513f52cc@tun.bytodev.ir:80?path=%2Fws&security=none&encryption=none&type=ws
-vless://5403c50a-fe7a-4268-b002-6d211e4c3336@Snapp.ir:2052?path=/vmMarketlabs&security=&encryption=none&host=info.drevnelo.ir&type=ws
-vless://80c72c9e-ea8f-4116-ad32-a394f4701c4b@cdn-de.alobaleping.top:2095?type=ws&encryption=none&path=%2Fcdn-de.alobaleping.top&host=cdn-de.alobaleping.top&security=none
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=none&host=Siri.artarona.ir&fp=chrome&type=ws&sni=Siri.artarona.ir
-vless://cefef05b-3985-47f7-a0df-703e5280a9c7@anten.ir:80?path=/&security=&encryption=none&type=ws&host=s2.xbat.ir
-vless://cbadb045-1095-4515-ac9f-f5fa37c67e57@varzesh3.com:2052?path=/&security=&encryption=none&host=book.mrsf.ir&type=ws
-vless://485daaeb-94df-4f10-acde-4ebef3e7c0cb@tamin.ir:80?path=/ws
-vless://1beef890-f0f3-4b8d-bc9c-dba78374dd02@anten.ir:2086?type=ws&security=none&path=/&host=hap.kalaleh24.ir
-vless://fef999d0-4d28-48fe-a519-24fd4b2f7bd3@snapp.ir:8443?mode=auto&path=/api?ed=256&security=tls&encryption=none&extra={
-vless://ecee957d-fd8b-4b64-a6fd-c5b9b1f7403a@bitpin.ir:80?path=/&security=none&encryption=none&host=ua1.nexat.ir&type=ws
-vless://1c55b36e-cb57-44a6-b3da-b2d5e93da942@varzesh3.com:8080?encryption=none&type=ws&path=/cdn&host=Za.movizdl.ir
 vless://7f9dcad2-3fc0-42df-bf0b-16e5b2dfb555@Snapp.ir:8080?type=ws&encryption=none&path=/&host=Shop.noznet.ir&security=none
-vless://00b2c573-d37e-447b-a979-5b940be44fd4@tn.mxspeed8-1.ir:8880?path=/&security=&encryption=none&type=ws
-vless://2641d904-84cb-4bc5-97ff-674ccf46a449@Snapp.ir:2086?type=ws&encryption=none&path=/&host=f.mroza.ir&security=none
-vless://9ad406c3-3a40-44f8-b985-92b7e554b150@fl1bot-ws.headerip.com:80?encryption=none&type=ws&path=/&host=fl1.mv5.ir
-vless://01c7d5d9-16d8-464f-b7cb-13f9929bafe8@ir1501.dsp7000.cfd:8080?path=/&security=&encryption=none&type=ws
-vless://01fd39bc-311d-4edf-80d3-8c868afbb802@Sid.ir:80?security=none&type=ws&headerType=&path=/cdn&host=dl4.movizdl.ir
-vless://710a1faa-b9df-45e8-baca-e72d3efc14da@Snapp.ir:443?mode=auto&path=/&security=tls&encryption=none&extra={
-vless://02825227-db66-4c6f-8061-b5abcbcebd51@gostar25N.ir2charkh.com:443?path=%2Fvr1025&security=tls&encryption=none&fp=firefox&type=ws&sni=gostar25n.ir2charkh.com
-vless://jetv2raye@blubank.ir:80?path=%2F&security=&encryption=none&host=vip.masterdadeh.ir&type=ws
-vless://7fe35b81-f9f7-4cd9-b4f7-39497191e842@beta.kamiplaye.ir:80?path=/mr-config&security=none&encryption=none&host=&type=ws
-vless://e871b1a6-2011-4071-b692-dca32af56a80@bpi.ir:80?path=/&security=&encryption=none&host=de2.rexcima2.ir&type=ws
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=none&host=Siri.artarona.ir&fp=chrome&type=ws&sni=Siri.artarona.ir
+vless://5403c50a-fe7a-4268-b002-6d211e4c3336@Snapp.ir:2052?path=/vmMarketlabs&security=&encryption=none&host=info.drevnelo.ir&type=ws
+vless://fef999d0-4d28-48fe-a519-24fd4b2f7bd3@snapp.ir:8443?mode=auto&path=/api?ed=256&security=tls&encryption=none&extra={
+vless://1beef890-f0f3-4b8d-bc9c-dba78374dd02@anten.ir:2086?type=ws&security=none&path=/&host=hap.kalaleh24.ir
+vless://cbadb045-1095-4515-ac9f-f5fa37c67e57@varzesh3.com:2052?path=/&security=&encryption=none&host=book.mrsf.ir&type=ws
 trojan://dTaXAtuoQF@185.143.235.200:443?security=tls&sni=nginx-4561f180e2-anssdsfsdf.apps.ir-northwest1.arvancaas.ir
 trojan://%40Nexus_v2ray@snapp.ir:2095?security=tls
