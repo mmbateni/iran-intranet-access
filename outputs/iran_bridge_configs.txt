@@ -1,14 +1,13 @@
-# Armenia→Iran bridge-verified — 2026-07-06 08:09 UTC
-# 12 configs
+# Armenia→Iran bridge-verified — 2026-07-06 16:46 UTC
+# 11 configs
 vless://624b6887-80c8-4d38-a0f7-948b8730bb43@5.10.215.244:443?encryption=mlkem768x25519plus.native.0rtt.1hJeTE4CpxnaxcPwjHmMoa43uSOQGZu1EKP_9aeBU2Y&security=tls&type=xhttp&headerType=none&flow=xtls-rprx-vision&path=%2F%3Fed%3D2560&host=2b31dbf5e4d07bc1.klyk.ir&mode=auto&sni=2b31dbf5e4d07bc1.klyk.ir&fp=chrome&alpn=h2,http%2F1.1
 vless://f76412c3-abdf-4318-baf8-4a1bfa438968@213.108.20.152:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=node-de-frankfurt.neverlock.uk
 vless://363fc7cb-211e-4ee5-86dc-32cebcd729a2@46.226.162.144:443?mode=gun&security=reality&encryption=none&pbk=yCVJx0wmxNCquTou_VefSTUXBJ1gMBJyOcNViF1BVXw&fp=chrome&spx=/&type=grpc&serviceName=Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs-Daily_Configs&sni=tgju.org&sid=b6b65b76b5969271
 vless://8e79bde5-4df6-482a-bdc0-fb688c45e5d9@46.226.166.59:443?security=reality&sni=web.max.ru&fp=chrome&pbk=NgEiD_D62tGsAi3uX_NBLKwNIv0x1bbxK88dBtYtTDw&sid=29b6dab465bf9c24&type=tcp&flow=xtls-rprx-vision&encryption=none
-vless://b22d87f9-3098-429f-a9fe-56463e0dc741@217.144.184.246:443?sni=fast_s24.slopllex.app&flow=xtls-rprx-vision-udp443&fp=edge&security=tls
+vless://b3939095-14db-47ec-9c15-261944j0cc54e@5.10.214.53:2086?encryption=none&host=dev.speciq.co&path=/&security=none&type=xhttp&mode=packet-up
 vless://936435ff-5220-4a12-8e8e-ea4f414fc057@5.10.215.229:2083?path=%2F&security=tls&type=ws&sni=floral-waterfall-59a7.whoisbobby1.workers.dev
 vless://c3422602-44e0-4b53-9f23-1beb3985741e@5.10.214.53:2053?path=/&security=tls&encryption=none&host=dashboard.ir-sub.ir&fp=chrome&type=ws&sni=dashboard.ir-sub.ir
-vless://baf38792-aa3c-4cfb-9d5c-45a4335d7113@5.10.215.244:2095?encryption=none&type=httpupgrade&path=/&host=de.carefreemob2.com.
-vless://7e58699f-1d5d-4f6b-b181-cb74f0ad9509@5.10.214.0:443?type=ws&security=tls&encryption=none&sni=GfV5t2331T.sMaRtTeChZaAl.InFo&host=GfV5t2331T.sMaRtTeChZaAl.InFo
 vless://5ef40d0b-3406-4409-9cdd-10a6372e50b5@5.10.214.53:80?path=/V2RayyNGvpn&security=none&encryption=none&host=MeTa.GaMEreDzOnE.tOP&type=httpupgrade
-vless://1a79d43f-b41c-496b-a241-dcbeefa81f0e@89.169.53.156:443?encryption=none&security=tls&sni=0926.qiang2000.link&type=ws&host=0926.qiang2000.link&path=Telegram%40WangCai2%2F%3Fed%3D2560
+vless://baf38792-aa3c-4cfb-9d5c-45a4335d7113@5.10.215.244:2095?encryption=none&type=httpupgrade&path=/&host=de.carefreemob2.com.
+vless://c28f3222-4f01-493c-a38f-0f1b34e62ea3@213.108.23.88:2048?encryption=none&type=ws&path=/&host=ads.x5.ru
 trojan://humanity@5.10.214.34:443?path=/assignment&security=tls&alpn=http/1.1&insecure=1&host=www.calmloud.com&type=ws&allowInsecure=1&sni=www.calmloud.com
