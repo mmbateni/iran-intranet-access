@@ -1,11 +1,9 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-07-08 06:20 UTC
-# 9 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-07-08 15:51 UTC
+# 7 configs
 vless://8619e4c1-0984-4dce-83e3-419e2d7f5079@185.112.59.159:443?type=tcp&security=reality&sni=max.ru&flow=xtls-rprx-vision&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&sid=111111
 vless://0c29e923-168d-46f2-baab-eaad11c15f69@89.35.119.194:443?sni=node.food38.ru&flow=xtls-rprx-vision-udp443&fp=chrome&security=tls
-vless://19a04069-2321-4d57-a289-44fa974a08f8@2.144.22.87:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=%2Fapi&host=api.bgp6.ir&sni=api.bgp6.ir&fp=chrome&alpn=h2,http%2F1.1
+vless://789c0ab6-0e2d-44b2-9484-f3570e9e90ed@2.144.25.196:443?flow=xtls-rprx-vision&encryption=none&security=tls&sni=api.bcdnjs.site&alpn=h2,%20http%2F1.1&fp=chrome&allowinsecure=0&type=tcp&headerType=none
 vless://5222937c-87ef-4bf4-935c-3459d872cdb0@2.144.15.238:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=%2Fapi&host=app.bgp6.ir&sni=app.bgp6.ir&fp=chrome&alpn=h2
-vless://ddf698cb-7608-44f4-bc37-1e9d176b2faf@2.144.23.70:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=/api&host=api.bgp6.ir&sni=api.bgp6.ir&fp=chrome&alpn=h2,http/1.1#@V2ray_confiig
-vless://60bcdc9e-9dbc-405e-a3c3-abacb65d017f@iran.mersconnect.ir:8392?security=reality&encryption=none&pbk=lczfo2hU9dpq63bCK26_3V0dZwQWu_5vrScV6AUDyQU&headerType=none&fp=chrome&type=tcp&sni=www.oracle.com&sid=1664
 vless://0f1603d2-61c2-4c4f-9180-9ec0ae1c150d@91.186.217.121:433?mode=multi&security=tls&encryption=none&type=ws&flow=&fp=chrome&sni=o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev&ech=cloudflare-ech.com
-vless://eb528c71-441a-4430-867d-ab63d301d4ee@grif.dns-crypto-yandex.com:443?sni=grif.dns-crypto-yandex.com&type=grpc&serviceName=grpc&fp=chrome&security=tls
+vless://538c7c92-9bb6-4294-8250-b224fb95fc78@2.144.21.44:443?encryption=none&type=ws&security=tls&path=%2Fcity%2Fsetting%3Fed%3D2560&host=roncomi.pages.dev&sni=roncomi.pages.dev&alpn=h2&fp=chrome&allowInsecure=0
 trojan://8r%3C%5B9%27l6hAO%238ZQi@185.112.83.62:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
