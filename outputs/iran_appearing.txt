@@ -1,22 +1,24 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-10 16:04 UTC | 15 configs
+# Generated: 2026-07-11 06:05 UTC | 17 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://0118e1e6-07b7-46a7-bc0d-62611112c466@w1.gogoli.xyz:50547?security=reality&pbk=NgR8LpKFLqxx1fWJkZFak5ZdT2srx5n6f14B2TVB3wg&fp=chrome&sni=www.yahoo.com&sid=68161faffc&spx=/&encryption=none&flow=xtls-rprx-vision&type=tcp#🇮🇷IR-🚀@VPNine1
+vless://c1ff787c-f770-484e-86d5-864514eca7ff@2.144.25.196:443?flow=xtls-rprx-vision&encryption=none&security=tls&sni=api.bcdnjs.site&alpn=h2&fp=chrome&allowinsecure=0&type=tcp&headerType=none
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.5:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=isna.ir
-vless://3e40c799-dc8f-4155-a1bc-6a515f7cd0c2@185.143.233.68:443?encryption=none&type=ws&security=tls&path=/&host=backend.parhamm2.ir&sni=backend.parhamm2.ir&fp=chrome&allowInsecure=1#تلگرام
 vless://7acaf8e3-97ac-4103-80ea-5eb1d31e314b@94.183.225.143:1881?type=tcp&security=none
-vless://000dec39-61ac-4ff2-97e1-5f7c003cf2e5@85.198.12.25:443?path=%2Ftelegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn&security=none&encryption=none&host=zula.ir&type=ws
+vless://d688105d-882c-4188-9fc3-6c1774132f8f@195.158.230.179:2083?security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=s3.vipshopnew.shop
 vless://c282b04e-f7a1-4196-8368-5701c6882a58@81.90.147.151:9185?encryption=none&type=tcp
+vless://feade342-9a00-427e-b049-752a4e584ba5@85.133.161.168:443?security=none&encryption=none&host=fsn.bestlive.ir&headerType=http&type=tcp#@v2rayngzendegimamad🕊️
+vless://d97ee9a9-0a91-4eda-b412-8c0c62684df2@217.144.107.202:50917?security=none&encryption=none&host=v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---v_ngfree---&headerType=none&type=tcp#🇩🇪
+vless://3e40c799-dc8f-4155-a1bc-6a515f7cd0c2@185.143.233.68:443?encryption=none&type=ws&security=tls&path=/&host=backend.parhamm2.ir&sni=backend.parhamm2.ir&fp=chrome&allowInsecure=1#تلگرام
 vless://3788e28f-f48a-485e-9b90-482a6f8ca51d@5.160.47.146:443?path=/vr1027?ed=2560&security=tls&encryption=none&insecure=0&fp=firefox&type=ws&allowInsecure=0&sni=gostar27.irtour123.com
 vless://528defd1-2a24-43bd-b45d-874367c6f4f5@anten.ir:8880?path=/&security=none&encryption=none&host=iran.shopdn.ir&type=ws#@WETCONFIG
 vless://526be552-290f-47b1-9a61-a13da8a0a43b@bmi.ir:80?path=/&security=&encryption=none&host=fi1.kianorbit.ir&type=httpupgrade#@electvpn0
 vless://56aab278-7c8b-4856-2315-6c8998cf08de@s1.zynavo.ir:2087?mode=auto&path=/BetForward&security=tls&alpn=h3,h2,http/1.1&encryption=none&extra={
 vless://9b139bbb-264e-4369-1120-7dd3f71fa93c@snapp.ir:2087?path=%2FBetForward&security=tls&encryption=none&insecure=0&host=dns.rorian.ir&fp=chrome&type=ws&allowInsecure=0&sni=dns.rorian.ir
-vless://71f1a3f9-11c9-482e-b64f-a8442b8fdef4@toma.hellotom.ir:12114?security=none&encryption=none&headerType=none&type=tcp#@NETMelliAnti
+vless://b2d496b6-8f96-4909-92c2-7e17e67fb120@khasis3.pingeto.com:2083?type=ws&path=%2F&host=khasis3.pingeto.com&security=tls&fp=chrome&alpn=h2&allowInsecure=1&sni=khasis3.pingeto.com
+vless://8f098803-8d2c-4346-8773-b58164626d38@dl4.gooniforoshi.fun:443?path=/download.php&security=tls&encryption=none&host=dl4.gooniforoshi.fun&allowinsecure=0&type=ws&sni=dl4.gooniforoshi.fun
 vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
-vless://00c7cd9c-b4ab-42c9-8c2f-48c183eb5997@iranserver.com:443?path=%2FTelegram%3A%40@Vip_Security
-vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
+ss://000dec39-61ac-4ff2-97e1-5f7c003cf2e5@85.198.12.25:443?path=%2Ftelegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn&security=none&encryption=none&host=zula.ir&type=ws

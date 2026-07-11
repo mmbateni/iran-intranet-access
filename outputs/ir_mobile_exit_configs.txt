@@ -1,10 +1,9 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-07-10 16:04 UTC
-# 8 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-07-11 06:05 UTC
+# 7 configs
 vless://8619e4c1-0984-4dce-83e3-419e2d7f5079@185.112.59.159:443?type=tcp&security=reality&sni=max.ru&flow=xtls-rprx-vision&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&sid=111111
 vless://c1ff787c-f770-484e-86d5-864514eca7ff@2.144.25.196:443?flow=xtls-rprx-vision&encryption=none&security=tls&sni=api.bcdnjs.site&alpn=h2&fp=chrome&allowinsecure=0&type=tcp&headerType=none
 vless://83b3bb17-bc07-453f-9f10-4264ae839314@89.34.230.234:443?security=tls&encryption=none&insecure=1&host=namasha.com&headerType=http&fp=chrome&type=tcp&allowInsecure=1&sni=namasha.com
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev
 trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram
-trojan://8r%3C%5B9%27l6hAO%238ZQi@185.112.83.62:8443?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
+trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev
 trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?security=tls
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpIZndVZXN1Uk4vT25Kanc4cFNtb0dQek9iRWxwMGllMHJPOHcxME1velo4PQ@91.186.193.39:16156
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwYTBGWFpBOGdoS0NjajZXUHNrbEZkeDE5USt6MEdlNEEwSTc2alIwWGtRPQ@e4.cover20.ir:16156?type=tcp
