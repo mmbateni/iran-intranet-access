@@ -1,13 +1,10 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-07-12 14:50 UTC
-# 11 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-07-13 06:45 UTC
+# 8 configs
 vless://8619e4c1-0984-4dce-83e3-419e2d7f5079@185.112.59.159:443?encryption=none&flow=xtls-rprx-vision&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&security=reality&sid=111111&sni=max.ru&type=tcp
 vless://c1ff787c-f770-484e-86d5-864514eca7ff@2.144.25.196:443?flow=xtls-rprx-vision&encryption=none&security=tls&sni=api.bcdnjs.site&alpn=h2&fp=chrome&allowinsecure=0&type=tcp&headerType=none
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=/api&host=api.bgp6.ir&sni=api.bgp6.ir&fp=chrome&alpn=h2,http/1.1
-vless://0c6b632a-cd96-4b74-9b51-151e3b5697db@pol2.neobo-tooth.ru:2083?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision-udp443#🔵@chillguy_vpn
 vless://83b3bb17-bc07-453f-9f10-4264ae839314@89.34.230.234:443?security=tls&encryption=none&insecure=1&host=namasha.com&headerType=http&fp=chrome&type=tcp&allowInsecure=1&sni=namasha.com
 vless://aaa4bce6-b329-49d2-a7b6-61d809ea90d5@91.186.217.121:433?encryption=none&security=tls&sni=ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev&type=ws&host=ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev&path=/@Marisa_kristi
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram
 trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev
+trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram
 trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?security=tls
-trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwYTBGWFpBOGdoS0NjajZXUHNrbEZkeDE5USt6MEdlNEEwSTc2alIwWGtRPQ@e4.cover20.ir:16156?type=tcp
