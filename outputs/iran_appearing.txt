@@ -1,19 +1,28 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-14 05:58 UTC | 12 configs
+# Generated: 2026-07-14 15:17 UTC | 21 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
+vless://12ea484c-e93b-43f1-8c95-40f0f601143e@x.zapts3.ir:30049?security=reality&encryption=none&pbk=HQhi7ri0ENVJuZhOE2utvx_spmjocTI7ETpPI6VPiVw&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.speedtest.net&sid=ebf65c8d#@filembad
+vless://54d7e7ab-889e-4dfe-8206-ec8148e2bd7b@tun.mamadhpbot.ir:2097?security=reality&encryption=none&pbk=HBj5Id8AD9xpZpCQAI_Qe3EcRgDabNUi-m3G6VENdT0&headerType=none&fp=chrome&type=tcp&sni=play.google.com&sid=0020b2c2d7f87920
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.5:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=isna.ir
 vless://ac9b2102-53de-4e07-98e5-5aec6dee694b@188.213.198.238:7080?security=&encryption=none&headerType=none&type=tcp
-vless://0d543aed-4e30-4553-b5ac-211419bb0961@185.128.139.11:18244?security=none&encryption=none&headerType=none&type=tcp
-vless://d9bc0973-59af-4f89-a2cc-49c0034a804f@95.38.234.154:51267?security=&encryption=none&headerType=&type=tcp
 vless://dc9b85ff-a632-4349-974a-6548e3f0beed@31.56.89.31:37825
-vless://d688105d-882c-4188-9fc3-6c1774132f8f@195.158.230.179:2083?security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=s3.vipshopnew.shop
+vless://3ccfd1ea-27f6-4af7-a025-7dc1867ae214@193.39.9.123:9000?security=none&path=/
 vless://3788e28f-f48a-485e-9b90-482a6f8ca51d@5.160.47.146:443?path=/vr1027?ed=2560&security=tls&encryption=none&insecure=0&fp=firefox&type=ws&allowInsecure=0&sni=gostar27.irtour123.com
-vless://feade342-9a00-427e-b049-752a4e584ba5@85.133.161.168:443?security=none&encryption=none&host=fsn.bestlive.ir&headerType=http&type=tcp#@v2rayngzendegimamad🕊️
 vless://9b139bbb-264e-4369-1120-7dd3f71fa93c@snapp.ir:2087?path=%2FBetForward&security=tls&encryption=none&insecure=0&host=dns.rorian.ir&fp=chrome&type=ws&allowInsecure=0&sni=dns.rorian.ir
 vless://528defd1-2a24-43bd-b45d-874367c6f4f5@anten.ir:8880?path=/&security=none&encryption=none&host=iran.shopdn.ir&type=ws#@WETCONFIG
-vless://526be552-290f-47b1-9a61-a13da8a0a43b@bmi.ir:80?path=/&security=&encryption=none&host=fi1.kianorbit.ir&type=httpupgrade#@electvpn0
 vless://56aab278-7c8b-4856-2315-6c8998cf08de@s1.zynavo.ir:2087?mode=auto&path=/BetForward&security=tls&alpn=h3,h2,http/1.1&encryption=none&extra={
+vless://526be552-290f-47b1-9a61-a13da8a0a43b@bmi.ir:80?path=/&security=&encryption=none&host=fi1.kianorbit.ir&type=httpupgrade#@electvpn0
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://54ef0355-d89a-4eab-bc72-8efe86d18716@dl3.gooniforoshi.fun:443?path=/download.php&security=tls&encryption=none&host=dl3.gooniforoshi.fun&type=ws&sni=dl3.gooniforoshi.fun
+vless://d40896cb-c5bc-4ae1-8c63-ad2a40ffc861@Snapp.ir:8880?path=/&security=none&encryption=none&host=Appleiranorg.com&type=ws#@Net2ray
+vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
+vless://84c17b99-0c79-48cc-82b8-3b6914801921@dlc-srv1.treenix-ping.com:9000?encryption=none&security=none&type=tcp&headerType=none
+vless://a490e46d-e450-4c73-631f-920da539186c@s2.zynavo.ir:2087?mode=auto&path=/BetForward&security=tls&alpn=h3,h2,http/1.1&encryption=none&extra={
+vless://ae31f4e8-cf79-4a6d-a238-4c610448ec8a@bitpin.ir:80?encryption=none&host=break.ghabahani.com&path=/&security=none&type=ws#ulmpt4mk6
+vless://f4e1ae51-3b3d-48b5-ae26-dd71bd4af38a@www.tgju.org:443?mode=stream-up&path=/&security=tls&alpn=h3,h2&encryption=none&insecure=0&host=APP-FI-2.85858569.XYZ&fp=chrome&type=xhttp&allowInsecure=0&sni=1Z6i1nhm.85858569.Xyz#@KAFING_2
+ss://000dec39-61ac-4ff2-97e1-5f7c003cf2e5@85.198.12.25:443?path=%2Ftelegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn&security=none&encryption=none&host=zula.ir&type=ws
+ss://00c7cd9c-b4ab-42c9-8c2f-48c183eb5997@iranserver.com:443?path=%2FTelegram%3A%40@Vip_Security

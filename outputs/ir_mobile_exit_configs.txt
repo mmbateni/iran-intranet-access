@@ -1,10 +1,10 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-07-14 05:58 UTC
+# IR mobile (MCI/Irancell/Rightel) — 2026-07-14 15:17 UTC
 # 8 configs
 vless://8619e4c1-0984-4dce-83e3-419e2d7f5079@185.112.59.159:443?encryption=none&flow=xtls-rprx-vision&pbk=IzCxPP6AbT5ncuSfj17EsHCyjnirVQ_LN62uIiQeQVA&security=reality&sid=111111&sni=max.ru&type=tcp
-vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=/api&host=api.bgp6.ir&sni=api.bgp6.ir&fp=chrome&alpn=h2,http/1.1
 vless://83b3bb17-bc07-453f-9f10-4264ae839314@89.34.230.234:443?security=tls&encryption=none&insecure=1&host=namasha.com&headerType=http&fp=chrome&type=tcp&allowInsecure=1&sni=namasha.com
 trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram
-trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?security=tls
 trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?security=tls&sni=Koma-YT.PAGeS.Dev
+trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606?security=tls
 trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpLcGlrVjBXY041NHVsN3l0UDBRT0dXN25qU1M5eHFxeS9KaTg1UE00S1FRPQ==@2.144.23.23:2053
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpLMDJWUjVOVkNMOURUSmdkQWRvdzBqalFSUStSbWhCaHRKMTJneUh6eXhvPQ@e4.cover20.ir:16156?type=tcp
