@@ -1,19 +1,19 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-16 06:06 UTC | 12 configs
+# Generated: 2026-07-16 15:25 UTC | 12 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://19a04069-2321-4d57-a289-44fa974a08f8@2.144.22.87:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=%2Fapi&host=api.bgp6.ir&sni=api.bgp6.ir&fp=chrome&alpn=h2,http%2F1.1
 vless://f122a83b-dfb3-46f4-9c51-5194077e5b94@185.143.233.5:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=pishparda.ir&sni=isna.ir&fp=chrome&allowInsecure=1
 vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
 vless://024bd761-7966-444b-a44b-255943eb67ec@185.143.233.122:443?type=ws&encryption=none&path=%2F&host=cyrus2.frtshop.ir&security=tls&fp=chrome&alpn=h2,http%2F1.1&sni=cyrus2.frtshop.ir
-vless://cccbfdd9-b6fe-45c5-ac08-da49a001e81e@185.231.183.159:80?mode=auto&path=/&security=&encryption=none&type=xhttp
-vless://03569239-80cc-4948-834e-a3cb0212246d@188.213.198.238:7080?security=&encryption=none&headerType=none&type=tcp
 vless://d688e1f5-eaf1-4f9f-b976-5584c16ed988@Snapp.ir:80?encryption=none&type=ws&path=/
-vless://d40896cb-c5bc-4ae1-8c63-ad2a40ffc861@Snapp.ir:8880?path=/&security=none&encryption=none&host=Appleiranorg.com&type=ws#@Net2ray
+vless://3ccfd1ea-27f6-4af7-a025-7dc1867ae214@193.39.9.123:9000?security=none&path=/
+vless://1073a3f2-dc7c-46fb-aa7c-4378d4b27785@asl3.feeliran.org:449?type=tcp&security=tls
 vless://7208f7a9-95d9-40c4-ab55-211681c14332@SnaPp.ir:2082?security=none&type=ws&headerType=&path=%2F&host=Mamad.mobilesubasa.com
 vless://4f236385-2aee-6ed9-4145-7f85a5725516@anten.ir:8880?security=none&type=ws&path=%2Fv2king&host=rizping.gxwatch.ir
 vless://526be552-290f-47b1-9a61-a13da8a0a43b@bmi.ir:80?path=/&security=&encryption=none&host=fi1.kianorbit.ir&type=httpupgrade#@electvpn0
 vless://107a97b2-75a7-44d5-aada-d85b783001cd@snapp.ir:2087?path=%2F&security=tls&encryption=none&host=01team.no1plus.ir&fp=chrome&type=ws&sni=01team.no1plus.ir
+vless://0473b41a-0d45-4e9b-97fb-aee5a799c6dd@www.parspack.com:80?path=/&security=none&encryption=none&host=FySuMyYk3.aMirsiTesos.sItE.&type=httpupgrade
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
