@@ -1,29 +1,19 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-15 15:15 UTC | 22 configs
+# Generated: 2026-07-16 06:06 UTC | 12 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://54d7e7ab-889e-4dfe-8206-ec8148e2bd7b@tun.mamadhpbot.ir:2097?security=reality&encryption=none&pbk=HBj5Id8AD9xpZpCQAI_Qe3EcRgDabNUi-m3G6VENdT0&headerType=none&fp=chrome&type=tcp&sni=play.google.com&sid=0020b2c2d7f87920
-vless://024bd761-7966-444b-a44b-255943eb67ec@185.143.233.122:443?type=ws&encryption=none&path=%2F&host=cyrus2.frtshop.ir&security=tls&fp=chrome&alpn=h2,http%2F1.1&sni=cyrus2.frtshop.ir
+vless://19a04069-2321-4d57-a289-44fa974a08f8@2.144.22.87:443?encryption=none&security=tls&type=tcp&headerType=none&flow=xtls-rprx-vision&path=%2Fapi&host=api.bgp6.ir&sni=api.bgp6.ir&fp=chrome&alpn=h2,http%2F1.1
 vless://f122a83b-dfb3-46f4-9c51-5194077e5b94@185.143.233.5:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=pishparda.ir&sni=isna.ir&fp=chrome&allowInsecure=1
 vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
+vless://024bd761-7966-444b-a44b-255943eb67ec@185.143.233.122:443?type=ws&encryption=none&path=%2F&host=cyrus2.frtshop.ir&security=tls&fp=chrome&alpn=h2,http%2F1.1&sni=cyrus2.frtshop.ir
+vless://cccbfdd9-b6fe-45c5-ac08-da49a001e81e@185.231.183.159:80?mode=auto&path=/&security=&encryption=none&type=xhttp
 vless://03569239-80cc-4948-834e-a3cb0212246d@188.213.198.238:7080?security=&encryption=none&headerType=none&type=tcp
-vless://dc9b85ff-a632-4349-974a-6548e3f0beed@31.56.89.31:37825
-vless://3ccfd1ea-27f6-4af7-a025-7dc1867ae214@193.39.9.123:9000?security=none&path=/
-vless://3788e28f-f48a-485e-9b90-482a6f8ca51d@5.160.47.146:443?path=/vr1027?ed=2560&security=tls&encryption=none&insecure=0&fp=firefox&type=ws&allowInsecure=0&sni=gostar27.irtour123.com
 vless://d688e1f5-eaf1-4f9f-b976-5584c16ed988@Snapp.ir:80?encryption=none&type=ws&path=/
-vless://35d03c55-7568-47e6-8cb6-86537b54a57d@alisa.xqnetwork.ir:222?mode=auto&path=/wxest&security=none&encryption=none&extra={
+vless://d40896cb-c5bc-4ae1-8c63-ad2a40ffc861@Snapp.ir:8880?path=/&security=none&encryption=none&host=Appleiranorg.com&type=ws#@Net2ray
 vless://7208f7a9-95d9-40c4-ab55-211681c14332@SnaPp.ir:2082?security=none&type=ws&headerType=&path=%2F&host=Mamad.mobilesubasa.com
 vless://4f236385-2aee-6ed9-4145-7f85a5725516@anten.ir:8880?security=none&type=ws&path=%2Fv2king&host=rizping.gxwatch.ir
 vless://526be552-290f-47b1-9a61-a13da8a0a43b@bmi.ir:80?path=/&security=&encryption=none&host=fi1.kianorbit.ir&type=httpupgrade#@electvpn0
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
 vless://107a97b2-75a7-44d5-aada-d85b783001cd@snapp.ir:2087?path=%2F&security=tls&encryption=none&host=01team.no1plus.ir&fp=chrome&type=ws&sni=01team.no1plus.ir
-vless://2335f653-ab29-46aa-bd8a-9d8e39625d57@al1.vipsite2.top:8088?security=tls&alpn=h2,http%2F1.1&encryption=none&headerType=none&fp=chrome&type=tcp&sni=alman1.rendai.ir
-vless://8f098803-8d2c-4346-8773-b58164626d38@dl4.gooniforoshi.fun:443?path=/download.php&security=tls&encryption=none&host=dl4.gooniforoshi.fun&allowinsecure=0&type=ws&sni=dl4.gooniforoshi.fun
-vless://d40896cb-c5bc-4ae1-8c63-ad2a40ffc861@Snapp.ir:8880?path=/&security=none&encryption=none&host=Appleiranorg.com&type=ws#@Net2ray
-vless://2a4e794e-c50c-4688-b4d7-31f5d0c5cead@varzesh3.com:2052?path=/&security=none&encryption=none&host=ai.xier.pro&type=ws
-vless://9e4074c6-f048-46c2-9626-37c3be19a432@ge2ir.botdeep.pw:2083?security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=pn.sirdeep.com#@Soul737
-vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
-vless://f4e1ae51-3b3d-48b5-ae26-dd71bd4af38a@www.tgju.org:443?mode=stream-up&path=/&security=tls&alpn=h3,h2&encryption=none&insecure=0&host=APP-FI-2.85858569.XYZ&fp=chrome&type=xhttp&allowInsecure=0&sni=1Z6i1nhm.85858569.Xyz#@KAFING_2
