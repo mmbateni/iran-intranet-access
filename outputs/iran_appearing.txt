@@ -1,16 +1,16 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-20 06:39 UTC | 9 configs
+# Generated: 2026-07-20 15:37 UTC | 9 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://e3d486fb-d9bf-47b6-817d-e67211f30d00@185.143.234.115:443?encryption=none&security=tls&type=ws&sni=rest.parhamm2.ir&host=
-vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
-vless://083c7724-d08f-4e0d-9712-3208abcf04d0@185.143.233.202:443?path=%2Fed%3D2080&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=cyrus.frtshop.ir&fp=chrome&type=ws&allowInsecure=1&sni=cyrus.frtshop.ir
-vless://f122a83b-dfb3-46f4-9c51-5194077e5b94@185.143.233.5:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=pishparda.ir&sni=isna.ir&fp=chrome&allowInsecure=1
-vless://1073a3f2-dc7c-46fb-aa7c-4378d4b27785@93.126.31.19:449?security=tls&path=/
-vless://915ba89d-a59b-4e66-8ad8-ac21875c9dc4@snapp.ir:2096?encryption=none&type=ws&security=tls&path=%2F&host=lizard.fastshop11.ir&sni=lizard.fastshop11.ir&allowInsecure=0
 vless://024bd761-7966-444b-a44b-255943eb67ec@185.143.233.122:443?type=ws&encryption=none&path=%2F&host=cyrus2.frtshop.ir&security=tls&fp=chrome&alpn=h2,http%2F1.1&sni=cyrus2.frtshop.ir
-vless://107a97b2-75a7-44d5-aada-d85b783001cd@snapp.ir:2087?path=%2F&security=tls&encryption=none&host=01team.no1plus.ir&fp=chrome&type=ws&sni=01team.no1plus.ir
-trojan://%40Nexus_v2ray@snapp.ir:2095?security=tls
+vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
+vless://f122a83b-dfb3-46f4-9c51-5194077e5b94@185.143.233.5:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=pishparda.ir&sni=isna.ir&fp=chrome&allowInsecure=1
+vless://083c7724-d08f-4e0d-9712-3208abcf04d0@185.143.233.202:443?path=%2Fed%3D2080&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=cyrus.frtshop.ir&fp=chrome&type=ws&allowInsecure=1&sni=cyrus.frtshop.ir
+vless://e3d486fb-d9bf-47b6-817d-e67211f30d00@185.143.234.115:443?encryption=none&security=tls&type=ws&sni=rest.parhamm2.ir&host=
+vless://74cc47a0-0156-49c0-884c-912f038881f1@87.107.110.209:2083?encryption=none&extra={
+vless://1073a3f2-dc7c-46fb-aa7c-4378d4b27785@93.126.31.19:449?security=tls&path=/
+vless://692cb76f-674d-4d3e-852a-d2ed274d1501@78.109.198.25:80?security=none&type=tcp
+vless://d40896cb-c5bc-4ae1-8c63-ad2a40ffc861@Snapp.ir:8880?path=/&security=none&encryption=none&host=Appleiranorg.com&type=ws#@Net2ray
