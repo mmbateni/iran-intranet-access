@@ -1,22 +1,17 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-28 06:15 UTC | 15 configs
+# Generated: 2026-07-28 15:50 UTC | 10 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://cd7365e1-5397-411c-9979-fc81d3a5ccbf@193.111.236.227:8443?mode=auto&path=%2F%3Fed%3D2560%2Fv2ray&security=tls&alpn=h2,http%2F1.1&encryption=mlkem768x25519plus.native.0rtt.u11XaDVDY8NRKpRGCtbksuhnefKg6RZBQfg5m2OepyI&extra=%7B%22xPaddingBytes%22%3A%22100-1000%22%7D&insecure=0&fp=chrome&type=xhttp&allowInsecure=0&flow=xtls-rprx-vision&sni=gb.jonghafteh.ir
-vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
 vless://f122a83b-dfb3-46f4-9c51-5194077e5b94@185.143.233.5:443?security=tls&type=ws&headerType=&path=%2Fvoip&host=pishparda.ir&sni=isna.ir&fp=chrome&allowInsecure=1
 vless://024bd761-7966-444b-a44b-255943eb67ec@185.143.233.122:443?type=ws&encryption=none&path=%2F&host=cyrus2.frtshop.ir&security=tls&fp=chrome&alpn=h2,http%2F1.1&sni=cyrus2.frtshop.ir
-vless://e48cf70b-a9a5-4855-9330-e8649a11882e@193.134.100.23:12596?security=none&encryption=none&headerType=none&type=tcp#@Net2ray
+vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
 vless://03569239-80cc-4948-834e-a3cb0212246d@188.213.198.238:7080?security=&encryption=none&headerType=none&type=tcp
 vless://feade342-9a00-427e-b049-752a4e584ba5@85.133.161.168:443?security=none&encryption=none&host=fsn.bestlive.ir&headerType=http&type=tcp#@v2rayngzendegimamad🕊️
-vless://00e407dc-8d0f-23dd-9b2e-e35ce13d29e8@85.133.161.190:443?encryption=none&type=xhttp&security=tls&path=%2FUS&host=iran.ir&sni=iran.ir&alpn=h2,http%2F1.1&fp=chrome&insecure=1&allowInsecure=1
+vless://53a58a9f-204a-4351-b093-16b9ada44071@185.143.233.120:2053?security=tls&sni=num.2d2d.ir&type=ws&path=%2F&fp=chrome&allowInsecure=1
 vless://06e5f9c4-c04d-48b9-8fd2-571811e2996d@abr185.onlyusers.org:3389?alpn=h2,http/1.1&fp=chrome&security=tls
-vless://b6b34e0e-91cb-4f5d-b725-5fe3c421fc7e@77.104.95.250:8443?encryption=none&host=&path=/&security=none&type=ws
 vless://526be552-290f-47b1-9a61-a13da8a0a43b@bmi.ir:80?path=/&security=&encryption=none&host=fi1.kianorbit.ir&type=httpupgrade#@electvpn0
-vless://107a97b2-75a7-44d5-aada-d85b783001cd@snapp.ir:2087?path=%2F&security=tls&encryption=none&host=01team.no1plus.ir&fp=chrome&type=ws&sni=01team.no1plus.ir
-vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
 vless://7208f7a9-95d9-40c4-ab55-211681c14332@SnaPp.ir:2082?security=none&type=ws&headerType=&path=%2F&host=Mamad.mobilesubasa.com
+vless://107a97b2-75a7-44d5-aada-d85b783001cd@snapp.ir:2087?path=%2F&security=tls&encryption=none&host=01team.no1plus.ir&fp=chrome&type=ws&sni=01team.no1plus.ir
