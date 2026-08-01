@@ -1,28 +1,16 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-07-31 15:48 UTC | 21 configs
+# Generated: 2026-08-01 06:17 UTC | 9 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
 vless://33b0ecd0-1c5a-4c6e-90ee-44f7fb045a93@z.pxui.ir:30051?security=reality&encryption=none&pbk=8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc&headerType=none&fp=chrome&spx=/Sl2vwH89a1A2NBk&type=tcp&sni=www.speedtest.net&sid=100645b1#@FarazV2ray
-vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@185.143.232.201:2052?encryption=none&security=tls&sni=sajjad.panivo.ir&insecure=0&allowInsecure=0&type=ws&host=sajjad.panivo.ir&path=%2F
-vless://00000000-0000-0000-0000-000000000005@185.143.232.253:443?security=tls&sni=3f40e40b00522eb1eb9bfb420b8bb012.skyroom.online&type=ws&host=flsrv.cdnplus1.ir&path=/downloadws?13011683841757
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@185.143.232.201:2096?encryption=none&security=tls&sni=Sha.artarona.ir&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=Sha.artarona.ir&path=%2F
-vless://024bd761-7966-444b-a44b-255943eb67ec@185.143.233.122:443?type=ws&encryption=none&path=%2F&host=cyrus2.frtshop.ir&security=tls&fp=chrome&alpn=h2,http%2F1.1&sni=cyrus2.frtshop.ir
-vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.5:443?type=ws&security=tls&path=/voip&sni=isna.ir&fp=chrome
-vless://f4e1ae51-3b3d-48b5-ae26-dd71bd4af38a@185.143.233.238:443?encryption=none&security=tls&sni=1Z6i1nhm.85858569.Xyz&fp=chrome&insecure=0&allowInsecure=0&type=xhttp&path=%2F
-vless://d40896cb-c5bc-4ae1-8c63-ad2a40ffc861@185.143.233.122:8880?encryption=none&security=tls&sni=Appleiranorg.com&insecure=0&allowInsecure=0&type=ws&host=Appleiranorg.com&path=%2F
-vless://ced3f588-d14f-4363-8171-33d8f0087606@185.126.14.200:11980?type=ws&encryption=none&path=/&host=&security=none#🇮🇷IR-🚀@VPNine1
-vless://6a55cbf2-cd1d-40dc-ab4c-143e18e73b74@185.126.14.200:51033?type=grpc&encryption=none&serviceName=&authority=&security=none#🇮🇷IR-🚀@VPNine1
-vless://4825edb4-0fde-4d48-892d-ddac2e1e13bb@www.parspack.com:8880?host=SHHproxy--shhPROXY--SHHproxy.PlusFood.org.&path=%2FSHHPROXY%3Fed%3D2048&security=none&type=httpupgrade
-vless://529cd8b2-0432-4fe7-80a2-89076c818f25@185.118.15.160:2095?type=tcp&security=none
-vless://1bc7aa95-9100-4e8e-de41-ae62b3419ae9@185.126.14.200:10635?&type=tcp&headerType=none&path=%2F
-vless://0a85da84-bbb4-4b0e-b67c-0c3eb4a8df19@zxcvbnm1.roozaraa.ir:8880?type=ws&security=tls&path=/&sni=zxcvbnm1.roozaraa.ir&fp=chrome
-vless://7208f7a9-95d9-40c4-ab55-211681c14332@SnaPp.ir:2082?type=tcp&encryption=none&security=none
+vless://0d543aed-4e30-4553-b5ac-211419bb0961@185.128.139.11:18244?security=none&encryption=none&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMB…
+vless://000dec39-61ac-4ff2-97e1-5f7c003cf2e5@85.198.12.25:443?path=%2Ftelegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn---telegram---v2tunnel_vpn&security=none&encryption=none&host=zula.ir&type=ws
+vless://71618681-e249-4da8-89d2-c659d979b6f2@45.89.223.219:443?security=none&encryption=mlkem768x25519plus.xorpub.0rtt.cq6hRK_ArflOb0vsw1pepsRro3fy2TixB9wx8P-eGxQ&headerType=none&type=tcp#@tootffarangi🍓-4
+vless://b82d817a-431e-4c4b-93b7-a924256db74e@al1.vipsite2.top:8088?security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=alman1.rendai.ir
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://6f95f0ef-e0ef-47c7-bf57-fb2024ff8639@avval.ir:2052?path=%2F&security=&encryption=none&host=test.golden98.ir&type=ws
-vless://107a97b2-75a7-44d5-aada-d85b783001cd@snapp.ir:2087?path=%2F&security=tls&encryption=none&host=01team.no1plus.ir&fp=chrome&type=ws&sni=01team.no1plus.ir
-trojan://bpb-trojan@zula.ir:443?sni=10-bPB-worKER-PAnEl.PagES.Dev&peer=10-bPB-worKER-PAnEl.PagES.Dev&security=tls
-trojan://b41dff00-bd43-11ee-a079-1239d0255272@iranserver.com:443?path=%2Fhowdy&security=tls&host=fr1.test3.net&type=ws&sni=fr1.test3.net
-ss://cd7365e1-5397-411c-9979-fc81d3a5ccbf@78.157.53.161:80?mode=auto&path=%2F%3Fed%3D2560%2Fv2ray&security=tls&alpn=h2,http%2F1.1&encryption=none&extra=%7B%22xPaddingBytes%22%3A%22100-1000%22%7D&insecure=0&fp=chrome&type=xhttp&allowInsecure=0&sni=g2.ostorehstore.ir
-ss://00e407dc-8d0f-23dd-9b2e-e35ce13d29e8@212.80.19.40:443?encryption=none&type=xhttp&security=tls&path=%2FUS&host=iran.ir&sni=iran.ir&alpn=h2,http%2F1.1&fp=chrome&insecure=1&allowInsecure=1
+vless://1ee1f28d-4975-4d7c-95c7-76172c20eed5@p01.parsi.sbs:2086?&type=ws&headerType=none&host=parsi.parsi.sbs&path=%2F
+trojan://auto@zula.ir:443?path=/@Azarakhsh_Proxy?ed=2560&security=tls&alpn=http/1.1&host=tg.cmliussss.us.kg&fp=chrome&type=ws&sni=tg.cmliussss.us.kg#🩵+@Azarakhsh_Proxy+🩷
