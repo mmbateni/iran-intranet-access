@@ -1,16 +1,16 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-01 06:17 UTC
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-01 14:49 UTC
 # 14 configs
-vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
+vless://25eaada7-1ac4-45ac-b454-421771336e25@89.34.230.48:443?security=reality&encryption=none&pbk=mBi2PpqpCcfwAy3Fkq5kqrs3SlZfS23j-dTYdMO4D1w&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.varzesh3.com&sid=a1b2c3d4#@Vip_Security
 vless://eb528c71-441a-4430-867d-ab63d301d4ee@grif.dns-crypto-yandex.com:443?encryption=none&type=grpc&serviceName=grpc&security=reality&fp=chrome&pbk=Bvdy2c0cxotdTPXwX1DXQ2RQDcWdRpNCaABu2tCwhzQ&sni=grif.dns-crypto-yandex.com&sid=0e830794d04398
 vless://72e466d0-c7f7-489f-a9bb-393d2e0a9647@94.183.209.37:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=Fmn3VyIvCT-KpCwvmb1ZqqkQxOW8GEBvamSZYZrqcic&security=reality&sid=376d46f012a36cd2&sni=www.twitch.tv&type=tcp
 vless://6af3672b-8994-4cf1-aa15-23ce6574ebf0@94.183.170.104:25311?encryption=none&fp=qq&mode=gun&pbk=HLXkRdO5mG922Ohb41SkRglI-aec3enQzilWZqO4-Us&security=reality&serviceName=auragrpc&sid=e7c3f9a2b6d4f8e1&sni=cloudflare.com&type=grpc
 vless://d54df3dd-4fdd-0006-89ce-3c9bfe761ee5@5.188.119.244:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=5daY68T2-jYVVQ__Raq1a4ggV2d1kAdrR53YkRutZF0&security=reality&sni=ru39.overseashost.ru&type=raw
 vless://411c1913-996e-000c-89fe-0d25ac621e83@213.176.19.11:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=PcJV65cp5U87UQOZJ5Oaf0NHriHZJbC8TPfthF4Aqyk&sni=dedrf.novabooster.ru&sid=15bcc0a77c3cacdf
+vless://01cb71aa-83a4-4415-b5d9-fd526ea0da75@5.188.115.159:8446?type=grpc&security=reality&encryption=none&sni=360.yandex.ru&fp=firefox&pbk=rUCHk3_64Wv_f_v46OfVNYldKu9fUqHpX937bmGeeDs&headerType=none&mode=gun
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
 vless://33b0ecd0-1c5a-4c6e-90ee-44f7fb045a93@z.pxui.ir:30051?security=reality&encryption=none&pbk=8smLHkjNzf2aWWr5MHrdq3DZRq-w8T9U2ulaeV_bnBc&headerType=none&fp=chrome&spx=/Sl2vwH89a1A2NBk&type=tcp&sni=www.speedtest.net&sid=100645b1#@FarazV2ray
-vless://243b6fb9-6241-476c-ae5f-5878e9e7127b@ru1.lnsync.online:443?security=reality&encryption=none&pbk=Jijz31jjUKmhwYwKFVjBd8OMbfHuYKLB4fB2FDIlQwk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dzen.ru&sid=66a34356#REALITY|IR🇮🇷
+vless://d555a2de-9f94-44f4-aba9-63584b81a36d@zone.fi1.linkora.ir:49429?security=reality&encryption=none&pbk=OQsVeM4sKyLRiGKO1QDfyo4C0xBJJhFB54EhFlcvzGM&host=telewebion.ir&headerType=http&fp=chrome&type=tcp&sni=telewebion.ir&sid=62b17aae389bb655#@Vip_Security
 vless://1a8081ff-61e7-49b5-8e86-1f835ea9e1d1@canada.gogs.ink:443?type=tcp&headerType=none&security=reality&encryption=none&sni=addons.mozilla.org&fp=chrome&pbk=zeWC31vWK-6rMIa_kiqgZLrtnij8TNrqYZzlXC1jzlA&sid=9e33c3e0e7d7ff06&flow=xtls-rprx-vision
 vless://1d2f9718-b0a4-4c4d-90e6-b297b23d8999@host13.virgool.best:55013?security=reality&encryption=none&pbk=vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ&headerType=none&fp=chrome&type=tcp&sni=www.digikala.com&sid=c385
-vless://23d6295f-0337-438f-be52-388bbe321ae4@a.samrayan.ir:443?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=a.samrayan.ir
 vless://1e8d112e-fed0-4f7c-91ec-df914ad49906@nl.riotvpn.eu:443?type=tcp&headerType=none&security=reality&encryption=none&sni=ads.x5.ru&fp=chrome&pbk=8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho&sid=b76dcf9e1183fe1b&flow=xtls-rprx-vision
 trojan://hGGbs2T6hf@mmd.asan9720.ir:8880?mode=auto&path=/&security=reality&extra={
