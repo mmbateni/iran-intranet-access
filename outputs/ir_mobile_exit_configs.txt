@@ -1,10 +1,11 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-08-02 06:21 UTC
-# 8 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-08-02 14:52 UTC
+# 9 configs
 vless://25eaada7-1ac4-45ac-b454-421771336e25@89.34.230.48:443?security=reality&encryption=none&pbk=mBi2PpqpCcfwAy3Fkq5kqrs3SlZfS23j-dTYdMO4D1w&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.varzesh3.com&sid=a1b2c3d4#@Vip_Security
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
 vless://eb528c71-441a-4430-867d-ab63d301d4ee@grif.dns-crypto-yandex.com:443?encryption=none&type=grpc&serviceName=grpc&security=reality&fp=chrome&pbk=Bvdy2c0cxotdTPXwX1DXQ2RQDcWdRpNCaABu2tCwhzQ&sni=grif.dns-crypto-yandex.com&sid=0e830794d04398
-vless://5bccc822-ac5c-459a-9d3e-1b6e9b864f39@89.34.230.135:59843?encryption=none&security=none&type=ws&headerType=none&path=%2Fa881bnya4l
-trojan://B1S_3TTW3eNe8cyP4BbRye4n@89.34.230.135:57831?security=none&type=ws&headerType=none&path=%2F7w6d00nm47
+vless://5bccc822-ac5c-459a-9d3e-1b6e9b864f39@89.34.230.135:59843?path=/a881bnya4l&security=none&encryption=none&type=ws
+trojan://B1S_3TTW3eNe8cyP4BbRye4n@89.34.230.135:57831?path=/7w6d00nm47&security=none&type=ws
 trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&host=www.ignitelimit.com&path=/assignment
-vmess://eyJhZGQiOiI4OS4zNC4yMzAuMTM1IiwiYWlkIjoiMCIsImlkIjoiYWY2YjZjOWItNjJiYy00NmMyLTkxNDctODFlYzM0ODg1ODk5IiwibmV0IjoidGNwIiwicG9ydCI6NTExODUsInBzIjoiQGZpbGVtYmFkIiwic2N5IjoiYXV0byIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-vmess://eyJhZGQiOiI4OS4zNC4yMzAuMTM1IiwiYWlkIjoiMCIsImlkIjoiYWY2YjZjOWItNjJiYy00NmMyLTkxNDctODFlYzM0ODg1ODk5IiwibmV0Ijoid3MiLCJwYXRoIjoiL3k4M3F5a20wem0iLCJwb3J0IjoxMTM2MSwicHMiOiJAZmlsZW1iYWQiLCJzY3kiOiJhdXRvIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiI4OS4zNC4yMzAuMTM1IiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6ImFmNmI2YzliLTYyYmMtNDZjMi05MTQ3LTgxZWMzNDg4NTg5OSIsIm5ldCI6IndzIiwicGF0aCI6Ii95ODNxeWttMHptIiwicG9ydCI6IjExMzYxIiwicHMiOiJCeSBFYnJhU2hhIPCfp7IiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0=
+vmess://eyJhZGQiOiI4OS4zNC4yMzAuMTM1IiwiYWlkIjoiMCIsImlkIjoiYWY2YjZjOWItNjJiYy00NmMyLTkxNDctODFlYzM0ODg1ODk5IiwibmV0IjoidGNwIiwicG9ydCI6NTExODUsInBzIjoiQnkgRWJyYVNoYSDwn5ObIiwic2N5IjoiYXV0byIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpfOHZ0MDluN0k5S2w2NFJZekxMd1llM1Y=@89.34.230.135:30736
