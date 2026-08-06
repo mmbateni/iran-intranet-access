@@ -1,5 +1,5 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-06 06:14 UTC
-# 8 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-06 15:47 UTC
+# 12 configs
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
 vless://eb528c71-441a-4430-867d-ab63d301d4ee@grif.dns-crypto-yandex.com:443?encryption=none&type=grpc&serviceName=grpc&security=reality&fp=chrome&pbk=Bvdy2c0cxotdTPXwX1DXQ2RQDcWdRpNCaABu2tCwhzQ&sni=grif.dns-crypto-yandex.com&sid=0e830794d04398
 vless://72e466d0-c7f7-489f-a9bb-393d2e0a9647@94.183.209.37:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=Fmn3VyIvCT-KpCwvmb1ZqqkQxOW8GEBvamSZYZrqcic&security=reality&sid=376d46f012a36cd2&sni=www.twitch.tv&type=tcp
@@ -7,4 +7,8 @@ vless://45dd8e3c-b04b-410d-bad3-91b8619212aa@5.188.115.159:8446?type=grpc&securi
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
 vless://41ff65ed-b05b-41c2-9f9d-f709e5e55b1c@5.188.114.71:443?type=raw&security=reality&encryption=none&sni=d3cdn1.cloud-cdn.xyz&fp=firefox&pbk=e2J6tVHMU8XoDn2SxWVXii7hUM_chBW01wgSbzbtHk4&sid=9c3fa068becd1f48&flow=xtls-rprx-vision&headerType=none
 vless://56b8b308-b257-47d7-bbee-2fe103f9b3b6@vip.cdkshop.ir:443?encryption=none&fp=chrome&pbk=SJdAKRmq9WVXSd1T92Nbk-JftCM7JZMNpBaNCnhLYjk&security=reality&sid=6b16ee683359&sni=myclub.snapp.ir&spx=/4b15e64ae37af70&type=tcp#🔥|
-trojan://hGGbs2T6hf@mmd.asan9720.ir:8880?security=reality&sni=www.aparat.com&fp=chrome&pbk=6f4gYYvBFM7iGf9zfFhUWRMoRTrK4zUl7soYqsEDMHI&sid=d2e5e6aed56c393b&spx=/kOxL13CTwtXvSvU&type=xhttp&mode=auto&path=/&extra={
+vless://6d50f4d6-ce1c-401b-bb4c-0cb54c0bb071@vip.nekeodjdbdji.fanzeka.ir:61885?security=reality&encryption=none&pbk=zhx1Hs2m5-qHm6S6FqKJVBbAkoEtU5Xzh7d9S1unfBI&headerType=none&fp=chrome&type=tcp&sni=skyroom.online&sid=64b02fb5e0ccd03b#✰𝗝𝗼𝗶𝗻
+vless://a8c14618-dce8-4d57-9678-7cfccb35c20b@free.soundfiy.ir:4554?security=reality&encryption=none&pbk=v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14&headerType=none&fp=chrome&spx=/0703fe19de990c1&type=tcp&sni=yahoo.com&sid=e3#🇮🇷135534
+vless://9abe63b7-dc27-4836-8237-1c9f313cc471@irser2.jobwebs.ir:18597?security=reality&encryption=none&pbk=st-ZCgACr63-Bvw5WtNae0Ey0dPeJ_T5328BYfnaG0E&headerType=none&fp=chrome&type=tcp&sni=arvancloud.ir&sid=561543f72a251565#@prrofile_purple
+vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?encryption=none&security=reality&sni=www.nvidia.com&fp=chrome&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&sid=c57bcc26&spx=/&allowinsecure=0&type=tcp&headerType=none#vpnsal
+vless://d555a2de-9f94-44f4-aba9-63584b81a36d@zone.fi1.linkora.ir:49429?security=reality&encryption=none&pbk=OQsVeM4sKyLRiGKO1QDfyo4C0xBJJhFB54EhFlcvzGM&host=telewebion.ir&headerType=http&fp=chrome&type=tcp&sni=telewebion.ir&sid=62b17aae389bb655#@Vip_Security
