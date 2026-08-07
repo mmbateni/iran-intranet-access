@@ -1,4 +1,2 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-08-07 05:16 UTC
-# 2 configs
-vless://f91109df-58b7-4532-a6ac-939d049bfb1e@2.144.27.189:443?path=/nova-geo-psiphon-de&security=tls&encryption=none&insecure=0&host=pro.polnejat.ir&type=ws&allowInsecure=0&sni=pro.polnejat.ir#[15267]
-trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&host=www.ignitelimit.com&path=/assignment&allowInsecure=1
+# IR mobile (MCI/Irancell/Rightel) — 2026-08-07 14:37 UTC
+# 0 configs
