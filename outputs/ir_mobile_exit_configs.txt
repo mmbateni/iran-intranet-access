@@ -1,6 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-08-06 15:47 UTC
-# 4 configs
-vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
-vless://eb528c71-441a-4430-867d-ab63d301d4ee@grif.dns-crypto-yandex.com:443?encryption=none&type=grpc&serviceName=grpc&security=reality&fp=chrome&pbk=Bvdy2c0cxotdTPXwX1DXQ2RQDcWdRpNCaABu2tCwhzQ&sni=grif.dns-crypto-yandex.com&sid=0e830794d04398
-vless://66f52bd2-41c7-40af-98a7-142848fc3cf1@2.144.24.109:3456?path=/&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=panel.ecofreenetping.com
-trojan://humanity@2.144.21.150:2000?path=/assignment&security=tls&insecure=0&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@FarazV2ray
+# IR mobile (MCI/Irancell/Rightel) — 2026-08-07 05:16 UTC
+# 2 configs
+vless://f91109df-58b7-4532-a6ac-939d049bfb1e@2.144.27.189:443?path=/nova-geo-psiphon-de&security=tls&encryption=none&insecure=0&host=pro.polnejat.ir&type=ws&allowInsecure=0&sni=pro.polnejat.ir#[15267]
+trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&host=www.ignitelimit.com&path=/assignment&allowInsecure=1
