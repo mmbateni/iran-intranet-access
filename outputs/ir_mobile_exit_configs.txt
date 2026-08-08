@@ -1,3 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-08-08 04:38 UTC
-# 1 configs
-vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
+# IR mobile (MCI/Irancell/Rightel) — 2026-08-08 14:11 UTC
+# 2 configs
+trojan://humanity@2.144.21.112:40443?path=%2Fassignment&security=tls&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=www.ignitelimit.com
+ss://YWVzLTI1Ni1nY206ZUhsbmVrODRhak4xZURSamFXTmtTREJLZDA5U1QzcDZhbWRqWm5aTVlUazJPRTFMTW1oMU1qTTFNVXRJTVVObWMwSjJSVmwyWjBGcFZFUTNjVVY2VUE9PQ@91.186.196.37:52473
