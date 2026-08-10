@@ -1,12 +1,9 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-10 05:09 UTC
-# 10 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-10 14:41 UTC
+# 7 configs
 vless://9500cf8b-020a-4a70-906c-e14bb5375875@94.183.254.26:443?flow=xtls-rprx-vision&fp=firefox&pbk=cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0&security=reality&sid=a1b2c4d4a1b2c5d5&sni=www.sciencedirect.com
-vless://851ed0d8-a37b-452d-8ef2-5b6c2d28a060@185.141.227.230:2027?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo&security=reality&sid=8d3293f0066e129a&sni=storage.yandex.net&type=raw
-vless://0fcf847b-9e7a-466c-8023-116e6da5d30a@185.141.227.92:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=uYiZWRgbowvS9uOhVZTe0FBS1pLzA3QMyQ_NfDh4_h8&security=reality&sid=5f50ac74b1ce9610&sni=fr-c63e107f41.sishka.network&type=raw
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
-vless://a8c14618-dce8-4d57-9678-7cfccb35c20b@free.soundfiy.ir:4554?security=reality&encryption=none&pbk=v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14&headerType=none&fp=chrome&spx=/0703fe19de990c1&type=tcp&sni=yahoo.com&sid=e3
+vless://16e4fd01-4b66-4034-bb7b-0ef8fbf569cf@5.188.115.159:8446?type=grpc&security=reality&encryption=none&sni=360.yandex.ru&fp=firefox&pbk=rUCHk3_64Wv_f_v46OfVNYldKu9fUqHpX937bmGeeDs&headerType=none&mode=gun
+vless://450340b0-e455-4e4b-9325-64244338a795@185.218.139.222:8080?mode=auto&path=/&security=reality&encryption=none&extra={
+vless://b54a05c6-fc72-4708-b88b-ee01bcffd9b0@ir.healingfluence.org:5000?security=reality&encryption=none&pbk=FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk&headerType=none&fp=chrome&spx=%2F&type=tcp&sni=play.google.com&sid=ddfc44847a83078c
 vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?security=reality&encryption=none&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.nvidia.com&sid=c57bcc26#@prrofile_purple
-vless://c0785153-19bb-4c68-a7c2-814531ed3192@pa1.rmspeed.shop:38168?security=reality&encryption=none&pbk=26P655mk6VDm8vtWHdlF3cOYyS-T2TaGccg2reXkwyg&headerType=none&fp=chrome&spx=/Fn9GFyZyQs8bnNN&type=tcp&sni=www.aparat.com&sid=c06a035146af20
-vless://1d2f9718-b0a4-4c4d-90e6-b297b23d8999@host13.virgool.best:55013?security=reality&encryption=none&pbk=vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ&headerType=none&fp=chrome&type=tcp&sni=www.digikala.com&sid=c385#@Vip_Security
-vless://b3790af1-e595-408d-bd26-2f21a15cd610@fast.superturk.ir:443?encryption=none&type=raw&security=reality&sni=telewebion.ir&fp=chrome&pbk=pCo2-ElBkfx1KTUwjzUyQVxcqGHcQXoX6-_z5uIccC0&sid=5918f395cc696590&spx=/HesarWeb#•
 trojan://hGGbs2T6hf@mmd.asan9720.ir:8880?security=reality&sni=www.aparat.com&fp=chrome&pbk=6f4gYYvBFM7iGf9zfFhUWRMoRTrK4zUl7soYqsEDMHI&sid=d2e5e6aed56c393b&spx=/kOxL13CTwtXvSvU&type=xhttp&mode=auto&path=/&extra={
