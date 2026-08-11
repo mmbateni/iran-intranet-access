@@ -1,9 +1,9 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-10 14:41 UTC
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-11 04:52 UTC
 # 7 configs
-vless://9500cf8b-020a-4a70-906c-e14bb5375875@94.183.254.26:443?flow=xtls-rprx-vision&fp=firefox&pbk=cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0&security=reality&sid=a1b2c4d4a1b2c5d5&sni=www.sciencedirect.com
-vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
+vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
+vless://1388bb49-e4a1-485d-b9ee-02ba3742f8f6@94.183.224.21:443?type=tcp&security=reality&encryption=none&fp=chrome&pbk=OnvxYKheQYpnGbyaF5S392QFQwYvFPOTuAnSJEweCG0&sni=avito.ru&sid=078a89fb628b9bd7&spx=%2F&flow=xtls-rprx-vision
+vless://9500cf8b-020a-4a70-906c-e14bb5375875@94.183.254.26:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0&security=reality&sid=a1b2c4d4a1b2c5d5&sni=www.sciencedirect.com&type=tcp
 vless://16e4fd01-4b66-4034-bb7b-0ef8fbf569cf@5.188.115.159:8446?type=grpc&security=reality&encryption=none&sni=360.yandex.ru&fp=firefox&pbk=rUCHk3_64Wv_f_v46OfVNYldKu9fUqHpX937bmGeeDs&headerType=none&mode=gun
+vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
 vless://450340b0-e455-4e4b-9325-64244338a795@185.218.139.222:8080?mode=auto&path=/&security=reality&encryption=none&extra={
-vless://b54a05c6-fc72-4708-b88b-ee01bcffd9b0@ir.healingfluence.org:5000?security=reality&encryption=none&pbk=FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk&headerType=none&fp=chrome&spx=%2F&type=tcp&sni=play.google.com&sid=ddfc44847a83078c
 vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?security=reality&encryption=none&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.nvidia.com&sid=c57bcc26#@prrofile_purple
-trojan://hGGbs2T6hf@mmd.asan9720.ir:8880?security=reality&sni=www.aparat.com&fp=chrome&pbk=6f4gYYvBFM7iGf9zfFhUWRMoRTrK4zUl7soYqsEDMHI&sid=d2e5e6aed56c393b&spx=/kOxL13CTwtXvSvU&type=xhttp&mode=auto&path=/&extra={
