@@ -1,10 +1,9 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-11 14:40 UTC
-# 8 configs
-vless://8033102198@94.183.219.145:443?flow=xtls-rprx-vision&fp=firefox&security=tls&sni=de15.fast-connect-service.site
-vless://9500cf8b-020a-4a70-906c-e14bb5375875@94.183.254.26:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=firefox&pbk=cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0&sni=www.sciencedirect.com&sid=a1b2c4d4a1b2c5d5
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-12 05:17 UTC
+# 7 configs
 vless://1388bb49-e4a1-485d-b9ee-02ba3742f8f6@94.183.224.21:443?type=tcp&security=reality&encryption=none&fp=chrome&pbk=OnvxYKheQYpnGbyaF5S392QFQwYvFPOTuAnSJEweCG0&sni=avito.ru&sid=078a89fb628b9bd7&spx=%2F&flow=xtls-rprx-vision
-vless://0fe1e823-0213-4479-8cdd-964e78bb748c@94.183.157.123:8443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&echfq=none&pbk=c-BHW_-nU9vrPfqKdAqwC_hp3kkOiGu7trFsGg0Wi2Q&sid=eb&spx=/atMfTbhxvqvVjdT&allowinsecure=0&type=tcp&headerType=none#🇵🇱
+vless://8033102198@94.183.219.145:443?flow=xtls-rprx-vision&fp=firefox&security=tls&sni=de15.fast-connect-service.site
 vless://16e4fd01-4b66-4034-bb7b-0ef8fbf569cf@5.188.115.159:8446?type=grpc&security=reality&encryption=none&sni=360.yandex.ru&fp=firefox&pbk=rUCHk3_64Wv_f_v46OfVNYldKu9fUqHpX937bmGeeDs&headerType=none&mode=gun
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
-vless://23e5702f-8bff-4074-9c70-6e1c34ad0a81@193.39.9.240:800?mode=auto&path=/&security=reality&encryption=none&extra={
-vless://450340b0-e455-4e4b-9325-64244338a795@185.218.139.222:8080?mode=auto&path=/&security=reality&encryption=none&extra={
+vless://0fe1e823-0213-4479-8cdd-964e78bb748c@94.183.157.123:8443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&echfq=none&pbk=c-BHW_-nU9vrPfqKdAqwC_hp3kkOiGu7trFsGg0Wi2Q&sid=eb&spx=/atMfTbhxvqvVjdT&allowinsecure=0&type=tcp&headerType=none#🇵🇱
+vless://cdd5a2b2-d1a7-4552-9344-4aee357840c9@193.39.9.240:1200?encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A%221000000%22,%22xPaddingBytes%22%3A%22100-1000%22%7D&fp=chrome&host=&mode=auto&path=%2F&pbk=m8hOnhxPNmdXtfOky4MHI9FhArP3qqfH7lxcopcQfQA&security=reality&sid=c0ca&sni=www.intel.com&spx=%2FCz628c2XY5tOlK8&type=xhttp&x_padding_bytes=100-1000
+vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?security=reality&encryption=none&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.nvidia.com&sid=c57bcc26#@prrofile_purple
