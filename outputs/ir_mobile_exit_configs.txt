@@ -1,3 +1,2 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-08-12 05:17 UTC
-# 1 configs
-trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&host=www.ignitelimit.com&path=/assignment&allowInsecure=1
+# IR mobile (MCI/Irancell/Rightel) — 2026-08-12 14:40 UTC
+# 0 configs
