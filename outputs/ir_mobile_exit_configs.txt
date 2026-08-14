@@ -1,5 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-08-13 05:21 UTC
-# 3 configs
-vless://fc0b9b85-063d-455f-a451-b6281671f8e2@91.186.196.204:45443?type=grpc&security=reality&encryption=none&sni=5post-gate.x5.ru&fp=firefox&pbk=EKnSxE7GvXy4piFEZq0dIAGyfLJOoiA6w2muX6b7wxQ&sid=7df4b6673821216f&headerType=none&serviceName=grpc&mode=gun
-trojan://humanity@2.144.21.112:40443?security=tls&sni=www.ignitelimit.com&type=ws&host=www.ignitelimit.com&path=/assignment&allowInsecure=1
-trojan://humanity@2.144.21.150:2000?security=tls&sni=www.ignitelimit.com&type=ws&path=%2Fassignment&Host=www.ignitelimit.com
+# IR mobile (MCI/Irancell/Rightel) — 2026-08-14 05:17 UTC
+# 2 configs
+vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
+trojan://humanity@2.144.21.150:2000?security=tls&sni=www.ignitelimit.com
