@@ -1,19 +1,20 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-14 14:35 UTC | 12 configs
+# Generated: 2026-08-15 04:06 UTC | 13 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://8cdba562-437e-4cf9-9929-cdf691969a82@193.39.9.240:1200?mode=auto&security=reality&extra={
-vless://d0eca1e1-c4ec-43dc-a6e9-25e5d29d9fe5@193.39.9.240:1300?encryption=none&fp=chrome&pbk=NFsIgOxjsTyqP45-UF_42xOsQH6u6vZSJ90JQYDtuSo&security=reality&sid=15629d&sni=www.intel.com&spx=%2F66Q11ymQVGjJQY0&type=tcp
-vless://3c4f4d61-ebcb-4594-aacf-ac0d620c8cde@alman.hellray-server.fun:3010?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=F50bIiv7OTo8dY83HheaSJoY_Mn2jZn8mfrCIly8Wy4&security=reality&sid=fa16a6435031&sni=www.aparat.com&spx=/83f2f218dd04e20&type=tcp#@GozargahAzad|🇮🇷
-vless://808580aa-c9a2-4122-af67-89300df67fdf@188.213.197.141:34343?path=/&security=&encryption=none&type=ws
-vless://8603e9d8-de32-4447-9e39-d68d119640ee@185.8.172.140:8443?security=none&encryption=none&headerType=none&type=tcp#@filembad
+vless://fb1572c8-96c2-4485-9946-4f83b82bd350@31.14.119.198:2053?security=reality&encryption=none&pbk=_Id1_cScFAlYQ3jwK7bTrpWSPtg_RHOXrRx2Y0Tecx8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=digikala.com&sid=469fd93b4a2f7da0#@erfanandroid
+vless://4d0fb838-2dbe-4dff-ae36-da6ee02739ca@turkey.blueheartz.ir:27632?security=reality&encryption=none&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&headerType=none&fp=chrome&spx=/77cda84b6307aea&type=tcp&flow=xtls-rprx-vision&sni=play-fe.googleapis.com&sid=3892a7a76e8b#@FarazV2ray
+vless://ef27ea8f-b3fc-4b41-83a3-0d52e25eabaf@185.143.233.5:443?path=/chat?ed=128&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=bn.8lack.ir&fp=chrome&type=ws&allowInsecure=0&sni=bn.8lack.ir#TesT
+vless://808580aa-c9a2-4122-af67-89300df67fdf@188.213.197.141:34343?path=%2F&security=&encryption=none&type=ws
+vless://2246f00c-dc5a-467e-30d5-f6277e065e5b@212.80.9.152:2087?pcs=1b995919865b4b061a1768296995613e66d1afad274f8b227d70521038e56c2b&alpn=h2,http/1.1,h3&fp=chrome&type=xhttp&sni=s3.zynetraq.ir&mode=auto&path=/BetForward&security=tls&encryption=none&extra={
+vless://0a85da84-bbb4-4b0e-b67c-0c3eb4a8df19@87.107.5.116:8880?path=/&security=tls&encryption=none&insecure=0&host=zxcvbnm1.roozaraa.ir&fp=chrome&type=ws&allowInsecure=0&sni=zxcvbnm1.roozaraa.ir
+vless://018a9e2e-9bfd-4a9e-a20d-c07eb53fa439@91.234.39.183:8080?encryption=none&security=none&type=ws&path=%2F
+vless://43cd4e70-f03e-4aa0-bad3-9cb02e546439@185.206.92.88:80?path=%2F&security=none&encryption=none&host=love-iran.akbar1999.ir&type=ws
+vless://83ca7c32-3000-4ea3-80af-38d9ea6f7ab2@193.138.77.84:5000?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=mlkem768x25519plus.native.0rtt.62O0m9ahsU1WfbvZBC3mgbvtBh_qes9sIHf0RPvFSm4&security=none&type=tcp&headerType=none#@GozargahAzad|🇮🇷
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://0c779063-1e0a-41c2-94bf-9bd79b4026f5@irtonn.darklink.ir:2035?path=/java&security=&encryption=none&host=irtonn.darklink.ir&type=ws#🇮🇷IR-🚀@VPNine1
-vless://07ec979a-dd85-4b50-a7fe-924837cf936a@port.serendpiti.ir:2626?encryption=none&type=ws&security=none#[21949]
 vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://6ee58946-96c9-4f3e-418e-fa38849c3577@s1.zynetraq.ir:2087?pcs=1997b017f0bf863fcbb3591f4aac662874e00c2d81d8aabbbf6ed66d4779c233&alpn=h2,http/1.1,h3&fp=chrome&type=xhttp&sni=s1.zynetraq.ir&mode=auto&path=/BetForward&security=tls&encryption=none&extra={
-vless://22f11833-5050-4ae1-9ff3-24649d74fc65@tuun.ashahan.ir:2036?path=%2F&security=tls&encryption=none&insecure=0&host=world.ashahan.ir&type=ws&allowInsecure=0&sni=world.ashahan.ir
+vless://0d1c3cee-2952-4a3e-a03e-fbe99d32dc72@de22.fastplus7.site:2086?type=ws&encryption=none&path=%2F&host=de21.fastplus11.ir&security=none
