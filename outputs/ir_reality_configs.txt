@@ -1,14 +1,10 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-15 04:06 UTC
-# 12 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-08-15 13:56 UTC
+# 8 configs
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
 vless://8033102198@94.183.219.145:443?flow=xtls-rprx-vision&fp=firefox&security=tls&sni=de15.fast-connect-service.site
 vless://574ffae7-4df3-45e4-9064-683136b97b3a@94.183.209.37:8443?type=tcp&security=reality&encryption=none&fp=firefox&pbk=TsoW8MkM_cRGxVvDEm4wLZ-fYbPg-vJvBMU2FYVbKwQ&sid=e059cb1d6b9dd9ec&sni=timeline.www.cloudflare.com&spx=/26il2tuyweuvdan
-vless://4a334454-22f7-0002-9bec-583e1e8a2773@5.188.140.5:2096?type=grpc&security=reality&encryption=none&sni=an.yandex.ru&fp=chrome&pbk=EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8&sid=1ed136481e0ede74&headerType=none&serviceName=grpc&mode=gun
-vless://ee791990-83c7-11f1-9ca5-1e6febe3e1df@5.188.140.39:2053?encryption=none&fp=firefox&mode=gun&pbk=WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M&security=reality&serviceName=grpc-direct&sid=4b685844d0b4f724&sni=hh.ru&type=grpc
-vless://2c634977-584e-4e1f-b501-1b70c77a6743@185.141.227.153:9001?type=grpc&security=reality&encryption=none&sni=api-maps.yandex.ru&serviceName=grpc-reality&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=6ba85179e30d4fc2
 vless://5e7ecc47-e424-4653-876e-c7515a2c82b4@94.183.209.43:33843?encryption=none&fp=firefox&pbk=mFLIx6qO9qtNTKCHiRV6_M3LzLtff_TU03sHwA2A3x4&security=reality&serviceName=grpc&sid=ed9e5b70102767a8&sni=www.cloudflare.com&spx=/z7znmkwyv1tjco4&type=grpc
-vless://fb1572c8-96c2-4485-9946-4f83b82bd350@31.14.119.198:2053?security=reality&encryption=none&pbk=_Id1_cScFAlYQ3jwK7bTrpWSPtg_RHOXrRx2Y0Tecx8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=digikala.com&sid=469fd93b4a2f7da0#@erfanandroid
+vless://ee791990-83c7-11f1-9ca5-1e6febe3e1df@5.188.140.39:2053?encryption=none&fp=firefox&mode=gun&pbk=WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M&security=reality&serviceName=grpc-direct&sid=4b685844d0b4f724&sni=hh.ru&type=grpc
+vless://4a334454-22f7-0002-9bec-583e1e8a2773@5.188.140.5:2096?encryption=none&security=reality&sni=an.yandex.ru&fp=chrome&pbk=EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8&sid=1ed136481e0ede74&type=grpc&authority=&serviceName=grpc&mode=gun
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
-vless://4d0fb838-2dbe-4dff-ae36-da6ee02739ca@turkey.blueheartz.ir:27632?security=reality&encryption=none&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&headerType=none&fp=chrome&spx=/77cda84b6307aea&type=tcp&flow=xtls-rprx-vision&sni=play-fe.googleapis.com&sid=3892a7a76e8b#@FarazV2ray
 vless://aa882bd3-f554-4576-a2a6-733b75337e08@serv40.strettenvpn.com:7771?type=grpc&security=reality&fp=qq&pbk=yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28&sid=c4a9f1e2&sni=sun6-21.userapi.com&serviceName=vless-grpc
-vless://b54a05c6-fc72-4708-b88b-ee01bcffd9b0@ir.healingfluence.org:5000?security=reality&encryption=none&pbk=FhMWFvLreYsLAVipnrvcbHBoYpNC0E9-Jt-ThM6f0Hk&headerType=none&fp=chrome&spx=%2F&type=tcp&sni=play.google.com&sid=ddfc44847a83078c
