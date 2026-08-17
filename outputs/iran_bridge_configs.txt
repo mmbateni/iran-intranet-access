@@ -1,8 +1,5 @@
-# Armenia→Iran bridge-verified — 2026-08-17 04:14 UTC
-# 6 configs
-vless://00b41e07-68e6-46b0-928f-a02becd4e398@sitea.awexco.shop:2020?security=reality&encryption=mlkem768x25519plus.native.0rtt.3mjd2WKbtUjfzkJO2SMVeOLyDFUE0bMH5T_R5H_YCV0&pbk=V-4X2cijRTs7097yspcWqhSXP1AejmSMEM3epCS-EFY&host=upload.google.com&headerType=http&fp=chrome&type=tcp&sni=play.googleapis.com&sid=d5f57af384c851d0#🇬🇧GB-🚀@VPNine1
-vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@5.10.214.138:8880?path=Telegram🇮🇷
-vless://17a1ffce-0cf5-b29b-ba3c-2f2300000000@91.195.254.34:443?path=/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN&security=tls&encryption=none&insecure=0&host=netlivpn1048.shshh.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=netlivpn1048.shshh.workers.dev
-vless://9f2f92ed-3ed2-4ef3-88e4-c12c5be53b1a@files.toriva.click:443?security=tls&alpn=http%2F1.1&encryption=mlkem768x25519plus.native.0rtt.xiVmE3k1gSJhST4Uf6szW_l5NSQA32CYkZZH-9r0fDY&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&sni=files.toriva.click
-trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
-trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
+# Armenia→Iran bridge-verified — 2026-08-17 14:03 UTC
+# 3 configs
+vless://410843d6-d5cd-4db6-a66f-3a20102d073a@46.226.162.172:8588?mode=auto&path=%2F&security=reality&encryption=none&pbk=_SUv0c82LgTdgmL7ZI39Uoq80yQzwwWAX05BkVpde3Y&fp=firefox&type=xhttp&sni=play.googleapis.com&sid=833014806333a43a#REALITY|GB🇬🇧
+vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=0e#REALITY|AM🇦🇲
+vless://9f2f92ed-3ed2-4ef3-88e4-c12c5be53b1a@files.toriva.click:443?security=tls&alpn=http/1.1&encryption=mlkem768x25519plus.native.0rtt.xiVmE3k1gSJhST4Uf6szW_l5NSQA32CYkZZH-9r0fDY&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=files.toriva.click#@v2rayng3
