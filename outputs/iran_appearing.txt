@@ -1,24 +1,29 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-17 14:03 UTC | 17 configs
+# Generated: 2026-08-18 04:10 UTC | 22 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://b47a1c70-d033-4c31-b24f-6058d6cd04bf@2.144.26.237:9443?path=/nova-geo-psiphon-be&security=tls&encryption=none&insecure=0&host=vip.polnejat.ir&type=ws&allowInsecure=0&sni=vip.polnejat.ir#@meliproxyy
 vless://316140f7-2190-4130-9ce4-017307d5c716@turkey.blueheartz.ir:27632?security=reality&encryption=none&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&headerType=none&fp=chrome&spx=/9ab09ad716ae120&type=tcp&sni=play-fe.googleapis.com&sid=2c9dd97f742c96#@FarazV2ray
+vless://769a8dad-869f-4707-a237-f284f2605d2b@respina.msphnx.ir:2019?encryption=none&fp=chrome&pbk=RYUCFGttyeR0jJRoAwx5RkkT7gVwtaj06hDf66GhuXU&security=reality&sid=5e8ef064a2f8&sni=digikala.com&spx=/b5a1076e87d9153&type=tcp#🇮🇷145592
 vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?security=reality&encryption=none&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.nvidia.com&sid=c57bcc26#@prrofile_purple
-vless://273fd35b-bb19-4fec-8192-ab2c83e73d55@direct.mynor.ir:443?security=reality&encryption=none&pbk=jdRc1m6H39-UZp0U8BkTwLpkZIZoyFEORGxEpcnKGAg&headerType=none&fp=chrome&spx=/ee0Pijo4izi7UL8&type=tcp&sni=myket.ir&sid=ee8fb0d94f#[🇮🇷]t.me/ConfigV2RayNG
 vless://88de9f34-576c-472e-bc11-2b1f63ef19e5@pichi.picmusic.ir:15882?security=reality&encryption=none&pbk=gZT_3S5MB7JX7lYznOoo9CgMXpJtwEy7ChVtybbUjz4&headerType=none&fp=chrome&spx=/&type=tcp&sni=arxiv.org&sid=f378eb2f#@Begoo_VPN
+vless://273fd35b-bb19-4fec-8192-ab2c83e73d55@direct.mynor.ir:443?security=reality&encryption=none&pbk=jdRc1m6H39-UZp0U8BkTwLpkZIZoyFEORGxEpcnKGAg&headerType=none&fp=chrome&spx=/ee0Pijo4izi7UL8&type=tcp&sni=myket.ir&sid=ee8fb0d94f#[🇮🇷]t.me/ConfigV2RayNG
+vless://a8c14618-dce8-4d57-9678-7cfccb35c20b@free.soundfiy.ir:4554?security=reality&encryption=none&pbk=v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14&headerType=none&fp=chrome&spx=/0703fe19de990c1&type=tcp&sni=yahoo.com&sid=e3
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.5:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=isna.ir#@Vip_Security
-vless://16227db7-1914-4a97-bb6b-7bf98e6b525b@185.143.232.201:443?path=/&security=tls&encryption=none&insecure=0&host=zapzap.mc.filimo.cam&type=ws&allowInsecure=0&sni=zapzap.mc.filimo.cam#@v2rayng3
-vless://feade342-9a00-427e-b049-752a4e584ba5@85.133.161.168:443?security=none&encryption=none&host=fsn.bestlive.ir&headerType=http&type=tcp#@v2rayngzendegimamad🕊️
-vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
-vless://257c313c-36fa-4d99-ba06-bb4a02aae70d@adgof.mgodping12.xyz:2086?type=grpc&security=tls&fp=chrome&serviceName=&sni=&alpn=h2,http/1.1,h3#✨
-vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://09a8d436-03d5-40bc-a06e-bb6541802c47@185.126.6.126:2053
+vless://0a85da84-bbb4-4b0e-b67c-0c3eb4a8df19@87.107.5.116:8880?path=/&security=tls&encryption=none&insecure=0&host=zxcvbnm1.roozaraa.ir&fp=chrome&type=ws&allowInsecure=0&sni=zxcvbnm1.roozaraa.ir
+vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
+vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
+vless://67122aab-4fa3-44c9-94fc-200b4c1df027@ir.speedit.ir:443?encryption=none&security=none&type=tcp#🇮🇷145744
+vless://f564970a-8d90-4139-aec2-72cfbf6b1e24@sv33.lithiumhost.ir:41722?security=&encryption=none&headerType=&type=tcp
 vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
-vless://839236b3-a8e5-426d-94d3-3ffa53317b70@zula.ir:80?type=ws&path=%2F-%40Shh_Proxy-%40Shh_Proxy-%40Shh_Proxy--%40Shh_Proxy--%3Fed%3D1024&host=www.speedtest.net.Ftp.debIan.org.soVemAitaly.shop.&security=none#@Vip_Security
+vless://257c313c-36fa-4d99-ba06-bb4a02aae70d@adgof.mgodping12.xyz:2086?mode=gun&security=tls&encryption=none&fp=chrome&type=grpc
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://922cfd30-5df3-4b68-b3d8-248c88c0276a@pro.howan.ir:11223?security=&encryption=none&host=play.google.com&headerType=http&type=tcp#🇮🇷145607
 vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
+vless://f526e941-52ac-4d28-ba49-5ba2fc0a984b@zula.ir:80?path=%2Fvless&security=none&encryption=none&host=uk2-vless.sshmax.xyz&type=ws
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://9bc7496f-b545-4082-a2fe-3a99fd5d1993@youqp-ab9040c5d6-sss.apps.ir-central1.arvancaas.ir:443?mode=auto&path=/user&security=tls&encryption=none&extra={
-vless://d0f4d620-db2b-45e0-8353-a073461b1130@new01.asaltabie.monster:443?encryption=none&security=tls&sni=new01.asaltabie.monster&type=ws&host=new01.asaltabie.monster&path=%2F#@Vip_Security
+vless://ab5a2531-acc1-4a54-b16c-e14665dc88a5@direct.freelauner.ir:443?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#@NETMelliAnti
