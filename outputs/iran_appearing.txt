@@ -1,27 +1,29 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-19 14:11 UTC | 20 configs
+# Generated: 2026-08-20 04:10 UTC | 22 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
+vless://b47a1c70-d033-4c31-b24f-6058d6cd04bf@2.144.26.237:9443?path=/nova-geo-psiphon-be&security=tls&encryption=none&insecure=0&host=vip.polnejat.ir&type=ws&allowInsecure=0&sni=vip.polnejat.ir#vpnsal
 vless://8ff538e4-330c-43c1-97c8-0c90bf989331@77.237.90.67:443?security=reality&encryption=none&pbk=a7eDhoO14l6Tt6oC9Qa2laZkuJlQ8vhDgtE3Ko9aGnw&headerType=none&fp=chrome&spx=/a7a31c8e82daa25&type=tcp&sni=www.samsung.com&sid=20f787f764e45d#@vmesskhodam
-vless://4e6fe6c7-fef1-4030-9faf-1345155999f2@185.218.139.222:500?encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A%221000000%22,%22xPaddingBytes%22%3A%22100-1000%22%7D&fp=chrome&host=&mode=auto&path=%2F&pbk=dWoPr-hBM4I7ykmsnSn2LnivT7rZcmzaPCAsryiVMn4&security=reality&sid=42a518&sni=www.sony.com&spx=%2FCubmyCKA9BaiK7Y&type=xhttp&x_padding_bytes=100-1000
+vless://316140f7-2190-4130-9ce4-017307d5c716@turkey.blueheartz.ir:27632?security=reality&encryption=none&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&headerType=none&fp=firefox&spx=%2F9ab09ad716ae120&type=tcp&sni=play-fe.googleapis.com&sid=2c9dd97f742c96#@Vip_Security
+vless://5fec9672-5ee7-31b4-5639-4a5379d4eb80@g1.pars2khaazaar.ir:2086?encryption=none&type=tcp&security=reality&headerType=none&sni=play.google.com&fp=chrome&insecure=1&allowInsecure=1&pbk=Tdk8aoUJ0MnoIQaAwqZVKuDxC5Q-5s9iMrnjwvusIHg&sid=19f4730f746d&spx=/battel#@MDvpnSEC
 vless://a8c14618-dce8-4d57-9678-7cfccb35c20b@free.soundfiy.ir:4554?security=reality&encryption=none&pbk=v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14&headerType=none&fp=chrome&spx=/0703fe19de990c1&type=tcp&sni=yahoo.com&sid=e3
-vless://4d0fb838-2dbe-4dff-ae36-da6ee02739ca@turkey.blueheartz.ir:27632?security=reality&encryption=none&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&headerType=none&fp=chrome&spx=/77cda84b6307aea&type=tcp&flow=xtls-rprx-vision&sni=play-fe.googleapis.com&sid=3892a7a76e8b#تلگرام
+vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?security=reality&encryption=none&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.nvidia.com&sid=c57bcc26#@prrofile_purple
 vless://88de9f34-576c-472e-bc11-2b1f63ef19e5@pichi.picmusic.ir:15882?security=reality&encryption=none&pbk=gZT_3S5MB7JX7lYznOoo9CgMXpJtwEy7ChVtybbUjz4&headerType=none&fp=chrome&spx=/&type=tcp&sni=arxiv.org&sid=f378eb2f#@Begoo_VPN
 vless://ef27ea8f-b3fc-4b41-83a3-0d52e25eabaf@185.143.233.5:443?path=/chat?ed=128&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=bn.8lack.ir&fp=chrome&type=ws&allowInsecure=0&sni=bn.8lack.ir#TesT
 vless://0a85da84-bbb4-4b0e-b67c-0c3eb4a8df19@87.107.5.116:8880?path=/&security=tls&encryption=none&insecure=0&host=zxcvbnm1.roozaraa.ir&fp=chrome&type=ws&allowInsecure=0&sni=zxcvbnm1.roozaraa.ir
-vless://6f85c8b8-941e-472e-d8da-8396d9fc9e44@212.80.9.157:2087?alpn=h2,http/1.1,h3&encryption=none&extra={
+vless://66c38516-8d85-45b7-afcd-4b1b0352e38c@188.213.198.238:7080?security=none&encryption=none&headerType=none&type=tcp#🇩🇪گیگی
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://44e3bf2e-155f-43c0-a270-651ecadd16ce@devip2.zeeshop.click:443?encryption=none&security=tls&sni=devip2.zeeshop.click&fp=chrome&alpn=h2,http%2F1.1&insecure=0&allowInsecure=0&type=tcp&headerType=none
+vless://0fdecf2e-b44d-4c7a-a0fa-3b817ffaf854@skyroom.online:2095?encryption=none&type=ws&path=/&host=cdn.namasha.top&allowInsecure=1#🇮🇷IR-🚀@VPNine1
 vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
+vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
 vless://7699e066-2abf-466a-b4a8-5d725b80650b@pg.restauranzorban.ir:2052?path=/&security=&encryption=none&host=finland1.restaurantnetwork.ir&type=ws#@CfoX_SerVer
-vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://73e08fcb-a0c7-45d0-b55d-f78c903c64a6@dl4.gooniforoshi.fun:443?path=/download.php&security=tls&encryption=none&insecure=0&host=dl4.gooniforoshi.fun&type=ws&allowInsecure=0&sni=dl4.gooniforoshi.fun
-vless://22c6684b-cd4f-4c8e-62e3-a17fc698471f@s2.zynetraq.ir:2087?alpn=h2,http/1.1,h3&encryption=none&extra={
 vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
 vless://9bc7496f-b545-4082-a2fe-3a99fd5d1993@youqp-ab9040c5d6-sss.apps.ir-central1.arvancaas.ir:443?mode=auto&path=/user&security=tls&encryption=none&extra={
+vless://ab5a2531-acc1-4a54-b16c-e14665dc88a5@direct.freelauner.ir:443?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#@NETMelliAnti
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://f526e941-52ac-4d28-ba49-5ba2fc0a984b@zula.ir:80?path=%2Fvless&security=none&encryption=none&host=uk2-vless.sshmax.xyz&type=ws
-vless://89d07d9e-55af-4233-8e42-6739e085450f@irr.horvexa.ir:2036?path=%2F&security=tls&encryption=none&insecure=0&host=world.ashahan.ir&type=ws&allowInsecure=0&sni=world.ashahan.ir
-vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
+vless://1de11be7-1b7c-4143-8b04-fabd57078581@tun.pcapps.ir:2092?security=tls&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=phonepanel.ir#🇮🇷147662
