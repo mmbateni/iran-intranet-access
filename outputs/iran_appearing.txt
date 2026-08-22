@@ -1,27 +1,26 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-21 14:11 UTC | 20 configs
+# Generated: 2026-08-22 04:08 UTC | 19 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://831195d8-9908-435a-9ac5-89f98c872831@2.188.244.60:39964?encryption=mlkem768x25519plus.native.0rtt.BxZv70b4zBcxRHZF_RCs3aMVlPTMgdp6w9lIa1xMWQI&fp=chrome&pbk=MQBChlAAmPeeJNb5ZmTr_-SYcgxGGeoaEGE1xTyCvBI&security=reality&sid=58062f&sni=www.aparat.com&spx=/1b8c51eef8a7e71&type=tcp#🇮🇷148991
 vless://15a93d2b-0ba0-1d70-c291-c9a1ce2708ee@g1.pars2khaazaar.ir:2086?encryption=none&type=tcp&security=reality&sni=play.google.com&fp=chrome&pbk=Tdk8aoUJ0MnoIQaAwqZVKuDxC5Q-5s9iMrnjwvusIHg&sid=19f4730f746d&spx=%2Fbattel
-vless://4d0fb838-2dbe-4dff-ae36-da6ee02739ca@turkey.blueheartz.ir:27632?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&security=reality&sid=3892a7a76e8b&sni=play-fe.googleapis.com&spx=%2F77cda84b6307aea&type=tcp
-vless://88de9f34-576c-472e-bc11-2b1f63ef19e5@pichi.picmusic.ir:15882?security=reality&encryption=none&pbk=gZT_3S5MB7JX7lYznOoo9CgMXpJtwEy7ChVtybbUjz4&headerType=none&fp=chrome&spx=/&type=tcp&sni=arxiv.org&sid=f378eb2f#@Begoo_VPN
+vless://264e32bc-51dd-43d8-995e-a090864d8f91@respina.msphnx.ir:2019?encryption=none&fp=chrome&pbk=RYUCFGttyeR0jJRoAwx5RkkT7gVwtaj06hDf66GhuXU&security=reality&sid=35951be3&sni=digikala.com&spx=/2dcf5f7d8ac5e11&type=tcp#🇮🇷149400
+vless://bba38246-7a7b-4dc9-a421-d29219ff4fa6@cl.northbookway.shop:9090?mode=gun&security=reality&encryption=none&pbk=MmgN7QjrLmvLBXvizo_j9va2vD_5Q4edahMmXAv6bRI&fp=chrome&type=grpc&serviceName=grpc-main-2026&sni=play.google.com&sid=2006495ca4229803#@FarazV2ray
 vless://b1d2a517-3ff2-4eb7-a9cd-2a42a2eb1c29@vl1.salar4040.ir:4040?security=reality&encryption=none&pbk=H9OGLRos1CxS7C197U2G6vmAINTN6GMasevL3gX9uEI&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.nvidia.com&sid=c57bcc26#@prrofile_purple
-vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.5:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=isna.ir#@Vip_Security
-vless://feade342-9a00-427e-b049-752a4e584ba5@85.133.161.168:443?security=none&encryption=none&host=fsn.bestlive.ir&headerType=http&type=tcp#@v2rayngzendegimamad🕊️
+vless://88de9f34-576c-472e-bc11-2b1f63ef19e5@pichi.picmusic.ir:15882?security=reality&encryption=none&pbk=gZT_3S5MB7JX7lYznOoo9CgMXpJtwEy7ChVtybbUjz4&headerType=none&fp=chrome&spx=/&type=tcp&sni=arxiv.org&sid=f378eb2f#@Begoo_VPN
+vless://4d0fb838-2dbe-4dff-ae36-da6ee02739ca@turkey.blueheartz.ir:27632?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&security=reality&sid=3892a7a76e8b&sni=play-fe.googleapis.com&spx=%2F77cda84b6307aea&type=tcp
 vless://66c38516-8d85-45b7-afcd-4b1b0352e38c@188.213.198.238:7080?security=none&encryption=none&headerType=none&type=tcp#🇩🇪گیگی
-vless://3a5771db-f779-47f6-9423-173cd4f952dd@bin.fastervip.ir:2052?encryption=none&type=ws&path=%2F&security=none
+vless://0a85da84-bbb4-4b0e-b67c-0c3eb4a8df19@87.107.5.116:8880?path=/&security=tls&encryption=none&insecure=0&host=zxcvbnm1.roozaraa.ir&fp=chrome&type=ws&allowInsecure=0&sni=zxcvbnm1.roozaraa.ir
+vless://feade342-9a00-427e-b049-752a4e584ba5@85.133.161.168:443?security=none&encryption=none&host=fsn.bestlive.ir&headerType=http&type=tcp#@v2rayngzendegimamad🕊️
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://50472630-5578-46c2-b6f0-dd3e2cccd542@v2fars.shop:8080?path=/api&security=tls&encryption=none&insecure=0&host=v2fars.shop&fp=chrome&type=ws&allowInsecure=0&sni=v2fars.shop#kurdconfig
 vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
-vless://6dc55f52-1054-4666-a122-c90eacb25f54@ne.configfast.site:11021?encryption=none&security=none&type=tcp&headerType=http&host=bale.ai,web.splus.ir,igap.net&path=%2F
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://7699e066-2abf-466a-b4a8-5d725b80650b@pg.restauranzorban.ir:2052?path=/&security=&encryption=none&host=finland1.restaurantnetwork.ir&type=ws#@CfoX_SerVer
-vless://ae420abb-5c4c-4a22-7fcc-70b8167d51af@s2.zynetraq.ir:2087?mode=auto&pcs=0258c1ff5f1251a516a8ac42c354d3f757e43355dce7ac49e870acf3973ab711&path=/BetForward&security=tls&encryption=none&extra={
 vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
-vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://6dc55f52-1054-4666-a122-c90eacb25f54@ne.configfast.site:11021?encryption=none&security=none&type=tcp&headerType=http&host=bale.ai,web.splus.ir,igap.net&path=%2F
 vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
 vless://ab5a2531-acc1-4a54-b16c-e14665dc88a5@direct.freelauner.ir:443?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#@NETMelliAnti
+vless://0473b41a-0d45-4e9b-97fb-aee5a799c6dd@www.parspack.com:80?path=/&security=none&encryption=none&host=FySuMyYk3.aMirsiTesos.sItE.&type=httpupgrade
+vless://00c68fef-5218-4d1d-8fdd-27c2fbfc39bd@dash.zendegizibast.ir:2087?encryption=none&security=tls&type=ws&headerType=none&path=/&host=dash.zendegizibast.ir&sni=dash.zendegizibast.ir&fp=chrome
