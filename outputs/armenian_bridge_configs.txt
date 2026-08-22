@@ -1,10 +1,8 @@
-# Armenian corridor bridge (all) — 2026-08-22 04:08 UTC
-# 8 configs
+# Armenian corridor bridge (all) — 2026-08-22 13:57 UTC
+# 6 configs
 vless://410843d6-d5cd-4db6-a66f-3a20102d073a@46.226.162.172:8588?mode=auto&path=%2F&security=reality&encryption=none&pbk=_SUv0c82LgTdgmL7ZI39Uoq80yQzwwWAX05BkVpde3Y&fp=firefox&type=xhttp&sni=play.googleapis.com&sid=833014806333a43a#REALITY|GB🇬🇧
-vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&sni=yahoo.com&fp=chrome&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&sid=0e&type=tcp&headerType=none&path=/#🇦🇲
-vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@5.10.214.138:8880?path=Telegram🇮🇷
 vless://a8307b5d-2d9e-4d34-912d-5b5dd8340082@46.226.162.172:64584
 vless://9f2f92ed-3ed2-4ef3-88e4-c12c5be53b1a@files.toriva.click:443?security=tls&alpn=http%2F1.1&encryption=mlkem768x25519plus.native.0rtt.xiVmE3k1gSJhST4Uf6szW_l5NSQA32CYkZZH-9r0fDY&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&sni=files.toriva.click
 trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
 trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
-trojan://SBh0VuEr3GxnuZNjEalfWK042tJLuWS-@peo2.awexio.ir:2020?security=none&type=tcp&headerType=http&path=/&host=msedge.b.tlu.dl.delivery.mp.microsoft.com#🇬🇧149315
+trojan://hotfIEe8wNzvC7y-jT2Dc26pqYAtKscl@peo2.awexio.ir:2020?security=none&type=tcp&headerType=http&path=/&host=msedge.b.tlu.dl.delivery.mp.microsoft.com#🇬🇧149680
