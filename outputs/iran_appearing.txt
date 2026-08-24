@@ -1,16 +1,17 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-24 04:17 UTC | 9 configs
+# Generated: 2026-08-24 14:15 UTC | 10 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://17df7d63-d1b3-48e3-908f-d29264dba756@fastserver.tdomainasite.ir:7601?encryption=none&security=reality&type=xhttp&headerType=none&path=/&host=akama.tdomainasite.ir&mode=auto&sni=bale.ai&fp=chrome&pbk=buoXgaiwq_eS0PaLeLVfRiDu05BhBI4TMhykAxDvlmc&sid=f862ac826b90a153#🇮🇷150844
+vless://88de9f34-576c-472e-bc11-2b1f63ef19e5@pichi.picmusic.ir:15882?security=reality&encryption=none&pbk=gZT_3S5MB7JX7lYznOoo9CgMXpJtwEy7ChVtybbUjz4&headerType=none&fp=chrome&spx=/&type=tcp&sni=arxiv.org&sid=f378eb2f#@Begoo_VPN
 vless://4d0fb838-2dbe-4dff-ae36-da6ee02739ca@turkey.blueheartz.ir:27632?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tge1_umgZzzbe243U0RmtmHKF9LNp-Hg6xg0KV7Zv1c&security=reality&sid=3892a7a76e8b&sni=play-fe.googleapis.com&spx=%2F77cda84b6307aea&type=tcp
-vless://66c38516-8d85-45b7-afcd-4b1b0352e38c@188.213.198.238:7080?security=none&encryption=none&headerType=none&type=tcp#🇩🇪گیگی
-vless://2d9de6ea-56c9-422d-a4ad-cac95b8e0881@185.215.228.157:8443?encryption=none&type=xhttp&security=tls&path=%2F&mode=auto&sni=ca.lebas2.ir&alpn=h2,http%2F1.1&fp=chrome&insecure=0&allowInsecure=0
-vless://01640ed0-9b23-493d-ac18-3947750e25c2@bot.rayopoder.top:50972?security=none&encryption=none&host=bale.ai&headerType=http&type=tcp#kurdconfig
+vless://01640ed0-9b23-493d-ac18-3947750e25c2@bot.rayopoder.top:50972?encryption=none&headerType=http&type=tcp&security=none&host=bale.ai
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
 vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
-vless://69682450-4f4f-4750-8595-aec68e7f283b@tun.pcapps.ir:2092?security=tls&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=phonepanel.ir#🇮🇷150784
+vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
+vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://ab5a2531-acc1-4a54-b16c-e14665dc88a5@direct.freelauner.ir:443?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#@NETMelliAnti
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
