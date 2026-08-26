@@ -1,11 +1,11 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-26 04:13 UTC | 4 configs
+# Generated: 2026-08-26 14:19 UTC | 4 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://8ff538e4-330c-43c1-97c8-0c90bf989331@77.237.90.67:443?security=reality&encryption=none&pbk=a7eDhoO14l6Tt6oC9Qa2laZkuJlQ8vhDgtE3Ko9aGnw&headerType=none&fp=chrome&spx=/a7a31c8e82daa25&type=tcp&sni=www.samsung.com&sid=fcf239025a00fddd
-vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
+vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.233.5:443?security=tls&encryption=none&host=speedtest.net&fp=chrome&type=ws
+vless://09c795fd-4c13-491e-b419-2598410077b9@185.53.142.132:443?security=tls&sni=xn--rgbk3dif70f.jObfiNeX.ir.&type=grpc
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
+vless://10219eb2-e64a-4557-bd61-5cfd6e1f2281@varzesh3.com:2052?path=%2F&security=&encryption=none&host=cfcpanel.namasha.top&type=ws
