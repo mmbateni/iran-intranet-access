@@ -1,11 +1,22 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-08-26 14:19 UTC | 4 configs
+# Generated: 2026-08-27 14:29 UTC | 15 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://46aea670-5e6c-40af-9b99-95585dd71cc3@185.143.233.5:443?security=tls&encryption=none&host=speedtest.net&fp=chrome&type=ws
-vless://09c795fd-4c13-491e-b419-2598410077b9@185.53.142.132:443?security=tls&sni=xn--rgbk3dif70f.jObfiNeX.ir.&type=grpc
+vless://88de9f34-576c-472e-bc11-2b1f63ef19e5@pichi.picmusic.ir:15882?security=reality&encryption=none&pbk=gZT_3S5MB7JX7lYznOoo9CgMXpJtwEy7ChVtybbUjz4&headerType=none&fp=chrome&spx=/&type=tcp&sni=arxiv.org&sid=f378eb2f#@Begoo_VPN
+vless://e0e49d1c-c56b-4347-9053-6cbed0966124@81.12.54.134:5050?path=/&security=tls&encryption=mlkem768x25519plus.native.0rtt.xsgWa17yg5fJYQ9pJ7WZWh8gcxREtb9PuXjnIgV0Ghs&insecure=0&host=tr.begooserver.xyz&fp=chrome&ech=AGX+DQBhAAAgACApzIl6tYbaaw/tgSCpR2Z4HZ9Qzd/EfewgX27QfLn/bAAkAAEAAQABAAIAAQADAAIAAQACAAIAAgADAAMAAQADAAIAAwADABJ0ci5iZWdvb3NlcnZlci54eXoAAA==&type=ws&allowInsecure=0&sni=tr.begooserver.xyz#@Beoo_VPN
+vless://23198a1f-fb44-4364-bf3a-e0209295b04a@78.109.198.25:80?security=none&type=tcp
+vless://16227db7-1914-4a97-bb6b-7bf98e6b525b@185.143.232.201:443?path=/&security=tls&encryption=none&insecure=0&host=zapzap.mc.filimo.cam&type=ws&allowInsecure=0&sni=zapzap.mc.filimo.cam#@v2rayng3
+vless://01640ed0-9b23-493d-ac18-3947750e25c2@bot.rayopoder.top:50972?security=&encryption=none&host=bale.ai&headerType=http&type=tcp#@B2Hub
+vless://14c3d8cb-0073-4362-904f-f3bcd55ef22b@217.18.90.79:443?encryption=none&security=none&type=tcp#@filembad
+vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
+vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://10219eb2-e64a-4557-bd61-5cfd6e1f2281@varzesh3.com:2052?path=%2F&security=&encryption=none&host=cfcpanel.namasha.top&type=ws
+vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
+vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
+vless://061da3a1-0b8a-4abe-a739-8b33ae5519c4@abr.superip.ir:2052?path=/API/superip&security=none&encryption=none&host=library.phill-up.ir&type=ws
+vless://f526e941-52ac-4d28-ba49-5ba2fc0a984b@zula.ir:80?path=%2Fvless&security=none&encryption=none&host=uk2-vless.sshmax.xyz&type=ws
+vless://ab5a2531-acc1-4a54-b16c-e14665dc88a5@direct.freelauner.ir:443?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#@NETMelliAnti
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
