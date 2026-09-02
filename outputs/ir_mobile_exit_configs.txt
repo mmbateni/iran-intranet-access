@@ -1,5 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-02 08:07 UTC
-# 3 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-02 17:19 UTC
+# 2 configs
 vless://fe8e2ffb-8796-408c-af5b-0d4774215e00@89.34.90.68:8443?encryption=none&security=reality&sni=360.yandex.ru&fp=chrome&pbk=dTdncizxtVTqDZDkQoYdRTkf2Mn6XuKtkzg8vZhrkzA&sid=6ba85179e30d4fc2&type=grpc&authority=&serviceName=grpc&mode=gun
-vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
-vless://24874fa7-a56d-463e-a047-67fbd4cd50da@91.186.218.227:4443?path=%2F%40Marisa_kristi&security=tls&encryption=none&host=kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev&fp=chrome&type=ws&sni=kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev&ech=cloudflare-ech.com+https://dns.alidns.com/dns-query
+vless://24874fa7-a56d-463e-a047-67fbd4cd50da@91.186.218.227:4443?path=/@Marisa_kristi&security=tls&encryption=none&host=kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev&fp=chrome&type=ws&sni=kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev&ech=cloudflare-ech.com
