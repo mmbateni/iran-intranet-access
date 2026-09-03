@@ -1,7 +1,7 @@
-# Armenian corridor bridge (all) — 2026-09-03 08:16 UTC
+# Armenian corridor bridge (all) — 2026-09-03 17:11 UTC
 # 5 configs
-vless://953e3703-4ddc-49a7-a087-c96049d22340@178.160.231.37:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=3eCxMv-u7Hnch7_YDkY2jVunI3gXyNEkt_paI6D40zU&sid=abcdedcd72&sni=gateway.icloud.com
+vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&sni=yahoo.com&fp=chrome&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&sid=0e&type=tcp&headerType=none&path=/#🇦🇲
 vless://17a1ffce-0cf5-b29b-ba3c-2f2300000000@91.195.254.34:443?path=/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN&security=tls&encryption=none&insecure=0&host=netlivpn1048.shshh.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=netlivpn1048.shshh.workers.dev
 trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
 trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
-vmess://eyJhZGQiOiJkZTIubGlvbi1saW9uLmlyIiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6IjMxNDc3YmQ5LWEyOWMtNDkwYy1iMjlkLTY5MzI4ZWMzMDdmMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiODg1MyIsInBzIjoiQnkgRWJyYVNoYSDimqEiLCJzY3kiOiJhdXRvIiwic25pIjoiZGUyLmxpb24tbGlvbi5pciIsInRlc3RfbmFtZSI6IjgzIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiJkZTIubGlvbi1saW9uLmlyIiwiYWlkIjoiMCIsImFscG4iOiJoMixodHRwLzEuMSIsImZwIjoiY2hyb21lIiwiaG9zdCI6IiIsImlkIjoiMzE0NzdiZDktYTI5Yy00OTBjLWIyOWQtNjkzMjhlYzMwN2YxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBjbiI6IiIsInBjcyI6IiIsInBvcnQiOiI4ODUzIiwicHMiOiJCeSBFYnJhU2hhIOKcqCIsInNjeSI6ImF1dG8iLCJzbmkiOiJkZTIubGlvbi1saW9uLmlyIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
