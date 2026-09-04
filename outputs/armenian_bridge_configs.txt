@@ -1,7 +1,9 @@
-# Armenian corridor bridge (all) — 2026-09-03 17:11 UTC
-# 5 configs
-vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&sni=yahoo.com&fp=chrome&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&sid=0e&type=tcp&headerType=none&path=/#🇦🇲
+# Armenian corridor bridge (all) — 2026-09-04 08:11 UTC
+# 7 configs
+vless://a8307b5d-2d9e-4d34-912d-5b5dd8340082@46.226.162.172:64584
+vless://bd29f019-85a2-43f6-b10a-e91dbdf58ee3@89.169.32.190:443?path=%2FhanBham0QSktwSruCtIbKI6PCsj&security=tls&alpn=h2&encryption=none&insecure=0&host=main.hvumyrpstghekb.top&fp=firefox&type=xhttp&allowInsecure=0&sni=main.hvumyrpstghekb.top
 vless://17a1ffce-0cf5-b29b-ba3c-2f2300000000@91.195.254.34:443?path=/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN&security=tls&encryption=none&insecure=0&host=netlivpn1048.shshh.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=netlivpn1048.shshh.workers.dev
 trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
 trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
-vmess://eyJhZGQiOiJkZTIubGlvbi1saW9uLmlyIiwiYWlkIjoiMCIsImFscG4iOiJoMixodHRwLzEuMSIsImZwIjoiY2hyb21lIiwiaG9zdCI6IiIsImlkIjoiMzE0NzdiZDktYTI5Yy00OTBjLWIyOWQtNjkzMjhlYzMwN2YxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBjbiI6IiIsInBjcyI6IiIsInBvcnQiOiI4ODUzIiwicHMiOiJCeSBFYnJhU2hhIOKcqCIsInNjeSI6ImF1dG8iLCJzbmkiOiJkZTIubGlvbi1saW9uLmlyIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiJkZTIubGlvbi1saW9uLmlyIiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6IjMxNDc3YmQ5LWEyOWMtNDkwYy1iMjlkLTY5MzI4ZWMzMDdmMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiODg1MyIsInBzIjoiQnkgRWJyYVNoYSDwn5qnIiwic2N5IjoiYXV0byIsInNuaSI6ImRlMi5saW9uLWxpb24uaXIiLCJ0ZXN0X25hbWUiOiI1OSIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpNYi1zbndIcUxIRnZfM2RaaFY4czdCODV3anVmUjVGSw==@46.226.162.172:1080#🇬🇧
