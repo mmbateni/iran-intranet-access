@@ -1,4 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-04 17:02 UTC
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-05 07:51 UTC
 # 3 configs
 vless://8fe8c95f-1840-42b8-bdf2-35c858eca4e9@91.92.43.177:443?security=reality&encryption=none&pbk=NUszayjBaw2LyjJtctsGRPzLltoafwwxO7xgEcDXWGk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=expire.selfsteal.vip&sid=6ba85179e30d4fc2#@icv2ray
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir

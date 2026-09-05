@@ -1,14 +1,21 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-09-04 17:02 UTC | 7 configs
+# Generated: 2026-09-05 07:51 UTC | 14 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://f07b0239-d5a4-42c4-b5a8-fc64902ebe5c@185.218.139.222:8080?mode=auto&path=/&security=reality&encryption=none&extra={
+vless://25ad4fd5-fdca-4495-a363-c3eda5222b20@tun2.w-ert.org:445?mode=auto&path=/&security=reality&encryption=none&pbk=woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU&fp=chrome&type=xhttp&sni=www.aparat.com&sid=ca4134a0ed2592b6#filembad-115
+vless://3923100b-fc39-4568-b589-55c4f2bec09b@sparkconfig.parsclad.ir:56408?encryption=none&fp=chrome&pbk=igieZCZLRmmQL7kS4JAz3jz0k97PpgjU86RLy5B95Tw&security=reality&sid=2924&sni=blog.api.www.cloudflare.com&spx=/a1a8b7296e4c45c&type=tcp#w5vflkamol-🇳🇱_sparkconfig1
+vless://6e229311-eed2-4b92-91cd-a33cb2e27ce3@sparkconfig.parsclad.ir:7378?encryption=none&fp=chrome&pbk=1hrU2O7Hads4EW7IWaubuDZmVQXKHtUfaUrtXLtcZhw&security=reality&sid=0c53ac&sni=www.cloudflare.com&spx=/95ac8580ab6cb96&type=tcp#-🇹🇷_sparkconfig1-2758q88h9o
 vless://16227db7-1914-4a97-bb6b-7bf98e6b525b@185.143.232.201:443?path=/&security=tls&encryption=none&insecure=0&host=zapzap.mc.filimo.cam&type=ws&allowInsecure=0&sni=zapzap.mc.filimo.cam#@v2rayng3
-vless://23198a1f-fb44-4364-bf3a-e0209295b04a@78.109.198.25:80?security=none&type=tcp
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://11cb0c12-7d9f-4286-759d-3428e7505337@s5.zynetrax.ir:2087?encryption=none&security=tls&sni=s5.zynetrax.ir&alpn=h2,
-vless://4843608f-f106-4f05-e24f-142706902057@s4.zynetraq.ir:2087?pcs=1aeacc25d232c936f0199a487fc17da95ba59fb6c06656846214cec835d3ac23&alpn=h2,http/1.1,h3&fp=chrome&type=xhttp&sni=s4.zynetraq.ir&mode=auto&path=/BetForward&security=tls&encryption=none&extra={
+vless://3b540fa0-24ab-415b-9444-5a5a99679501@sparkconfig.parsclad.ir:19580?encryption=none&extra={
+vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
+vless://4feeac9e-f8ea-4101-b6ff-cc21a75f3bd5@sparkconfig.parsclad.ir:8371?encryption=none&extra={
+vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
+vless://6fefce4c-2683-41fd-90b0-1277bd7be713@sparkconfig.parsclad.ir:43350?encryption=none&extra={
+vless://aa5e25fc-c7d7-4e6e-b7f7-105a35c0175a@tamin.ir:80?path=/&security=none&encryption=none&host=tr1.kianorbit.ir&type=httpupgrade#@tanhanet
 vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
+vless://ab5a2531-acc1-4a54-b16c-e14665dc88a5@direct.freelauner.ir:443?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#@NETMelliAnti

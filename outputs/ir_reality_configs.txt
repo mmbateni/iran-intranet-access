@@ -1,11 +1,15 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-09-04 17:02 UTC
-# 9 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-09-05 07:51 UTC
+# 13 configs
 vless://8fe8c95f-1840-42b8-bdf2-35c858eca4e9@91.92.43.177:443?security=reality&encryption=none&pbk=NUszayjBaw2LyjJtctsGRPzLltoafwwxO7xgEcDXWGk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=expire.selfsteal.vip&sid=6ba85179e30d4fc2#@icv2ray
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
-vless://2f581cf2-a54e-4e34-bd59-2d6299b7635c@94.183.170.6:443?type=grpc&security=reality&fp=firefox&pbk=dYcOz-2uQsLv-ZwS376H8QFXphTWbAjcIE035BekNnY&sid=91c156bf&sni=www.google.com&serviceName=grpce6f7b66c2fbd
+vless://b4c5a66f-1f66-4262-b72d-c6aa661abc2c@5.196.243.4:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=0jolgptjjXxVsUgMPN_mcoyHET2uHQ7onbAMZ7uCc2w&sid=8d0a77a398415b0e&sni=www.apple.com#[037641]
 vless://f4ba862a-4d64-431a-9213-dd7aaafd476a@94.183.209.33:8443?type=tcp&security=reality&fp=firefox&pbk=S_13TsXuoNyvkx6uf7JHJeuPX3G-nmSRMzn_hgcF3mk&sid=bafa6f22a3&sni=timeline.www.cloudflare.com
 vless://d23cb516-40db-4aa4-8142-6b45ff882f90@94.183.209.59:33843?type=grpc&security=reality&fp=firefox&pbk=6GqM3zujFqyHA2Ksah-jgKWzxZToKS-PZOHqLIWNJhs&sid=b9a14981&sni=www.cloudflare.com&mode=gun&serviceName=grpc&spx=/hqrcwtxf9mhwjkc
+vless://2f581cf2-a54e-4e34-bd59-2d6299b7635c@94.183.170.6:443?type=grpc&security=reality&fp=firefox&pbk=dYcOz-2uQsLv-ZwS376H8QFXphTWbAjcIE035BekNnY&sid=91c156bf&sni=www.google.com&serviceName=grpce6f7b66c2fbd
 vless://5e7ecc47-e424-4653-876e-c7515a2c82b4@94.183.209.43:33843?encryption=none&fp=firefox&pbk=mFLIx6qO9qtNTKCHiRV6_M3LzLtff_TU03sHwA2A3x4&security=reality&serviceName=grpc&sid=ed9e5b70102767a8&sni=www.cloudflare.com&spx=/z7znmkwyv1tjco4&type=grpc
 vless://78791f9e-fe09-4d4f-88ec-895764bae0d6@94.183.209.58:33843?type=grpc&security=reality&fp=firefox&pbk=HtztwkGs2v0zvTQK6L0fznidtVkxrZ-a8wLh9pwh6Fs&sid=01fd9c2b8e6144&sni=www.cloudflare.com&serviceName=grpc&spx=/j1z1qdltac8xa3q
+vless://2dfd0db2-cd4e-4c09-97fc-67c3d8ee9409@5.188.141.67:8449?encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=edge-vk.vpn.partners&type=raw
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
-vless://f07b0239-d5a4-42c4-b5a8-fc64902ebe5c@185.218.139.222:8080?mode=auto&path=/&security=reality&encryption=none&extra={
+vless://25ad4fd5-fdca-4495-a363-c3eda5222b20@tun2.w-ert.org:445?mode=auto&path=/&security=reality&encryption=none&pbk=woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU&fp=chrome&type=xhttp&sni=www.aparat.com&sid=ca4134a0ed2592b6#filembad-115
+vless://3923100b-fc39-4568-b589-55c4f2bec09b@sparkconfig.parsclad.ir:56408?encryption=none&fp=chrome&pbk=igieZCZLRmmQL7kS4JAz3jz0k97PpgjU86RLy5B95Tw&security=reality&sid=2924&sni=blog.api.www.cloudflare.com&spx=/a1a8b7296e4c45c&type=tcp#w5vflkamol-🇳🇱_sparkconfig1
+vless://6e229311-eed2-4b92-91cd-a33cb2e27ce3@sparkconfig.parsclad.ir:7378?encryption=none&fp=chrome&pbk=1hrU2O7Hads4EW7IWaubuDZmVQXKHtUfaUrtXLtcZhw&security=reality&sid=0c53ac&sni=www.cloudflare.com&spx=/95ac8580ab6cb96&type=tcp#-🇹🇷_sparkconfig1-2758q88h9o
