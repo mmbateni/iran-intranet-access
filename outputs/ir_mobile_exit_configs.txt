@@ -1,4 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-09 08:22 UTC
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-09 17:18 UTC
 # 3 configs
 vless://0dd9cfaa-cebd-4444-8778-70cb22737944@91.92.33.95:443?mode=gun&security=reality&encryption=none&authority=/?TELEGRAM@MARAMBASHI_MARAMBASHI&pbk=HFTFARa1OS53m4HWnjwtZ0J3lu7aoKkE7OujIyM62QI&fp=chrome&spx=/HesarWeb&type=grpc&serviceName=grpc-tunnel&sni=dl.google.com&sid=2a236a7fcbe0ce61#•
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
