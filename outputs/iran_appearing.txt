@@ -1,17 +1,16 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-09-08 17:26 UTC | 10 configs
+# Generated: 2026-09-09 08:22 UTC | 9 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://220b6b3c-ab69-4f5c-aaae-2879802f8425@sparkconfig.parsclad.ir:56408?encryption=none&fp=chrome&pbk=igieZCZLRmmQL7kS4JAz3jz0k97PpgjU86RLy5B95Tw&security=reality&sid=17c520895497&sni=www.cloudflare.com&spx=/399772c68e6a550&type=tcp
 vless://6cb3f83b-b212-415c-90ee-ee5d7aadd848@ttt.trt1379.fun:443?encryption=mlkem768x25519plus.native.0rtt.CcMVuZeA-n6sFDMiT18svH2q7o-HfreKKUXzXVUYuks&fp=chrome&pbk=ms5DiJ0D2g0AIVupBb7XLWhiKvLH8BVD4FXvlae95TA&security=reality&sid=a65731c26402&sni=www.aws.amazon.com&spx=/dd1b62a41e59828&type=tcp#@meliproxyy
 vless://16227db7-1914-4a97-bb6b-7bf98e6b525b@185.143.232.201:443?path=/&security=tls&encryption=none&insecure=0&host=zapzap.mc.filimo.cam&type=ws&allowInsecure=0&sni=zapzap.mc.filimo.cam#@v2rayng3
+vless://675ee872-adb2-4c66-8358-bd360259311f@217.144.106.130:8080?mode=auto&path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=mlkem768x25519plus.native.0rtt.Ucc3HihoFXSiUfA_hsq6fD0Q57b1uaaDet2nnQ8nAzg&insecure=0&fp=chrome&type=xhttp&allowInsecure=0&sni=german2.hopegiver.ir
+vless://01640ed0-9b23-493d-ac18-3947750e25c2@bot.rayopoder.top:50972?security=none&encryption=none&host=bale.ai&headerType=http&type=tcp#@appsooner
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://09e90d43-f7de-48ef-947f-c584144f75d9@uae1-ravannet-dl-persianmusics.xirnaro.ir:20588?path=/api/v2/movies/download/&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=uae1-ravannet-dl-persianmusics.xirnaro.ir&fp=chrome&type=ws&allowInsecure=0&sni=uae1-ravannet-dl-persianmusics.xirnaro.ir#@V2raySaman
-vless://675ee872-adb2-4c66-8358-bd360259311f@217.144.106.130:8080?mode=auto&path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=mlkem768x25519plus.native.0rtt.Ucc3HihoFXSiUfA_hsq6fD0Q57b1uaaDet2nnQ8nAzg&insecure=0&fp=chrome&type=xhttp&allowInsecure=0&sni=german2.hopegiver.ir
-vless://4e25f7ad-e636-4003-856a-2ec14e963032@spark.parsclad.ir:56473?encryption=none&extra={
-vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
-vless://949139db-dcd3-4da9-a510-6bf22d1f5cb6@varzesh3.com:2052?path=/&security=&encryption=none&host=sajjad.panivo.ir&type=ws#Brayirani
+vless://7450e6ea-c848-47d9-bfe9-5830edeec5e0@is.hivaphone.ir:80?encryption=none&security=none&type=ws&headerType=none&path=/pgcfws-r4&host=
+vless://44de73bc-eb6d-429d-9c2f-ec0a6e4a6681@my.configfast.site:4013?security=none&encryption=none&host=bale.ai,web.splus.ir,igap.net&headerType=http&type=tcp#[044142]
+vless://7058ebbd-96af-43f2-ba81-d8e289cb4358@getwww.restaurantcloud.ir:5001?path=%2F&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=lest.zivaroid.ir
