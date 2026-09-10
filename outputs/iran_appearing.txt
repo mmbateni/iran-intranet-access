@@ -1,17 +1,17 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-09-09 17:18 UTC | 10 configs
+# Generated: 2026-09-10 08:21 UTC | 10 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://6cb3f83b-b212-415c-90ee-ee5d7aadd848@ttt.trt1379.fun:443?encryption=mlkem768x25519plus.native.0rtt.CcMVuZeA-n6sFDMiT18svH2q7o-HfreKKUXzXVUYuks&fp=chrome&pbk=ms5DiJ0D2g0AIVupBb7XLWhiKvLH8BVD4FXvlae95TA&security=reality&sid=a65731c26402&sni=www.aws.amazon.com&spx=/dd1b62a41e59828&type=tcp#🇫🇷⇝
 vless://16227db7-1914-4a97-bb6b-7bf98e6b525b@185.143.232.201:443?path=/&security=tls&encryption=none&insecure=0&host=zapzap.mc.filimo.cam&type=ws&allowInsecure=0&sni=zapzap.mc.filimo.cam#@v2rayng3
-vless://01640ed0-9b23-493d-ac18-3947750e25c2@bot.rayopoder.top:50972?security=none&encryption=none&host=bale.ai&headerType=http&type=tcp#@appsooner
+vless://23198a1f-fb44-4364-bf3a-e0209295b04a@78.109.198.25:80?security=none&type=tcp
 vless://675ee872-adb2-4c66-8358-bd360259311f@217.144.106.130:8080?mode=auto&path=%2F&security=tls&alpn=h2,http%2F1.1&encryption=mlkem768x25519plus.native.0rtt.Ucc3HihoFXSiUfA_hsq6fD0Q57b1uaaDet2nnQ8nAzg&insecure=0&fp=chrome&type=xhttp&allowInsecure=0&sni=german2.hopegiver.ir
+vless://00ea847b-add2-47e4-9c48-cbca742e55c9@freeforall.nexavps.ir:32443?mode=auto&path=/phx&security=none&encryption=none&type=xhttp#Free
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://46aeacfa-0b4a-4e35-9a0f-6db76e92d4c6@earth.lukelucky.com:2086?mode=auto&path=%2F&security=none&encryption=none&host=cC.cafearen.ir&type=xhttp
-vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
+vless://437b53da-26b1-4c56-a319-d057b1347cab@varzesh3.com:2095?encryption=none&security=none&type=ws&headerType=none&path=/pgcfws-r4&host=dashboard.hamrahconff.ir#🇮🇷IR-🚀@VPNine1
+vless://44fff300-6307-46e2-b937-7c903375c57c@varzesh3.com:8080?path=/ws&encryption=none&host=panel.hamrahconff.ir&type=ws
 vless://4e25f7ad-e636-4003-856a-2ec14e963032@spark.parsclad.ir:56473?encryption=none&extra={
-vless://7058ebbd-96af-43f2-ba81-d8e289cb4358@getwww.restaurantcloud.ir:5001?path=%2F&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=lest.zivaroid.ir
+vless://2b5e2b86-55b6-4571-abc1-c1dec8605725@www.zula.ir:443?path=/vless&security=tls&encryption=none&host=tr1-vless.sshmax.xyz&type=ws&sni=tr1-vless.sshmax.xyz
