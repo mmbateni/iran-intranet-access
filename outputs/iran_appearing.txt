@@ -1,18 +1,20 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-09-14 09:13 UTC | 11 configs
+# Generated: 2026-09-14 18:54 UTC | 13 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://ae80f2ed-7ec9-4b44-94e3-68745d6b0b9e@94.183.210.20:2087?mode=auto&path=/DeliveryMarket&security=reality&encryption=none&extra={
+vless://a29b7d91-621b-4acc-a01f-f8f29e079e89@37.32.5.214:4550?encryption=mlkem768x25519plus.native.0rtt.k7kKZmijAjFqJDH8hP_RBOj6fYciRXHog_pcRedUewY&security=reality&type=tcp&headerType=none&sni=amp-api-edge.apps.apple.com&fp=chrome&pbk=kCHZOw4ysg2w6eU7YYECafZgIOJca90W1XgDw4w8_TI&sid=7e7645906abbd773#🇮🇷171303
 vless://23d6295f-0337-438f-be52-388bbe321ae4@a.samrayan.ir:443?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=a.samrayan.ir#✨
+vless://6cb3f83b-b212-415c-90ee-ee5d7aadd848@ttt.trt1379.fun:443?encryption=mlkem768x25519plus.native.0rtt.CcMVuZeA-n6sFDMiT18svH2q7o-HfreKKUXzXVUYuks&fp=chrome&pbk=ms5DiJ0D2g0AIVupBb7XLWhiKvLH8BVD4FXvlae95TA&security=reality&sid=a65731c26402&sni=www.aws.amazon.com&spx=/dd1b62a41e59828&type=tcp#🇫🇷⇝
 vless://bc4d97ba-d54f-4555-ba71-f7421796d92c@185.143.234.111:443?path=/&security=tls&encryption=none&host=frontend.parhamm2.ir&fp=chrome
 vless://16227db7-1914-4a97-bb6b-7bf98e6b525b@185.143.232.201:443?path=/&security=tls&encryption=none&insecure=0&host=zapzap.mc.filimo.cam&type=ws&allowInsecure=0&sni=zapzap.mc.filimo.cam#@v2rayng3
-vless://01640ed0-9b23-493d-ac18-3947750e25c2@bot.rayopoder.top:50972?security=none&encryption=none&host=bale.ai&headerType=http&type=tcp#@appsooner
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://00ea847b-add2-47e4-9c48-cbca742e55c9@freeforall.nexavps.ir:32443?mode=auto&path=/phx&security=none&encryption=none&type=xhttp#Free
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://0fd9369e-68a8-4f3a-b21d-bae61033ff3e@port.skyshield.space:26131?security=none&encryption=none&host=wikipedia.org&headerType=http&type=tcp#[
-vless://4b6978d2-bebb-4c81-ba5b-77ec8f31c8bb@re.lanzivo.ir:443?mode=stream-up&path=/&security=tls&encryption=none&insecure=0&host=re.lanzivo.ir&type=xhttp&allowInsecure=0&sni=re.lanzivo.ir#کانال
 vless://fa9eeceb-105d-4ab1-8f07-d072158522a9@SNAPP.IR:2095?path=%2Fpgcfws-r4&security=none&encryption=none&host=uhvsbsj.velqoro.ir&type=ws
+vless://54708f89-0cc0-4cc9-96f2-291e56fa3aa4@sparkconfigg.parsclad.ir:47060?encryption=none&extra={
+vless://561012a3-c46e-4dbe-8615-b41e7379dbb2@spark.parsclad.ir:43350?encryption=none&extra={
+vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
+vless://0d1c3cee-2952-4a3e-a03e-fbe99d32dc72@de22.fastplus7.site:2086?type=ws&encryption=none&path=%2F&host=de21.fastplus11.ir&security=none
