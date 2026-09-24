@@ -1,6 +1,7 @@
-# Armenia→Iran bridge-verified — 2026-09-24 08:42 UTC
-# 4 configs
+# Armenia→Iran bridge-verified — 2026-09-24 17:58 UTC
+# 5 configs
+vless://72e69627-2463-4607-88d9-0b2fa9539f32@87.121.47.89:443?encryption=none&security=reality&sni=news.samsung.com&fp=chrome&pbk=InDEMZiOVU0PYMes4fDh_NALMAjVmWmtlNp2VpNNz3w&sid=8fe3c7&type=xhttp&path=/&mode=auto#Telegram:
 vless://17a1ffce-0cf5-b29b-ba3c-2f2300000000@91.195.254.34:443?path=/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN&security=tls&encryption=none&insecure=0&host=netlivpn1048.shshh.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=netlivpn1048.shshh.workers.dev
-trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
 trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
-ss://53fa8fafba4b43229c69a3e5b1555049Og==@5.10.214.123:8880#DE%F0%9F%87%A9%F0%9F%87%AA+%7C+5.10.214.123-8880+%7C+1.67ms
+trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
+ss://53fa8fafba4b43229c69a3e5b1555049Og==@5.10.214.123:8880#DE%F0%9F%87%A9%F0%9F%87%AA+%7C+5.10.214.123-8880+%7C+17.49ms
