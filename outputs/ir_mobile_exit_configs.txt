@@ -1,4 +1,3 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-25 09:04 UTC
-# 2 configs
-vless://21909bee-7f8f-488e-939b-8c7e9fece3ea@2.144.21.45:443?encryption=none&type=tcp&security=reality&sni=www.aparat.com&fp=chrome&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&allowInsecure=1#🇮🇷IR-🚀@VPNine1
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-25 18:06 UTC
+# 1 configs
 vless://a5055b0f-209b-4a49-8f1c-656b294bd463@2.144.26.192:6017?mode=auto&path=%2Fpath&security=reality&encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A%2B1000000,%2B%22scMaxConcurrentPosts%22%3A%2B100,%2B%22scMinPostsIntervalMs%22%3A%2B30,%2B%22xPaddingBytes%22%3A%2B%22100-1000%22,%2B%22noGRPCHeader%22%3A%2Bfalse%7D&pbk=vXYJc12Nn1vODQKN3WQdbG89eDNl_NxGTc7jmRtgBGc&host=hostname&fp=firefox&type=xhttp&sni=sni.kevnilo.ir&sid=3bec2937ffa88b18#REALITY|IR🇮🇷
