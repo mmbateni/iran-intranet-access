@@ -1,12 +1,14 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-09-24 17:58 UTC
-# 10 configs
-vless://fe8e2ffb-8796-408c-af5b-0d4774215e00@89.34.90.68:8443?mode=gun&security=reality&encryption=none&authority=/?TELEGRAM@MARAMBASHI_MARAMBASHI&pbk=dTdncizxtVTqDZDkQoYdRTkf2Mn6XuKtkzg8vZhrkzA&fp=chrome&type=grpc&serviceName=grpc&sni=360.yandex.ru&sid=6ba85179e30d4fc2#✨
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-09-25 09:04 UTC
+# 12 configs
+vless://21909bee-7f8f-488e-939b-8c7e9fece3ea@2.144.21.45:443?encryption=none&type=tcp&security=reality&sni=www.aparat.com&fp=chrome&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&allowInsecure=1#🇮🇷IR-🚀@VPNine1
 vless://a5055b0f-209b-4a49-8f1c-656b294bd463@2.144.26.192:6017?mode=auto&path=%2Fpath&security=reality&encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A%2B1000000,%2B%22scMaxConcurrentPosts%22%3A%2B100,%2B%22scMinPostsIntervalMs%22%3A%2B30,%2B%22xPaddingBytes%22%3A%2B%22100-1000%22,%2B%22noGRPCHeader%22%3A%2Bfalse%7D&pbk=vXYJc12Nn1vODQKN3WQdbG89eDNl_NxGTc7jmRtgBGc&host=hostname&fp=firefox&type=xhttp&sni=sni.kevnilo.ir&sid=3bec2937ffa88b18#REALITY|IR🇮🇷
-vless://162d2fa0-ac57-40bf-a01b-15ac7d9fe3da@94.183.238.74:443?security=reality&encryption=none&sni=google.com&fp=firefox&pbk=Fp0-VrMBeaQe9xOrehDYHt0mqTZL-5CdfuMEzoXkOE8&flow=xtls-rprx-vision
 vless://1b487f79-6b87-4971-863c-526bd31abd44@94.183.157.8:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=dkaIImQrQ1ZVQGNfyrNZbtkE-8hxp_u8AH99XDFgfHw&security=reality&sid=75c55b707d25ae8d&sni=poland2.serverslocal.ru&type=tcp
+vless://162d2fa0-ac57-40bf-a01b-15ac7d9fe3da@94.183.238.74:443?security=reality&encryption=none&sni=google.com&fp=firefox&pbk=Fp0-VrMBeaQe9xOrehDYHt0mqTZL-5CdfuMEzoXkOE8&flow=xtls-rprx-vision
 vless://5edbcb44-8d04-4fa7-a587-bc5d60c24ca1@94.183.170.147:8443?encryption=none&fp=&pbk=s2uiu3GQA2SlZzsr86Z5Dav97eAFTPf7Nvr-zqzzRgg&security=reality&serviceName=9d30d49278&sid=72ccd4a7563c2953&sni=www.cloudflare.com&type=grpc#REALITY|EE🇪🇪
 vless://2f581cf2-a54e-4e34-bd59-2d6299b7635c@94.183.170.6:443?type=grpc&security=reality&fp=firefox&pbk=dYcOz-2uQsLv-ZwS376H8QFXphTWbAjcIE035BekNnY&sid=91c156bf&sni=www.google.com&serviceName=grpce6f7b66c2fbd
-vless://010bf7ad-b6ec-482b-8392-ae038f466a0a@dl-cf.f8r.ir:80?encryption=mlkem768x25519plus.native.0rtt.DHnJWxTmgF8ZPET081QQQzgOOW_jVgRJ6n-iEEWKmjo&flow=xtls-rprx-vision&security=none&type=xhttp&host=dlv2.f8r.ir&path=/dl&mode=auto&extra={
-vless://02156f38-8366-429c-8b60-0d8038cafe63@45.81.18.34:443?security=reality&encryption=none&pbk=ioufLXV7_DfXZ1oomDTaUMxdduFNWI-j4Ssa3QuME0Q&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=www.aparat.com&sid=bcf760#@Vip_Security
 vless://419e8d73-db47-4614-b54b-e707cf7df35c@5.180.43.242:443?encryption=none&security=reality&sni=ya.ru&fp=firefox&pbk=k7dworBISiOlCzqSKN29SWJoYDLN71QT6uS14v86pEo&sid=a1b2c3d4&type=tcp&flow=xtls-rprx-vision
 vless://23d6295f-0337-438f-be52-388bbe321ae4@a.samrayan.ir:443?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=a.samrayan.ir#✨
+vless://11e211a9-8885-4a99-b7e9-136e1832c38e@trtnfl.zephyrx.ir:2433?mode=auto&path=%2Fa7k9p2-aparat-xhttp%3Fed%3D2048&security=reality&encryption=none&extra=%7B%22xmux%22%3A%7B%22maxConcurrency%22%3A16,%22cMaxReuseTimes%22%3A128,%22cMaxLifetimeMs%22%3A1800000,%22hMaxRequestTimes%22%3A800,%22hMaxReusableSecs%22%3A1800%7D%7D&pbk=QZE2pxLFdPCfeowBZXM02Z6A8Rx3b4r9mkmuOMWBFC8&host=aparat.com&fp=edge&type=xhttp&sni=aparat.com&sid=b7e56c01a9d4f230
+vless://3e6a0acc-0a63-43c9-88fe-0418a425f0bb@nim.marlifo.ir:443?mode=auto&security=reality&encryption=none&extra={
+vless://4c3b90b6-0e76-4fda-8c13-abf95ae23b2b@bg.serviceili.ir:2433?mode=auto&path=/a7k9p2-aparat-xhttp?ed=2048&security=reality&encryption=none&extra={
+vless://73d2e0ea-8494-49c7-bcb6-2ae5ba0a0aac@tgseenrobo.ir:2053?encryption=none&security=reality&sni=subliprint.de&fp=chrome&pbk=6NjC_ui0fm371GqcF-ecLFxvU35CEfDiO4dYJeiqtXk&sid=2a&spx=/f39de6dc636c0d8&type=xhttp&host=subliprint.de&path=/&mode=auto&extra={
