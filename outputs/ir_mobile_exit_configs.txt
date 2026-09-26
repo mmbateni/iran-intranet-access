@@ -1,3 +1,5 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-26 08:49 UTC
-# 1 configs
-vless://049ab1c3-35da-426b-87ee-519f87aa022e@2.144.26.204:443?encryption=none&type=ws&security=tls&host=vip2.polnejat.ir&path=%2Fnova-geo-psiphon-nl&sni=vip2.polnejat.ir
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-26 17:26 UTC
+# 3 configs
+vless://6767f87f-47d7-44de-bffd-ca7e44fb6cc8@185.112.59.226:443?encryption=none&type=tcp&flow=xtls-rprx-vision&security=reality&sni=www.amazon.com&fp=safari&pbk=BwYEsOceGvFRp4Cqbc2gHYGSeqbohltSc0oIhUJBw0g&sid=d823f610fcf74b22&allowInsecure=1
+vless://2f35965a-9a9b-45fd-ba32-987296dfb6be@89.35.14.33:443?mode=gun&security=reality&encryption=none&pbk=TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg&fp=firefox&type=grpc&serviceName=hub.v1.ApiService&sni=md4.univesalsrv.com&sid=8e07337954f9823f#%40FarazV2ray
+vless://153fa912-47ce-4e93-9180-65d5cfe71a95@yandexcdn1.ookcdn.ru:443?encryption=none&type=xhttp&mode=auto&extra={
