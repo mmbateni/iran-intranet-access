@@ -1,3 +1,3 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-25 18:06 UTC
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-26 08:49 UTC
 # 1 configs
-vless://a5055b0f-209b-4a49-8f1c-656b294bd463@2.144.26.192:6017?mode=auto&path=%2Fpath&security=reality&encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A%2B1000000,%2B%22scMaxConcurrentPosts%22%3A%2B100,%2B%22scMinPostsIntervalMs%22%3A%2B30,%2B%22xPaddingBytes%22%3A%2B%22100-1000%22,%2B%22noGRPCHeader%22%3A%2Bfalse%7D&pbk=vXYJc12Nn1vODQKN3WQdbG89eDNl_NxGTc7jmRtgBGc&host=hostname&fp=firefox&type=xhttp&sni=sni.kevnilo.ir&sid=3bec2937ffa88b18#REALITY|IR🇮🇷
+vless://049ab1c3-35da-426b-87ee-519f87aa022e@2.144.26.204:443?encryption=none&type=ws&security=tls&host=vip2.polnejat.ir&path=%2Fnova-geo-psiphon-nl&sni=vip2.polnejat.ir
