@@ -1,4 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-09-29 10:05 UTC
+# IR mobile (MCI/Irancell/Rightel) — 2026-09-29 18:52 UTC
 # 3 configs
 vless://6767f87f-47d7-44de-bffd-ca7e44fb6cc8@185.112.59.226:443?encryption=none&type=tcp&flow=xtls-rprx-vision&security=reality&sni=www.amazon.com&fp=safari&pbk=BwYEsOceGvFRp4Cqbc2gHYGSeqbohltSc0oIhUJBw0g&sid=d823f610fcf74b22&allowInsecure=1
 vless://2f35965a-9a9b-45fd-ba32-987296dfb6be@md5.univesalsrv.com:443?mode=gun&security=reality&encryption=none&pbk=99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg&fp=firefox&type=grpc&serviceName=app.v1.PushService&sni=md5.univesalsrv.com&sid=aa9884f2982b7d3c#%40v2raybaaz%20%C2%B2
