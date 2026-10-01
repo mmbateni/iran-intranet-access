@@ -1,4 +1,4 @@
-# Armenian corridor bridge (all) — 2026-10-01 10:25 UTC
+# Armenian corridor bridge (all) — 2026-10-01 19:03 UTC
 # 4 configs
 vless://72e69627-2463-4607-88d9-0b2fa9539f32@87.121.47.89:443?encryption=none&security=reality&sni=news.samsung.com&fp=chrome&pbk=InDEMZiOVU0PYMes4fDh_NALMAjVmWmtlNp2VpNNz3w&sid=8fe3c7&type=xhttp&path=/&mode=auto#vpnsal
 trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
