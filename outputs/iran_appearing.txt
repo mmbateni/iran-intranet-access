@@ -1,9 +1,21 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-10-02 18:40 UTC | 2 configs
+# Generated: 2026-10-03 09:24 UTC | 14 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
+vless://f3212c28-27b0-4188-851e-c367f58f3127@94.183.154.216:2001?security=reality&encryption=mlkem768x25519plus.native.0rtt.100-111-1111.75-0-111.50-0-3333.ViMEhCgoHZDNxf-UcUlz5PGBvDKD1OdZLK3r0aja-i4&pbk=_3keWobK7ZaY3zcm452rOAQU1cwEhIAMfdSbifhi_UU&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.filimo.com&sid=051e7b231954ec0b#Free
+vless://3cdc6bec-363e-4754-9797-f0e622680198@94.183.154.216:1003?security=reality&encryption=mlkem768x25519plus.native.0rtt.100-111-1111.75-0-111.50-0-3333.HqdaNzGwHVgtA5BvCNSeEnkczJ6HN3N7ubRjuZlwXkk&pbk=r-Ewj6XI7GKX1TbyRuOCV4o7c00HATiljR-exskeIR0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.filimo.com&sid=88f23ad5a4ea1d57#@appsooner
+vless://e33e40d2-859e-471f-b7dc-6f768f7cad9c@94.183.154.216:1001?security=reality&encryption=mlkem768x25519plus.native.0rtt.100-111-1111.75-0-111.50-0-3333.ejm35mx3XTS_gTck_ChVg_HHP4H9Msde_q2NDk-EtWc&pbk=KX755gv-2X6CXLfWm33OmTc3zHKHcNQK7nPZ06nki1U&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.filimo.com&sid=429e38fcd14a06a8#[
+vless://23d6295f-0337-438f-be52-388bbe321ae4@a.samrayan.ir:443?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=a.samrayan.ir#✨
 vless://1cc6bd10-e414-4171-9220-09aaba23a6fa@bg.masterpgd.com:6016?encryption=none&security=reality&type=tcp&headerType=none&flow=xtls-rprx-vision&sni=play.google.com&fp=chrome&pcs=67634d1da2bc34c87fb0e6e53afd4ead78b50d26131ce554238e1ef2bd5d034d&pinSHA256=67634d1da2bc34c87fb0e6e53afd4ead78b50d26131ce554238e1ef2bd5d034d&pbk=ZqviTSUKpqxl9htoEiix8iIH3lRB6ahvw00btl-HOSk&sid=1779b108c9eb4da7
-vless://186eb738-3580-4296-0fd3-1892acec2149@bs.cexora.ir:2087?mode=auto&pcs=b8608bfe94caba86a6d3c9dd2ff6fcd4eed5a8a9554d06565b23b458dffd54b5&path=/BetForward&security=tls&encryption=none&extra={
+vless://73d2e0ea-8494-49c7-bcb6-2ae5ba0a0aac@tgseenrobo.ir:2053?mode=auto&path=/&security=reality&encryption=none&extra={
+vless://bc4d97ba-d54f-4555-ba71-f7421796d92c@185.143.234.111:443?path=/&security=tls&encryption=none&host=frontend.parhamm2.ir&fp=chrome
+vless://e0ff8a9b-dad3-4671-baf4-c8d466d1eb48@31.14.123.220:49433?security=&encryption=none&headerType=none&type=tcp#9700
+vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
+vless://0d1c3cee-2952-4a3e-a03e-fbe99d32dc72@de22.fastplus7.site:2086?type=ws&encryption=none&path=%2F&host=de21.fastplus11.ir&security=none
+vless://186eb738-3580-4296-0fd3-1892acec2149@bs.cexora.ir:2087?encryption=none&type=xhttp&security=tls&sni=bs.cexora.ir&pcs=b8608bfe94caba86a6d3c9dd2ff6fcd4eed5a8a9554d06565b23b458dffd54b5&fp=chrome&host=bs.cexora.ir&path=/BetForward&mode=auto&extra={
+vless://44de73bc-eb6d-429d-9c2f-ec0a6e4a6681@my.configfast.site:4013?security=none&encryption=none&host=bale.ai,web.splus.ir,igap.net&headerType=http&type=tcp#🇮🇷186287
+ss://M2QzYjE1OWQtZTMxMy00YjRmLWIyNDgtOTliZjEwNjQxNzVhOg==@zula.ir:80#@Vip_Security

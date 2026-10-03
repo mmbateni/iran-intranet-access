@@ -1,6 +1,4 @@
-# Armenian corridor bridge (all) — 2026-10-02 18:40 UTC
-# 4 configs
-vless://85d61e30-8809-439a-b00e-0764c25aee8d@46.226.166.159:8443?pbk=N9s349Tqafjq2bXAfwTcbYcNtkm5L9OK47XoUQb8GTU&security=reality&encryption=none&sid=a7f11a250738b23f&type=xhttp&sni=vk.com&fp=chrome#🇫🇷FR-🚀@VPNine1
-vless://e86ba41f-f2c4-4773-a6da-6534f12163bb@usa2.armageddonvpn.xyz:443?path=%2FgbV2rcwZ%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=usa2.armageddonvpn.xyz&fp=chrome&type=ws&allowInsecure=0&sni=usa2.armageddonvpn.xyz
-trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
+# Armenian corridor bridge (all) — 2026-10-03 09:24 UTC
+# 2 configs
 trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
+trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
