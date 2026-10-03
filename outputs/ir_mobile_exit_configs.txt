@@ -1,3 +1,2 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-10-03 09:24 UTC
-# 1 configs
-vless://2f35965a-9a9b-45fd-ba32-987296dfb6be@md5.univesalsrv.com:443?mode=gun&security=reality&encryption=none&pbk=99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg&fp=firefox&type=grpc&serviceName=app.v1.PushService&sni=md5.univesalsrv.com&sid=aa9884f2982b7d3c#%40v2raybaaz%20%C2%B2
+# IR mobile (MCI/Irancell/Rightel) — 2026-10-03 17:35 UTC
+# 0 configs
