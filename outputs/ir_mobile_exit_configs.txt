@@ -1,9 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-10-04 10:09 UTC
-# 7 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-10-04 17:50 UTC
+# 2 configs
 vless://2f35965a-9a9b-45fd-ba32-987296dfb6be@md5.univesalsrv.com:443?mode=gun&security=reality&encryption=none&pbk=99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg&fp=firefox&type=grpc&serviceName=app.v1.PushService&sni=md5.univesalsrv.com&sid=aa9884f2982b7d3c#%40v2raybaaz%20%C2%B2
-vless://6d257a71-6d98-42d2-983a-34363b6dedcd@89.35.14.43:443?encryption=none&fp=firefox&security=tls&serviceName=mobile.api.Event&sni=md7.mediacorp.fyi&type=grpc
-vless://66f52bd2-41c7-40af-98a7-142848fc3cf1@2.144.24.109:3456?path=/&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=panel.ecofreenetping.com
-vless://b47a1c70-d033-4c31-b24f-6058d6cd04bf@2.144.26.237:9443?path=%2Fnova-geo-psiphon-be&security=tls&encryption=none&insecure=0&host=vip.polnejat.ir&type=ws&allowInsecure=0&sni=vip.polnejat.ir
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.217.16:8443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram+@WangCai2&Host=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@91.186.212.131:8443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws&path=/trTelegram+@WangCai2&Host=Koma-YT.PAGeS.Dev
-trojan://8r%3C%5B9%27l6hAO%238ZQi@89.34.227.238:57606
+vless://153fa912-47ce-4e93-9180-65d5cfe71a95@yandexcdn1.ookcdn.ru:443?encryption=none&type=xhttp&mode=auto&extra={

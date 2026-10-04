@@ -1,14 +1,4 @@
-# Armenia→Iran bridge-verified — 2026-10-04 10:09 UTC
-# 12 configs
-vless://85d61e30-8809-439a-b00e-0764c25aee8d@46.226.166.159:8443?security=reality&type=xhttp&packetEncoding=xudp&sni=vk.com&fp=chrome&sid=a7f11a250738b23f&pbk=N9s349Tqafjq2bXAfwTcbYcNtkm5L9OK47XoUQb8GTU&encryption=none
-vless://901cb0b0-0185-4983-b42a-67c431fa2f10@92.246.138.96:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=XNRqBVhMN7DRE0OnISDpLpIr2x7V6reBNg1BdBPP8jk&sid=29680d77&sni=storage.yandex.ru
-vless://5e5608a2-9893-4eaa-b90a-e202bacef5b6@5.10.214.53:443?type=xhttp&security=tls&encryption=none&path=/kir&host=cdn.safev2ray.store&mode=auto&sni=cdn.safev2ray.store&alpn=h2,http/1.1&fp=chrome&allowInsecure=1
-vless://7e58699f-1d5d-4f6b-b181-cb74f0ad9509@5.10.214.0:443?type=ws&security=tls&encryption=none&sni=GfV5t2331T.sMaRtTeChZaAl.InFo&host=GfV5t2331T.sMaRtTeChZaAl.InFo
-vless://c9e9fb6d-d9fd-40be-aaa7-8639031e127b@5.10.214.0:2095?security=none&type=httpupgrade&headerType=&path=/&host=gb.carefreemob2.com.
-vless://1a79d43f-b41c-496b-a241-dcbeefa81f0e@89.169.53.156:443?encryption=none&security=tls&sni=0926.qiang2000.link&type=ws&host=0926.qiang2000.link&path=Telegram%40WangCai2%2F%3Fed%3D2560
-vless://17a1ffce-0cf5-b29b-ba3c-2f2300000000@91.195.254.34:443?encryption=none&type=ws&host=netlivpn1048.shshh.workers.dev&path=%2FNetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN&security=tls&fp=chrome&sni=netlivpn1048.shshh.workers.dev
-vless://2eadb97f-bba4-4471-8d55-bd461525a2dc@2.56.207.67:443?&security=tls&fp=chrome&sni=eded-52n.pages.dev&type=ws&headerType=none&host=eded-52n.pages.dev&path=%2F
+# Armenia→Iran bridge-verified — 2026-10-04 17:50 UTC
+# 2 configs
 trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
 trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
-trojan://8r%3C%5B9%27l6hAO%238ZQi@92.246.139.226:443?allowInsecure=1&sni=Koma-YT.PAGeS.Dev&type=ws&host=Koma-YT.PAGeS.Dev&path=/trTelegram
-trojan://8r%3C%5B9%27l6hAO%238ZQi@46.226.161.12:2053?host=Koma-YT.PAGeS.Dev&path=/trTelegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2&security=tls&sni=Koma-YT.PAGeS.Dev&type=ws
