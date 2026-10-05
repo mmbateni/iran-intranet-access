@@ -1,4 +1,4 @@
-# Armenian corridor bridge (all) — 2026-10-04 17:50 UTC
+# Armenian corridor bridge (all) — 2026-10-05 10:48 UTC
 # 2 configs
-trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
 trojan://ttfang@5.10.215.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
+trojan://ttfang@5.10.214.216:2096?security=tls&sni=ttfang.fange.me&type=ws&path=Telegram🇨🇳&Host=ttfang.fange.me
