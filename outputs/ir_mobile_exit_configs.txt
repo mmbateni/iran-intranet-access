@@ -1,5 +1,6 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-10-09 18:58 UTC
-# 3 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-10-10 10:05 UTC
+# 4 configs
 vless://5e9d217c-0f9f-4c8c-aa79-a600baa8765b@2.144.22.87:443?security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=0&host=api.bgp6.ir&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=api.bgp6.ir
+vless://579b72a5-785a-4fb6-ac64-1de2f8c49601@185.112.59.107:443?mode=gun&security=reality&encryption=none&pbk=LAIeXhB_Q_APveaVNJDD4svH4esgDVx3qeo-MSfu1Wg&fp=chrome&type=grpc&serviceName=vless-grpc&sni=samsung.com.com#@irdusti(29)🇳🇱
 trojan://gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU@91.92.43.240:443?security=tls&sni=ger1.fytpn.com&fp=firefox&type=tcp&headerType=none
 trojan://gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU@ger1.fytpn.com:443?type=tcp&security=tls&sni=ger1.fytpn.com&fp=chrome
