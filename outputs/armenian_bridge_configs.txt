@@ -1,4 +1,4 @@
-# Armenian corridor bridge (all) — 2026-10-16 17:40 UTC
+# Armenian corridor bridge (all) — 2026-10-17 08:00 UTC
 # 2 configs
-vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=0e#86
+vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?sni=yahoo.com&fp=chrome&security=tls#%F0%9F%8F%B3%5Bwww.v2nodes.com%5D%20vless-
 vless://af827fd0-6381-426f-bc5e-dcd9a7baeaac@46.226.166.208:14430?&type=ws&headerType=&path=%2Fvless
