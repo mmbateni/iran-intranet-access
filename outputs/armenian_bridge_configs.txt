@@ -1,3 +1,4 @@
-# Armenian corridor bridge (all) — 2026-10-19 19:26 UTC
-# 1 configs
-vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=0e#@V2ray_Alpha🌡️
+# Armenian corridor bridge (all) — 2026-10-20 08:47 UTC
+# 2 configs
+vless://b2bf3e70-e99f-47ed-9802-5c8d264ecc0c@185.202.113.108:443?encryption=none&fp=chrome&pbk=SfZ0hMKMM1KUDFQnnrDLRGru6d4tlWdOBjCtC9R9V3s&security=reality&sid=b6&sni=www.microsoft.com&spx=/1a1aadd83ce8b74&support-x25519mlkem768=true&type=tcp#@filembad
+vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=0e#@vasl_bashim
