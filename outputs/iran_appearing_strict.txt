@@ -1,6 +1,7 @@
 # Iranian-exit (3/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Highest confidence: all three GeoIP APIs (ip-api.com, ipapi.co, ipinfo.io) agree.
-# Generated: 2026-10-22 08:49 UTC | 0 configs
+# Generated: 2026-10-22 18:08 UTC | 1 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
+vless://392e172e-6046-4229-b8c4-fed6e1fbe970@docs.sslforfree.shop:2083?path=/&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=docs.sslforfree.shop&fp=chrome&type=ws&allowInsecure=0&sni=docs.sslforfree.shop#YFZ
