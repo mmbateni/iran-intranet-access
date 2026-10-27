@@ -1,7 +1,6 @@
 # Iranian-exit (3/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Highest confidence: all three GeoIP APIs (ip-api.com, ipapi.co, ipinfo.io) agree.
-# Generated: 2026-10-26 19:31 UTC | 1 configs
+# Generated: 2026-10-27 09:15 UTC | 0 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://c0a06843-8a72-4eca-b124-a589da434c98@goold.zovip2.ir:443?encryption=none&type=ws&host=goold.zovip2.ir&path=/api/v3/pulse&security=tls&fp=chrome&sni=goold.zovip2.ir&alpn=http/1.1
