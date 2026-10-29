@@ -1,9 +1,6 @@
 # Iranian-exit (3/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Highest confidence: all three GeoIP APIs (ip-api.com, ipapi.co, ipinfo.io) agree.
-# Generated: 2026-10-28 19:01 UTC | 3 configs
+# Generated: 2026-10-29 10:18 UTC | 0 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://50b69a47-452d-40a4-c13c-4d82218ce889@s3.lemvuno.ir:2087?mode=auto&pcs=e13a8316b04a67e148ada4c91e5be8458976d65998174938c7ba0b6eac23bb3c&path=/BetForward&security=tls&encryption=none&extra={
-vless://54692ec9-fd24-41c8-9677-6db0e345c2b0@frank20.zarghamweb.ir:31915?encryption=none&security=tls&sni=pasar.zarghamweb.ir&alpn=h3,
-vless://65479d3f-6e51-40b7-9d0a-ac3a1896f72f@turk.karmatel.ir:2083?alpn=h2,http/1.1,h3&fp=chrome&ech=AGL+DQBeAAAgACCXzKEKm/+B/vRPfIxvAxApd2jISK73kDhgsy1IGiAfRgAkAAEAAQABAAIAAQADAAIAAQACAAIAAgADAAMAAQADAAIAAwADAA92czEua2FybWF0ZWwuaXIAAA==&type=xhttp&sni=vs1.karmatel.ir&mode=auto&path=/&security=tls&encryption=mlkem768x25519plus.native.0rtt.9-YTeU3_o9aQ2SEPXyYtYH9ZOw_VoNYSRjeEVPIweUg&extra={
