@@ -1,10 +1,8 @@
-# IR-exit + VLESS Reality (best DPI resistance) — 2026-10-30 10:20 UTC
-# 8 configs
+# IR-exit + VLESS Reality (best DPI resistance) — 2026-10-30 18:48 UTC
+# 6 configs
 vless://b1da2601-ff93-46d6-af87-04af3f541fde@5.180.181.113:443?security=reality&encryption=none&pbk=wY_MYPJUx849su3BlowuxnwnUaj25iLfRw2LooQfPAY&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun1-19.userapi.com#@MigMigVPNSHOP
-vless://02156f38-8366-429c-8b60-0d8038cafe63@45.81.18.34:443?security=reality&encryption=none&pbk=ioufLXV7_DfXZ1oomDTaUMxdduFNWI-j4Ssa3QuME0Q&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=www.aparat.com&sid=bcf760#@Vip_Security
 vless://950ec237-e75f-4e99-9557-6545784d4202@94.182.131.101:443?encryption=none&security=reality&sni=youtu.be&fp=chrome&pbk=fPjow17wDX8YJG89j9lraSqv54yvuS21lq3lJiAX_g0&sid=489861db&spx=/9bd64fcfdc16ca6&type=tcp&headerType=none#🇩🇪All³
+vless://ad0fe7ae-3f8b-4586-b692-ca115e4a137f@37.202.228.56:443?security=reality&encryption=none&pbk=J5kmrlkFtPh30sNqkY4hH3LoM0Vpj1h10JYaCo2CJzI&headerType=none&fp=chrome&type=tcp&sni=divar.ir&sid=9ddd9f551b3db80c#REALITY|IR🇮🇷
 vless://2dcf2405-102b-471f-be53-296b0bf8c1a7@89.42.196.237:2030?mode=auto&path=/ZIRO&security=reality&encryption=mlkem768x25519plus.native.0rtt.Zig_uuifp-MrjbXA4ROLhXyqbLUGVZtgTIlxReYUYTg&pbk=3mA0RBw4RFVbXJN3RbtA4U0TsaD4EtVELLyQ9K8xww8&host=ZIRO&fp=chrome&type=xhttp&sni=amp-api-edge.apps.apple.com&sid=135ce189ff681b18#@Shh_Proxy-New⁷
-vless://6ba8077f-0e37-44d8-b6e0-c3b1871fe439@5.202.4.8:5066?security=reality&encryption=none&pbk=LTA0C-rWwGeaNv3oHvYti-zGGhVu4mo_8xyoEM34n3s&headerType=none&fp=chrome&spx=/26a7a1f1620a112&type=tcp&sni=api.receptivity.io&sid=c849e1d5d92374#🇮🇷202939
-vless://2f358bd2-f55b-4735-aeae-2a6f4eea4880@static.melzumo.ir:444?security=reality&encryption=none&pbk=TCiH-81qivOC6XSb54cdXEWWALuXFMcT7B38vHzuEX4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.aparat.com&sid=586b3940a7d5c987#@toot
 vless://33645276-befa-4e8e-b0d9-9b2a5638a9ef@iran.whitenet3vip.ir:2099?security=reality&encryption=none&pbk=otqaen_rEi80EVvnVCoy3PAg3d3rAqlzRz7ZQiCAhUg&host=amp-api-edge.apps.apple.com&headerType=http&fp=chrome&spx=/4fad055e68e907e&type=tcp&sni=search.led.samsung.com&sid=734f8ee0ba66#@IRAN_V2RAY1
-vless://3a24f714-5585-4103-9291-6ae21f11c10d@dashboard.wingerdt.com:11147?security=reality&encryption=none&pbk=W_0O5fiA1zi8nXHksSKSTLzwLPyjECWNES5-gDAbQRY&headerType=none&fp=chrome&type=tcp&sni=www.aparat.com&sid=197fe3f584bc15f3#@v2ray_phoenix
+vless://9b5c9dd3-20c8-41af-96b9-2621d02c0e49@mojigr.fusetea.ir:1102?encryption=none&security=reality&sni=www.aparat.com&fp=chrome&pbk=r753xovnUQvFw0toamiB3UsmgR33o8SXswOK_HrKrmU&sid=886cff912766c2d1&type=xhttp&path=/&mode=packet-up#@VPsave
