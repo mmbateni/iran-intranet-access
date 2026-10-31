@@ -1,5 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-10-31 09:53 UTC
-# 3 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-10-31 17:53 UTC
+# 2 configs
 vless://03a3d946-4738-968a-5ce9-e4f470980d47@tr2-tun.dnetopps.ir:10060?security=reality&type=xhttp&headerType=none&encryption=none&path=/Path&host=HostName&sni=reality2.dnetopps.ir&fp=chrome&pbk=uMOGVm4rvS4MgK7iefgPUJVQBgXFm0aEIQr6vGi_AX0&sid=13&spx=/#[115116]
 vless://86a8c2dd-1d47-4006-a397-72b76f2d67c8@yandexcdn1.ookcdn.ru:8443?mode=auto&security=reality&encryption=none&extra={
-vless://647f3600-112a-406c-9d19-6d1da58ff041@iron4.gofuc7f.ir:2083?mode=auto&path=%2Findex.php&security=tls&alpn=h2,http%2F1.1&encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A1000000,%22scMaxConcurrentPosts%22%3A100,%22scMinPostsIntervalMs%22%3A30,%22xPaddingBytes%22%3A%22100-1000%22,%22noGRPCHeader%22%3Afalse%7D&insecure=0&host=iron4.gofuc7f.ir&fp=chrome&type=xhttp&allowInsecure=0&sni=iron4.gofuc7f.ir#IR🇮🇷
