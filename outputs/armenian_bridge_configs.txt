@@ -1,3 +1,6 @@
-# Armenian corridor bridge (all) — 2026-10-30 18:48 UTC
-# 1 configs
-vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&type=tcp&sni=yahoo.com&sid=0e#11246@proxy_online_net
+# Armenian corridor bridge (all) — 2026-10-31 09:53 UTC
+# 4 configs
+vless://eaa34d9f-662d-4378-8210-3508b5eee727@217.216.218.108:443?mode=auto&security=reality&encryption=none&pbk=B4gdMxfjdXtFuqg-Ek9CDKiJT6QQiKb-tV2VODt_ik0&type=xhttp&sni=savesafe.top&sid=def9b800fb6a3ddb#@ICV2RAY
+vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?security=reality&encryption=none&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&headerType=none&type=tcp&sni=yahoo.com&sid=0e#11378@proxy_online_net
+vless://c18b978e-1c4e-415c-8bea-07942b563a64@2.56.204.183:443?security=tls&sni=shuma.ccwu.cc&type=ws&fp=chrome&path=/#🇦🇲203844
+vless://f7376394-cd54-11f1-bb6a-bff6d0326f6a@194.36.37.59:10004?encryption=none&path=%2Fvpnjantit&security=none&type=ws#AM🇦🇲
