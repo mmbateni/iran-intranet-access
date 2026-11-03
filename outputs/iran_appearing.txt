@@ -1,22 +1,36 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-11-03 11:12 UTC | 15 configs
+# Generated: 2026-11-03 20:15 UTC | 29 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://38184696-21c9-41ab-9a62-2a1da5e0df53@f0c3e8501ac0fab6.tunvi.w-ert.org:50332?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#[125098]
-vless://38e6c206-fe40-49bd-ab35-be943d9cdac5@716ca599511416e1.tunvi.w-ert.org:40287?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&flow=xtls-rprx-vision&security=tls&sni=ask.w-ert.org&fp=chrome&type=tcp&headerType=none#Channel
+vless://1f862a91-69b8-4f69-a457-02595c7bcd8c@iron2.zokfune.ir:443?mode=stream-one&path=/index.php&security=tls&alpn=h2,http/1.1&encryption=none&extra={
+vless://5ad3dad8-9e66-4c5c-b066-2cfffe629341@94.184.12.212:8443?security=reality&encryption=mlkem768x25519plus.native.0rtt.QzpL3AnK7qmvOYhdzcCKCmwD_-NHvuRBeU1S-YwvODo&pbk=vaSJOBboASfxpH2XAAcLABTx6idwDhn0gyhUlE3CDTM&headerType=none&fp=chrome&spx=/ea3f75c439430cf&type=tcp&sni=aparat.com&sid=10d6730efd#🇮🇷205915
 vless://23ab3d0a-7626-48d5-99b8-8446b0187734@3633c37daa4e6400.tunvi.w-ert.org:40287?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&flow=xtls-rprx-vision&security=tls&sni=ask.w-ert.org&fp=chrome&type=tcp&headerType=none#Channel
 vless://03a3d946-4738-968a-5ce9-e4f470980d47@tr2-tun.dnetopps.ir:10060?security=reality&type=xhttp&headerType=none&encryption=none&path=/Path&host=HostName&sni=reality2.dnetopps.ir&fp=chrome&pbk=uMOGVm4rvS4MgK7iefgPUJVQBgXFm0aEIQr6vGi_AX0&sid=13&spx=/#[115116]
+vless://38184696-21c9-41ab-9a62-2a1da5e0df53@f0c3e8501ac0fab6.tunvi.w-ert.org:50332?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#[125098]
+vless://38e6c206-fe40-49bd-ab35-be943d9cdac5@716ca599511416e1.tunvi.w-ert.org:40287?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&flow=xtls-rprx-vision&security=tls&sni=ask.w-ert.org&fp=chrome&type=tcp&headerType=none#Channel
+vless://3a24f714-5585-4103-9291-6ae21f11c10d@dashboard.wingerdt.com:11147?security=reality&encryption=none&pbk=W_0O5fiA1zi8nXHksSKSTLzwLPyjECWNES5-gDAbQRY&headerType=none&fp=chrome&type=tcp&sni=www.aparat.com&sid=197fe3f584bc15f3#@v2ray_phoenix
 vless://39c56b7e-9299-4d65-82b6-eb2efb1689da@tunn.pasmazy1.ir:1462?encryption=none&security=reality&sni=play.google.com&fp=chrome&pbk=MAkYuPf-gK04xzX3epCM7wr6i0nyxZh8sBhPO_cbqRE&sid=80faf6f018dab000&type=tcp&headerType=none&host=dynu.com#Channel
 vless://51854f86-b1f6-409c-9018-b164fbd8c6f6@4ba8a08bae9457ad.tunvi.w-ert.org:40287?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&host=copy_az_Chanel0111Net&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#@MDvpnSEC
-vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.233:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=pishparda.ir#@Vip_Security
+vless://1b3bfa6c-6e45-455a-aeec-c1f553c0d844@c89bab261dd57222.tunvi.w-ert.org:40287?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&flow=xtls-rprx-vision&security=tls&sni=ask.w-ert.org&fp=chrome&type=tcp&headerType=none#Channel
+vless://6f3f7209-acaf-4609-83a9-ead51c8a65a1@n1.fllow.ir:443?authority=&encryption=none&fp=chrome&pbk=2_l_AeThgEkkPEN4_jQm83_oGgx_e9nsvYc2VHXk93w&security=reality&serviceName=aparat-stream&sid=69ced6d11253b058&sni=th.bing.com&spx=/e0e7617cd8e0f3f&support-x25519mlkem768=true&type=grpc#@VPsave
+vless://86f62b39-e8d4-4095-8e0e-e1bc60b4b2ce@num3-ge.specialteam2.com:2626?security=reality&encryption=none&pbk=PWQTEqDK7DXsRxV0w74VoF0p7dNKbkbIcLt0o4_QaHU&headerType=none&fp=chrome&type=tcp&sni=www.goo.gl&sid=29e8472db54c86dc#@Vip_Security
 vless://a7f4c93a-98e1-4835-82f0-0571f8378d14@185.143.233.5:443?path=%2Fchat%3Fed%3D128&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=hn.8lack.ir&fp=firefox&type=ws&allowInsecure=1&sni=hn.8lack.ir#@Vip_Security
-vless://392e172e-6046-4229-b8c4-fed6e1fbe970@docs.sslforfree.shop:2083?path=/&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=docs.sslforfree.shop&fp=chrome&type=ws&allowInsecure=0&sni=docs.sslforfree.shop#YFZ
-vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
+vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.233:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=pishparda.ir#@Vip_Security
+vless://445a4c86-9cab-46d3-9d9e-ec7107be688b@185.208.174.236:80?security=none&encryption=none&headerType=none&type=tcp#@Vip_Security
+vless://30fcec7f-164b-465c-87f4-b93784a6056b@185.226.140.140:8880?path=/&security=none&encryption=none&host=azsv1.drpingservice.com&type=ws#@hopev2ray🤍
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
+vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
 vless://06f086df-4f64-48ab-8cbd-834221d388ce@dgiehywg.sanprime.ir:4520?encryption=none&security=tls&type=ws&headerType=none&path=/&host=Tunde5.pasarguardspeed.ir&sni=Tunde5.pasarguardspeed.ir&fp=chrome#@VPsave
-vless://02837f9f-84ab-40b7-b081-0dd2b3d3c719@ser2.plasmoon.ir:2050?security=tls&alpn=http/1.1&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=tun1.plasmoon.ir#@tootffarangi🍓-13mtn
+vless://392e172e-6046-4229-b8c4-fed6e1fbe970@docs.sslforfree.shop:2083?path=/&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=docs.sslforfree.shop&fp=chrome&type=ws&allowInsecure=0&sni=docs.sslforfree.shop#YFZ
+vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
+vless://74fd2adf-3719-4e33-b407-55c28d6eae4e@trz.3drive.sbs:2095?path=/&security=&encryption=none&host=trz.3drive.sbs&type=ws#@VPsave
+vless://c09795c8-ee61-4c2a-980b-5946d66c80ec@VARZESH3.COM:2096?path=/&security=tls&alpn=h2,http/1.1&encryption=none&insecure=0&host=lol6.artarona.ir&type=ws&allowInsecure=0&sni=lol6.artarona.ir#TEL;Father_vpn
 vless://5860b202-143f-4111-a6f6-ab94c5ef61c2@varzesh3.com:2095?path=/pgcfws-r4&security=&encryption=mlkem768x25519plus.native.0rtt.rK2aQSz2wOAaLoJe61rb_TmbQxnF87VEAxGzd3TVmlY&host=dox.safari-df.ir&type=ws#🇧🇷
+vless://dabb5d60-4ac7-4982-bb01-11502e85b192@uk-emergency-service.relqino.ir:443?path=%2F&security=tls&encryption=none&insecure=0&host=uk-emergency-service.relqino.ir&fp=firefox&type=ws&allowInsecure=0&sni=uk-emergency-service.relqino.ir#@Vip_Security
+vless://dc4d5002-9545-4357-bfe4-b0ab6f174bd8@www.snappfood.ir:2083?path=%2Fapi%2Fv1%3Fed%23Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=serv2.servvadd.org&fp=chrome&type=ws&allowInsecure=0&sni=serv2.servvadd.org#@Vip_Security
+vless://c2f41712-c452-402f-9592-c78a83b92ba7@forallpanel.srtongston.ir:8880?path=/?ed=2082&security=&encryption=none&host=nnNn.postshup.ir&type=httpupgrade#@VPsave
+vless://d2f77cdd-5ca6-480a-a996-53e58ce52720@api3.chaqalli.com:8180?path=%2F&security=none&encryption=mlkem768x25519plus.native.0rtt.PdwZJuxIVUGHGbEzz3Q39ZoRqqxfF0lFg22yCLQvaWk&type=ws#@Vip_Security
+vmess://eyJhZGQiOiJzbmFwcC5pciIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoicnQub3J2ZXhhLmlyIiwiaWQiOiJiYWQ2Mjk2OC1iYmMxLTQwYzAtYWFiZS1mNzUxODMzOWZjNmIiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ3cyIsInBhdGgiOiJcLyIsInBjcyI6IiIsInBvcnQiOiIyMDUyIiwicHMiOiJJUlx1ZDgzY1x1ZGRlZVx1ZDgzY1x1ZGRmNyB8IHJ0Lm9ydmV4YS5pci0yMDUyIHwgNzM1LjcybXMiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Ii0tLSIsInYiOiIyIiwidmNuIjoiIn0=
