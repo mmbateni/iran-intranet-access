@@ -1,16 +1,15 @@
-# HYSTERIA2 — 2026-11-05 20:48 UTC
-# 14
-hysteria2://70043bfa-d6fb-4980-b27e-773e9e8b2004@141.0.187.15:443?sni=crt.onecloudstream.com#%E2%8F%B31%40oneclickvpnkeys
-hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#🇫🇷
-hysteria2://Telegram@179.61.138.145:443?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#Telegram%40vpnjey%20%234
+# HYSTERIA2 — 2026-11-06 11:18 UTC
+# 13
 hysteria2://CnVfXXvMzh@72.56.92.120:443?insecure=1&sni=hys13.wba-pn.ru#🇳🇱
+hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#🇫🇷
+hysteria2://Telegram@179.61.138.145:443?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#Telegram%40vpnjey%20%232
 hysteria2://p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR@130.49.161.70:443?insecure=0&sni=hy2.aspidnet.xyz&obfs=salamander&obfs-password=rG07s3COMIEvdnQipRyWzx_H_2xygNC3#%40confiig_hub%20%231
 hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@45.192.12.93:443?sni=admin.wwwinternetvideo.click#🇵🇱
-hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@144.31.49.47:443?insecure=1&sni=admin.wwwinternetvideo.click#🇷🇺
-hysteria2://h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT@222.167.212.82:8443?insecure=1&sni=hopp-legend-se.roxa.org#🇫🇮
-hysteria2://c9aca131-c6a4-4518-9d7d-be52a60b4a3f@201.58.187.25:443?sni=nl1.obxodvpn.us#🇺🇸
-hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@144.31.93.126:443?insecure=1&sni=admin.wwwinternetvideo.click#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20877452
-hysteria2://sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX@31.76.71.63:443?insecure=1&sni=cabinet.wwwinternetvideo.click#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20973039
 hysteria2://6aab8efdf13945829ae3699c342be406@31.76.80.69:443?insecure=0&sni=fiproxy1.lockdwn.com&obfs=salamander&obfs-password=uw9b2qq5rx#Telegram%3A%40v2rayng3
-hysteria2://GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_@85.159.228.22:443?sni=hy2-latvia2.unlimited-access.ru#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20282450
+hysteria2://GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_@85.159.228.22:443?sni=hy2-latvia2.unlimited-access.ru#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20738883
+hysteria2://h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT@222.167.212.82:8443?insecure=1&sni=hopp-legend-se.roxa.org#🇫🇮
+hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@144.31.93.126:443?insecure=1&sni=admin.wwwinternetvideo.click#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20411716
+hysteria2://c9aca131-c6a4-4518-9d7d-be52a60b4a3f@201.58.187.25:443?sni=nl1.obxodvpn.us#🇺🇸
+hysteria2://YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc@144.31.49.47:443?insecure=1&sni=admin.wwwinternetvideo.click#🇷🇺
+hysteria2://sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX@31.76.71.63:443?insecure=1&sni=cabinet.wwwinternetvideo.click#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20294271
 hysteria2://eb0e3aec-f67f-4fa2-8577-b0bff0484e77@194.238.40.185:443?insecure=1&sni=kaz0001hy01.packet-drop-society.net#🇰🇿
