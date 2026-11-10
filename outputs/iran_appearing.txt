@@ -1,28 +1,25 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-11-10 11:30 UTC | 21 configs
+# Generated: 2026-11-10 20:34 UTC | 18 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://01d31e8f-5eb5-4f2f-bceb-addb87f107a3@mabix.dgtr.net:443?security=reality&encryption=none&pbk=hvgEwCWp__pO1IzyQfvz-whyQhBbj760XxZ6SxD9qDg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=speedtest.net&sid=b101b6832ecf3eca#@v2ray_configs_pools
-vless://23ab3d0a-7626-48d5-99b8-8446b0187734@3633c37daa4e6400.tunvi.w-ert.org:40287?headerType=none&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&allowInsecure=0&type=tcp&security=tls&fp=chrome&sni=ask.w-ert.org&flow=xtls-rprx-vision&insecure=0#@nofiltering2
-vless://2e70d9ae-7906-4e34-a6f9-187987823e0b@j2.fllow.ir:25456?mode=gun&security=reality&encryption=none&pbk=2_l_AeThgEkkPEN4_jQm83_oGgx_e9nsvYc2VHXk93w&fp=chrome&spx=/a0fd1806f4f1efe&type=grpc&serviceName=aparat-stream&sni=r.msftstatic.com&sid=3e69a3a1c5#✅
+vless://ca39b355-b488-9297-918f-9d011d075ba2@185.209.42.72:2084?encryption=none&security=reality&sni=www.aparat.com&fp=chrome&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs&sid=2f567c6d&spx=/&type=xhttp&host=copy_Shode_az_Chanel0111Net&path=/&mode=auto#Channel
+vless://2e5713f7-93c6-43f5-bb0f-e6bf88910a71@t.zynexoz.ir:9593?security=reality&encryption=none&pbk=z7KGy_XXNAisx54zJb1Lzfz-7xSgUjICpsg-6wgJaTQ&headerType=none&fp=chrome&type=tcp&sni=t2.zynexoz.ir&sid=13015adb35046407#kurdconfig
 vless://38184696-21c9-41ab-9a62-2a1da5e0df53@f0c3e8501ac0fab6.tunvi.w-ert.org:50332?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#[125098]
-vless://38e6c206-fe40-49bd-ab35-be943d9cdac5@716ca599511416e1.tunvi.w-ert.org:40287?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#@VConfing
+vless://23ab3d0a-7626-48d5-99b8-8446b0187734@3633c37daa4e6400.tunvi.w-ert.org:40287?headerType=none&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&allowInsecure=0&type=tcp&security=tls&fp=chrome&sni=ask.w-ert.org&flow=xtls-rprx-vision&insecure=0#@nofiltering2
 vless://4728b9d4-dba7-434e-a5af-22f828876499@eth.voidxco.xyz:443?security=reality&encryption=mlkem768x25519plus.native.0rtt.cPR5wqp9QOrCkHXxwqemEY9AEkY4viCHiCLVyhBYOgE&pbk=QOfIev-YDVQQjZMabUBjWBOgExzO5yL8gKZ2B9l0M2o&host=google.com&headerType=http&fp=chrome&spx=/Uadi183GDs&type=tcp&sni=digikala.com&sid=5afaa0f0069f3fdf#@ICV2RAY
-vless://1b3bfa6c-6e45-455a-aeec-c1f553c0d844@c89bab261dd57222.tunvi.w-ert.org:40287?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&fp=chrome&sni=ask.w-ert.org&allowInsecure=0&flow=xtls-rprx-vision&security=tls&type=tcp&headerType=none#@nofiltering2
+vless://38e6c206-fe40-49bd-ab35-be943d9cdac5@716ca599511416e1.tunvi.w-ert.org:40287?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#@VConfing
+vless://5ce289ce-7d99-4f82-90c6-47821a110bd1@Germany.Tunnel.ufou008.com:2495?security=reality&encryption=none&pbk=VfrTQevOErixXjhyKUK8p8tT66NO0lhWxzK2Qsbux3Q&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.oracle.com&sid=2617c8683ba61b1d#@FXxNET⚡️
 vless://5b129671-ef53-3373-5149-de23a65606e9@ir-irn.maxuup.ir.maxuup.fun:48736?security=reality&encryption=none&pbk=YfHSYoUGAuTwCab4F65ymIQQTBSPuk9C5RX6rvg-KkM&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.aparat.com&sid=fbd534db#YFZ
-vless://1ee24c8e-969e-49e9-81c7-54fefe714c74@lws.athforce.ir:43443?mode=auto&path=/&security=reality&encryption=none&pbk=-cFRkLsKv5Fa5FVlB0Z1fFykhUQpgA6MCtyvBpv61S8&host=www.firefox.com&fp=chrome&type=xhttp&sni=www.firefox.com&sid=bb1541a0b1a4f86e#12146@proxy_online_net
+vless://1b3bfa6c-6e45-455a-aeec-c1f553c0d844@c89bab261dd57222.tunvi.w-ert.org:40287?encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&fp=chrome&sni=ask.w-ert.org&allowInsecure=0&flow=xtls-rprx-vision&security=tls&type=tcp&headerType=none#@nofiltering2
 vless://a7f4c93a-98e1-4835-82f0-0571f8378d14@185.143.233.5:443?path=%2Fchat%3Fed%3D128&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=hn.8lack.ir&fp=firefox&type=ws&allowInsecure=1&sni=hn.8lack.ir#@Vip_Security
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.233:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=pishparda.ir#@Vip_Security
-vless://30fcec7f-164b-465c-87f4-b93784a6056b@185.226.140.140:8880?path=/&security=none&encryption=none&host=azsv1.drpingservice.com&type=ws#@hopev2ray🤍
+vless://445a4c86-9cab-46d3-9d9e-ec7107be688b@185.208.174.236:80?security=none&encryption=none&headerType=none&type=tcp#@Vip_Security
 vless://5ca6d0b3-68e1-4415-90ce-4b3e27e6e051@5.57.38.179:5003?encryption=none&fp=chrome&mode=auto&path=/&security=tls&sni=afr-data-16.myket.ir&type=xhttp#🇮🇷IR-🚀@VPNine1
-vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://2569e4d0-7e61-44c3-2526-3c2853589b6a@s9.femqera.ir:2087?mode=auto&pcs=c490c38a3ccb3cc8296742de69070511a40f0e34089f139afd568db9ed1079e3&path=/BetForward&security=tls&encryption=none&extra={
-vless://00b128fd-69e3-47a1-8102-0ab7aafe393a@fnhub.nimhubnet.ir:1019?encryption=mlkem768x25519plus.native.0rtt.Qfv8YAsBYUQ64MqGmEhBppVCeCfFBrDg0CDbpKI-eV8&security=none&type=xhttp&host=cafeariel.ir&path=/&mode=stream-up&extra={
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
-vless://54692ec9-fd24-41c8-9677-6db0e345c2b0@frank20.zarghamweb.ir:31915?encryption=none&security=tls&sni=pasar.zarghamweb.ir&alpn=h3,
-vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
 vless://8c561eb2-f643-49ce-b5b6-81690ec268c0@b2n.ir:2087?mode=auto&path=/FiShChIpS&security=tls&encryption=none&extra={
+vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
