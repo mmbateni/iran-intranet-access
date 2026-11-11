@@ -1,3 +1,2 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-11-10 20:34 UTC
-# 1 configs
-ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206NW4zY3dyY25VRHR6UGVzUTlFQzIvOTVjeFZLYVdOdWQxYVVKU2o0QWVtdz0=@gaming.cloudnamercqtzumigrhrjm.ir:30473#IR%F0%9F%87%AE%F0%9F%87%B7+%7C+gaming.cloudnamercqtzumigrhrjm.ir-30473+%7C+413.36ms
+# IR mobile (MCI/Irancell/Rightel) — 2026-11-11 11:19 UTC
+# 0 configs

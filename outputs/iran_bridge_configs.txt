@@ -1,7 +1,5 @@
-# Armenia→Iran bridge-verified — 2026-11-10 20:34 UTC
-# 5 configs
+# Armenia→Iran bridge-verified — 2026-11-11 11:19 UTC
+# 3 configs
 vless://eaa34d9f-662d-4378-8210-3508b5eee727@217.216.218.123:443?mode=auto&security=reality&encryption=none&pbk=B4gdMxfjdXtFuqg-Ek9CDKiJT6QQiKb-tV2VODt_ik0&type=xhttp&sni=savesafe.top&sid=def9b800fb6a3ddb#YFZ
 vless://c1fdf1e6-6370-4bad-a866-f80f27f5e785@213.108.21.173:443?security=reality&encryption=none&pbk=oSbyJBoI2JTEva2ks51kmUCA7z-iFUcoGYCk-ciEaDU&headerType=none&fp=chrome&spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM&type=tcp&flow=xtls-rprx-vision&sni=nl1.kids-games.ru#@B2Hub
-vless://4b1be712-774c-4b65-8491-a3339e124a70@am1.pc-nodalys.top:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&fp=chrome&sni=am1.pc-nodalys.top&pbk=v36yrZJ-5Zikx9eh_SXaoDS2GuobOA4_WLagBVO0vxk&sid=a9c3f7e2#⚡️
 vless://5cd8e5fe-7595-4387-95f9-79b0f18eb125@213.108.23.184:443?security=none&encryption=none&headerType=none&type=tcp#FI🇫🇮
-vless://5d7b401c-78fa-4254-872e-6d42bf7e75ec@91.198.108.191:443?sni=v1n3.11676767.xyz&type=ws&host=v1n3.11676767.xyz&path=/go.php/productsfp=chrome&security=tls#%F0%9F%87%A6%F0%9F%87%B2%20AM_26%20%231
