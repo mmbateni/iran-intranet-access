@@ -1,22 +1,26 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-11-12 11:40 UTC | 15 configs
+# Generated: 2026-11-12 21:02 UTC | 19 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
-vless://ca39b355-b488-9297-918f-9d011d075ba2@185.209.42.72:2084?encryption=none&security=reality&sni=www.aparat.com&fp=chrome&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs&sid=2f567c6d&spx=/&type=xhttp&host=copy_Shode_az_Chanel0111Net&path=/&mode=auto#Channel
-vless://01d31e8f-5eb5-4f2f-bceb-addb87f107a3@mabix.dgtr.net:443?security=reality&encryption=none&pbk=hvgEwCWp__pO1IzyQfvz-whyQhBbj760XxZ6SxD9qDg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=speedtest.net&sid=b101b6832ecf3eca#@v2ray_configs_pools
+vless://ca39b355-b488-9297-918f-9d011d075ba2@185.209.42.72:2084?mode=auto&path=/&security=reality&encryption=none&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs&host=copy_Shode_az_Chanel0111Net&fp=chrome&spx=/&type=xhttp&sni=www.aparat.com&sid=2f567c6d#@MDvpnSEC
+vless://02156f38-8366-429c-8b60-0d8038cafe63@45.81.18.34:443?security=reality&encryption=none&pbk=ioufLXV7_DfXZ1oomDTaUMxdduFNWI-j4Ssa3QuME0Q&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=www.aparat.com&sid=bcf760#@Vip_Security
 vless://01b2b871-d68c-45f7-8df5-fb5cb472b866@mojif.fusetea.ir:1080?mode=packet-up&path=/&security=reality&encryption=none&pbk=u3EnhSlPtnsjoA4OQwRa8Pk5mQCnBXHYWSP1bfdjYm8&fp=chrome&type=xhttp&sni=www.aparat.com&sid=a17c76d6a2f35aaf#@ConfigV2RayNG
-vless://6a0131c0-7ced-4e81-a76f-05923c67beb7@ir.raexa.ir:443?encryption=none&security=reality&type=xhttp&headerType=none&path=/&mode=auto&sni=www.aparat.com&fp=chrome&pbk=o00_7BsGDMrBx7oQxq15hYd1rhnyMsmj1d5VtQhXLHo&sid=af41267c3f2fccda#@VPsave
-vless://6bf83eb4-6e1a-49e7-b966-30de57239621@nl1.melkban24.ir:3102?security=none&encryption=mlkem768x25519plus.xorpub.0rtt.vttlu-JKxHijJDTOT5WyFwDkTKSIeXOqeZr6IRxyci0&host=Copy_Shode_az_Chanel0111Net&headerType=none&type=tcp&flow=xtls-rprx-vision#@sora1co
-vless://a7f4c93a-98e1-4835-82f0-0571f8378d14@185.143.233.5:443?path=%2Fchat%3Fed%3D128&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=hn.8lack.ir&fp=firefox&type=ws&allowInsecure=1&sni=hn.8lack.ir#@Vip_Security
+vless://42a151f5-5c96-4f0b-8441-a54bc98ebf99@nsmartdns.ariprivateservice.ir:50269?encryption=none&security=reality&sni=iphone.amazon.com&fp=chrome&pbk=I1YxRI9iFq1YQSn6Vi4BElatg9T_iOlsLSCPbpPmTxU&sid=b0185b70&spx=/4fce4980150963d&type=xhttp&host=myket.ir&path=/assets&mode=stream-up&extra={
+vless://ce4b2104-f1fe-4216-ad67-8c21869b9118@www.gameturk.bestvnxv.org:21710?mode=auto&path=%2F&security=reality&encryption=none&pbk=y1FXsWq-fLzk3Dle_2l_XSfpbBT-OtPBCkuQMMyN7hk&fp=chrome&type=xhttp&sni=cdn-apple.com&sid=a9c6792c83079ed3#@Vip_Security
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.233:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=pishparda.ir#@Vip_Security
-vless://445a4c86-9cab-46d3-9d9e-ec7107be688b@185.208.174.236:80?security=none&encryption=none&headerType=none&type=tcp#@Vip_Security
+vless://a7f4c93a-98e1-4835-82f0-0571f8378d14@185.143.233.5:443?path=%2Fchat%3Fed%3D128&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=hn.8lack.ir&fp=firefox&type=ws&allowInsecure=1&sni=hn.8lack.ir#@Vip_Security
 vless://30fcec7f-164b-465c-87f4-b93784a6056b@185.226.140.140:8880?path=/&security=none&encryption=none&host=azsv1.drpingservice.com&type=ws#@hopev2ray🤍
-vless://57b9e60b-62d3-41f1-9706-bd179a3af366@37.202.226.147:2083?encryption=none&extra={
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
+vless://4c264911-ecc1-4f47-a0b6-ce10cd2b8d7f@mtun.headerip.com:443?security=tls&alpn=http/1.1&encryption=none&host=de1.mv11.ir&headerType=none&fp=chrome&type=tcp&sni=de1.mv11.ir#🇮🇷213088
+vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
+vless://d5af4dfe-eaf1-460c-87aa-fefe930db0ba@b2n.ir:443?mode=auto&path=%2FChOpIn&security=tls&encryption=none&extra=%7B%22xPaddingBytes%22%3A%2216-64%22,%22xPaddingObfsMode%22%3Atrue,%22xPaddingKey%22%3A%22_dc%22,%22xPaddingHeader%22%3A%22X-Cache%22,%22xPaddingMethod%22%3A%22tokenish%22%7D&insecure=0&host=chopin.kaftarkakolbesarwifi.com&type=xhttp&allowInsecure=0&sni=chopin.kaftarkakolbesarwifi.com#@Vip_Security
+vless://dc4d5002-9545-4357-bfe4-b0ab6f174bd8@www.snappfood.ir:2083?path=%2Fapi%2Fv1%3Fed%23Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=serv2.servvadd.org&fp=chrome&type=ws&allowInsecure=0&sni=serv2.servvadd.org#@Vip_Security
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
+vless://58715b6d-83c2-4695-b536-e5de12913eb6@t1.arshiaspeed.shop:2086?path=%2F&security=none&encryption=none&type=ws#@Vip_Security
 vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
-vless://81be1b4f-3be5-43ca-8e85-13a01164493c@free.2freenet.ddns.info:2083?path=/wp-admin.php?ed=2083&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=my.nila-services.top&fp=chrome&type=ws&allowInsecure=0&sni=my.nila-services.top#@FarazV2ray
+vless://7b24b15b-4f09-4ace-867b-dcd2f5a08c4d@ir.li6nk.ir:1001?alpn=http/1.1&encryption=none&fp=chrome&host=filimo.com&path=/&security=tls&sni=ir.li6nk.ir&type=ws#🇮🇷IR-🚀@VPNine1
 vless://1fd9bcca-bccf-493f-a9a7-570859bd0cc3@avcd.banfuna.ir:29448?encryption=none&security=tls&sni=tl3.tavqila.ir&fp=chrome&type=ws&host=tl3.tavqila.ir&path=/#Channel
+trojan://auto@zula.ir:443?path=/@Azarakhsh_Proxy?ed=2560&security=tls&alpn=http/1.1&host=tg.cmliussss.us.kg&fp=chrome&type=ws&sni=tg.cmliussss.us.kg#🩵+@Azarakhsh_Proxy+🩷
