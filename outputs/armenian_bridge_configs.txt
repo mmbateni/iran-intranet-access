@@ -1,4 +1,5 @@
-# Armenian corridor bridge (all) — 2026-11-13 11:22 UTC
-# 2 configs
+# Armenian corridor bridge (all) — 2026-11-13 20:37 UTC
+# 3 configs
 vless://eaa34d9f-662d-4378-8210-3508b5eee727@217.216.218.123:443?mode=auto&security=reality&encryption=none&pbk=B4gdMxfjdXtFuqg-Ek9CDKiJT6QQiKb-tV2VODt_ik0&type=xhttp&sni=savesafe.top&sid=def9b800fb6a3ddb#YFZ
 vless://c1fdf1e6-6370-4bad-a866-f80f27f5e785@213.108.21.173:443?security=reality&encryption=none&pbk=oSbyJBoI2JTEva2ks51kmUCA7z-iFUcoGYCk-ciEaDU&headerType=none&fp=chrome&spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM&type=tcp&flow=xtls-rprx-vision&sni=nl1.kids-games.ru#@B2Hub
+vless://5cd8e5fe-7595-4387-95f9-79b0f18eb125@213.108.23.184:443?security=none&encryption=none&headerType=none&type=tcp#FI🇫🇮
