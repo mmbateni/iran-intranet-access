@@ -1,19 +1,21 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-11-13 20:37 UTC | 12 configs
+# Generated: 2026-11-14 10:46 UTC | 14 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
 vless://ca39b355-b488-9297-918f-9d011d075ba2@185.209.42.72:2084?mode=auto&path=/&security=reality&encryption=none&pbk=yeEgcP0ehhicUQZdFGJBhLuU3wsEMSRyg8l2voakZBs&host=copy_Shode_az_Chanel0111Net&fp=chrome&spx=/&type=xhttp&sni=www.aparat.com&sid=2f567c6d#@MDvpnSEC
-vless://2355da28-bf28-4d4a-803c-a1ef00b3f93b@37.202.226.147:2083?mode=auto&path=/pubtun&security=reality&encryption=none&extra={
-vless://4728b9d4-dba7-434e-a5af-22f828876499@eth.voidxco.xyz:443?security=reality&encryption=mlkem768x25519plus.native.0rtt.cPR5wqp9QOrCkHXxwqemEY9AEkY4viCHiCLVyhBYOgE&pbk=QOfIev-YDVQQjZMabUBjWBOgExzO5yL8gKZ2B9l0M2o&host=google.com&headerType=http&fp=chrome&spx=/Uadi183GDs&type=tcp&sni=digikala.com&sid=5afaa0f0069f3fdf#@ICV2RAY
+vless://01d31e8f-5eb5-4f2f-bceb-addb87f107a3@mabix.dgtr.net:443?security=reality&encryption=none&pbk=hvgEwCWp__pO1IzyQfvz-whyQhBbj760XxZ6SxD9qDg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=speedtest.net&sid=b101b6832ecf3eca#@v2ray_configs_pools
+vless://27f1eba3-0d5f-47c3-8dfa-f734f3aeccdf@tun404.app9.ir:8023?encryption=none&security=reality&sni=speedtest.net&fp=chrome&pbk=3VKs9HG9EgsB69ppfvFEJcXiO5MDOvvQOByDD2HceXQ&sid=b7e45d3a65bfc319&type=tcp&headerType=none#@filembad
 vless://a7f4c93a-98e1-4835-82f0-0571f8378d14@185.143.233.5:443?path=%2Fchat%3Fed%3D128&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=hn.8lack.ir&fp=firefox&type=ws&allowInsecure=1&sni=hn.8lack.ir#@Vip_Security
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.233:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=pishparda.ir#@Vip_Security
+vless://445a4c86-9cab-46d3-9d9e-ec7107be688b@185.208.174.236:80?security=none&encryption=none&headerType=none&type=tcp#@Vip_Security
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
-vless://73e08fcb-a0c7-45d0-b55d-f78c903c64a6@dl3.gooniforoshi.fun:443?path=%2Fdownload.php&security=tls&encryption=none&insecure=0&host=dl3.gooniforoshi.fun&type=ws&allowInsecure=0&sni=dl3.gooniforoshi.fun#IR🇮🇷
-vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
-vless://8c561eb2-f643-49ce-b5b6-81690ec268c0@b2n.ir:2087?mode=auto&path=/FiShChIpS&security=tls&encryption=none&extra={
 vless://81be1b4f-3be5-43ca-8e85-13a01164493c@free.2freenet.ddns.info:2083?path=/wp-admin.php?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM?ed=2083&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=my.nila-services.top&fp=chrome&type=ws&allowInsecure=0&sni=my.nila-services.top#@B2Hub
-vless://abd56c8f-21df-4727-8280-751749b9a27b@hostca2.shop-goldserver.shop:443?mode=packet-up&path=/wp-content/assetsca2/&security=tls&alpn=h2,http/1.1&encryption=none&extra={
-vless://dabb5d60-4ac7-4982-bb01-11502e85b192@uk-emergency-service.relqino.ir:443?path=%2F&security=tls&encryption=none&insecure=0&host=uk-emergency-service.relqino.ir&fp=firefox&type=ws&allowInsecure=0&sni=uk-emergency-service.relqino.ir#@Vip_Security
+vless://73e08fcb-a0c7-45d0-b55d-f78c903c64a6@dl3.gooniforoshi.fun:443?path=%2Fdownload.php&security=tls&encryption=none&insecure=0&host=dl3.gooniforoshi.fun&type=ws&allowInsecure=0&sni=dl3.gooniforoshi.fun#IR🇮🇷
+vless://8c561eb2-f643-49ce-b5b6-81690ec268c0@b2n.ir:2087?mode=auto&path=/FiShChIpS&security=tls&encryption=none&extra={
+vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
+vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
+vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
+vless://1fd9bcca-bccf-493f-a9a7-570859bd0cc3@avcd.banfuna.ir:29448?encryption=none&security=tls&sni=tl3.tavqila.ir&fp=chrome&type=ws&host=tl3.tavqila.ir&path=/#Channel
