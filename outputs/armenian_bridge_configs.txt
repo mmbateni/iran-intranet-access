@@ -1,3 +1,2 @@
-# Armenian corridor bridge (all) — 2026-11-16 11:53 UTC
-# 1 configs
-vless://c1fdf1e6-6370-4bad-a866-f80f27f5e785@213.108.21.173:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=oSbyJBoI2JTEva2ks51kmUCA7z-iFUcoGYCk-ciEaDU&security=reality&sni=nl1.kids-games.ru&type=tcp#REALITY|NL🇳🇱
+# Armenian corridor bridge (all) — 2026-11-16 23:00 UTC
+# 0 configs

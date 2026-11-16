@@ -1,12 +1,20 @@
 # Iranian-exit (≥2/3 GeoIP APIs confirmed) — websites will see you as in Iran
 # Recommended: majority vote across 3 independent GeoIP services.
 Use this if you need your exit IP to appear Iranian to external sites.
-# Generated: 2026-11-16 11:53 UTC | 11 configs
+# Generated: 2026-11-16 23:00 UTC | 24 configs
 #
 # NOT included: armenian_bridge configs — those show Armenian IPs to sites.
 
+vless://27f1eba3-0d5f-47c3-8dfa-f734f3aeccdf@tun404.app9.ir:8023?encryption=none&security=reality&sni=speedtest.net&fp=chrome&pbk=3VKs9HG9EgsB69ppfvFEJcXiO5MDOvvQOByDD2HceXQ&sid=b7e45d3a65bfc319&type=tcp&headerType=none#Channel
 vless://0a37aa8a-905d-447d-b0c3-af37e5c2d282@www.2freenet.ddns.info:443?encryption=none&security=reality&sni=qa.aparat.com&fp=chrome&pbk=DX-SM1e4oi8M-CPdfvlJkSljL1KpldJ2Rrd0QwCTpXA&sid=284f933fef3a62b6&spx=/download&type=xhttp&host=qa.aparat.com&path=/&mode=auto#@VPsave
-vless://c224a3cc-e575-4212-9e4f-d85ec9f2085d@053fcbd4ab1babc2.web.vipercloud.ir:38780?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&host=/?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#Tel@MARAMBASHI
+vless://42a151f5-5c96-4f0b-8441-a54bc98ebf99@nsmartdns.ariprivateservice.ir:50269?encryption=none&security=reality&sni=iphone.amazon.com&fp=chrome&pbk=I1YxRI9iFq1YQSn6Vi4BElatg9T_iOlsLSCPbpPmTxU&sid=b0185b70&spx=/4fce4980150963d&type=xhttp&host=myket.ir&path=/assets&mode=stream-up&extra={
+vless://c224a3cc-e575-4212-9e4f-d85ec9f2085d@78e7eeceeae8a446.web.vipercloud.ir:15100?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&headerType=none&fp=chrome&spx=/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#@B2Hub
+vless://6ecec42d-ccc9-489a-bb0b-c2670aaf4edf@tv.samesung.tr:47363?encryption=none&security=reality&sni=aparat.com&fp=chrome&pbk=6ePW9v314ZSQEB_NiMQIUYye1u7A9UIV3vjeDt8exBM&sid=40836d8b077e4865&type=tcp&headerType=http&host=google.com&path=/#🇮🇷216954
+vless://6a002409-fc42-4728-8aa7-ebd1c51325f4@ir.rokoi.ir:8456?encryption=none&security=reality&type=tcp&headerType=none&flow=xtls-rprx-vision&sni=s1.rokoi.ir&fp=chrome&pbk=ocgh26Ko-2nvlF-8PzA7T0hvH6l2zbqoygpJj6bf804&sid=337fb0078065ad72&spx=/#@VPsave
+vless://9517e5e2-c4e9-425d-9355-0a8a9cfbf330@18855ef9d987ecd0.web.vipercloud.ir:38780?security=tls&encryption=mlkem768x25519plus.native.0rtt.g4zPsP8_Ju17nfVQ9cRaBqzWPbv0Ve4ELGpzE9yf8CA&insecure=0&host=/?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=ask.w-ert.org#Tel@MARAMBASHI
+vless://6bf83eb4-6e1a-49e7-b966-30de57239621@nl1.melkban24.ir:3102?security=none&encryption=mlkem768x25519plus.xorpub.0rtt.vttlu-JKxHijJDTOT5WyFwDkTKSIeXOqeZr6IRxyci0&host=Copy_Shode_az_Chanel0111Net&headerType=none&type=tcp&flow=xtls-rprx-vision#@sora1co
+vless://db4ee353-1baf-4b82-96ec-8aeab542b1a9@tv.samesung.tr:63004?encryption=none&security=reality&sni=cafebazaar.ir&fp=chrome&pbk=BuCrPaIpo_OcMnpGMeuTO2FwrsHYv3Jykfe8X9EVDRA&sid=66b19c2eafbdb05b&type=tcp&headerType=none#🇩🇪All³
+vless://ce4b2104-f1fe-4216-ad67-8c21869b9118@www.gameturk.bestvnxv.org:21710?mode=auto&path=%2F&security=reality&encryption=none&pbk=y1FXsWq-fLzk3Dle_2l_XSfpbBT-OtPBCkuQMMyN7hk&fp=chrome&type=xhttp&sni=cdn-apple.com&sid=a9c6792c83079ed3#@Vip_Security
 vless://bcbb541b-6e85-4115-a26a-8cf67eca09cf@185.143.233.233:443?path=%2Fvoip&security=tls&encryption=none&insecure=1&host=pishparda.ir&fp=chrome&type=ws&allowInsecure=1&sni=pishparda.ir#@Vip_Security
 vless://a7f4c93a-98e1-4835-82f0-0571f8378d14@185.143.233.5:443?path=%2Fchat%3Fed%3D128&security=tls&alpn=h2,http%2F1.1&encryption=none&insecure=1&host=hn.8lack.ir&fp=firefox&type=ws&allowInsecure=1&sni=hn.8lack.ir#@Vip_Security
 vless://30fcec7f-164b-465c-87f4-b93784a6056b@185.226.140.140:8880?path=/&security=none&encryption=none&host=azsv1.drpingservice.com&type=ws#@hopev2ray🤍
@@ -14,5 +22,10 @@ vless://f415ebc0-2061-4688-b3e8-f1959668a5dd@85.9.114.39:2087?mode=stream-up&pat
 vless://01f93877-3307-4e73-ba4c-592d4489a9ea@inexall.cloudvipgamefall.ir:8080?security=tls&encryption=none&insecure=0&headerType=http&fp=chrome&type=tcp&allowInsecure=0&sni=newnexip1.nexvpnfun.com#@Shh_Proxy-New⁴
 vless://2e409cdc-d0c9-4fc0-b285-9371034b8002@1.call-me-seyed.ir:8080?path=/&security=none&encryption=none&type=ws#TEL;Father_vpn
 vless://2402a18b-77f3-4346-db46-4284cb037bb3@snapp.ir:2087?path=/BetForward&security=tls&encryption=none&host=cdn.xelira.ir&fp=chrome&type=ws&sni=cdn.xelira.ir#@VpnCostumer+|+بیا+تو+وصل+باش+💙
+vless://73e08fcb-a0c7-45d0-b55d-f78c903c64a6@dl3.gooniforoshi.fun:443?path=%2Fdownload.php&security=tls&encryption=none&insecure=0&host=dl3.gooniforoshi.fun&type=ws&allowInsecure=0&sni=dl3.gooniforoshi.fun#IR🇮🇷
 vless://81be1b4f-3be5-43ca-8e85-13a01164493c@free.2freenet.ddns.info:2083?path=/wp-admin.php?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM?ed=2083&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=my.nila-services.top&fp=chrome&type=ws&allowInsecure=0&sni=my.nila-services.top#@B2Hub
-vless://7451454d-a345-45b5-d6ed-c35cf38c53dc@s2.zynetraq.ir:2087?security=tls&encryption=none&headerType=none&type=tcp&sni=s2.zynetraq.ir#IR🇮🇷
+vless://83e56eb0-0876-4647-8ff2-e408cf4247e3@DETUN.PRIMESELL.IR:3535?security=tls&type=ws&path=/&host=ttuit.aitseller.ir&sni=pars.aitseller.ir&fp=chrome&encryption=none#🇩🇪07
+vless://58ea8326-65e1-4848-9ee6-cb6bc8753ba5@www.zula.ir:443?mode=multi&security=tls&encryption=none&type=grpc&serviceName=@VPNCUSTOMIZE,@VPNCUSTOMIZE&sni=V2ray-Napsternet-Irancell-Iran-Fair.Varzesh3-CDN.site#MTN+ZULA+@vpnsal
+vless://8c561eb2-f643-49ce-b5b6-81690ec268c0@b2n.ir:2087?mode=auto&path=/FiShChIpS&security=tls&encryption=none&extra={
+vless://fdb271af-8d6a-4075-acc8-8e15b2746bb1@Iran.powerpanel.space:443?security=none&encryption=mlkem768x25519plus.native.0rtt.JhFafu3WxlVo6xMe01oUXCPAFQoc4bt5updF83mIthE&headerType=none&type=tcp#✅
+vless://dc4d5002-9545-4357-bfe4-b0ab6f174bd8@www.snappfood.ir:2083?path=%2Fapi%2Fv1%3Fed%23Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=serv2.servvadd.org&fp=chrome&type=ws&allowInsecure=0&sni=serv2.servvadd.org#@Vip_Security
