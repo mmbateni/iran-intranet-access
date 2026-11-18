@@ -1,3 +1,2 @@
-# Armenia→Iran bridge-verified — 2026-11-17 21:53 UTC
-# 1 configs
-vless://f8d52ece-fad4-478d-875d-df6eed3befa7@media.study.golangwikito.cfd:8443?&security=reality&pbk=QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI&sid=40a4b9403abe554c&fp=firefox&sni=media.study.golangwikito.cfd&type=xhttp#%F0%9F%87%A9%F0%9F%87%AA%20%E5%BE%B7%E5%9B%BD%20%7C%20DEU
+# Armenia→Iran bridge-verified — 2026-11-18 12:03 UTC
+# 0 configs
