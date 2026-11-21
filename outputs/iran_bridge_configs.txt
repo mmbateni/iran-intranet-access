@@ -1,3 +1,2 @@
-# Armenia→Iran bridge-verified — 2026-11-21 11:33 UTC
-# 1 configs
-vless://5cd8e5fe-7595-4387-95f9-79b0f18eb125@213.108.23.184:443?security=none&encryption=none&headerType=none&type=tcp#FI🇫🇮
+# Armenia→Iran bridge-verified — 2026-11-21 20:13 UTC
+# 0 configs
