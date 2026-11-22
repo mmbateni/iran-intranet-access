@@ -1,6 +1,5 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-11-22 11:48 UTC
-# 4 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-11-22 20:28 UTC
+# 3 configs
 vless://019832a7-9376-445a-ba66-76ee9df0685d@185.112.56.83:8443?encryption=none&security=reality&sni=github.com&fp=chrome&pbk=CsB20mYga1ELkQfn_MTZP1Rr6RHVWJ_P6yVP0NproWo&sid=e3a41cf04c4ebf4a&spx=/a1bc60cd6c9e32e&type=xhttp&path=/48hvv8hg7bnJhg71xcdRE32&mode=auto&extra={
-vless://dcf42340-4143-4a52-980d-171afd3efa5c@91.186.197.50:8443?&security=reality&flow=xtls-rprx-vision&pbk=T4N8v2chhy4ZJrt2ENLMmwnQU7h7omZEFRhZhKWR9SA&sid=7ac0b7f44ed17b33&fp=chrome&sni=origin.media.cdn.videoclothing.xyz&type=xhttp#%F0%9F%87%B3%F0%9F%87%B1%20%E8%8D%B7%E5%85%B0%20%7C%20NLD
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@net.soft98ver2.com:301#@vpnsal
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@ger2.soft98ver2.com:305#@vpnsal
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@net.soft98ver2.com:301#@vpnsal
