@@ -1,5 +1,4 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-11-22 20:28 UTC
-# 3 configs
-vless://019832a7-9376-445a-ba66-76ee9df0685d@185.112.56.83:8443?encryption=none&security=reality&sni=github.com&fp=chrome&pbk=CsB20mYga1ELkQfn_MTZP1Rr6RHVWJ_P6yVP0NproWo&sid=e3a41cf04c4ebf4a&spx=/a1bc60cd6c9e32e&type=xhttp&path=/48hvv8hg7bnJhg71xcdRE32&mode=auto&extra={
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@ger2.soft98ver2.com:305#@vpnsal
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@net.soft98ver2.com:301#@vpnsal
+# IR mobile (MCI/Irancell/Rightel) — 2026-11-23 13:27 UTC
+# 2 configs
+vless://019832a7-9376-445a-ba66-76ee9df0685d@185.112.56.83:8443?mode=auto&path=/48hvv8hg7bnJhg71xcdRE32?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=reality&encryption=none&ext
+vless://03786aa4-21a5-4e7c-83d6-873aafc41217@nl-06.neverspy.tech:443?security=reality&encryption=none&pbk=sZXAejndrxL9cgna_fPXmbSB28y8yAJ9Ln6hRzy5TV0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=nl-06.neverspy.tech&sid=86af85a72387ef02#Channel
