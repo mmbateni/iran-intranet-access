@@ -1,3 +1,5 @@
-# IR mobile (MCI/Irancell/Rightel) — 2026-11-26 22:31 UTC
-# 1 configs
+# IR mobile (MCI/Irancell/Rightel) — 2026-11-27 12:56 UTC
+# 3 configs
 vless://019832a7-9376-445a-ba66-76ee9df0685d@185.112.56.83:8443?mode=auto&path=/48hvv8hg7bnJhg71xcdRE32?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=reality&encryption=none&ext
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@ger2.soft98ver2.com:305#@vpnsal
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNFc2VDdUaC14MGl2bDA2WWt4WVZCcjZiVExzSXRWQw@net.soft98ver2.com:301#@vpnsal
