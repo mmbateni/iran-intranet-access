@@ -1,3 +1,3 @@
-# Armenia→Iran bridge-verified — 2026-11-27 22:16 UTC
+# Armenia→Iran bridge-verified — 2026-11-28 12:07 UTC
 # 1 configs
 vless://4bec3709-0954-4173-ae59-3dee6cb8b961@91.192.158.251:2066?security=reality&encryption=none&pbk=84GM9QUTdTfTrhR-8loDOu7VA0LFW8X02vSvBQdsLAg&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=google.com&sid=1b2a3f#@V2ray_confiig
